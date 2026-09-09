@@ -1,1 +1,2717 @@
-{"sections":{"custom_slides_aa6mTK":{"type":"custom-slides","blocks":{"slide_ByX9rB":{"type":"slide","disabled":true,"settings":{"desktop_image":"shopify:\/\/shop_images\/Rakhi.jpg","mobile_image":"shopify:\/\/shop_images\/Rakhi_Mobile.jpg","slide_link":"shopify:\/\/collections\/bracelets","heading":"","text":""}},"slide_rzAGab":{"type":"slide","settings":{"desktop_image":"shopify:\/\/shop_images\/Image-1_jpg.jpg","mobile_image":"shopify:\/\/shop_images\/1x1.png","slide_link":"","heading":"","text":""}},"slide_NyiUmm":{"type":"slide","settings":{"desktop_image":"shopify:\/\/shop_images\/Banner_5_Heal_Your_Inner_Self_with_Sound_Frequencies.jpg","mobile_image":"shopify:\/\/shop_images\/5_50c739ec-3b84-4d35-9ec7-2163b47b10b7.jpg","slide_link":"","heading":"","text":""}},"slide_8zHYEV":{"type":"slide","disabled":true,"settings":{"desktop_image":"shopify:\/\/shop_images\/Banner_3_tat_sat__Shp_By_Number.jpg","mobile_image":"shopify:\/\/shop_images\/3_625b106d-2ac5-4ddb-abaf-0455bf720478.jpg","slide_link":"","heading":"","text":""}},"slide_DDqW7K":{"type":"slide","disabled":true,"settings":{"desktop_image":"shopify:\/\/shop_images\/Banner_6_tat_sat__Crystal_Guidance.jpg","mobile_image":"shopify:\/\/shop_images\/6_e592187c-6d95-4f3e-9102-a1c81c4b0063.jpg","slide_link":"","heading":"","text":""}},"slide_WVNDam":{"type":"slide","disabled":true,"settings":{"desktop_image":"shopify:\/\/shop_images\/Banner_4_tat_sat__Home_Decor.jpg","mobile_image":"shopify:\/\/shop_images\/4_86f6b5bb-03b4-4276-bb30-b5c5d5c98b76.jpg","slide_link":"","heading":"","text":""}},"slide_B4iYYw":{"type":"slide","disabled":true,"settings":{"desktop_image":"shopify:\/\/shop_images\/Banner_2_tat_sat__Shp_By_problm.jpg","mobile_image":"shopify:\/\/shop_images\/2_beb9a95f-e68d-421a-97c9-510e36215393.jpg","slide_link":"","heading":"","text":""}},"slide_6F9zU6":{"type":"slide","settings":{"desktop_image":"shopify:\/\/shop_images\/Banner_1_Ma_am.jpg","mobile_image":"shopify:\/\/shop_images\/1_56e5b7c5-10aa-40b7-b94c-7d2d32a9c436.jpg","slide_link":"","heading":"","text":""}}},"block_order":["slide_ByX9rB","slide_rzAGab","slide_NyiUmm","slide_8zHYEV","slide_DDqW7K","slide_WVNDam","slide_B4iYYw","slide_6F9zU6"],"name":"Custom Slideshow","settings":{}},"problem_sec_aUEeke":{"type":"problem-sec","blocks":{"problem_item_yGL9Kr":{"type":"problem_item","settings":{"product":"peacock-pyrite-master-money-magnet","title":"MONEY"}},"problem_item_PrkUWM":{"type":"problem_item","settings":{"product":"pink-kunzite-master-love-magnet","title":"LOVE"}},"problem_item_T33wjK":{"type":"problem_item","settings":{"product":"labradorite-master-negative-energy-shield","title":"EVIL EYE"}},"problem_item_Ucb6qQ":{"type":"problem_item","settings":{"product":"green-fluorite-master-of-intellect","title":"MEMORY"}},"problem_item_DmAYhk":{"type":"problem_item","settings":{"product":"prehnite-master-of-calm-in-the-storm","title":"STRESS"}},"problem_item_AFTBfR":{"type":"problem_item","settings":{"product":"sunstone-master-of-power","title":"CONFIDENCE"}},"problem_item_mjWNab":{"type":"problem_item","settings":{"product":"citrine-master-of-good-times","title":"GOOD LUCK"}},"problem_item_MEerU4":{"type":"problem_item","settings":{"product":"green-jade-master-of-success","title":"SUCCESS"}}},"block_order":["problem_item_yGL9Kr","problem_item_PrkUWM","problem_item_T33wjK","problem_item_Ucb6qQ","problem_item_DmAYhk","problem_item_AFTBfR","problem_item_mjWNab","problem_item_MEerU4"],"disabled":true,"name":"Shop By Problem","settings":{"main_heading":"SHOP BY PROBLEM"}},"product_list_BFA8mJ":{"type":"product-list","blocks":{"static-header":{"type":"_product-list-content","name":"t:names.header","static":true,"settings":{"content_direction":"row","vertical_on_mobile":false,"horizontal_alignment":"center","vertical_alignment":"center","align_baseline":true,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"product_list_text_Y3aMH3":{"type":"_product-list-text","name":"t:names.collection_title","settings":{"text":"<h3>Shop by problem<\/h3>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"product_list_button_jHBV6x":{"type":"_product-list-button","name":"t:names.product_list_button","disabled":true,"settings":{"label":"View all","open_in_new_tab":false,"style_class":"link","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["product_list_text_Y3aMH3","product_list_button_jHBV6x"]},"static-product-card":{"type":"_product-card","name":"t:names.product_card","static":true,"settings":{"product_card_gap":4,"inherit_color_scheme":true,"color_scheme":"","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"product_card_gallery_Vb8Pra":{"type":"_product-card-gallery","name":"t:names.product_card_media","settings":{"image_ratio":"square","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"product_title_P6nhJE":{"type":"product-title","name":"t:names.product_title","settings":{"width":"fit-content","max_width":"none","alignment":"left","type_preset":"h5","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground-heading)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":4,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"price_QN7mqa":{"type":"price","name":"t:names.product_price","settings":{"show_sale_price_first":true,"show_installments":false,"show_tax_info":false,"type_preset":"h6","width":"100%","alignment":"left","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","color":"var(--color-foreground)","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"review_q8QR9y":{"type":"review","name":"t:names.product_review_stars","settings":{"stars_style":"shaded","show_number":true,"rating_color":"primary","type_preset":"paragraph","alignment":"left"},"blocks":{}},"buy_buttons_Nm9kWd":{"type":"buy-buttons","name":"t:names.product_buy_buttons","settings":{"stacking":false,"show_pickup_availability":true,"gift_card_form":true,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"quantity":{"type":"quantity","disabled":true,"static":true,"settings":{},"blocks":{}},"add-to-cart":{"type":"add-to-cart","static":true,"settings":{"style_class":"button"},"blocks":{}},"accelerated-checkout":{"type":"accelerated-checkout","disabled":true,"static":true,"settings":{},"blocks":{}}},"block_order":[]}},"block_order":["product_card_gallery_Vb8Pra","product_title_P6nhJE","price_QN7mqa","review_q8QR9y","buy_buttons_Nm9kWd"]}},"name":"t:names.products_grid","settings":{"collection":"shop-by-problem","layout_type":"grid","carousel_on_mobile":false,"max_products":8,"columns":4,"mobile_columns":"2","mobile_card_size":"60cqw","columns_gap":8,"rows_gap":24,"icons_style":"arrow","icons_shape":"none","section_width":"page-width","horizontal_alignment":"flex-start","gap":28,"color_scheme":"scheme-1","padding-block-start":48,"padding-block-end":48}},"collection_list_TxbKR9":{"type":"collection-list","blocks":{"group_kH44E7":{"type":"group","name":"t:names.header","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"text_PdFn8J":{"type":"text","name":"t:names.text","settings":{"text":"<p>FIND YOUR FAVOURITES<\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_pA9VkJ":{"type":"text","name":"t:names.heading","settings":{"text":"<h2>SHOP BY CATEGORY<\/h2>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"h3","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground-heading)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["text_PdFn8J","text_pA9VkJ"]},"ai_gen_block_b7731c0_gwa6aq":{"type":"ai_gen_block_b7731c0","settings":{"columns_desktop":4,"columns_tablet":2,"columns_mobile":"1","gap":20,"padding":20,"background_color":"#ffffff","border_radius":0,"item_padding":0,"item_border_radius":0,"item_border_width":0,"item_border_color":"#e0e0e0","text_alignment":"center","hover_lift":4,"hover_shadow":8,"overlay_color":"#d4af7f","overlay_text_size":16,"image_spacing":0,"item_1_enabled":true,"item_1_collection":"bracelets","item_1_custom_title":"","item_1_custom_image":"shopify:\/\/shop_images\/Peacock_Pyrite_4d8e7520-0f28-4ede-98c4-39a805826cba.png","item_2_enabled":true,"item_2_collection":"neck-pieces","item_2_custom_title":"","item_2_custom_image":"shopify:\/\/shop_images\/Untitled_Session02701_copy.jpg","item_3_enabled":true,"item_3_collection":"sacred-alignment-set","item_3_custom_title":"Combo's","item_3_custom_image":"shopify:\/\/shop_images\/Shungite_5e7b2350-eb59-4009-8cb7-c33c27673862.png","item_4_enabled":true,"item_4_collection":"home-decor","item_4_custom_title":"","item_4_custom_image":"shopify:\/\/shop_images\/tat_sat_11.webp","item_5_enabled":false,"item_5_collection":"","item_5_custom_title":"","item_6_enabled":false,"item_6_collection":"","item_6_custom_title":"","item_7_enabled":false,"item_7_collection":"","item_7_custom_title":"","item_8_enabled":false,"item_8_collection":"","item_8_custom_title":"","item_9_enabled":false,"item_9_collection":"","item_9_custom_title":"","item_10_enabled":false,"item_10_collection":"","item_10_custom_title":"","item_11_enabled":false,"item_11_collection":"","item_11_custom_title":"","item_12_enabled":false,"item_12_collection":"","item_12_custom_title":""},"blocks":{}},"group_qeeRDQ":{"type":"group","name":"t:names.group","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"button_VKCRWa":{"type":"button","name":"t:names.button","settings":{"label":"All Categories","link":"shopify:\/\/collections\/all","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["button_VKCRWa"]},"static-collection-card":{"type":"_collection-card","name":"t:names.collection_card","disabled":true,"static":true,"settings":{"placement":"below_image","horizontal_alignment":"flex-start","vertical_alignment":"center","collection_card_gap":8,"inherit_color_scheme":true,"color_scheme":"","border":"none","border_width":1,"border_opacity":100,"border_radius":0},"blocks":{"collection_title_EfMLJG":{"type":"collection-title","name":"t:names.collection_title","settings":{"width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"collection-card-image":{"type":"_collection-card-image","name":"t:names.collection_card_image","static":true,"settings":{"image_ratio":"adapt","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","border":"none","border_width":1,"border_opacity":100,"border_radius":0},"blocks":{}}},"block_order":["collection_title_EfMLJG"]}},"block_order":["group_kH44E7","ai_gen_block_b7731c0_gwa6aq","group_qeeRDQ"],"name":"t:names.collections_carousel","settings":{"collection_list":[],"layout_type":"carousel","carousel_on_mobile":false,"columns":3,"mobile_columns":"2","mobile_card_size":"60cqw","columns_gap":8,"bento_gap":8,"rows_gap":8,"max_collections":4,"icons_style":"arrow","icons_shape":"circle","section_width":"page-width","gap":12,"color_scheme":"","padding-block-start":48,"padding-block-end":48}},"image_gallery_xdLL9D":{"type":"image-gallery","blocks":{"image_AMAVLE":{"type":"image","settings":{}},"image_WQEjWe":{"type":"image","settings":{}},"image_qmprYU":{"type":"image","settings":{}},"image_HNgxnU":{"type":"image","settings":{}}},"block_order":["image_AMAVLE","image_WQEjWe","image_qmprYU","image_HNgxnU"],"disabled":true,"name":"Responsive Image Gallery","settings":{"heading":"Responsive Image Gallery","subheading":"Resize the screen to see the responsive effect","columns":4}},"product_list_VQpani":{"type":"product-list","blocks":{"static-header":{"type":"_product-list-content","name":"t:names.header","static":true,"settings":{"content_direction":"row","vertical_on_mobile":false,"horizontal_alignment":"center","vertical_alignment":"center","align_baseline":true,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"product_list_text_XKmaGD":{"type":"_product-list-text","name":"t:names.collection_title","settings":{"text":"<h3>Shop by NUmerology<\/h3>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"product_list_button_4jQ8r4":{"type":"_product-list-button","name":"t:names.product_list_button","disabled":true,"settings":{"label":"View all","open_in_new_tab":false,"style_class":"link","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["product_list_text_XKmaGD","product_list_button_4jQ8r4"]},"static-product-card":{"type":"_product-card","name":"t:names.product_card","static":true,"settings":{"product_card_gap":4,"inherit_color_scheme":true,"color_scheme":"","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"product_card_gallery_T64gT6":{"type":"_product-card-gallery","name":"t:names.product_card_media","settings":{"image_ratio":"square","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"product_title_jaMDDd":{"type":"product-title","name":"t:names.product_title","settings":{"width":"fit-content","max_width":"none","alignment":"left","type_preset":"h5","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground-heading)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":4,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"price_QPiKG7":{"type":"price","name":"t:names.product_price","settings":{"show_sale_price_first":true,"show_installments":false,"show_tax_info":false,"type_preset":"h6","width":"100%","alignment":"left","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","color":"var(--color-foreground)","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"review_j7J3VQ":{"type":"review","name":"t:names.product_review_stars","settings":{"stars_style":"shaded","show_number":true,"rating_color":"primary","type_preset":"paragraph","alignment":"left"},"blocks":{}},"buy_buttons_damNMC":{"type":"buy-buttons","name":"t:names.product_buy_buttons","settings":{"stacking":false,"show_pickup_availability":true,"gift_card_form":true,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"quantity":{"type":"quantity","disabled":true,"static":true,"settings":{},"blocks":{}},"add-to-cart":{"type":"add-to-cart","static":true,"settings":{"style_class":"button"},"blocks":{}},"accelerated-checkout":{"type":"accelerated-checkout","disabled":true,"static":true,"settings":{},"blocks":{}}},"block_order":[]}},"block_order":["product_card_gallery_T64gT6","product_title_jaMDDd","price_QPiKG7","review_j7J3VQ","buy_buttons_damNMC"]}},"name":"t:names.products_grid","settings":{"collection":"shop-by-numerology","layout_type":"grid","carousel_on_mobile":false,"max_products":8,"columns":4,"mobile_columns":"2","mobile_card_size":"60cqw","columns_gap":8,"rows_gap":24,"icons_style":"arrow","icons_shape":"none","section_width":"page-width","horizontal_alignment":"flex-start","gap":28,"color_scheme":"scheme-1","padding-block-start":48,"padding-block-end":48}},"divider_KJPnFc":{"type":"divider","name":"t:names.divider_section","settings":{"color_scheme":"","section_width":"full-width","thickness":1,"corner_radius":"square","width_percent":100,"alignment_horizontal":"center","padding-block-start":16,"padding-block-end":16}},"section_ytcYni":{"type":"section","blocks":{"image_KhEeUx":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/1_74144464-4080-4bd5-aa93-41dd32dba257.jpg","link":"","image_ratio":"portrait","width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"group_TxfWTw":{"type":"group","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"custom","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"text_CJ8xXr":{"type":"text","name":"t:names.heading","settings":{"text":"<p>TRINITY HEALING<\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"h3","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground-heading)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_3dLah6":{"type":"text","settings":{"text":"<p>At Tat Sat, every product we serve, is not just a piece of crystal. it's Infused with Trinity Healing: Light, Sound, and Fire. Our offerings help realign your energetic blueprint with the ancient forces of the universe. They are designed not just to heal, but to burn karmas, preserve dharma, and awaken the light within. We don’t just offer energy tools, we offer energy contracts which your soul already chose before entering this lifetime.<\/p>","width":"100%","max_width":"none","alignment":"left","type_preset":"paragraph","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"button_YEn6Hk":{"type":"button","settings":{"label":"Shop now","link":"shopify:\/\/collections\/all","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["text_CJ8xXr","text_3dLah6","button_YEn6Hk"]}},"block_order":["image_KhEeUx","group_TxfWTw"],"custom_css":[".image-block__image {max-height: 500px; max-width: 500px; border-radius: 50%;}",".image-block {justify-content: center;}"],"name":"t:names.image_with_text","settings":{"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":32,"section_width":"page-width","section_height":"","section_height_custom":50,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0}},"divider_4MUVjh":{"type":"divider","name":"t:names.divider_section","settings":{"color_scheme":"","section_width":"full-width","thickness":1,"corner_radius":"square","width_percent":100,"alignment_horizontal":"center","padding-block-start":16,"padding-block-end":16}},"video_series_rBByrV":{"type":"video-series","blocks":{"video_card_6Nhqbd":{"type":"video_card","settings":{"title":"Tat Sat- The Ultimate Truth","subtitle":"","video_url":"https:\/\/www.youtube.com\/embed\/np9Sc_ysE5I","thumbnail":"shopify:\/\/shop_images\/Video1.webp","is_youtube":true,"no_video":false,"placeholder_bg":"#f5f5f5","placeholder_text_color":"#8b631a","placeholder_text":"Coming Soon","placeholder_link":"","video_title_color":"#8b631a","video_subtitle_color":"#444444"}},"video_card_xJnHKD":{"type":"video_card","settings":{"title":"Tat Sat- The Ultimate Truth","subtitle":"","video_url":"https:\/\/www.youtube.com\/embed\/QX9q1t0WYog","thumbnail":"shopify:\/\/shop_images\/Video1.webp","is_youtube":true,"no_video":false,"placeholder_bg":"#f5f5f5","placeholder_text_color":"#8b631a","placeholder_text":"Coming Soon","placeholder_link":"","video_title_color":"#8b631a","video_subtitle_color":"#444444"}},"video_card_3DB6tc":{"type":"video_card","settings":{"title":"Welcome to Tat Sat","subtitle":"","video_url":"https:\/\/www.youtube.com\/embed\/jybXUhlWpsI","thumbnail":"shopify:\/\/shop_images\/Video1.webp","is_youtube":true,"no_video":false,"placeholder_bg":"#f5f5f5","placeholder_text_color":"#8b631a","placeholder_text":"Coming Soon","placeholder_link":"","video_title_color":"#8b631a","video_subtitle_color":"#444444"}},"video_card_PmzaNQ":{"type":"video_card","settings":{"title":"Tat Sat- The Ultimate Truth","subtitle":"","video_url":"https:\/\/www.youtube.com\/embed\/EauttqKNotw","thumbnail":"shopify:\/\/shop_images\/Video1.webp","is_youtube":true,"no_video":false,"placeholder_bg":"#f5f5f5","placeholder_text_color":"#8b631a","placeholder_text":"Coming Soon","placeholder_link":"","video_title_color":"#8b631a","video_subtitle_color":"#444444"}},"video_card_bVXTyt":{"type":"video_card","settings":{"title":"Tat Sat's Trinity Healing Ritual ","subtitle":"","video_url":"https:\/\/www.youtube.com\/embed\/-WgYooKHiJE","thumbnail":"shopify:\/\/shop_images\/Video1.webp","is_youtube":true,"no_video":false,"placeholder_bg":"#f5f5f5","placeholder_text_color":"#8b631a","placeholder_text":"Coming Soon","placeholder_link":"","video_title_color":"#8b631a","video_subtitle_color":"#444444"}},"video_card_3dztYV":{"type":"video_card","settings":{"title":"What is Tat Sat's Karmic Light Book?","subtitle":"","video_url":"https:\/\/www.youtube.com\/embed\/CCk7O3woerc","thumbnail":"shopify:\/\/shop_images\/Video1.webp","is_youtube":true,"no_video":false,"placeholder_bg":"#f5f5f5","placeholder_text_color":"#8b631a","placeholder_text":"Coming Soon","placeholder_link":"","video_title_color":"#8b631a","video_subtitle_color":"#444444"}},"video_card_cLXprC":{"type":"video_card","settings":{"title":"","subtitle":"","video_url":"","is_youtube":false,"no_video":true,"placeholder_bg":"#dccab2","placeholder_text_color":"#000000","placeholder_text":"Watch All Videos","placeholder_link":"https:\/\/www.youtube.com\/@tatsatuniverse","video_title_color":"#444444","video_subtitle_color":"#444444"}}},"block_order":["video_card_6Nhqbd","video_card_xJnHKD","video_card_3DB6tc","video_card_PmzaNQ","video_card_bVXTyt","video_card_3dztYV","video_card_cLXprC"],"disabled":true,"name":"Video Series with Instagram","settings":{"section_heading":"TAT SAT SACRED SERIES","section_subheading":"Watch the energies come alive — from our origin story to healing rituals and karmic activation.","padding_top":40,"padding_bottom":50,"margin_top":0,"margin_bottom":0,"heading_font_size":24,"subheading_font_size":14,"heading_color":"#8b631a","subheading_color":"#493002","subheading_font_weight":"300"}},"section_T84jTj":{"type":"section","blocks":{"testimonials_qMVAGk":{"type":"testimonials","disabled":true,"settings":{"style":"style-1","padding":"","margin":"","show_heading":true,"heading":"","navigation":true,"pagination":true,"infinite":true,"autoplay":true,"autoplay_speed":"3000","columns":3,"column1440":3,"column1":3,"column2":2,"column3":2,"column4":1},"blocks":{"testimonial_item_TC7dnA":{"type":"_testimonial-item","settings":{"padding":"","margin":"","show_image":true,"image":"shopify:\/\/shop_images\/aobvehfqu8x7jx6pw7n2.webp","size":"83px","show_name":true,"name":"Anjali Desai","show_title":true,"title":"“Good vibes only”","show_review":true,"review":"Ever since I started wearing this, I’ve noticed small but positive changes. Even my mood has improved...","show_rating":true,"rating":"4"},"blocks":{}},"testimonial_item_69hG3p":{"type":"_testimonial-item","settings":{"padding":"","margin":"","show_image":true,"image":"shopify:\/\/shop_images\/qh0wsuw1iif86b710ool.webp","size":"83px","show_name":true,"name":"Kiran Malhotra","show_title":true,"title":"“Stylish and  Spiritual”","show_review":true,"review":"Wasn’t expecting much, but this bracelet truly amazed me. It feels like a silent support system on my wrist...","show_rating":true,"rating":"4"},"blocks":{}},"testimonial_item_TF94M7":{"type":"_testimonial-item","settings":{"padding":"","margin":"","show_image":true,"image":"shopify:\/\/shop_images\/eyq1zocvjyerebs7yipb.webp","size":"83px","show_name":true,"name":"Riya Sharma","show_title":true,"title":"“Highly Recommend!”","show_review":true,"review":"This bracelet has helped me stay positive during some tough days. Very well-made and deeply meaningful...","show_rating":true,"rating":"4"},"blocks":{}},"testimonial_item_aFzDpV":{"type":"_testimonial-item","settings":{"padding":"","margin":"","show_image":true,"image":"shopify:\/\/shop_images\/ojxhk0rxyirhghaz0enw.webp","size":"83px","show_name":true,"name":"Riya & Karan Malhotra","show_title":true,"title":"“Golden Bond”","show_review":true,"review":"These Citrine bracelets have brought warmth, joy, and a renewed sense of togetherness into our lives. Truly the master of good times!","show_rating":true,"rating":"4"},"blocks":{}},"testimonial_item_hU9inw":{"type":"_testimonial-item","settings":{"padding":"","margin":"","show_image":true,"image":"shopify:\/\/shop_images\/lsbx1igkjldo8h5rb0hy.webp","size":"83px","show_name":true,"name":"Neha Kapoor","show_title":true,"title":"“Lucky Charm for Real”","show_review":true,"review":"Got this as a gift and now I don’t leave home without it. Brings me a sense of peace and confidence every day...","show_rating":true,"rating":"4"},"blocks":{}},"testimonial_item_3QqRTn":{"type":"_testimonial-item","settings":{"padding":"","margin":"","show_image":true,"image":"shopify:\/\/shop_images\/hcs9rbwefz6djzg3880h.webp","size":"83px","show_name":true,"name":"Arjun Mehta","show_title":true,"title":"“Wisdom & Modern Intention”","show_review":true,"review":"Wearing the Peacock Pyrite bracelet has truly amplified my energy and focus, it's a powerful magnet for abundance. A perfect blend of ancient wisdom and modern intention.","show_rating":true,"rating":"4"},"blocks":{}},"testimonial_item_bNYzWN":{"type":"_testimonial-item","settings":{"padding":"","margin":"","show_image":true,"image":"shopify:\/\/shop_images\/azzzklkurnycfmpfle6n.webp","size":"83px","show_name":true,"name":"Dr. Ananya Sharma","show_title":true,"title":"“Timeless Glow”","show_review":true,"review":"Wearing the Mookaite Jasper bracelet feels like a daily dose of youthful energy—grounding, radiant, and deeply rejuvenating.","show_rating":true,"rating":"4"},"blocks":{}},"custom-testimonial":{"type":"custom-testimonial","static":true,"settings":{"text_align":"center","color_heading":"#8b631a","font_size_heading":24,"line_height_heading":34,"font_weight_heading":"600","margin_heading":"0px 0px 0px 0px","font":"--font-family-base","color_review":"#493002","font_size_review":14,"line_height_review":24,"font_weight_review":"400","font_style":"normal","margin_review":"0px 0px 20px 0px","color_title":"#8b631a","font_size_title":18,"line_height_title":24,"font_weight_title":"500","letter_spacing_title":0,"margin_title":"0px 0px 12px 0px","color_name":"#8b631a","font_size_name":12,"line_height_name":22,"font_weight_name":"400","letter_spacing_name":2,"margin_name":"15px 0px 0px 0px","width_avatar":83,"border_avatar":"50%","font_size_heading_mobi":20,"line_height_heading_mobi":28,"margin_heading_mobi":"0px 0px 0px 0px","font_size_review_mobi":14,"line_height_review_mobi":24,"font_size_title_mobi":20,"line_height_title_mobi":28,"font_size_name_mobi":12,"line_height_name_mobi":22,"width_avatar_mobi":83},"blocks":{}}},"block_order":["testimonial_item_TC7dnA","testimonial_item_69hG3p","testimonial_item_TF94M7","testimonial_item_aFzDpV","testimonial_item_hU9inw","testimonial_item_3QqRTn","testimonial_item_bNYzWN"]}},"block_order":["testimonials_qMVAGk"],"disabled":true,"name":"t:names.custom_section","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"section_width":"page-width","section_height":"small","section_height_custom":50,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0}},"17652768549105e0fa":{"type":"_blocks","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"section_width":"page-width","section_height":"","section_height_custom":50,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0}},"custom_liquid_ntNHAa":{"type":"custom-liquid","disabled":true,"name":"t:names.custom_liquid","settings":{"custom_liquid":"<style>\n  .testimonials-section {\n    padding: 60px 20px;\n    background: #ffffff;\n    max-width: 1400px;\n    margin: 0 auto;\n    position: relative;\n  }\n\n  .testimonials-header {\n    text-align: center;\n    margin-bottom: 50px;\n  }\n\n  .testimonials-header h2 {\n    font-size: 25px;\n    font-weight: 600;\n    color: #8b7355;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n    margin: 0;\n  }\n\n  .testimonials-slider-wrapper {\n    position: relative;\n    overflow: hidden;\n    padding: 0 60px;\n  }\n\n  .testimonials-slider {\n    display: flex;\n    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);\n  }\n\n  .testimonial-card {\n    flex: 0 0 calc(50% - 15px);\n    background: #ffffff;\n    border: 2px solid #e5e5e5;\n    border-radius: 8px;\n    padding: 30px 25px;\n    text-align: center;\n    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n    transition: all 0.3s ease;\n    margin-right: 30px;\n  }\n\n  .testimonial-card:hover {\n    transform: translateY(-5px);\n    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);\n    border-color: #8b7355;\n  }\n\n  .testimonial-stars {\n    display: flex;\n    justify-content: center;\n    gap: 5px;\n    margin-bottom: 15px;\n  }\n\n  .testimonial-stars svg {\n    width: 20px;\n    height: 20px;\n    fill: #ffa500;\n  }\n\n  .testimonial-stars svg.empty {\n    fill: #e0e0e0;\n  }\n\n  .testimonial-title {\n    font-size: 18px;\n    font-weight: 600;\n    color: #333333;\n    margin-bottom: 15px;\n    font-style: italic;\n  }\n\n  .testimonial-text {\n    font-size: 15px;\n    line-height: 1.7;\n    color: #666666;\n    margin-bottom: 25px;\n    min-height: 80px;\n  }\n\n  .testimonial-customer {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 12px;\n  }\n\n  .testimonial-image {\n    width: 80px;\n    height: 80px;\n    border-radius: 50%;\n    overflow: hidden;\n    border: 3px solid #8b7355;\n  }\n\n  .testimonial-image img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n  }\n\n  .testimonial-name {\n    font-size: 16px;\n    font-weight: 500;\n    color: #8b7355;\n  }\n\n  \/* Navigation Arrows *\/\n  .slider-nav {\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    width: 44px;\n    height: 44px;\n    background: #ffffff;\n    border: 2px solid #8b7355;\n    border-radius: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    z-index: 10;\n  }\n\n  .slider-nav:hover {\n    background: #8b7355;\n  }\n\n  .slider-nav:hover svg {\n    fill: #ffffff;\n  }\n\n  .slider-nav svg {\n    width: 22px;\n    height: 22px;\n    fill: #8b7355;\n    transition: fill 0.3s ease;\n  }\n\n  .slider-nav.prev {\n    left: 0;\n  }\n\n  .slider-nav.next {\n    right: 0;\n  }\n\n  \/* Navigation Dots *\/\n  .slider-dots {\n    display: flex;\n    justify-content: center;\n    gap: 10px;\n    margin-top: 35px;\n  }\n\n  .slider-dot {\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background: #e0e0e0;\n    cursor: pointer;\n    transition: all 0.3s ease;\n  }\n\n  .slider-dot.active {\n    background: #8b7355;\n    width: 30px;\n    border-radius: 5px;\n  }\n\n  \/* Responsive *\/\n  @media (max-width: 768px) {\n    .testimonials-section {\n      padding: 40px 15px;\n    }\n\n    .testimonials-header h2 {\n      font-size: 24px;\n    }\n\n    .testimonials-slider-wrapper {\n      padding: 0 50px;\n    }\n\n    .testimonial-card {\n      flex: 0 0 100%;\n      padding: 25px 20px;\n      margin-right: 0;\n    }\n\n    .testimonial-text {\n      min-height: auto;\n    }\n\n    .slider-nav {\n      width: 38px;\n      height: 38px;\n    }\n\n    .slider-nav svg {\n      width: 18px;\n      height: 18px;\n    }\n  }\n<\/style>\n\n<div class=\"testimonials-section\">\n  \n  <!-- Header -->\n  <div class=\"testimonials-header\">\n    <h2>TESTIMONIALS<\/h2>\n  <\/div>\n\n  <!-- Slider Wrapper -->\n  <div class=\"testimonials-slider-wrapper\">\n    \n    <!-- Previous Button -->\n    <div class=\"slider-nav prev\" onclick=\"testimonialSlider.moveSlide(-1)\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z\"\/>\n      <\/svg>\n    <\/div>\n\n    <!-- Testimonials Slider -->\n    <div class=\"testimonials-slider\" id=\"testimonialsSlider\">\n      \n      <!-- Testimonial 1 -->\n      <div class=\"testimonial-card\">\n        <div class=\"testimonial-stars\">\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg class=\"empty\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n        <\/div>\n        <div class=\"testimonial-title\">\"Good vibes only\"<\/div>\n        <div class=\"testimonial-text\">\n          Ever since I started wearing this, I've noticed small but positive changes. Even my mood has improved...\n        <\/div>\n        <div class=\"testimonial-customer\">\n          <div class=\"testimonial-image\">\n            <img src=\"https:\/\/tatsatuniverse.com\/cdn\/shop\/files\/qh0wsuw1iif86b710ool_180x.webp?v=1751144602\" alt=\"Anjali Desai\">\n          <\/div>\n          <div class=\"testimonial-name\">Anjali Desai<\/div>\n        <\/div>\n      <\/div>\n\n      <!-- Testimonial 2 -->\n      <div class=\"testimonial-card\">\n        <div class=\"testimonial-stars\">\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg class=\"empty\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n        <\/div>\n        <div class=\"testimonial-title\">\"Stylish and Spiritual\"<\/div>\n        <div class=\"testimonial-text\">\n          Wasn't expecting much, but this bracelet truly amazed me. It feels like a silent support system on my wrist...\n        <\/div>\n        <div class=\"testimonial-customer\">\n          <div class=\"testimonial-image\">\n            <img src=\"https:\/\/tatsatuniverse.com\/cdn\/shop\/files\/lsbx1igkjldo8h5rb0hy_180x.webp?v=1751144601\" alt=\"Kiran Malhotra\">\n          <\/div>\n          <div class=\"testimonial-name\">Kiran Malhotra<\/div>\n        <\/div>\n      <\/div>\n\n      <!-- Testimonial 3 -->\n      <div class=\"testimonial-card\">\n        <div class=\"testimonial-stars\">\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n        <\/div>\n        <div class=\"testimonial-title\">\"Pure Energy\"<\/div>\n        <div class=\"testimonial-text\">\n          This product exceeded all my expectations. I can feel the positive energy flowing through me every day!\n        <\/div>\n        <div class=\"testimonial-customer\">\n          <div class=\"testimonial-image\">\n            <img src=\"https:\/\/tatsatuniverse.com\/cdn\/shop\/files\/ojxhk0rxyirhghaz0enw_180x.webp?v=1751144600\" alt=\"Rahul Sharma\">\n          <\/div>\n          <div class=\"testimonial-name\">Rahul Sharma<\/div>\n        <\/div>\n      <\/div>\n\n      <!-- Testimonial 4 -->\n      <div class=\"testimonial-card\">\n        <div class=\"testimonial-stars\">\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\/><\/svg>\n        <\/div>\n        <div class=\"testimonial-title\">\"Life Changing\"<\/div>\n        <div class=\"testimonial-text\">\n          I never believed in these things, but after using this product, I'm a true believer. Thank you!\n        <\/div>\n        <div class=\"testimonial-customer\">\n          <div class=\"testimonial-image\">\n            <img src=\"https:\/\/tatsatuniverse.com\/cdn\/shop\/files\/hcs9rbwefz6djzg3880h_180x.webp?v=1751144602\" alt=\"Priya Singh\">\n          <\/div>\n          <div class=\"testimonial-name\">Priya Singh<\/div>\n        <\/div>\n      <\/div>\n\n    <\/div>\n\n    <!-- Next Button -->\n    <div class=\"slider-nav next\" onclick=\"testimonialSlider.moveSlide(1)\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"\/>\n      <\/svg>\n    <\/div>\n\n  <\/div>\n\n  <!-- Navigation Dots -->\n  <div class=\"slider-dots\" id=\"sliderDots\"><\/div>\n\n<\/div>\n\n<script>\n  var testimonialSlider = (function() {\n    const slider = document.getElementById('testimonialsSlider');\n    const dotsContainer = document.getElementById('sliderDots');\n    const cards = slider.querySelectorAll('.testimonial-card');\n    \n    let currentIndex = 0;\n    let cardsPerView = 2; \/\/ 2 cards on desktop\n    let autoplayInterval;\n\n    \/\/ Check if mobile\n    function isMobile() {\n      return window.innerWidth <= 768;\n    }\n\n    \/\/ Update cards per view\n    function updateCardsPerView() {\n      cardsPerView = isMobile() ? 1 : 2;\n      return Math.ceil(cards.length \/ cardsPerView);\n    }\n\n    \/\/ Create dots\n    function createDots() {\n      const totalSlides = updateCardsPerView();\n      dotsContainer.innerHTML = '';\n      \n      for (let i = 0; i < totalSlides; i++) {\n        const dot = document.createElement('div');\n        dot.className = 'slider-dot' + (i === 0 ? ' active' : '');\n        dot.onclick = function() { goToSlide(i); };\n        dotsContainer.appendChild(dot);\n      }\n    }\n\n    \/\/ Update slider position\n    function updateSlider() {\n      const slideWidth = 100; \/\/ Each slide is 100% of container\n      const offset = currentIndex * slideWidth;\n      \n      slider.style.transform = `translateX(-${offset}%)`;\n\n      \/\/ Update dots\n      const dots = dotsContainer.querySelectorAll('.slider-dot');\n      dots.forEach((dot, index) => {\n        dot.classList.toggle('active', index === currentIndex);\n      });\n    }\n\n    \/\/ Move slide\n    function moveSlide(direction) {\n      const totalSlides = updateCardsPerView();\n      currentIndex += direction;\n      \n      \/\/ Loop around\n      if (currentIndex < 0) {\n        currentIndex = totalSlides - 1;\n      } else if (currentIndex >= totalSlides) {\n        currentIndex = 0;\n      }\n      \n      updateSlider();\n      resetAutoplay();\n    }\n\n    \/\/ Go to specific slide\n    function goToSlide(index) {\n      currentIndex = index;\n      updateSlider();\n      resetAutoplay();\n    }\n\n    \/\/ Start autoplay\n    function startAutoplay() {\n      autoplayInterval = setInterval(function() {\n        moveSlide(1);\n      }, 5000);\n    }\n\n    \/\/ Reset autoplay\n    function resetAutoplay() {\n      clearInterval(autoplayInterval);\n      startAutoplay();\n    }\n\n    \/\/ Pause on hover\n    slider.addEventListener('mouseenter', function() {\n      clearInterval(autoplayInterval);\n    });\n\n    slider.addEventListener('mouseleave', function() {\n      startAutoplay();\n    });\n\n    \/\/ Handle window resize\n    let resizeTimeout;\n    window.addEventListener('resize', function() {\n      clearTimeout(resizeTimeout);\n      resizeTimeout = setTimeout(function() {\n        currentIndex = 0;\n        createDots();\n        updateSlider();\n      }, 250);\n    });\n\n    \/\/ Initialize\n    createDots();\n    updateSlider();\n    startAutoplay();\n\n    \/\/ Public methods\n    return {\n      moveSlide: moveSlide,\n      goToSlide: goToSlide\n    };\n  })();\n<\/script>","color_scheme":"","section_width":"page-width","padding-block-start":0,"padding-block-end":0}},"section_D4AeMX":{"type":"section","blocks":{"group_EE3CbT":{"type":"group","name":"t:names.group","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fit-content","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"text_KzNqRB":{"type":"text","name":"t:names.heading","settings":{"text":"<p>KARMIC LIGHTBOOK<\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"h3","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground-heading)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_PG9TzK":{"type":"text","name":"t:names.text","settings":{"text":"<p>Each Tat Sat piece comes with a sacred guide. The Karmic Lightbook This is not a rulebook, but a divine manual for your soul. It outlines the karmic actions, mindset shifts, and aligned practices you must adopt to truly activate the energy of your chosen crystal. Because energy doesn’t respond to intention alone, it responds to action with awareness. Following the Karmic Lightbook helps:<\/p><ul><li>Help you decode which Tatva dominates or distorts your karmas.<\/li><li>Offer simple yet powerful healing actions rooted in that element.<\/li><li>Align your thoughts, emotions, and actions with your soul dharma.<\/li><li>And most importantly - activate your awakened crystal through your karma's. <\/li><\/ul><p>The Lightbook ensures that your inner field and outer frequency are in sync -<br\/>so your crystal doesn’t just sit with you, it works with you.<br\/>It becomes an ally, a transmitter, a divine amplifier of your awakened karma.<br\/><\/p>","width":"fit-content","max_width":"none","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"button_baTzX6":{"type":"button","name":"t:names.button","settings":{"label":"Shop now","link":"shopify:\/\/collections\/all","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["text_KzNqRB","text_PG9TzK","button_baTzX6"]},"image_BJFhEz":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Karmik_Light_Book.webp","link":"","image_ratio":"square","width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["group_EE3CbT","image_BJFhEz"],"custom_css":[".image-block__image {object-fit: contain;}"],"name":"t:names.image_with_text","settings":{"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":32,"section_width":"page-width","section_height":"","section_height_custom":50,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0}},"section_hE8wam":{"type":"section","blocks":{"image_C6PBwA":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/image.jpg","link":"","image_ratio":"square","width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"group_8TexQt":{"type":"group","name":"t:names.group","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fit-content","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"text_mEBMWK":{"type":"text","name":"t:names.heading","settings":{"text":"<p>Welcome to Tat Sat.<\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"h6","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground-heading)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_JbpETG":{"type":"text","name":"t:names.heading","settings":{"text":"<p>If you've arrived at Tat Sat, <br\/>it's not by chance -  it's a sign.<\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"custom","font":"var(--font-body--family)","font_size":"1.25rem","line_height":"normal","letter_spacing":"normal","case":"uppercase","wrap":"pretty","color":"var(--color-foreground-heading)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_hk6MXP":{"type":"text","name":"t:names.text","settings":{"text":"<p>Maybe you've been searching. Maybe you've been silent. But your inner frequency has been calling for alignment - and the universe listened.<br\/><br\/>At<strong> <\/strong>Tat Sat, we don't just offer crystals. We offer Divine Companions - each one coded with light, sound, and intention to support your highest path. <br\/><br\/>If you feel a quiet YES in your body, if your eyes pause a little longer on one crystal, if your heart knows before your mind catches up, that’s your karmic awakening whispering:<br\/><strong><br\/>\"You’re ready to remember who you are.\"<br\/><\/strong><br\/>Every piece you see here has been chosen, coded and prepared through sacred rituals - so it may reach the one it was meant for. You did not find us. You remembered us. You were never lost - only being led, gently, back to your truth.<\/p>","width":"fit-content","max_width":"none","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"button_gaUJHR":{"type":"button","name":"t:names.button","settings":{"label":"About Us","link":"shopify:\/\/pages\/brand-story","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["text_mEBMWK","text_JbpETG","text_hk6MXP","button_gaUJHR"]}},"block_order":["image_C6PBwA","group_8TexQt"],"name":"t:names.image_with_text","settings":{"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":32,"section_width":"page-width","section_height":"","section_height_custom":50,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":40,"padding-block-end":40}},"reviews_section_mQKeU6":{"type":"reviews-section","blocks":{"testimonial_ARyNUb":{"type":"testimonial","settings":{"row":"top","image":"shopify:\/\/shop_images\/Sneha_Citrine.jpg","name":"Anjali Desai","review":"Ever since I started wearing this crystal bracelet from Tatsat Universe, I’ve felt more calm and emotionally balanced. The energy feels gentle yet powerful, and it has become a part of my daily routine.","rating":5}},"testimonial_r6m776":{"type":"testimonial","settings":{"row":"top","image":"shopify:\/\/shop_images\/Daksh_peacock_Pyrite.jpg","name":"Rahul Mehta","review":"I was a bit skeptical at first, but the crystal I received from Tatsat Universe exceeded my expectations. The quality is excellent, and I genuinely feel more focused and grounded throughout the day.","rating":5}},"testimonial_JtY6kY":{"type":"testimonial","settings":{"row":"top","image":"shopify:\/\/shop_images\/Sonia.jpg","name":"Neha Kapoor","review":"The crystals from Tatsat Universe are not only beautiful but also feel deeply meaningful. I keep mine close during meditation, and it has helped me feel more centered and positive.","rating":5}},"testimonial_dWD6C3":{"type":"testimonial","settings":{"row":"top","image":"shopify:\/\/shop_images\/Harsh_Mookait.jpg","name":"Amit Verma","review":"What I appreciate most about Tatsat Universe is the authenticity. The crystal feels natural, well-crafted, and carries a soothing energy that stays with you. Definitely worth it.","rating":5}},"testimonial_EL6kbR":{"type":"testimonial","settings":{"row":"top","image":"shopify:\/\/shop_images\/Roshni_Clear_Quartz.jpg","name":"Priya Sharma","review":"I ordered a crystal as a gift and it was absolutely loved. The packaging, quality, and intention behind Tatsat Universe products make them feel very special and thoughtful.","rating":5}},"testimonial_r9edmj":{"type":"testimonial","settings":{"row":"top","image":"shopify:\/\/shop_images\/Sneha_Citrine.jpg","name":"Anjali Desai","review":"Ever since I started wearing this crystal bracelet from Tatsat Universe, I’ve felt more calm and emotionally balanced. The energy feels gentle yet powerful, and it has become a part of my daily routine.","rating":5}},"testimonial_gjfALr":{"type":"testimonial","settings":{"row":"top","image":"shopify:\/\/shop_images\/Daksh_peacock_Pyrite.jpg","name":"Rahul Mehta","review":"I was a bit skeptical at first, but the crystal I received from Tatsat Universe exceeded my expectations. The quality is excellent, and I genuinely feel more focused and grounded throughout the day.","rating":5}},"testimonial_DpTPmG":{"type":"testimonial","settings":{"row":"top","image":"shopify:\/\/shop_images\/Sonia.jpg","name":"Neha Kapoor","review":"The crystals from Tatsat Universe are not only beautiful but also feel deeply meaningful. I keep mine close during meditation, and it has helped me feel more centered and positive.","rating":5}},"testimonial_CYwAaa":{"type":"testimonial","settings":{"row":"bottom","image":"shopify:\/\/shop_images\/Rohit_prehnite.jpg","name":"Karan Malhotra","review":"Minimal design, powerful energy. The crystal I bought from Tatsat Universe feels subtle yet effective. It doesn’t overpower — it gently supports you through the day.","rating":5}},"testimonial_3EYX93":{"type":"testimonial","settings":{"row":"bottom","image":"shopify:\/\/shop_images\/Riya_Green_Flourite.jpg","name":"Shreya Iyer","review":"The crystal I purchased from Tatsat Universe feels incredibly calming. I keep it near my workspace and have noticed a more peaceful, focused environment since then.","rating":5}},"testimonial_PLLJa3":{"type":"testimonial","settings":{"row":"bottom","image":"shopify:\/\/shop_images\/Vansh_Labradorite.jpg","name":"Rohit Khanna","review":"You can immediately sense the quality of the crystals from Tatsat Universe. They feel genuine, well-selected, and thoughtfully delivered. A very reassuring experience overall.","rating":5}},"testimonial_ACjeBg":{"type":"testimonial","settings":{"row":"bottom","image":"shopify:\/\/shop_images\/Ranjana.jpg","name":"Pooja Malhotra","review":"I love how subtle yet effective these crystals feel. Tatsat Universe has become my go-to whenever I’m looking for something meaningful and grounding. A very reassuring experience overall.","rating":5}},"testimonial_kk8hMG":{"type":"testimonial","settings":{"row":"bottom","image":"shopify:\/\/shop_images\/Ram_Sunstone.jpg","name":"Siddharth Jain","review":"I love how subtle yet effective these crystals feel. Tatsat Universe has become my go-to whenever I’m looking for something meaningful and grounding. A very reassuring experience overall.","rating":5}},"testimonial_jh4Mjf":{"type":"testimonial","settings":{"row":"bottom","image":"shopify:\/\/shop_images\/Rahul_Spider_Web_jasper.jpg","name":"Nikhil Arora","review":"There’s a quiet strength in the crystals from Tatsat Universe. They don’t feel flashy — just pure, calming, and thoughtfully curated. A very reassuring experience overall.","rating":5}},"testimonial_qwDH7e":{"type":"testimonial","settings":{"row":"bottom","image":"shopify:\/\/shop_images\/Rohit_prehnite.jpg","name":"Karan Malhotra","review":"Minimal design, powerful energy. The crystal I bought from Tatsat Universe feels subtle yet effective. It doesn’t overpower — it gently supports you through the day.","rating":5}},"testimonial_Dh4Apg":{"type":"testimonial","settings":{"row":"bottom","image":"shopify:\/\/shop_images\/Riya_Green_Flourite.jpg","name":"Shreya Iyer","review":"The crystal I purchased from Tatsat Universe feels incredibly calming. I keep it near my workspace and have noticed a more peaceful, focused environment since then.","rating":5}}},"block_order":["testimonial_ARyNUb","testimonial_r6m776","testimonial_JtY6kY","testimonial_dWD6C3","testimonial_EL6kbR","testimonial_r9edmj","testimonial_gjfALr","testimonial_DpTPmG","testimonial_CYwAaa","testimonial_3EYX93","testimonial_PLLJa3","testimonial_ACjeBg","testimonial_kk8hMG","testimonial_jh4Mjf","testimonial_qwDH7e","testimonial_Dh4Apg"],"name":"Testimonials Marquee","settings":{"heading":"Testimonials"}},"1766233528e2e57a55":{"type":"_blocks","blocks":{"judge_me_reviews_featured_carousel_jH89py":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"maxwidth":1080}}},"block_order":["judge_me_reviews_featured_carousel_jH89py"],"disabled":true,"settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"section_width":"page-width","section_height":"","section_height_custom":50,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0}},"divider_A6cV4D":{"type":"divider","name":"t:names.divider_section","settings":{"color_scheme":"","section_width":"full-width","thickness":1,"corner_radius":"square","width_percent":100,"alignment_horizontal":"center","padding-block-start":16,"padding-block-end":16}},"section_rGJc8c":{"type":"section","blocks":{"group_h9hqTz":{"type":"group","name":"t:names.column","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"flex-start","gap":8,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":10,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"image_pgHx3y":{"type":"image","name":"t:names.image","settings":{"image":"shopify:\/\/shop_images\/Icons-1.png","link":"","image_ratio":"adapt","width":"custom","custom_width":30,"width_mobile":"custom","custom_width_mobile":24,"height":"fit","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_XgDYay":{"type":"text","name":"t:names.heading","settings":{"text":"<p>INFUSED WITH TRINITY HEALING<\/p>","width":"100%","max_width":"normal","alignment":"center","type_preset":"h4","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground-heading)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_nxJr6b":{"type":"text","name":"t:names.description","settings":{"text":"<p>A soul journal to decode your karma,  balance your elements and activate your crystal's purpose<\/p>","width":"100%","max_width":"normal","alignment":"center","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["image_pgHx3y","text_XgDYay","text_nxJr6b"]},"group_fPQFbe":{"type":"group","name":"t:names.column","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"flex-start","gap":8,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":10,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"image_tJz7Eh":{"type":"image","name":"t:names.image","settings":{"image":"shopify:\/\/shop_images\/Icons-2.png","link":"","image_ratio":"adapt","width":"custom","custom_width":30,"width_mobile":"custom","custom_width_mobile":24,"height":"fit","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_eYdX9U":{"type":"text","name":"t:names.heading","settings":{"text":"<p>COMES WITH KARMIC LIGHT BOOK<\/p>","width":"100%","max_width":"normal","alignment":"center","type_preset":"h4","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground-heading)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_DwmnVb":{"type":"text","name":"t:names.description","settings":{"text":"<p>We obsess over the details and strive to deliver the best products at the best prices, every time.<\/p>","width":"100%","max_width":"normal","alignment":"center","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["image_tJz7Eh","text_eYdX9U","text_DwmnVb"]},"group_YztAXD":{"type":"group","name":"t:names.column","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"flex-start","gap":8,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":10,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"image_aYj8nH":{"type":"image","name":"t:names.image","settings":{"image":"shopify:\/\/shop_images\/Icons-3.png","link":"","image_ratio":"adapt","width":"custom","custom_width":30,"width_mobile":"custom","custom_width_mobile":24,"height":"fit","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_kPBPwG":{"type":"text","name":"t:names.heading","settings":{"text":"<p>ENERGIZED BEFORE DELIVERY<\/p>","width":"100%","max_width":"normal","alignment":"center","type_preset":"h4","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground-heading)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_AD7JKr":{"type":"text","name":"t:names.description","settings":{"text":"<p>We don't just pack. We seal your energy tool with sacred intentions.<\/p>","width":"100%","max_width":"normal","alignment":"center","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["image_aYj8nH","text_kPBPwG","text_AD7JKr"]}},"block_order":["group_h9hqTz","group_fPQFbe","group_YztAXD"],"name":"t:names.multicolumn","settings":{"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"flex-start","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":16,"section_width":"page-width","section_height":"","section_height_custom":50,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":48,"padding-block-end":48}}},"order":["custom_slides_aa6mTK","problem_sec_aUEeke","product_list_BFA8mJ","collection_list_TxbKR9","image_gallery_xdLL9D","product_list_VQpani","divider_KJPnFc","section_ytcYni","divider_4MUVjh","video_series_rBByrV","section_T84jTj","17652768549105e0fa","custom_liquid_ntNHAa","section_D4AeMX","section_hE8wam","reviews_section_mQKeU6","1766233528e2e57a55","divider_A6cV4D","section_rGJc8c"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_slides_aa6mTK": {
+      "type": "custom-slides",
+      "blocks": {
+        "slide_ByX9rB": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/Rakhi.jpg",
+            "mobile_image": "shopify://shop_images/Rakhi_Mobile.jpg",
+            "slide_link": "shopify://collections/bracelets",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "slide_rzAGab": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Image-1_jpg.jpg",
+            "mobile_image": "shopify://shop_images/1x1.png",
+            "slide_link": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "slide_NyiUmm": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Banner_5_Heal_Your_Inner_Self_with_Sound_Frequencies.jpg",
+            "mobile_image": "shopify://shop_images/5_50c739ec-3b84-4d35-9ec7-2163b47b10b7.jpg",
+            "slide_link": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "slide_8zHYEV": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/Banner_3_tat_sat__Shp_By_Number.jpg",
+            "mobile_image": "shopify://shop_images/3_625b106d-2ac5-4ddb-abaf-0455bf720478.jpg",
+            "slide_link": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "slide_DDqW7K": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/Banner_6_tat_sat__Crystal_Guidance.jpg",
+            "mobile_image": "shopify://shop_images/6_e592187c-6d95-4f3e-9102-a1c81c4b0063.jpg",
+            "slide_link": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "slide_WVNDam": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/Banner_4_tat_sat__Home_Decor.jpg",
+            "mobile_image": "shopify://shop_images/4_86f6b5bb-03b4-4276-bb30-b5c5d5c98b76.jpg",
+            "slide_link": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "slide_B4iYYw": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/Banner_2_tat_sat__Shp_By_problm.jpg",
+            "mobile_image": "shopify://shop_images/2_beb9a95f-e68d-421a-97c9-510e36215393.jpg",
+            "slide_link": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "slide_6F9zU6": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Banner_1_Ma_am.jpg",
+            "mobile_image": "shopify://shop_images/1_56e5b7c5-10aa-40b7-b94c-7d2d32a9c436.jpg",
+            "slide_link": "",
+            "heading": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_ByX9rB",
+        "slide_rzAGab",
+        "slide_NyiUmm",
+        "slide_8zHYEV",
+        "slide_DDqW7K",
+        "slide_WVNDam",
+        "slide_B4iYYw",
+        "slide_6F9zU6"
+      ],
+      "name": "Custom Slideshow",
+      "settings": {}
+    },
+    "problem_sec_aUEeke": {
+      "type": "problem-sec",
+      "blocks": {
+        "problem_item_yGL9Kr": {
+          "type": "problem_item",
+          "settings": {
+            "product": "peacock-pyrite-master-money-magnet",
+            "title": "MONEY"
+          }
+        },
+        "problem_item_PrkUWM": {
+          "type": "problem_item",
+          "settings": {
+            "product": "pink-kunzite-master-love-magnet",
+            "title": "LOVE"
+          }
+        },
+        "problem_item_T33wjK": {
+          "type": "problem_item",
+          "settings": {
+            "product": "labradorite-master-negative-energy-shield",
+            "title": "EVIL EYE"
+          }
+        },
+        "problem_item_Ucb6qQ": {
+          "type": "problem_item",
+          "settings": {
+            "product": "green-fluorite-master-of-intellect",
+            "title": "MEMORY"
+          }
+        },
+        "problem_item_DmAYhk": {
+          "type": "problem_item",
+          "settings": {
+            "product": "prehnite-master-of-calm-in-the-storm",
+            "title": "STRESS"
+          }
+        },
+        "problem_item_AFTBfR": {
+          "type": "problem_item",
+          "settings": {
+            "product": "sunstone-master-of-power",
+            "title": "CONFIDENCE"
+          }
+        },
+        "problem_item_mjWNab": {
+          "type": "problem_item",
+          "settings": {
+            "product": "citrine-master-of-good-times",
+            "title": "GOOD LUCK"
+          }
+        },
+        "problem_item_MEerU4": {
+          "type": "problem_item",
+          "settings": {
+            "product": "green-jade-master-of-success",
+            "title": "SUCCESS"
+          }
+        }
+      },
+      "block_order": [
+        "problem_item_yGL9Kr",
+        "problem_item_PrkUWM",
+        "problem_item_T33wjK",
+        "problem_item_Ucb6qQ",
+        "problem_item_DmAYhk",
+        "problem_item_AFTBfR",
+        "problem_item_mjWNab",
+        "problem_item_MEerU4"
+      ],
+      "disabled": true,
+      "name": "Shop By Problem",
+      "settings": {
+        "main_heading": "SHOP BY PROBLEM"
+      }
+    },
+    "product_list_BFA8mJ": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "name": "t:names.header",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_list_text_Y3aMH3": {
+              "type": "_product-list-text",
+              "name": "t:names.collection_title",
+              "settings": {
+                "text": "<h3>Shop by problem</h3>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_list_button_jHBV6x": {
+              "type": "_product-list-button",
+              "name": "t:names.product_list_button",
+              "disabled": true,
+              "settings": {
+                "label": "View all",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_list_text_Y3aMH3",
+            "product_list_button_jHBV6x"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_card_gallery_Vb8Pra": {
+              "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
+              "settings": {
+                "image_ratio": "square",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_title_P6nhJE": {
+              "type": "product-title",
+              "name": "t:names.product_title",
+              "settings": {
+                "width": "fit-content",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price_QN7mqa": {
+              "type": "price",
+              "name": "t:names.product_price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "var(--color-foreground)",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "review_q8QR9y": {
+              "type": "review",
+              "name": "t:names.product_review_stars",
+              "settings": {
+                "stars_style": "shaded",
+                "show_number": true,
+                "rating_color": "primary",
+                "type_preset": "paragraph",
+                "alignment": "left"
+              },
+              "blocks": {}
+            },
+            "buy_buttons_Nm9kWd": {
+              "type": "buy-buttons",
+              "name": "t:names.product_buy_buttons",
+              "settings": {
+                "stacking": false,
+                "show_pickup_availability": true,
+                "gift_card_form": true,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            }
+          },
+          "block_order": [
+            "product_card_gallery_Vb8Pra",
+            "product_title_P6nhJE",
+            "price_QN7mqa",
+            "review_q8QR9y",
+            "buy_buttons_Nm9kWd"
+          ]
+        }
+      },
+      "name": "t:names.products_grid",
+      "settings": {
+        "collection": "shop-by-problem",
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "max_products": 8,
+        "columns": 4,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 8,
+        "rows_gap": 24,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 28,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "collection_list_TxbKR9": {
+      "type": "collection-list",
+      "blocks": {
+        "group_kH44E7": {
+          "type": "group",
+          "name": "t:names.header",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_PdFn8J": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>FIND YOUR FAVOURITES</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_pA9VkJ": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>SHOP BY CATEGORY</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_PdFn8J",
+            "text_pA9VkJ"
+          ]
+        },
+        "ai_gen_block_b7731c0_gwa6aq": {
+          "type": "ai_gen_block_b7731c0",
+          "settings": {
+            "columns_desktop": 4,
+            "columns_tablet": 2,
+            "columns_mobile": "1",
+            "gap": 20,
+            "padding": 20,
+            "background_color": "#ffffff",
+            "border_radius": 0,
+            "item_padding": 0,
+            "item_border_radius": 0,
+            "item_border_width": 0,
+            "item_border_color": "#e0e0e0",
+            "text_alignment": "center",
+            "hover_lift": 4,
+            "hover_shadow": 8,
+            "overlay_color": "#d4af7f",
+            "overlay_text_size": 16,
+            "image_spacing": 0,
+            "item_1_enabled": true,
+            "item_1_collection": "bracelets",
+            "item_1_custom_title": "",
+            "item_1_custom_image": "shopify://shop_images/Peacock_Pyrite_4d8e7520-0f28-4ede-98c4-39a805826cba.png",
+            "item_2_enabled": true,
+            "item_2_collection": "neck-pieces",
+            "item_2_custom_title": "",
+            "item_2_custom_image": "shopify://shop_images/Untitled_Session02701_copy.jpg",
+            "item_3_enabled": true,
+            "item_3_collection": "sacred-alignment-set",
+            "item_3_custom_title": "Combo's",
+            "item_3_custom_image": "shopify://shop_images/Shungite_5e7b2350-eb59-4009-8cb7-c33c27673862.png",
+            "item_4_enabled": true,
+            "item_4_collection": "home-decor",
+            "item_4_custom_title": "",
+            "item_4_custom_image": "shopify://shop_images/tat_sat_11.webp",
+            "item_5_enabled": false,
+            "item_5_collection": "",
+            "item_5_custom_title": "",
+            "item_6_enabled": false,
+            "item_6_collection": "",
+            "item_6_custom_title": "",
+            "item_7_enabled": false,
+            "item_7_collection": "",
+            "item_7_custom_title": "",
+            "item_8_enabled": false,
+            "item_8_collection": "",
+            "item_8_custom_title": "",
+            "item_9_enabled": false,
+            "item_9_collection": "",
+            "item_9_custom_title": "",
+            "item_10_enabled": false,
+            "item_10_collection": "",
+            "item_10_custom_title": "",
+            "item_11_enabled": false,
+            "item_11_collection": "",
+            "item_11_custom_title": "",
+            "item_12_enabled": false,
+            "item_12_collection": "",
+            "item_12_custom_title": ""
+          },
+          "blocks": {}
+        },
+        "group_qeeRDQ": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "button_VKCRWa": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "All Categories",
+                "link": "shopify://collections/all",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_VKCRWa"
+          ]
+        },
+        "static-collection-card": {
+          "type": "_collection-card",
+          "name": "t:names.collection_card",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "placement": "below_image",
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "collection_card_gap": 8,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0
+          },
+          "blocks": {
+            "collection_title_EfMLJG": {
+              "type": "collection-title",
+              "name": "t:names.collection_title",
+              "settings": {
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "collection-card-image": {
+              "type": "_collection-card-image",
+              "name": "t:names.collection_card_image",
+              "static": true,
+              "settings": {
+                "image_ratio": "adapt",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "collection_title_EfMLJG"
+          ]
+        }
+      },
+      "block_order": [
+        "group_kH44E7",
+        "ai_gen_block_b7731c0_gwa6aq",
+        "group_qeeRDQ"
+      ],
+      "name": "t:names.collections_carousel",
+      "settings": {
+        "collection_list": [],
+        "layout_type": "carousel",
+        "carousel_on_mobile": false,
+        "columns": 3,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 8,
+        "bento_gap": 8,
+        "rows_gap": 8,
+        "max_collections": 4,
+        "icons_style": "arrow",
+        "icons_shape": "circle",
+        "section_width": "page-width",
+        "gap": 12,
+        "color_scheme": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "image_gallery_xdLL9D": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_AMAVLE": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_WQEjWe": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_qmprYU": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_HNgxnU": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_AMAVLE",
+        "image_WQEjWe",
+        "image_qmprYU",
+        "image_HNgxnU"
+      ],
+      "disabled": true,
+      "name": "Responsive Image Gallery",
+      "settings": {
+        "heading": "Responsive Image Gallery",
+        "subheading": "Resize the screen to see the responsive effect",
+        "columns": 4
+      }
+    },
+    "product_list_VQpani": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "name": "t:names.header",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_list_text_XKmaGD": {
+              "type": "_product-list-text",
+              "name": "t:names.collection_title",
+              "settings": {
+                "text": "<h3>Shop by NUmerology</h3>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_list_button_4jQ8r4": {
+              "type": "_product-list-button",
+              "name": "t:names.product_list_button",
+              "disabled": true,
+              "settings": {
+                "label": "View all",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_list_text_XKmaGD",
+            "product_list_button_4jQ8r4"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_card_gallery_T64gT6": {
+              "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
+              "settings": {
+                "image_ratio": "square",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_title_jaMDDd": {
+              "type": "product-title",
+              "name": "t:names.product_title",
+              "settings": {
+                "width": "fit-content",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price_QPiKG7": {
+              "type": "price",
+              "name": "t:names.product_price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "var(--color-foreground)",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "review_j7J3VQ": {
+              "type": "review",
+              "name": "t:names.product_review_stars",
+              "settings": {
+                "stars_style": "shaded",
+                "show_number": true,
+                "rating_color": "primary",
+                "type_preset": "paragraph",
+                "alignment": "left"
+              },
+              "blocks": {}
+            },
+            "buy_buttons_damNMC": {
+              "type": "buy-buttons",
+              "name": "t:names.product_buy_buttons",
+              "settings": {
+                "stacking": false,
+                "show_pickup_availability": true,
+                "gift_card_form": true,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            }
+          },
+          "block_order": [
+            "product_card_gallery_T64gT6",
+            "product_title_jaMDDd",
+            "price_QPiKG7",
+            "review_j7J3VQ",
+            "buy_buttons_damNMC"
+          ]
+        }
+      },
+      "name": "t:names.products_grid",
+      "settings": {
+        "collection": "shop-by-numerology",
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "max_products": 8,
+        "columns": 4,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 8,
+        "rows_gap": 24,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 28,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "divider_KJPnFc": {
+      "type": "divider",
+      "name": "t:names.divider_section",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "full-width",
+        "thickness": 1,
+        "corner_radius": "square",
+        "width_percent": 100,
+        "alignment_horizontal": "center",
+        "padding-block-start": 16,
+        "padding-block-end": 16
+      }
+    },
+    "section_ytcYni": {
+      "type": "section",
+      "blocks": {
+        "image_KhEeUx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_74144464-4080-4bd5-aa93-41dd32dba257.jpg",
+            "link": "",
+            "image_ratio": "portrait",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "group_TxfWTw": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_CJ8xXr": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<p>TRINITY HEALING</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_3dLah6": {
+              "type": "text",
+              "settings": {
+                "text": "<p>At Tat Sat, every product we serve, is not just a piece of crystal. it's Infused with Trinity Healing: Light, Sound, and Fire. Our offerings help realign your energetic blueprint with the ancient forces of the universe. They are designed not just to heal, but to burn karmas, preserve dharma, and awaken the light within. We don’t just offer energy tools, we offer energy contracts which your soul already chose before entering this lifetime.</p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button_YEn6Hk": {
+              "type": "button",
+              "settings": {
+                "label": "Shop now",
+                "link": "shopify://collections/all",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_CJ8xXr",
+            "text_3dLah6",
+            "button_YEn6Hk"
+          ]
+        }
+      },
+      "block_order": [
+        "image_KhEeUx",
+        "group_TxfWTw"
+      ],
+      "custom_css": [
+        ".image-block__image {max-height: 500px; max-width: 500px; border-radius: 50%;}",
+        ".image-block {justify-content: center;}"
+      ],
+      "name": "t:names.image_with_text",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "divider_4MUVjh": {
+      "type": "divider",
+      "name": "t:names.divider_section",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "full-width",
+        "thickness": 1,
+        "corner_radius": "square",
+        "width_percent": 100,
+        "alignment_horizontal": "center",
+        "padding-block-start": 16,
+        "padding-block-end": 16
+      }
+    },
+    "video_series_rBByrV": {
+      "type": "video-series",
+      "blocks": {
+        "video_card_6Nhqbd": {
+          "type": "video_card",
+          "settings": {
+            "title": "Tat Sat- The Ultimate Truth",
+            "subtitle": "",
+            "video_url": "https://www.youtube.com/embed/np9Sc_ysE5I",
+            "thumbnail": "shopify://shop_images/Video1.webp",
+            "is_youtube": true,
+            "no_video": false,
+            "placeholder_bg": "#f5f5f5",
+            "placeholder_text_color": "#8b631a",
+            "placeholder_text": "Coming Soon",
+            "placeholder_link": "",
+            "video_title_color": "#8b631a",
+            "video_subtitle_color": "#444444"
+          }
+        },
+        "video_card_xJnHKD": {
+          "type": "video_card",
+          "settings": {
+            "title": "Tat Sat- The Ultimate Truth",
+            "subtitle": "",
+            "video_url": "https://www.youtube.com/embed/QX9q1t0WYog",
+            "thumbnail": "shopify://shop_images/Video1.webp",
+            "is_youtube": true,
+            "no_video": false,
+            "placeholder_bg": "#f5f5f5",
+            "placeholder_text_color": "#8b631a",
+            "placeholder_text": "Coming Soon",
+            "placeholder_link": "",
+            "video_title_color": "#8b631a",
+            "video_subtitle_color": "#444444"
+          }
+        },
+        "video_card_3DB6tc": {
+          "type": "video_card",
+          "settings": {
+            "title": "Welcome to Tat Sat",
+            "subtitle": "",
+            "video_url": "https://www.youtube.com/embed/jybXUhlWpsI",
+            "thumbnail": "shopify://shop_images/Video1.webp",
+            "is_youtube": true,
+            "no_video": false,
+            "placeholder_bg": "#f5f5f5",
+            "placeholder_text_color": "#8b631a",
+            "placeholder_text": "Coming Soon",
+            "placeholder_link": "",
+            "video_title_color": "#8b631a",
+            "video_subtitle_color": "#444444"
+          }
+        },
+        "video_card_PmzaNQ": {
+          "type": "video_card",
+          "settings": {
+            "title": "Tat Sat- The Ultimate Truth",
+            "subtitle": "",
+            "video_url": "https://www.youtube.com/embed/EauttqKNotw",
+            "thumbnail": "shopify://shop_images/Video1.webp",
+            "is_youtube": true,
+            "no_video": false,
+            "placeholder_bg": "#f5f5f5",
+            "placeholder_text_color": "#8b631a",
+            "placeholder_text": "Coming Soon",
+            "placeholder_link": "",
+            "video_title_color": "#8b631a",
+            "video_subtitle_color": "#444444"
+          }
+        },
+        "video_card_bVXTyt": {
+          "type": "video_card",
+          "settings": {
+            "title": "Tat Sat's Trinity Healing Ritual ",
+            "subtitle": "",
+            "video_url": "https://www.youtube.com/embed/-WgYooKHiJE",
+            "thumbnail": "shopify://shop_images/Video1.webp",
+            "is_youtube": true,
+            "no_video": false,
+            "placeholder_bg": "#f5f5f5",
+            "placeholder_text_color": "#8b631a",
+            "placeholder_text": "Coming Soon",
+            "placeholder_link": "",
+            "video_title_color": "#8b631a",
+            "video_subtitle_color": "#444444"
+          }
+        },
+        "video_card_3dztYV": {
+          "type": "video_card",
+          "settings": {
+            "title": "What is Tat Sat's Karmic Light Book?",
+            "subtitle": "",
+            "video_url": "https://www.youtube.com/embed/CCk7O3woerc",
+            "thumbnail": "shopify://shop_images/Video1.webp",
+            "is_youtube": true,
+            "no_video": false,
+            "placeholder_bg": "#f5f5f5",
+            "placeholder_text_color": "#8b631a",
+            "placeholder_text": "Coming Soon",
+            "placeholder_link": "",
+            "video_title_color": "#8b631a",
+            "video_subtitle_color": "#444444"
+          }
+        },
+        "video_card_cLXprC": {
+          "type": "video_card",
+          "settings": {
+            "title": "",
+            "subtitle": "",
+            "video_url": "",
+            "is_youtube": false,
+            "no_video": true,
+            "placeholder_bg": "#dccab2",
+            "placeholder_text_color": "#000000",
+            "placeholder_text": "Watch All Videos",
+            "placeholder_link": "https://www.youtube.com/@tatsatuniverse",
+            "video_title_color": "#444444",
+            "video_subtitle_color": "#444444"
+          }
+        }
+      },
+      "block_order": [
+        "video_card_6Nhqbd",
+        "video_card_xJnHKD",
+        "video_card_3DB6tc",
+        "video_card_PmzaNQ",
+        "video_card_bVXTyt",
+        "video_card_3dztYV",
+        "video_card_cLXprC"
+      ],
+      "disabled": true,
+      "name": "Video Series with Instagram",
+      "settings": {
+        "section_heading": "TAT SAT SACRED SERIES",
+        "section_subheading": "Watch the energies come alive — from our origin story to healing rituals and karmic activation.",
+        "padding_top": 40,
+        "padding_bottom": 50,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "heading_font_size": 24,
+        "subheading_font_size": 14,
+        "heading_color": "#8b631a",
+        "subheading_color": "#493002",
+        "subheading_font_weight": "300"
+      }
+    },
+    "section_T84jTj": {
+      "type": "section",
+      "blocks": {
+        "testimonials_qMVAGk": {
+          "type": "testimonials",
+          "disabled": true,
+          "settings": {
+            "style": "style-1",
+            "padding": "",
+            "margin": "",
+            "show_heading": true,
+            "heading": "",
+            "navigation": true,
+            "pagination": true,
+            "infinite": true,
+            "autoplay": true,
+            "autoplay_speed": "3000",
+            "columns": 3,
+            "column1440": 3,
+            "column1": 3,
+            "column2": 2,
+            "column3": 2,
+            "column4": 1
+          },
+          "blocks": {
+            "testimonial_item_TC7dnA": {
+              "type": "_testimonial-item",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "show_image": true,
+                "image": "shopify://shop_images/aobvehfqu8x7jx6pw7n2.webp",
+                "size": "83px",
+                "show_name": true,
+                "name": "Anjali Desai",
+                "show_title": true,
+                "title": "“Good vibes only”",
+                "show_review": true,
+                "review": "Ever since I started wearing this, I’ve noticed small but positive changes. Even my mood has improved...",
+                "show_rating": true,
+                "rating": "4"
+              },
+              "blocks": {}
+            },
+            "testimonial_item_69hG3p": {
+              "type": "_testimonial-item",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "show_image": true,
+                "image": "shopify://shop_images/qh0wsuw1iif86b710ool.webp",
+                "size": "83px",
+                "show_name": true,
+                "name": "Kiran Malhotra",
+                "show_title": true,
+                "title": "“Stylish and  Spiritual”",
+                "show_review": true,
+                "review": "Wasn’t expecting much, but this bracelet truly amazed me. It feels like a silent support system on my wrist...",
+                "show_rating": true,
+                "rating": "4"
+              },
+              "blocks": {}
+            },
+            "testimonial_item_TF94M7": {
+              "type": "_testimonial-item",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "show_image": true,
+                "image": "shopify://shop_images/eyq1zocvjyerebs7yipb.webp",
+                "size": "83px",
+                "show_name": true,
+                "name": "Riya Sharma",
+                "show_title": true,
+                "title": "“Highly Recommend!”",
+                "show_review": true,
+                "review": "This bracelet has helped me stay positive during some tough days. Very well-made and deeply meaningful...",
+                "show_rating": true,
+                "rating": "4"
+              },
+              "blocks": {}
+            },
+            "testimonial_item_aFzDpV": {
+              "type": "_testimonial-item",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "show_image": true,
+                "image": "shopify://shop_images/ojxhk0rxyirhghaz0enw.webp",
+                "size": "83px",
+                "show_name": true,
+                "name": "Riya & Karan Malhotra",
+                "show_title": true,
+                "title": "“Golden Bond”",
+                "show_review": true,
+                "review": "These Citrine bracelets have brought warmth, joy, and a renewed sense of togetherness into our lives. Truly the master of good times!",
+                "show_rating": true,
+                "rating": "4"
+              },
+              "blocks": {}
+            },
+            "testimonial_item_hU9inw": {
+              "type": "_testimonial-item",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "show_image": true,
+                "image": "shopify://shop_images/lsbx1igkjldo8h5rb0hy.webp",
+                "size": "83px",
+                "show_name": true,
+                "name": "Neha Kapoor",
+                "show_title": true,
+                "title": "“Lucky Charm for Real”",
+                "show_review": true,
+                "review": "Got this as a gift and now I don’t leave home without it. Brings me a sense of peace and confidence every day...",
+                "show_rating": true,
+                "rating": "4"
+              },
+              "blocks": {}
+            },
+            "testimonial_item_3QqRTn": {
+              "type": "_testimonial-item",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "show_image": true,
+                "image": "shopify://shop_images/hcs9rbwefz6djzg3880h.webp",
+                "size": "83px",
+                "show_name": true,
+                "name": "Arjun Mehta",
+                "show_title": true,
+                "title": "“Wisdom & Modern Intention”",
+                "show_review": true,
+                "review": "Wearing the Peacock Pyrite bracelet has truly amplified my energy and focus, it's a powerful magnet for abundance. A perfect blend of ancient wisdom and modern intention.",
+                "show_rating": true,
+                "rating": "4"
+              },
+              "blocks": {}
+            },
+            "testimonial_item_bNYzWN": {
+              "type": "_testimonial-item",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "show_image": true,
+                "image": "shopify://shop_images/azzzklkurnycfmpfle6n.webp",
+                "size": "83px",
+                "show_name": true,
+                "name": "Dr. Ananya Sharma",
+                "show_title": true,
+                "title": "“Timeless Glow”",
+                "show_review": true,
+                "review": "Wearing the Mookaite Jasper bracelet feels like a daily dose of youthful energy—grounding, radiant, and deeply rejuvenating.",
+                "show_rating": true,
+                "rating": "4"
+              },
+              "blocks": {}
+            },
+            "custom-testimonial": {
+              "type": "custom-testimonial",
+              "static": true,
+              "settings": {
+                "text_align": "center",
+                "color_heading": "#8b631a",
+                "font_size_heading": 24,
+                "line_height_heading": 34,
+                "font_weight_heading": "600",
+                "margin_heading": "0px 0px 0px 0px",
+                "font": "--font-family-base",
+                "color_review": "#493002",
+                "font_size_review": 14,
+                "line_height_review": 24,
+                "font_weight_review": "400",
+                "font_style": "normal",
+                "margin_review": "0px 0px 20px 0px",
+                "color_title": "#8b631a",
+                "font_size_title": 18,
+                "line_height_title": 24,
+                "font_weight_title": "500",
+                "letter_spacing_title": 0,
+                "margin_title": "0px 0px 12px 0px",
+                "color_name": "#8b631a",
+                "font_size_name": 12,
+                "line_height_name": 22,
+                "font_weight_name": "400",
+                "letter_spacing_name": 2,
+                "margin_name": "15px 0px 0px 0px",
+                "width_avatar": 83,
+                "border_avatar": "50%",
+                "font_size_heading_mobi": 20,
+                "line_height_heading_mobi": 28,
+                "margin_heading_mobi": "0px 0px 0px 0px",
+                "font_size_review_mobi": 14,
+                "line_height_review_mobi": 24,
+                "font_size_title_mobi": 20,
+                "line_height_title_mobi": 28,
+                "font_size_name_mobi": 12,
+                "line_height_name_mobi": 22,
+                "width_avatar_mobi": 83
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "testimonial_item_TC7dnA",
+            "testimonial_item_69hG3p",
+            "testimonial_item_TF94M7",
+            "testimonial_item_aFzDpV",
+            "testimonial_item_hU9inw",
+            "testimonial_item_3QqRTn",
+            "testimonial_item_bNYzWN"
+          ]
+        }
+      },
+      "block_order": [
+        "testimonials_qMVAGk"
+      ],
+      "disabled": true,
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "small",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "17652768549105e0fa": {
+      "type": "_blocks",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_ntNHAa": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  .testimonials-section {\n    padding: 60px 20px;\n    background: #ffffff;\n    max-width: 1400px;\n    margin: 0 auto;\n    position: relative;\n  }\n\n  .testimonials-header {\n    text-align: center;\n    margin-bottom: 50px;\n  }\n\n  .testimonials-header h2 {\n    font-size: 25px;\n    font-weight: 600;\n    color: #8b7355;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n    margin: 0;\n  }\n\n  .testimonials-slider-wrapper {\n    position: relative;\n    overflow: hidden;\n    padding: 0 60px;\n  }\n\n  .testimonials-slider {\n    display: flex;\n    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);\n  }\n\n  .testimonial-card {\n    flex: 0 0 calc(50% - 15px);\n    background: #ffffff;\n    border: 2px solid #e5e5e5;\n    border-radius: 8px;\n    padding: 30px 25px;\n    text-align: center;\n    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n    transition: all 0.3s ease;\n    margin-right: 30px;\n  }\n\n  .testimonial-card:hover {\n    transform: translateY(-5px);\n    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);\n    border-color: #8b7355;\n  }\n\n  .testimonial-stars {\n    display: flex;\n    justify-content: center;\n    gap: 5px;\n    margin-bottom: 15px;\n  }\n\n  .testimonial-stars svg {\n    width: 20px;\n    height: 20px;\n    fill: #ffa500;\n  }\n\n  .testimonial-stars svg.empty {\n    fill: #e0e0e0;\n  }\n\n  .testimonial-title {\n    font-size: 18px;\n    font-weight: 600;\n    color: #333333;\n    margin-bottom: 15px;\n    font-style: italic;\n  }\n\n  .testimonial-text {\n    font-size: 15px;\n    line-height: 1.7;\n    color: #666666;\n    margin-bottom: 25px;\n    min-height: 80px;\n  }\n\n  .testimonial-customer {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 12px;\n  }\n\n  .testimonial-image {\n    width: 80px;\n    height: 80px;\n    border-radius: 50%;\n    overflow: hidden;\n    border: 3px solid #8b7355;\n  }\n\n  .testimonial-image img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n  }\n\n  .testimonial-name {\n    font-size: 16px;\n    font-weight: 500;\n    color: #8b7355;\n  }\n\n  /* Navigation Arrows */\n  .slider-nav {\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    width: 44px;\n    height: 44px;\n    background: #ffffff;\n    border: 2px solid #8b7355;\n    border-radius: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    z-index: 10;\n  }\n\n  .slider-nav:hover {\n    background: #8b7355;\n  }\n\n  .slider-nav:hover svg {\n    fill: #ffffff;\n  }\n\n  .slider-nav svg {\n    width: 22px;\n    height: 22px;\n    fill: #8b7355;\n    transition: fill 0.3s ease;\n  }\n\n  .slider-nav.prev {\n    left: 0;\n  }\n\n  .slider-nav.next {\n    right: 0;\n  }\n\n  /* Navigation Dots */\n  .slider-dots {\n    display: flex;\n    justify-content: center;\n    gap: 10px;\n    margin-top: 35px;\n  }\n\n  .slider-dot {\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background: #e0e0e0;\n    cursor: pointer;\n    transition: all 0.3s ease;\n  }\n\n  .slider-dot.active {\n    background: #8b7355;\n    width: 30px;\n    border-radius: 5px;\n  }\n\n  /* Responsive */\n  @media (max-width: 768px) {\n    .testimonials-section {\n      padding: 40px 15px;\n    }\n\n    .testimonials-header h2 {\n      font-size: 24px;\n    }\n\n    .testimonials-slider-wrapper {\n      padding: 0 50px;\n    }\n\n    .testimonial-card {\n      flex: 0 0 100%;\n      padding: 25px 20px;\n      margin-right: 0;\n    }\n\n    .testimonial-text {\n      min-height: auto;\n    }\n\n    .slider-nav {\n      width: 38px;\n      height: 38px;\n    }\n\n    .slider-nav svg {\n      width: 18px;\n      height: 18px;\n    }\n  }\n</style>\n\n<div class=\"testimonials-section\">\n  \n  <!-- Header -->\n  <div class=\"testimonials-header\">\n    <h2>TESTIMONIALS</h2>\n  </div>\n\n  <!-- Slider Wrapper -->\n  <div class=\"testimonials-slider-wrapper\">\n    \n    <!-- Previous Button -->\n    <div class=\"slider-nav prev\" onclick=\"testimonialSlider.moveSlide(-1)\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z\"/>\n      </svg>\n    </div>\n\n    <!-- Testimonials Slider -->\n    <div class=\"testimonials-slider\" id=\"testimonialsSlider\">\n      \n      <!-- Testimonial 1 -->\n      <div class=\"testimonial-card\">\n        <div class=\"testimonial-stars\">\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg class=\"empty\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n        </div>\n        <div class=\"testimonial-title\">\"Good vibes only\"</div>\n        <div class=\"testimonial-text\">\n          Ever since I started wearing this, I've noticed small but positive changes. Even my mood has improved...\n        </div>\n        <div class=\"testimonial-customer\">\n          <div class=\"testimonial-image\">\n            <img src=\"https://tatsatuniverse.com/cdn/shop/files/qh0wsuw1iif86b710ool_180x.webp?v=1751144602\" alt=\"Anjali Desai\">\n          </div>\n          <div class=\"testimonial-name\">Anjali Desai</div>\n        </div>\n      </div>\n\n      <!-- Testimonial 2 -->\n      <div class=\"testimonial-card\">\n        <div class=\"testimonial-stars\">\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg class=\"empty\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n        </div>\n        <div class=\"testimonial-title\">\"Stylish and Spiritual\"</div>\n        <div class=\"testimonial-text\">\n          Wasn't expecting much, but this bracelet truly amazed me. It feels like a silent support system on my wrist...\n        </div>\n        <div class=\"testimonial-customer\">\n          <div class=\"testimonial-image\">\n            <img src=\"https://tatsatuniverse.com/cdn/shop/files/lsbx1igkjldo8h5rb0hy_180x.webp?v=1751144601\" alt=\"Kiran Malhotra\">\n          </div>\n          <div class=\"testimonial-name\">Kiran Malhotra</div>\n        </div>\n      </div>\n\n      <!-- Testimonial 3 -->\n      <div class=\"testimonial-card\">\n        <div class=\"testimonial-stars\">\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n        </div>\n        <div class=\"testimonial-title\">\"Pure Energy\"</div>\n        <div class=\"testimonial-text\">\n          This product exceeded all my expectations. I can feel the positive energy flowing through me every day!\n        </div>\n        <div class=\"testimonial-customer\">\n          <div class=\"testimonial-image\">\n            <img src=\"https://tatsatuniverse.com/cdn/shop/files/ojxhk0rxyirhghaz0enw_180x.webp?v=1751144600\" alt=\"Rahul Sharma\">\n          </div>\n          <div class=\"testimonial-name\">Rahul Sharma</div>\n        </div>\n      </div>\n\n      <!-- Testimonial 4 -->\n      <div class=\"testimonial-card\">\n        <div class=\"testimonial-stars\">\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n          <svg viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n        </div>\n        <div class=\"testimonial-title\">\"Life Changing\"</div>\n        <div class=\"testimonial-text\">\n          I never believed in these things, but after using this product, I'm a true believer. Thank you!\n        </div>\n        <div class=\"testimonial-customer\">\n          <div class=\"testimonial-image\">\n            <img src=\"https://tatsatuniverse.com/cdn/shop/files/hcs9rbwefz6djzg3880h_180x.webp?v=1751144602\" alt=\"Priya Singh\">\n          </div>\n          <div class=\"testimonial-name\">Priya Singh</div>\n        </div>\n      </div>\n\n    </div>\n\n    <!-- Next Button -->\n    <div class=\"slider-nav next\" onclick=\"testimonialSlider.moveSlide(1)\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/>\n      </svg>\n    </div>\n\n  </div>\n\n  <!-- Navigation Dots -->\n  <div class=\"slider-dots\" id=\"sliderDots\"></div>\n\n</div>\n\n<script>\n  var testimonialSlider = (function() {\n    const slider = document.getElementById('testimonialsSlider');\n    const dotsContainer = document.getElementById('sliderDots');\n    const cards = slider.querySelectorAll('.testimonial-card');\n    \n    let currentIndex = 0;\n    let cardsPerView = 2; // 2 cards on desktop\n    let autoplayInterval;\n\n    // Check if mobile\n    function isMobile() {\n      return window.innerWidth <= 768;\n    }\n\n    // Update cards per view\n    function updateCardsPerView() {\n      cardsPerView = isMobile() ? 1 : 2;\n      return Math.ceil(cards.length / cardsPerView);\n    }\n\n    // Create dots\n    function createDots() {\n      const totalSlides = updateCardsPerView();\n      dotsContainer.innerHTML = '';\n      \n      for (let i = 0; i < totalSlides; i++) {\n        const dot = document.createElement('div');\n        dot.className = 'slider-dot' + (i === 0 ? ' active' : '');\n        dot.onclick = function() { goToSlide(i); };\n        dotsContainer.appendChild(dot);\n      }\n    }\n\n    // Update slider position\n    function updateSlider() {\n      const slideWidth = 100; // Each slide is 100% of container\n      const offset = currentIndex * slideWidth;\n      \n      slider.style.transform = `translateX(-${offset}%)`;\n\n      // Update dots\n      const dots = dotsContainer.querySelectorAll('.slider-dot');\n      dots.forEach((dot, index) => {\n        dot.classList.toggle('active', index === currentIndex);\n      });\n    }\n\n    // Move slide\n    function moveSlide(direction) {\n      const totalSlides = updateCardsPerView();\n      currentIndex += direction;\n      \n      // Loop around\n      if (currentIndex < 0) {\n        currentIndex = totalSlides - 1;\n      } else if (currentIndex >= totalSlides) {\n        currentIndex = 0;\n      }\n      \n      updateSlider();\n      resetAutoplay();\n    }\n\n    // Go to specific slide\n    function goToSlide(index) {\n      currentIndex = index;\n      updateSlider();\n      resetAutoplay();\n    }\n\n    // Start autoplay\n    function startAutoplay() {\n      autoplayInterval = setInterval(function() {\n        moveSlide(1);\n      }, 5000);\n    }\n\n    // Reset autoplay\n    function resetAutoplay() {\n      clearInterval(autoplayInterval);\n      startAutoplay();\n    }\n\n    // Pause on hover\n    slider.addEventListener('mouseenter', function() {\n      clearInterval(autoplayInterval);\n    });\n\n    slider.addEventListener('mouseleave', function() {\n      startAutoplay();\n    });\n\n    // Handle window resize\n    let resizeTimeout;\n    window.addEventListener('resize', function() {\n      clearTimeout(resizeTimeout);\n      resizeTimeout = setTimeout(function() {\n        currentIndex = 0;\n        createDots();\n        updateSlider();\n      }, 250);\n    });\n\n    // Initialize\n    createDots();\n    updateSlider();\n    startAutoplay();\n\n    // Public methods\n    return {\n      moveSlide: moveSlide,\n      goToSlide: goToSlide\n    };\n  })();\n</script>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "section_D4AeMX": {
+      "type": "section",
+      "blocks": {
+        "group_EE3CbT": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_KzNqRB": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<p>KARMIC LIGHTBOOK</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_PG9TzK": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Each Tat Sat piece comes with a sacred guide. The Karmic Lightbook This is not a rulebook, but a divine manual for your soul. It outlines the karmic actions, mindset shifts, and aligned practices you must adopt to truly activate the energy of your chosen crystal. Because energy doesn’t respond to intention alone, it responds to action with awareness. Following the Karmic Lightbook helps:</p><ul><li>Help you decode which Tatva dominates or distorts your karmas.</li><li>Offer simple yet powerful healing actions rooted in that element.</li><li>Align your thoughts, emotions, and actions with your soul dharma.</li><li>And most importantly - activate your awakened crystal through your karma's. </li></ul><p>The Lightbook ensures that your inner field and outer frequency are in sync -<br/>so your crystal doesn’t just sit with you, it works with you.<br/>It becomes an ally, a transmitter, a divine amplifier of your awakened karma.<br/></p>",
+                "width": "fit-content",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button_baTzX6": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Shop now",
+                "link": "shopify://collections/all",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_KzNqRB",
+            "text_PG9TzK",
+            "button_baTzX6"
+          ]
+        },
+        "image_BJFhEz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Karmik_Light_Book.webp",
+            "link": "",
+            "image_ratio": "square",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "group_EE3CbT",
+        "image_BJFhEz"
+      ],
+      "custom_css": [
+        ".image-block__image {object-fit: contain;}"
+      ],
+      "name": "t:names.image_with_text",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "section_hE8wam": {
+      "type": "section",
+      "blocks": {
+        "image_C6PBwA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image.jpg",
+            "link": "",
+            "image_ratio": "square",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "group_8TexQt": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_mEBMWK": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<p>Welcome to Tat Sat.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h6",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_JbpETG": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<p>If you've arrived at Tat Sat, <br/>it's not by chance -  it's a sign.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "1.25rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_hk6MXP": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Maybe you've been searching. Maybe you've been silent. But your inner frequency has been calling for alignment - and the universe listened.<br/><br/>At<strong> </strong>Tat Sat, we don't just offer crystals. We offer Divine Companions - each one coded with light, sound, and intention to support your highest path. <br/><br/>If you feel a quiet YES in your body, if your eyes pause a little longer on one crystal, if your heart knows before your mind catches up, that’s your karmic awakening whispering:<br/><strong><br/>\"You’re ready to remember who you are.\"<br/></strong><br/>Every piece you see here has been chosen, coded and prepared through sacred rituals - so it may reach the one it was meant for. You did not find us. You remembered us. You were never lost - only being led, gently, back to your truth.</p>",
+                "width": "fit-content",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button_gaUJHR": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "About Us",
+                "link": "shopify://pages/brand-story",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_mEBMWK",
+            "text_JbpETG",
+            "text_hk6MXP",
+            "button_gaUJHR"
+          ]
+        }
+      },
+      "block_order": [
+        "image_C6PBwA",
+        "group_8TexQt"
+      ],
+      "name": "t:names.image_with_text",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "reviews_section_mQKeU6": {
+      "type": "reviews-section",
+      "blocks": {
+        "testimonial_ARyNUb": {
+          "type": "testimonial",
+          "settings": {
+            "row": "top",
+            "image": "shopify://shop_images/Sneha_Citrine.jpg",
+            "name": "Anjali Desai",
+            "review": "Ever since I started wearing this crystal bracelet from Tatsat Universe, I’ve felt more calm and emotionally balanced. The energy feels gentle yet powerful, and it has become a part of my daily routine.",
+            "rating": 5
+          }
+        },
+        "testimonial_r6m776": {
+          "type": "testimonial",
+          "settings": {
+            "row": "top",
+            "image": "shopify://shop_images/Daksh_peacock_Pyrite.jpg",
+            "name": "Rahul Mehta",
+            "review": "I was a bit skeptical at first, but the crystal I received from Tatsat Universe exceeded my expectations. The quality is excellent, and I genuinely feel more focused and grounded throughout the day.",
+            "rating": 5
+          }
+        },
+        "testimonial_JtY6kY": {
+          "type": "testimonial",
+          "settings": {
+            "row": "top",
+            "image": "shopify://shop_images/Sonia.jpg",
+            "name": "Neha Kapoor",
+            "review": "The crystals from Tatsat Universe are not only beautiful but also feel deeply meaningful. I keep mine close during meditation, and it has helped me feel more centered and positive.",
+            "rating": 5
+          }
+        },
+        "testimonial_dWD6C3": {
+          "type": "testimonial",
+          "settings": {
+            "row": "top",
+            "image": "shopify://shop_images/Harsh_Mookait.jpg",
+            "name": "Amit Verma",
+            "review": "What I appreciate most about Tatsat Universe is the authenticity. The crystal feels natural, well-crafted, and carries a soothing energy that stays with you. Definitely worth it.",
+            "rating": 5
+          }
+        },
+        "testimonial_EL6kbR": {
+          "type": "testimonial",
+          "settings": {
+            "row": "top",
+            "image": "shopify://shop_images/Roshni_Clear_Quartz.jpg",
+            "name": "Priya Sharma",
+            "review": "I ordered a crystal as a gift and it was absolutely loved. The packaging, quality, and intention behind Tatsat Universe products make them feel very special and thoughtful.",
+            "rating": 5
+          }
+        },
+        "testimonial_r9edmj": {
+          "type": "testimonial",
+          "settings": {
+            "row": "top",
+            "image": "shopify://shop_images/Sneha_Citrine.jpg",
+            "name": "Anjali Desai",
+            "review": "Ever since I started wearing this crystal bracelet from Tatsat Universe, I’ve felt more calm and emotionally balanced. The energy feels gentle yet powerful, and it has become a part of my daily routine.",
+            "rating": 5
+          }
+        },
+        "testimonial_gjfALr": {
+          "type": "testimonial",
+          "settings": {
+            "row": "top",
+            "image": "shopify://shop_images/Daksh_peacock_Pyrite.jpg",
+            "name": "Rahul Mehta",
+            "review": "I was a bit skeptical at first, but the crystal I received from Tatsat Universe exceeded my expectations. The quality is excellent, and I genuinely feel more focused and grounded throughout the day.",
+            "rating": 5
+          }
+        },
+        "testimonial_DpTPmG": {
+          "type": "testimonial",
+          "settings": {
+            "row": "top",
+            "image": "shopify://shop_images/Sonia.jpg",
+            "name": "Neha Kapoor",
+            "review": "The crystals from Tatsat Universe are not only beautiful but also feel deeply meaningful. I keep mine close during meditation, and it has helped me feel more centered and positive.",
+            "rating": 5
+          }
+        },
+        "testimonial_CYwAaa": {
+          "type": "testimonial",
+          "settings": {
+            "row": "bottom",
+            "image": "shopify://shop_images/Rohit_prehnite.jpg",
+            "name": "Karan Malhotra",
+            "review": "Minimal design, powerful energy. The crystal I bought from Tatsat Universe feels subtle yet effective. It doesn’t overpower — it gently supports you through the day.",
+            "rating": 5
+          }
+        },
+        "testimonial_3EYX93": {
+          "type": "testimonial",
+          "settings": {
+            "row": "bottom",
+            "image": "shopify://shop_images/Riya_Green_Flourite.jpg",
+            "name": "Shreya Iyer",
+            "review": "The crystal I purchased from Tatsat Universe feels incredibly calming. I keep it near my workspace and have noticed a more peaceful, focused environment since then.",
+            "rating": 5
+          }
+        },
+        "testimonial_PLLJa3": {
+          "type": "testimonial",
+          "settings": {
+            "row": "bottom",
+            "image": "shopify://shop_images/Vansh_Labradorite.jpg",
+            "name": "Rohit Khanna",
+            "review": "You can immediately sense the quality of the crystals from Tatsat Universe. They feel genuine, well-selected, and thoughtfully delivered. A very reassuring experience overall.",
+            "rating": 5
+          }
+        },
+        "testimonial_ACjeBg": {
+          "type": "testimonial",
+          "settings": {
+            "row": "bottom",
+            "image": "shopify://shop_images/Ranjana.jpg",
+            "name": "Pooja Malhotra",
+            "review": "I love how subtle yet effective these crystals feel. Tatsat Universe has become my go-to whenever I’m looking for something meaningful and grounding. A very reassuring experience overall.",
+            "rating": 5
+          }
+        },
+        "testimonial_kk8hMG": {
+          "type": "testimonial",
+          "settings": {
+            "row": "bottom",
+            "image": "shopify://shop_images/Ram_Sunstone.jpg",
+            "name": "Siddharth Jain",
+            "review": "I love how subtle yet effective these crystals feel. Tatsat Universe has become my go-to whenever I’m looking for something meaningful and grounding. A very reassuring experience overall.",
+            "rating": 5
+          }
+        },
+        "testimonial_jh4Mjf": {
+          "type": "testimonial",
+          "settings": {
+            "row": "bottom",
+            "image": "shopify://shop_images/Rahul_Spider_Web_jasper.jpg",
+            "name": "Nikhil Arora",
+            "review": "There’s a quiet strength in the crystals from Tatsat Universe. They don’t feel flashy — just pure, calming, and thoughtfully curated. A very reassuring experience overall.",
+            "rating": 5
+          }
+        },
+        "testimonial_qwDH7e": {
+          "type": "testimonial",
+          "settings": {
+            "row": "bottom",
+            "image": "shopify://shop_images/Rohit_prehnite.jpg",
+            "name": "Karan Malhotra",
+            "review": "Minimal design, powerful energy. The crystal I bought from Tatsat Universe feels subtle yet effective. It doesn’t overpower — it gently supports you through the day.",
+            "rating": 5
+          }
+        },
+        "testimonial_Dh4Apg": {
+          "type": "testimonial",
+          "settings": {
+            "row": "bottom",
+            "image": "shopify://shop_images/Riya_Green_Flourite.jpg",
+            "name": "Shreya Iyer",
+            "review": "The crystal I purchased from Tatsat Universe feels incredibly calming. I keep it near my workspace and have noticed a more peaceful, focused environment since then.",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_ARyNUb",
+        "testimonial_r6m776",
+        "testimonial_JtY6kY",
+        "testimonial_dWD6C3",
+        "testimonial_EL6kbR",
+        "testimonial_r9edmj",
+        "testimonial_gjfALr",
+        "testimonial_DpTPmG",
+        "testimonial_CYwAaa",
+        "testimonial_3EYX93",
+        "testimonial_PLLJa3",
+        "testimonial_ACjeBg",
+        "testimonial_kk8hMG",
+        "testimonial_jh4Mjf",
+        "testimonial_qwDH7e",
+        "testimonial_Dh4Apg"
+      ],
+      "name": "Testimonials Marquee",
+      "settings": {
+        "heading": "Testimonials"
+      }
+    },
+    "1766233528e2e57a55": {
+      "type": "_blocks",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_jH89py": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_jH89py"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "divider_A6cV4D": {
+      "type": "divider",
+      "name": "t:names.divider_section",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "full-width",
+        "thickness": 1,
+        "corner_radius": "square",
+        "width_percent": 100,
+        "alignment_horizontal": "center",
+        "padding-block-start": 16,
+        "padding-block-end": 16
+      }
+    },
+    "section_rGJc8c": {
+      "type": "section",
+      "blocks": {
+        "group_h9hqTz": {
+          "type": "group",
+          "name": "t:names.column",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 8,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 10,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "image_pgHx3y": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/Icons-1.png",
+                "link": "",
+                "image_ratio": "adapt",
+                "width": "custom",
+                "custom_width": 30,
+                "width_mobile": "custom",
+                "custom_width_mobile": 24,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_XgDYay": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<p>INFUSED WITH TRINITY HEALING</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h4",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_nxJr6b": {
+              "type": "text",
+              "name": "t:names.description",
+              "settings": {
+                "text": "<p>A soul journal to decode your karma,  balance your elements and activate your crystal's purpose</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_pgHx3y",
+            "text_XgDYay",
+            "text_nxJr6b"
+          ]
+        },
+        "group_fPQFbe": {
+          "type": "group",
+          "name": "t:names.column",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 8,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 10,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "image_tJz7Eh": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/Icons-2.png",
+                "link": "",
+                "image_ratio": "adapt",
+                "width": "custom",
+                "custom_width": 30,
+                "width_mobile": "custom",
+                "custom_width_mobile": 24,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_eYdX9U": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<p>COMES WITH KARMIC LIGHT BOOK</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h4",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_DwmnVb": {
+              "type": "text",
+              "name": "t:names.description",
+              "settings": {
+                "text": "<p>We obsess over the details and strive to deliver the best products at the best prices, every time.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_tJz7Eh",
+            "text_eYdX9U",
+            "text_DwmnVb"
+          ]
+        },
+        "group_YztAXD": {
+          "type": "group",
+          "name": "t:names.column",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 8,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 10,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "image_aYj8nH": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/Icons-3.png",
+                "link": "",
+                "image_ratio": "adapt",
+                "width": "custom",
+                "custom_width": 30,
+                "width_mobile": "custom",
+                "custom_width_mobile": 24,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_kPBPwG": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<p>ENERGIZED BEFORE DELIVERY</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h4",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_AD7JKr": {
+              "type": "text",
+              "name": "t:names.description",
+              "settings": {
+                "text": "<p>We don't just pack. We seal your energy tool with sacred intentions.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_aYj8nH",
+            "text_kPBPwG",
+            "text_AD7JKr"
+          ]
+        }
+      },
+      "block_order": [
+        "group_h9hqTz",
+        "group_fPQFbe",
+        "group_YztAXD"
+      ],
+      "name": "t:names.multicolumn",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "flex-start",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    }
+  },
+  "order": [
+    "custom_slides_aa6mTK",
+    "problem_sec_aUEeke",
+    "product_list_BFA8mJ",
+    "collection_list_TxbKR9",
+    "image_gallery_xdLL9D",
+    "product_list_VQpani",
+    "divider_KJPnFc",
+    "section_ytcYni",
+    "divider_4MUVjh",
+    "video_series_rBByrV",
+    "section_T84jTj",
+    "17652768549105e0fa",
+    "custom_liquid_ntNHAa",
+    "section_D4AeMX",
+    "section_hE8wam",
+    "reviews_section_mQKeU6",
+    "1766233528e2e57a55",
+    "divider_A6cV4D",
+    "section_rGJc8c"
+  ]
+}
