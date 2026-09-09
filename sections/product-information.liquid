@@ -1,0 +1,1263 @@
+{% liquid
+  if section.settings.desktop_media_position == 'left'
+    assign render_order = 'media,product-details'
+  else
+    assign render_order = 'product-details,media'
+  endif
+
+  assign product_has_media = true
+  if closest.product.media.size == 0
+    assign product_has_media = false
+  endif
+
+  assign product_grid_class = 'product-information__grid'
+
+  if product_has_media == false
+    assign product_grid_class = product_grid_class | append: ' product-information--media-none'
+  elsif section.settings.desktop_media_position == 'right'
+    assign product_grid_class = product_grid_class | append: ' product-information--media-right'
+  else
+    assign product_grid_class = product_grid_class | append: ' product-information--media-left'
+  endif
+
+  if section.settings.equal_columns
+    assign product_grid_class = product_grid_class | append: ' product-information__grid--half'
+
+    if section.settings.limit_details_width
+      assign product_grid_class = product_grid_class | append: ' product-information__grid--limit-details'
+    endif
+  endif
+
+  case section.settings.content_width
+    when 'content-center-aligned'
+      assign content_width = 'page-width'
+    when 'content-full-width'
+      assign content_width = 'full-width'
+  endcase
+%}
+
+<script type="application/ld+json">
+  {{ closest.product | structured_data }}
+</script>
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div
+  class="product-information section section--{{ content_width }} spacing-style color-{{ section.settings.color_scheme }} relative"
+  style="{% render 'spacing-style', settings: section.settings %} --gap: {{ section.settings.gap }}px;"
+>
+  {% if section.settings.desktop_media_position == 'left' and product_has_media %}
+    {% assign product_href = '#ProductInformation-' | append: section.id %}
+    {% render 'skip-to-content-link', href: product_href, text: 'accessibility.skip_to_product_info' %}
+  {% endif %}
+  <div
+    class="{{ product_grid_class }}"
+    data-product-grid-content
+  >
+    {% assign render_order_array = render_order | split: ',' %}
+    {% capture media %}
+      <div
+        class="product-information__media"
+        data-testid="product-information-media"
+      >
+        {%- content_for 'block',
+          type: '_product-media-gallery',
+          id: 'media-gallery',
+          closest.product: closest.product
+        -%}
+      </div>
+    {% endcapture %}
+
+    {% capture details %}
+        {% content_for 'block',
+          type: '_product-details',   
+          id: 'product-details',
+          closest.product: closest.product
+        %}
+        
+       
+    {% endcapture %}
+
+    {% for block in render_order_array %}
+      {% if block == 'media' and product_has_media %}
+        {{ media }}
+      {% elsif block == 'product-details' %}
+        {{ details }}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+<!-- TRINITY HEALING POPUP -->
+<div id="TrinityPopup" class="trinity-modal" aria-hidden="true">
+  <div class="trinity-modal__overlay"></div>
+  <div class="trinity-modal__content">
+    <button type="button" class="trinity-modal__close" id="TrinityClose" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+    
+    <div class="trinity-modal__header">
+      <div class="trinity-model__headerflex" >
+      <div class="trinity-modal__icon">✨</div>
+      <h4>Your Healing Journey</h4>
+      </div>
+      <p id="TrinitySelected" class="trinity-selected-option"></p>
+    </div>
+
+    <div class="trinity-modal__body">
+      <label class="trinity-form-field">
+        <span class="trinity-label">Full Name</span>
+        <input type="text" id="trinity-name" required placeholder="Enter your name">
+      </label>
+
+      <label class="trinity-form-field">
+        <span class="trinity-label">Date of Birth</span>
+        <input type="date" id="trinity-dob" required>
+      </label>
+
+      <label class="trinity-form-field">
+        <span class="trinity-label">Share you problem</span>
+        <textarea id="trinity-problem" rows="3"  placeholder="Share your problem..."></textarea>
+      </label>
+
+      <div id="trinity-add-ans-wrapper" style="display: none;">
+        <button type="button" id="trinity-add-ans-btn" class="trinity-add-field-btn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          Add Ancestor's Name
+        </button>
+      </div>
+
+      <label id="trinity-ans-name-wrapper" class="trinity-form-field" style="display: none;">
+        <span class="trinity-label">Ancestor's Name</span>
+        <input type="text" id="trinity-ans-name" placeholder="Ancestor's Name">
+        <button type="button" id="trinity-remove-ans-btn" class="trinity-remove-btn">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M10.5 3.5L3.5 10.5M3.5 3.5L10.5 10.5" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          Remove
+        </button>
+      </label>
+    </div>
+
+    <div class="trinity-modal__actions">
+      <button type="button" id="TrinityCancel" class="trinity-btn trinity-btn--secondary">Cancel</button>
+      <button type="button" id="TrinitySave" class="trinity-btn trinity-btn--primary">Add Details</button>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Trinity Popup - Brand Themed */
+.trinity-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.trinity-model__headerflex{
+  display:flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.trinity-modal.is-open { 
+  display: flex; 
+}
+
+@media screen and (min-width: 750px) {
+  .trinity-modal__content {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+  }
+
+  .trinity-modal__content::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+Replace th
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.trinity-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.trinity-modal__content {
+  position: relative;
+  background: #ffffff;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 1;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close Button */
+.trinity-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  color: #666;
+  z-index: 10;
+}
+
+.trinity-modal__close:hover {
+  background: #f5f5f5;
+  color: #000;
+  transform: rotate(90deg);
+}
+
+/* Header */
+.trinity-modal__header {
+  background: linear-gradient(135deg, #ffedce 0%, #ffe4b8 100%);
+  padding: 20px 30px 20px;
+  text-align: center;
+  border-radius: 16px 16px 0 0;
+}
+
+.trinity-modal__icon {
+  font-size: 38px;
+  {% comment %} margin-bottom: 15px; {% endcomment %}
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.trinity-modal__header h4 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 0 8px;
+  color: #2c2c2c;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.trinity-selected-option {
+  font-size: 15px;
+  color: #8b6f47;
+  font-weight: 500;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* Body */
+.trinity-modal__body {
+  padding: 20px;
+}
+
+.trinity-form-field {
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.trinity-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trinity-form-field input,
+.trinity-form-field textarea {
+  width: 100%;
+  border: 1.5px solid #e0e0e0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  background: #fafafa;
+}
+
+.trinity-form-field input:focus,
+.trinity-form-field textarea:focus {
+  outline: none;
+  border-color: #ffedce;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 237, 206, 0.2);
+}
+
+.trinity-form-field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.trinity-form-field input::placeholder,
+.trinity-form-field textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Add Field Button */
+#trinity-add-ans-wrapper {
+  margin: 25px 0;
+}
+
+.trinity-add-field-btn {
+  background: transparent;
+  border: 1.5px dashed #d0d0d0;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.trinity-add-field-btn:hover {
+  border-color: #ffedce;
+  color: #8b6f47;
+  background: #fffbf5;
+}
+
+.trinity-add-field-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.trinity-add-field-btn:hover svg {
+  transform: rotate(90deg);
+}
+
+/* Remove Button */
+.trinity-remove-btn {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  background: #fff0f0;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #d84545;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.trinity-remove-btn:hover {
+  background: #ffe0e0;
+  transform: scale(1.05);
+}
+
+/* Actions */
+.trinity-modal__actions {
+  padding: 0 30px 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.trinity-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trinity-btn--secondary {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.trinity-btn--secondary:hover {
+  background: #e8e8e8;
+  color: #333;
+}
+
+.trinity-btn--primary {
+  background: linear-gradient(135deg, #ffedce 0%, #ffd89b 100%);
+  color: #2c2c2c;
+  box-shadow: 0 4px 15px rgba(255, 237, 206, 0.4);
+}
+
+.trinity-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 237, 206, 0.6);
+}
+
+.trinity-btn--primary:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .trinity-modal__content {
+    margin: 20px;
+    max-height: 75vh;
+  }
+  
+  .trinity-modal__header {
+    padding: 20px 20px 25px;
+  }
+  
+  .trinity-modal__body {
+    padding: 5px 20px;
+  }
+  .trinity-modal__icon{
+    font-size:35px;
+  }
+  
+  .trinity-modal__actions {
+    padding: 0 20px 20px;
+    flex-direction: column;
+  }
+  
+  .trinity-btn {
+    width: 100%;
+  }
+  
+  .trinity-modal__header h4 {
+    font-size: 15px;
+  }
+}
+
+/* Smooth scrollbar */
+.trinity-modal__content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.trinity-modal__content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.trinity-modal__content::-webkit-scrollbar-thumb {
+  background: #ffedce;
+  border-radius: 4px;
+}
+
+.trinity-modal__content::-webkit-scrollbar-thumb:hover {
+  background: #ffd89b;
+}
+</style>
+
+
+<script>
+(function() {
+  function initTrinityPopup() {
+    var modal = document.getElementById('TrinityPopup');
+    if (!modal) return;
+
+    var selectedTxt  = document.getElementById('TrinitySelected');
+    var nameField    = document.getElementById('trinity-name');
+    var dobField     = document.getElementById('trinity-dob');
+    var problemField = document.getElementById('trinity-problem');
+    var ansNameField = document.getElementById('trinity-ans-name');
+    var ansNameWrapper = document.getElementById('trinity-ans-name-wrapper');
+    var addAnsWrapper = document.getElementById('trinity-add-ans-wrapper');
+    var addAnsBtn = document.getElementById('trinity-add-ans-btn');
+    var removeAnsBtn = document.getElementById('trinity-remove-ans-btn');
+
+    var cancelBtn    = document.getElementById('TrinityCancel');
+    var closeBtn     = document.getElementById('TrinityClose');
+    var saveBtn      = document.getElementById('TrinitySave');
+    var currentOption = null;
+    var savedNoteData = null; // Store note data globally
+
+    function openPopupForOption(optionValue) {
+      if (optionValue !== '3 Steps - Basic' && 
+          optionValue !== '11 Steps - Advance' && 
+          optionValue !== '21 Steps - Premium') {
+        return;
+      }
+
+      currentOption = optionValue;
+      selectedTxt.textContent = optionValue;
+      
+      if (optionValue === '21 Steps - Premium') {
+        addAnsWrapper.style.display = 'block';
+      } else {
+        addAnsWrapper.style.display = 'none';
+        ansNameWrapper.style.display = 'none';
+        ansNameField.value = '';
+      }
+      
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+      ansNameWrapper.style.display = 'none';
+      addAnsWrapper.style.display = 'none';
+      ansNameField.value = '';
+    }
+
+    document.addEventListener('change', function(e) {
+      var target = e.target;
+      if (!target.matches('input[type="radio"][data-trinity-option]')) return;
+      if (!target.checked) return;
+
+      var optionValue = target.getAttribute('data-trinity-option');
+      openPopupForOption(optionValue);
+    });
+
+    addAnsBtn.addEventListener('click', function() {
+      ansNameWrapper.style.display = 'block';
+      addAnsWrapper.style.display = 'none';
+      ansNameField.focus();
+    });
+
+    removeAnsBtn.addEventListener('click', function() {
+      ansNameWrapper.style.display = 'none';
+      addAnsWrapper.style.display = 'block';
+      ansNameField.value = '';
+    });
+
+    cancelBtn.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal || e.target.classList.contains('trinity-modal__overlay')) {
+        closeModal();
+      }
+    });
+
+    saveBtn.addEventListener('click', function() {
+      if (!nameField.value || !dobField.value || !problemField.value) {
+        alert('Please fill all required fields.');
+        return;
+      }
+
+      // Format note text
+      var noteText = '━━━ TRINITY HEALING DETAILS ━━━\n\n';
+      noteText += 'Healing Type: ' + currentOption + '\n';
+      noteText += 'Name: ' + nameField.value + '\n';
+      noteText += 'Date of Birth: ' + dobField.value + '\n';
+      noteText += 'Problem: ' + problemField.value;
+      
+      if (ansNameField.value) {
+        noteText += '\nANS Name: ' + ansNameField.value;
+      }
+
+      // Store note data
+      savedNoteData = noteText;
+
+      // Try to find and set note field (if exists)
+      var noteInput = document.querySelector('textarea[name="note"], input[name="note"], #cart-note');
+      if (noteInput) {
+        noteInput.value = noteText;
+      }
+
+      // Update cart note via AJAX immediately
+      updateCartNote(noteText);
+
+      // Clear form
+      nameField.value = '';
+      dobField.value = '';
+      problemField.value = '';
+      ansNameField.value = '';
+      
+      closeModal();
+    });
+
+    // Function to update cart note via Shopify API
+    function updateCartNote(noteText) {
+      fetch('/cart/update.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          note: noteText
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Cart note updated successfully:', data);
+      })
+      .catch(error => {
+        console.error('Error updating cart note:', error);
+      });
+    }
+
+    // Intercept "Add to Cart" to ensure note is saved
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      if (form.querySelector('button[name="add"]') && savedNoteData) {
+        // Note already saved via AJAX, just ensure it's there
+        setTimeout(function() {
+          updateCartNote(savedNoteData);
+        }, 500);
+      }
+    });
+
+    // Also handle GoKwik button if present
+    var gokwikBtn = document.getElementById('gokwik-buy-now');
+    if (gokwikBtn) {
+      gokwikBtn.addEventListener('click', function() {
+        if (savedNoteData) {
+          updateCartNote(savedNoteData);
+        }
+      });
+    }
+  }
+
+  if (document.readyState !== 'loading') {
+    initTrinityPopup();
+  } else {
+    document.addEventListener('DOMContentLoaded', initTrinityPopup);
+  }
+})();
+</script>
+
+
+
+
+
+
+  {% content_for 'blocks' %}
+</div>
+
+{% stylesheet %}
+ .product-information {
+  gap: var(--gap) 0;
+}
+
+/* Base grid layout */
+.product-information__grid {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+/* Default column positions */
+.product-details {
+  order: 1;
+}
+
+.product-information__media {
+  order: 0;
+  width: 0;
+  min-width: 100%;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 749px) {
+  .product-information__media {
+    grid-column: 1 / -1;
+  }
+
+  .product-details {
+    grid-column: 2 / 3;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 750px) {
+  .product-information__grid {
+    grid-column: 2;
+  }
+
+  /* Position when there is no media */
+  .product-information__grid.product-information--media-none,
+  .product-information__grid:has(.product-information__media:empty) {
+    .product-details {
+      width: var(--narrow-content-width);
+      margin: 0 auto;
+    }
+  }
+
+  /* Position when there is media */
+  .product-information__grid:not(:has(.product-information__media:empty)) {
+    /* Media on the left side - UPDATED FOR YOUR LAYOUT */
+    &.product-information--media-left {
+      grid-template-columns: 1fr 0.8fr; /* Image larger, details narrower */
+      gap: 40px; /* Add spacing between columns */
+
+      .product-information__media {
+        padding-right: 20px;
+      }
+
+      .product-details {
+        padding-left: 20px;
+        max-width: 600px; /* Limit details width */
+      }
+
+      &:has(.media-gallery--extend) {
+        grid-column: 1 / 3;
+      }
+    }
+
+    /* Media on the right side */
+    &.product-information--media-right {
+      grid-template-columns: 0.8fr 1fr;
+      gap: 40px;
+
+      .product-information__media {
+        padding-left: 20px;
+        order: 1;
+      }
+
+      .product-details {
+        padding-right: 20px;
+        max-width: 600px;
+        order: 0;
+      }
+
+      &:has(.media-gallery--extend) {
+        grid-column: 2 / -1;
+      }
+    }
+
+    /* Equal width columns */
+    &.product-information__grid--half,
+    &.product-information__grid--half:has(.media-gallery--extend) {
+      grid-column: 1 / -1;
+      grid-template-columns:
+        var(--full-page-grid-margin) calc(var(--full-page-grid-central-column-width) / 2) calc(
+          var(--full-page-grid-central-column-width) / 2
+        )
+        var(--full-page-grid-margin);
+
+      &.product-information--media-left {
+        .product-information__media {
+          grid-column: 2 / 3;
+
+          &:has(.media-gallery--extend) {
+            grid-column: 1 / 3;
+          }
+        }
+
+        .product-details {
+          grid-column: 3 / 4;
+        }
+      }
+
+      &.product-information--media-right {
+        .product-information__media {
+          grid-column: 3 / 4;
+
+          &:has(.media-gallery--extend) {
+            grid-column: 3 / -1;
+          }
+        }
+
+        .product-details {
+          grid-column: 2 / 3;
+        }
+      }
+    }
+  }
+
+  /* Handle full width section */
+  .section--full-width {
+    .product-information__grid:not(:has(.product-information__media:empty)),
+    .product-information__grid:not(:has(.product-information__media:empty)) {
+      &.product-information--media-left,
+      &.product-information--media-right {
+        grid-column: 1 / -1;
+      }
+
+      &.product-information--media-left .product-details {
+        padding-inline-end: var(--padding-lg);
+      }
+
+      &.product-information--media-right .product-details {
+        padding-inline-start: var(--padding-lg);
+      }
+
+      &.product-information__grid--half.product-information--media-left {
+        .product-information__media {
+          grid-column: 1 / 3;
+        }
+
+        .product-details {
+          grid-column: 3 / -1;
+        }
+      }
+
+      &.product-information__grid--half.product-information--media-right {
+        .product-information__media {
+          grid-column: 3 / -1;
+        }
+
+        .product-details {
+          grid-column: 1 / 3;
+        }
+      }
+    }
+  }
+}
+
+/* Wider sidebar for large screens - UPDATED */
+@media screen and (min-width: 1200px) {
+  .product-information__grid:not(
+      .product-information__grid--half,
+      :has(.product-information__media:empty)
+    ).product-information--media-left {
+    grid-template-columns: 1.2fr 0.8fr; /* Wider image column */
+  }
+
+  .product-information__grid:not(
+      .product-information__grid--half,
+      :has(.product-information__media:empty)
+    ).product-information--media-right {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+}
+
+.product-information__grid--limit-details .product-details > .group-block {
+  max-width: var(--sidebar-width);
+}
+
+/* If the header is sticky, make product details content stick underneath the header */
+body:has(#header-group #header-component[data-sticky-state='active']) .product-details.sticky-content--desktop {
+  --sticky-header-offset: var(--header-height);
+}
+
+/* ==================== SHARE BUTTON (SIMPLE STYLE) ==================== */
+.product_share {
+  margin: 15px 0;
+  padding-top: 15px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.product_share_button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product_share_button:hover {
+  border-color: #333333;
+  background: #f9f9f9;
+}
+
+.product_share_button svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+/* Modal Overlay */
+.product_share-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product_share-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.product_share-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+/* Modal Content */
+.product_share-content {
+  position: relative;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.product_share-content h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Close Button */
+.product_share-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  color: #666666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.product_share-close:hover {
+  color: #333333;
+}
+
+/* Copy Link Section */
+.product_share-copy {
+  margin-bottom: 25px;
+}
+
+.product_share-copy label,
+.product_share-social label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666666;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.copy-input-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.copy-input-wrapper input.url_share {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #666666;
+  background: #f9f9f9;
+}
+
+.copy-input-wrapper input.url_share:focus {
+  outline: none;
+  border-color: #333333;
+  background: #ffffff;
+}
+
+.copy-input-wrapper .copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.copy-input-wrapper .copy-btn:hover {
+  background: #000000;
+  transform: translateY(-1px);
+}
+
+.copy-input-wrapper .copy-btn:active {
+  transform: translateY(0);
+}
+
+.copy-input-wrapper .copy-btn.copied {
+  background: #28a745;
+}
+
+/* Social Media Section */
+.product_share-social {
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .product_share-content {
+    padding: 25px 20px;
+    width: 95%;
+  }
+
+  .product_share-content h3 {
+    font-size: 18px;
+  }
+
+  .copy-input-wrapper {
+    flex-direction: column;
+  }
+
+  .copy-input-wrapper .copy-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+{% endstylesheet %}
+
+<script>
+  // Social Share Popup Toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const shareLabel = document.querySelector('.product_share_label');
+    const shareContent = document.querySelector('.product_share-content');
+    const closeButtons = document.querySelectorAll('.product_share-close');
+    const copyButton = document.querySelector('.copy-url-btn');
+    const urlInput = document.querySelector('.url_share');
+
+    // Open share popup
+    if (shareLabel) {
+      shareLabel.addEventListener('click', function() {
+        shareContent.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    // Close share popup
+    closeButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        shareContent.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Copy URL to clipboard
+    if (copyButton && urlInput) {
+      copyButton.addEventListener('click', function() {
+        urlInput.select();
+        urlInput.setSelectionRange(0, 99999); // For mobile devices
+
+        try {
+          navigator.clipboard.writeText(urlInput.value).then(function() {
+            copyButton.textContent = 'Copied!';
+            copyButton.style.background = '#28a745';
+            
+            setTimeout(function() {
+              copyButton.textContent = 'Copy';
+              copyButton.style.background = '';
+            }, 2000);
+          }).catch(function() {
+            // Fallback for older browsers
+            document.execCommand('copy');
+            copyButton.textContent = 'Copied!';
+            
+            setTimeout(function() {
+              copyButton.textContent = 'Copy';
+            }, 2000);
+          });
+        } catch (err) {
+          console.error('Failed to copy:', err);
+        }
+      });
+    }
+
+    // Close on ESC key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && shareContent.classList.contains('active')) {
+        shareContent.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "t:names.product_information",
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "content_width",
+      "label": "t:settings.width",
+      "options": [
+        {
+          "value": "content-center-aligned",
+          "label": "t:options.page"
+        },
+        {
+          "value": "content-full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "content-center-aligned"
+    },
+    {
+      "type": "select",
+      "id": "desktop_media_position",
+      "label": "t:settings.media_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "equal_columns",
+      "label": "t:settings.equal_columns",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "limit_details_width",
+      "label": "t:settings.limit_product_details_width",
+      "default": false,
+      "visible_if": "{{ section.settings.equal_columns }}"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Social Sharing"
+    },
+    {
+      "type": "checkbox",
+      "id": "social_sharing_products",
+      "label": "Enable social sharing",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "product_share_title",
+      "label": "Share button text",
+      "default": "Share"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": []
+}
+{% endschema %}

@@ -1,0 +1,215 @@
+{% liquid
+  assign product_resource = closest.product
+  if request.visual_preview_mode and product_resource == blank
+    assign product_resource = collections.all.products.first
+  endif
+-%}
+
+
+{% render 'variant-main-picker', product_resource: product_resource %}
+
+<style>
+/* Smooth transitions for Trinity options */
+.variant-option input[data-trinity-option] ~ .variant-option__button-label__pill {
+  transition: transform 0.3s ease, opacity 0.3s ease !important;
+}
+
+/* Force unselected state on load for Trinity options */
+.trinity-unselected input[data-trinity-option] {
+  pointer-events: auto !important;
+}
+
+.trinity-unselected .variant-option__button-label__pill {
+  opacity: 0 !important;
+  transform: translateX(-100%) !important;
+}
+
+/* Smooth selected state */
+ .variant-option__button-label:has(input[data-trinity-option]:checked) .variant-option__button-label__pill {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+.best-seller-badge{
+  display:inline-block;
+  position:relative;
+  top:auto;
+  left:auto;
+  transform:none;
+  background:#cead80;
+  color:#fff;
+  font-size:10px;
+  font-weight:700;
+  padding:2px 8px;
+  border-radius:3px;
+  margin-bottom:4px;
+  z-index:2;
+}
+
+.variant-option__button-label__text{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+} 
+
+</style>
+
+<script>
+(function() {
+  function selectDefaultTrinity() {
+    // Find all Trinity radios
+    var trinityInputs = document.querySelectorAll(
+      'input[type="radio"][data-trinity-option]'
+    );
+
+    if (!trinityInputs.length) return;
+
+    // Check if already selected
+    var alreadySelected = Array.from(trinityInputs).some(input => input.checked);
+    if (alreadySelected) return;
+
+    // Priority order (you can change this)
+    var priority = [
+      '3 Part Healing',
+      '11 Part Healing',
+      '21 Part Healing'
+    ];
+
+    var selected = null;
+
+    priority.forEach(function(val) {
+      if (!selected) {
+        selected = document.querySelector(
+          'input[data-trinity-option="' + val + '"]'
+        );
+      }
+    });
+
+    // Fallback: first option
+    if (!selected) {
+      selected = trinityInputs[0];
+    }
+
+    // Select it properly
+    if (selected) {
+      selected.checked = true;
+      selected.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+
+    // Enable Add to Cart
+    var addToCartBtn = document.querySelector('button[name="add"]');
+    if (addToCartBtn) {
+      addToCartBtn.disabled = false;
+      addToCartBtn.textContent =
+        addToCartBtn.getAttribute('data-original-text') || 'Add to cart';
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(selectDefaultTrinity, 100);
+    });
+  } else {
+    setTimeout(selectDefaultTrinity, 100);
+  }
+})();
+</script>
+
+
+
+{% schema %}
+
+{
+  "name": "t:names.product_variant_picker",
+  "tag": null,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:content.resource_reference_product_variant_picker"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:content.edit_variants_in_theme_settings"
+    },
+    {
+      "type": "select",
+      "id": "variant_style",
+      "label": "t:settings.style",
+      "options": [
+        {
+          "value": "dropdowns",
+          "label": "t:options.dropdowns"
+        },
+        {
+          "value": "buttons",
+          "label": "t:options.buttons"
+        }
+      ],
+      "default": "buttons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_swatches",
+      "label": "t:settings.swatches",
+      "default": true
+    },
+    {
+      "type": "text_alignment",
+      "id": "alignment",
+      "label": "t:settings.alignment",
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.product_variant_picker",
+      "category": "t:categories.product"
+    }
+  ]
+}
+{% endschema %}
