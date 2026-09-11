@@ -1,0 +1,80 @@
+<div class="container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 30px; padding: 0 30px;">
+  {% for block in section.blocks %}
+    <div style="text-align: center; color: {{ block.settings.text_color }}" {{ block.shopify_attributes }}>
+      {% if block.settings.cover_image %}
+        <img src="{{ block.settings.cover_image | image_url: width: 400 }}" alt="{{ block.settings.title }}" style="width: 100%; border-radius: 10px;">
+      {% endif %}
+      <div class="audio-info">
+        <p style="margin: 10px 0 5px;">Crystal Name : <strong>{{ block.settings.title }}</strong></p>
+        <p style="margin: 10px 0 5px;">Healing Focus : <strong>{{ block.settings.focus }}</strong></p>
+        <p style="margin: 10px 0 5px;">Sound Frequency Used : <strong>{{ block.settings.sound }}</strong></p>
+      </div>
+      {% if block.settings.audio_url %}
+        <audio controls style="width: 100%;">
+          <source src="{{ block.settings.audio_url }}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      {% else %}
+        <p style="font-size: 14px; color: gray;">No audio</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+  .audio-info p {
+    border-bottom: 1px solid #dccab2;
+    padding: 5px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Audio Grid",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "audio_item",
+      "name": "Audio Track",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "cover_image",
+          "label": "Album Cover"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Crystal Name"
+        },
+        {
+          "type": "text",
+          "id": "focus",
+          "label": "Healing Focus"
+        },
+        {
+          "type": "text",
+          "id": "sound",
+          "label": "Sound Frequency"
+        },
+        {
+          "type": "url",
+          "id": "audio_url",
+          "label": "Audio File URL"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#000000"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Audio Grid"
+    }
+  ]
+}
+{% endschema %}

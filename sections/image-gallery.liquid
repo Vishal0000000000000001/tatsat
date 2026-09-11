@@ -1,0 +1,217 @@
+{% stylesheet %}
+  .responsive-sec{
+        padding: 40px 15px;
+  }
+
+    .responsive-sec-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+      .responsive-column{
+              position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      }
+    .h2-heading h2{
+      text-align: center;
+      color: rgb(206 173 128 / 1.0);
+      font-size: 32px;
+      font-weight: normal;
+      padding-bottom: 30px;
+    }
+
+    @media(max-width: 425px){
+      .responsive-sec-grid {
+          grid-template-columns: repeat(2, 1fr);
+      }
+       .h2-heading h2 {
+      font-size: 26px;
+      }
+    }
+{% endstylesheet %}
+
+<section class="responsive-sec">
+  <div class="h2-heading">
+    <h2>Celebrities who also believe in crystal Manifestation</h2>
+  </div>
+
+  <div class="responsive-sec-grid">
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/1.webp?v=1767091878"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/2.webp?v=1767091878"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/3.webp?v=1767091878"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+    {% comment %}  {% endcomment %}
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/4.webp?v=1767091878"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/5.webp?v=1767091878"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/7.webp?v=1767091878"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+       <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/Kartik.webp?v=1772265228"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/Rani.webp?v=1772265429"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/Ajay.webp?v=1772265970"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/Shilpa.webp?v=1772265914"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/Johnny_Depp.webp?v=1772268008"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/Cristiano_Ronaldo.webp?v=1772268008"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/Jason_Momoa.webp?v=1772268008"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+    <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/David_Beckham.webp?v=1772268008"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+        <div class="responsive-column">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0935/1997/0578/files/Ananya.webp?v=1772519984"
+        alt="responsive-column"
+        width="100px"
+        height="100px"
+      >
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Responsive Image Gallery",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Responsive Image Gallery"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub Heading",
+      "default": "Resize the screen to see the responsive effect"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "Desktop Columns",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 4
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Gallery Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Responsive Image Gallery",
+      "blocks": [{ "type": "image" }, { "type": "image" }, { "type": "image" }, { "type": "image" }]
+    }
+  ]
+}
+{% endschema %}

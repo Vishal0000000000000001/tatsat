@@ -1,0 +1,965 @@
+<div id="chakra-section" class="chakra-wrapper">
+    <div id="loading" class="chakra-card fade-in">
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <p id="thought-message" class="thought-message">Aligning your energy...</p>
+    </div>
+
+    <div id="result" class="chakra-card hidden fade-in">
+        <div id="button-div">
+            <button id="download-pdf" class="download-btn">Download Page as PDF</button>
+        </div>
+        <div id="chakra-output"></div>
+        <section id="master-report" style="margin-top: 40px;">
+            <h2 id="grid-heading" class="page-break">Detailed Report by Master Aakriti</h2>
+            <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Theme</th>
+                        <th>Presence</th>
+                        <th>Count</th>
+                        <th>Interpretation</th>
+                    </tr>
+                </thead>
+                <tbody id="master-report-body">
+                    </tbody>
+            </table>
+        </section>
+
+        <h2 id="lo-shu-heading" class="page-break">Your Lo Shu Grid Chart</h2>
+        <button onclick="toggleGrid()" class="next-btn mobile-toggle">Toggle Grid View</button>
+        <div id="loShuGrid"></div>
+        <div id="kua-section" style="margin-top: 30px;"></div>
+    </div>
+
+    <div id="products" class="chakra-card hidden fade-in">
+        <h3>🛍️ Recommended Products</h3>
+        <div id="product-grid" class="product-grid"></div>
+    </div>
+</div>
+
+<style>
+
+  @media screen and (max-width: 768px) {
+    /* Hide the table headers on small screens */
+    #master-report thead {
+        display: none;
+    }
+
+    /* Make table rows behave like blocks */
+    #master-report tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    /* Make table cells behave like blocks and label them */
+    #master-report td {
+        display: block;
+        text-align: right;
+        font-size: 0.9rem;
+        position: relative;
+        border: none;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Add a pseudo-element to display the header text as a label */
+    #master-report td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #493002;
+        width: calc(50% - 20px);
+    }
+}
+    /* ... (CSS remains the same for the most part, with minor adjustments) ... */
+    .chakra-wrapper {
+        font-family: 'Lato', sans-serif;
+        background: #f6f7f9;
+        padding: 40px 20px;
+        font-weight: 300;
+    }
+
+    #grid-heading {
+        font-size: 1.1 rem;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        color: #493002;
+    }
+
+    .chakra-card {
+        background: white;
+        padding: 30px;
+        color: #493002;
+        margin: 20px auto;
+        max-width: 1200px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .title {
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+        color: #8B631A;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .step-heading {
+        font-weight: 400;
+        margin-bottom: 8px;
+        font-size: 1.15rem;
+        color: #493002;
+    }
+
+    .step-description {
+        color: #444;
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+        color: #493002;
+    }
+
+    .option-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        color: #493002;
+    }
+
+    .option-btn {
+        flex: 1;
+        padding: 15px;
+        border: 1px solid #ccc;
+        background: #f9f9f9;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.3s;
+        color: #493002;
+    }
+
+    .option-btn.selected {
+        border: 2px solid #000;
+        background: #fff;
+        color: #493002;
+    }
+
+    .option-btn span {
+        display: block;
+        font-size: 0.85rem;
+        color: #555;
+        margin-top: 4px;
+        color: #493002;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        color: #493002;
+    }
+
+    .input-group label {
+        font-weight: 500;
+        color: #493002;
+    }
+
+    .input-group input,
+    .input-group select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+
+    .next-btn {
+        margin-top: 10px;
+        background: #8B631A;
+        color: white;
+        text-transform: uppercase;
+        border: none;
+        padding: 12px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .next-btn:hover {
+        background: #493002;
+    }
+
+    .fade-in {
+        opacity: 0;
+        transform: translateY(10px);
+        animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .progress-container {
+        background-color: #eee;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 10px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .progress-bar {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(90deg, #4ade80, #3b82f6, #a78bfa);
+        animation: loading 2s infinite linear;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    .thought-message {
+        text-align: center;
+        font-style: italic;
+        color: #666;
+        margin-top: 10px;
+    }
+
+    #product-list li {
+        margin-bottom: 6px;
+    }
+
+    #chakra-output {
+        font-size: 1.1rem;
+        /* Increased font size */
+        line-height: 1.6;
+        color: #333;
+    }
+
+    #result h3 {
+        font-size: 1.1rem;
+        /* Made heading slightly smaller */
+        font-weight: 400;
+        margin-bottom: 12px;
+    }
+
+    #kua-section p {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    #kua-section h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    #product-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+        #product-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .cell div {
+        white-space: wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .mobile-toggle {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .mobile-toggle {
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            padding: 10px 16px;
+        }
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        background: #fff;
+        padding: 20px;
+        margin-top: 30px;
+        transition: transform 0.3s ease;
+        text-align: left;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .product-image {
+        max-width: 300px;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    .product-info {
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .product-title {
+        font-weight: 400;
+        font-size: 0.8rem;
+        margin-bottom: 6px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .product-price {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #847054;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .buy-btn {
+        background: #8B631A;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.3s;
+        display: inline-block;
+    }
+
+    .buy-btn:hover {
+        background: #333;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 40px auto;
+        gap: 6px;
+    }
+
+    @media (max-width: 768px) {
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            max-width: 1200px;
+            margin: 40px auto;
+            gap: 12px;
+        }
+    }
+
+    .cell {
+        padding: 24px;
+        border-radius: 12px;
+        color: #3a3a3a;
+        font-size: 1.05rem;
+        position: relative;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(145deg, #f7e5b7, #f3d898, #f5ebc9);
+        background-size: 400% 400%;
+        animation: shimmer 8s ease infinite;
+    }
+
+    @keyframes shimmer {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .cell .number {
+        font-size: 2rem;
+        font-weight: bold;
+        background: #fff;
+        color: #000;
+        padding: 6px 14px;
+        border-radius: 24px;
+        display: inline-block;
+        margin-bottom: 12px;
+    }
+
+    #chakra-output {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #222;
+        margin-bottom: 30px;
+    }
+
+    .cell.missing {
+        font-style: italic;
+        border: 1px dashed #a57c1b;
+        /* or something elegant */
+        color: #555;
+    }
+
+    .label {
+        margin-top: 5px;
+        display: block;
+    }
+
+    .missingNumber {
+        position: relative;
+        color: #999;
+    }
+
+    .missingNumber::before {
+        content: "❌";
+        position: absolute;
+        font-size: 2rem;
+        opacity: 0.8;
+        color: red;
+    }
+
+    #loShuCard {
+        background: #0d122e;
+        color: white;
+        border: 8px solid transparent;
+        border-image: linear-gradient(to bottom, #d4af37, #f7e099, #d4af37) 1;
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+        padding: 20px 20px;
+        text-align: center;
+        border-radius: 12px;
+    }
+
+    .lotus-icon {
+        font-size: 2rem;
+        color: #f7e099;
+        margin-bottom: 10px;
+    }
+
+    .lo-shu-title {
+        font-family: 'Playfair Display', serif;
+        /* Use a more elegant font */
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #f7e099;
+        text-shadow: 0 0 5px rgba(212, 175, 55, 0.6);
+        margin-top: 10px;
+        line-height: 1.2;
+    }
+
+    .lo-shu-subtitle {
+        font-size: 2rem;
+        color: #f0f0f0;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    .lo-shu-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        border: 3px solid #f7e099;
+        border-radius: 6px;
+        margin: 20px auto;
+    }
+
+    .lo-shu-grid.mobile-single {
+        grid-template-columns: 1fr;
+    }
+
+    .lo-shu-cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #f7e099;
+        height: 100px;
+        border: 1px solid #f7e099;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .lo-shu-cell span {
+        color: #f7e099;
+    }
+
+    .lo-shu-cell.missing {
+        font-size: 4rem;
+        color: #f7e099;
+        opacity: 0.7;
+    }
+
+    .lo-shu-cell.kua-number {
+        font-size: 2rem;
+        font-weight: normal;
+    }
+
+    .kua-label {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: #f7e099;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+</style>
+
+<script>
+    const thoughts = [
+      "Aligning your aura...",
+      "Calibrating chakras...",
+      "Consulting ancient scrolls...",
+      "Gathering cosmic data...",
+      "Translating soul vibrations...",
+      "Syncing with universal energies...",
+      "Polishing your destiny crystal..."
+    ];
+  
+    let thoughtInterval;
+
+    function showLoader(){
+      let index = 0;
+      document.getElementById("thought-message").innerText = thoughts[index];
+      thoughtInterval = setInterval(() => {
+        index = (index + 1) % thoughts.length;
+        document.getElementById("thought-message").innerText = thoughts[index];
+      }, 5000);
+    }
+
+    function hideLoader() {
+      clearInterval(thoughtInterval);
+      document.getElementById("loading").classList.add("hidden");
+    }
+
+    const interpretations = {
+        1: {
+            theme: "Leadership, Independence, and Power",
+            missing: "Learning to stand alone. This person must develop confidence, self-reliance, and leadership through challenges. May struggle to assert themselves.",
+            balanced: "Natural leader. Independent thinker. Comfortable taking initiative and making bold decisions.",
+            repeating: "Strong leadership and drive. Can handle pressure well. Must remain humble.",
+            unbalanced: "Tends toward ego, control, or domination. May struggle to accept help or listen. Needs emotional grounding."
+        },
+        2: {
+            theme: "Sensitivity, Relationships, and Cooperation",
+            missing: "Struggles with emotional expression and vulnerability. Must learn to trust, cooperate, and open up.",
+            balanced: "Emotionally aware, good with people, values harmony. Excellent partner or team member.",
+            repeating: "Deep empathy and emotional strength. Feels everything. Should guard boundaries.",
+            unbalanced: "Overly sensitive, prone to emotional instability or co-dependence. Needs balance and self-worth."
+        },
+        3: {
+            theme: "Creativity, Communication, and Wisdom",
+            missing: "Difficulty expressing oneself or finding joy. Must learn to speak up, play, and share wisdom.",
+            balanced: "Creative, expressive, and inspiring. A natural communicator or teacher.",
+            repeating: "Charismatic speaker and creative powerhouse. Must use talents wisely.",
+            unbalanced: "Scattered energy, attention-seeking, gossiping. Needs grounding and purpose-driven communication."
+        },
+        4: {
+            theme: "Stability, Discipline, and Structure",
+            missing: "Dislikes routine, lacks discipline. Must learn patience, order, and time management.",
+            balanced: "Hardworking, structured, dependable. Can build strong foundations in life.",
+            repeating: "Very reliable and methodical. Can achieve long-term success.",
+            unbalanced: "Rigid, overly controlling, resistant to change. Needs flexibility and emotional openness."
+        },
+        5: {
+            theme: "Intellect, Adventure, and Financial Success",
+            missing: "Feels stuck or mentally foggy. Must learn flexibility, quick thinking, and how to manage money.",
+            balanced: "Curious, witty, adventurous. Good with ideas and adaptable to change.",
+            repeating: "Fast learner, enjoys risks, may attract financial opportunities.",
+            unbalanced: "Restless, impulsive, can struggle with commitment or misuse of money. Needs focus and discipline."
+        },
+        6: {
+            theme: "Responsibility, Family, and Nurturing",
+            missing: "Avoids responsibility, may resist emotional closeness or commitment. Must grow into caregiving roles.",
+            balanced: "Emotionally supportive, responsible, and values family or community.",
+            repeating: "Strong nurturing instinct. Can be an excellent healer, parent, or mentor.",
+            unbalanced: "Overburdened, guilt-driven, or controlling. May attract dependent relationships. Needs boundaries."
+        },
+        7: {
+            theme: "Spirituality, Intuition, and Knowledge",
+            missing: "Finds it hard to trust intuition or higher purpose. Needs to connect inward and learn spiritual lessons.",
+            balanced: "Introspective, wise, intuitive. Thinks deeply and seeks meaning in life.",
+            repeating: "Strong connection to higher wisdom. Could pursue mysticism, teaching, or healing.",
+            unbalanced: "Detached, overly analytical, escapist. Can struggle with overthinking or isolation. Needs grounding."
+        },
+        8: {
+            theme: "Karmic, Material Success, and Ambition",
+            missing: "Feels powerless or insecure. Must learn to manage karma, money, and long-term goals.",
+            balanced: "Ambitious, strong-willed, and goal-focused. Understands effort and reward.",
+            repeating: "Attracts karmic lessons and financial cycles. Has leadership potential.",
+            unbalanced: "Overly materialistic, controlling, or struggles with authority. Needs spiritual grounding and humility."
+        },
+        9: {
+            theme: "Command, Control, and Strength",
+            missing: "May feel unseen or lack inner strength. Needs to develop leadership with grace.",
+            balanced: "Strong sense of purpose, integrity, and vision. Can lead with compassion.",
+            repeating: "Powerful, influential, spiritually commanding. Must avoid controlling others.",
+            unbalanced: "Authoritarian, ego-driven, or karmically imbalanced. Needs humility and service."
+        }
+    };
+
+    const kuaTraits = {
+        1: {
+            element: "Water",
+            direction: "North",
+            traits: "Ambitious, communicator, career-oriented"
+        },
+        2: {
+            element: "Earth",
+            direction: "Southwest",
+            traits: "Supportive, nurturing, dependable"
+        },
+        3: {
+            element: "Wood",
+            direction: "East",
+            traits: "Creative, optimistic, growth-driven"
+        },
+        4: {
+            element: "Wood",
+            direction: "Southeast",
+            traits: "Diplomatic, intuitive, expressive"
+        },
+        5: {
+            element: "Earth",
+            direction: "N/A",
+            traits: "A central and powerful number, often redirected to Kua 2 (for males) or Kua 8 (for females)."
+        },
+        6: {
+            element: "Metal",
+            direction: "Northwest",
+            traits: "Leader, authoritative, protective"
+        },
+        7: {
+            element: "Metal",
+            direction: "West",
+            traits: "Joyful, persuasive, charming"
+        },
+        8: {
+            element: "Earth",
+            direction: "Northeast",
+            traits: "Stable, wise, disciplined"
+        },
+        9: {
+            element: "Fire",
+            direction: "South",
+            traits: "Passionate, visionary, respected"
+        },
+    };
+
+    function reduceToSingleDigit(num) {
+        while (num > 9 && num !== 11 && num !== 22) {
+            num = num
+                .toString()
+                .split("")
+                .reduce((sum, digit) => sum + parseInt(digit, 10), 0);
+        }
+        return num;
+    }
+
+    function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+            dob: params.get('dob'),
+            gender: params.get('gender')
+        };
+    }
+
+    function calculateLoShuData(dobStr, gender) {
+        // Step 1: Extract and sum digits from DOB
+        const digits = dobStr.replaceAll("-", "").split("").map(Number);
+        const day = parseInt(dobStr.split("-")[2]);
+        const total = digits.reduce((sum, d) => sum + d, 0);
+
+        // Step 2: Calculate Driver, Conductor, and Kua
+        const driver = reduceToSingleDigit(day);
+        const conductor = reduceToSingleDigit(total);
+
+        const year = parseInt(dobStr.split("-")[0]);
+        let sumYear = reduceToSingleDigit(year.toString().split("").reduce((acc, digit) => acc + parseInt(digit), 0));
+
+        let kua;
+        if (gender === "male") {
+            kua = 11 - sumYear;
+            if (kua === 5) kua = 2;
+        } else {
+            kua = sumYear + 4;
+            if (kua === 5) kua = 8;
+        }
+        if (kua > 9) kua = reduceToSingleDigit(kua);
+
+        // Step 3: Count how many times each number from 1 to 9 appears
+        const allDigits = [...digits]; // Only digits from DOB
+        const numberCounts = {};
+        for (let i = 1; i <= 9; i++) numberCounts[i] = 0;
+        allDigits.forEach(d => {
+            if (d !== 0) numberCounts[d]++;
+        });
+
+        const presentNumbers = [];
+        const missingNumbers = [];
+
+        for (let i = 1; i <= 9; i++) {
+            if (numberCounts[i] > 0) presentNumbers.push(i);
+            else missingNumbers.push(i);
+        }
+
+        return {
+            dobStr,
+            driver,
+            conductor,
+            kua,
+            numberCounts,
+            presentNumbers,
+            missingNumbers
+        };
+    }
+
+    function renderLoShuGrid(data) {
+        const resultContainer = document.getElementById("loShuGrid");
+        const kuaInfo = kuaTraits[data.kua] || {};
+
+        resultContainer.innerHTML = `
+            <div id="loShuCard">
+                <div class="lotus-icon">❀</div>
+                <div class="lo-shu-subtitle">TAT SAT</div>
+                <h2 class="lo-shu-title">LO SHU GRID</h2>
+                <div class="lo-shu-subtitle">${new Date(data.dobStr).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}</div>
+                <div class="lo-shu-grid" id="loShuGridContent"></div>
+                <div class="kua-label">KUA NUMBER: ${data.kua}</div>
+            </div>
+        `;
+
+        const gridContent = document.getElementById("loShuGridContent");
+        const gridOrder = [4, 9, 2, 3, 5, 7, 8, 1, 6];
+
+        gridOrder.forEach(num => {
+            let cellContent;
+            let cellClass = 'lo-shu-cell';
+            const count = data.numberCounts[num];
+            if (count === 0) {
+                cellContent = '—';
+                cellClass += ' missing';
+            } else {
+                cellContent = num;
+            }
+            gridContent.innerHTML += `<div class="${cellClass}">${cellContent}</div>`;
+        });
+    }
+
+    function renderMasterReport(data) {
+        const tbody = document.getElementById("master-report-body");
+        tbody.innerHTML = "";
+
+        for (let num = 1; num <= 9; num++) {
+            const count = data.numberCounts[num] || 0;
+            let presence, interpretation;
+
+            if (count === 0) {
+                presence = "Missing";
+                interpretation = interpretations[num].missing;
+            } else if (count === 1) {
+                presence = "Balanced";
+                interpretation = interpretations[num].balanced;
+            } else if (count === 2) {
+                presence = "Repeating – Balanced";
+                interpretation = interpretations[num].repeating;
+            } else {
+                presence = "Unbalanced Repetition";
+                interpretation = interpretations[num].unbalanced;
+            }
+
+            tbody.innerHTML += `
+                <tr>
+                    <td>${num}</td>
+                    <td>${interpretations[num].theme}</td>
+                    <td>${presence}</td>
+                    <td>${count}</td>
+                    <td>${interpretation}</td>
+                </tr>
+            `;
+        }
+    }
+
+    function renderKuaInfo(data) {
+        const kuaData = kuaTraits[data.kua] || {};
+        const kuaOutput = document.getElementById("kua-section");
+        kuaOutput.innerHTML = `
+            <hr style="margin:30px 0;">
+            <h3>Kua Number: ${data.kua}</h3>
+            <p><strong>Element:</strong> ${kuaData.element || 'Unknown'}</p>
+            <p><strong>Lucky Direction:</strong> ${kuaData.direction || 'N/A'}</p>
+            <p><strong>Traits:</strong> ${kuaData.traits || 'No traits available.'}</p>
+        `;
+    }
+
+    function renderDetailedInsights(data) {
+        const chakraOutput = document.getElementById("chakra-output");
+        let detailHtml = `
+            <p><strong>Driver:</strong> <span style="font-size: 1.4rem;">${data.driver}</span></p>
+            <p><strong>Conductor:</strong> <span style="font-size: 1.4rem;">${data.conductor}</span></p>
+            <p><strong>Kua Number:</strong> <span style="font-size: 1.4rem;">${data.kua}</span></p>
+            <p><strong>Present Numbers:</strong> ${data.presentNumbers.join(", ")}</p>
+            <p><strong>Missing Numbers:</strong> ${data.missingNumbers.length ? data.missingNumbers.join(", ") : "None 🎉"}</p>
+            <hr style='margin:30px 0;'><h3>🔍 Detailed Insight</h3>
+        `;
+
+        if (data.missingNumbers.length) {
+            detailHtml += "<h4>❌ Missing Numbers</h4><ul>";
+            data.missingNumbers.forEach(num => {
+                detailHtml += `<li><strong>${num}:</strong> ${interpretations[num].missing}</li>`;
+            });
+            detailHtml += "</ul>";
+        } else {
+            detailHtml += "<p>🎉 You have a complete grid! All energies are present and balanced.</p>";
+        }
+
+        if (data.presentNumbers.length) {
+            detailHtml += "<h4>✅ Present Numbers</h4><ul>";
+            data.presentNumbers.forEach(num => {
+                detailHtml += `<li><strong>${num}:</strong> ${interpretations[num].balanced}</li>`;
+            });
+            detailHtml += "</ul>";
+        }
+        chakraOutput.innerHTML = detailHtml;
+    }
+
+    function renderProducts(tags) {
+        const productGrid = document.getElementById("product-grid");
+        productGrid.innerHTML = "";
+        
+        fetch('/collections/bracelets/products.json')
+            .then(res => res.json())
+            .then(data => {
+                const products = data.products.filter(p =>
+                    p.tags.some(t => tags.includes(t.toLowerCase()))
+                );
+
+                if (products.length === 0) {
+                    productGrid.innerHTML = "<p>No matching products found.</p>";
+                } else {
+                    products.forEach(p => {
+                        const image = p.images?.[0]?.src || "https://via.placeholder.com/300";
+                        const price = p.variants?.[0]?.price || "—";
+                        productGrid.innerHTML += `
+                            <a href="/products/${p.handle}" class="product-card">
+                                <img src="${image}" alt="${p.title}" class="product-image">
+                                <div class="product-info">
+                                    <div class="product-title">${p.title}</div>
+                                    <div class="product-price">Rs${parseFloat(price).toFixed(2)}</div>
+                                </div>
+                            </a>
+                        `;
+                    });
+                }
+                document.getElementById("products").classList.remove("hidden");
+            });
+    }
+
+    function toggleGrid() {
+        const grid = document.getElementById("loShuGridContent");
+        if (grid) {
+            grid.classList.toggle("mobile-single");
+        }
+    }
+
+
+    function submitDOB(dob, gender) {
+        setTimeout(() => {
+            const data = calculateLoShuData(dob, gender);
+            renderMasterReport(data);
+            renderLoShuGrid(data);
+            renderKuaInfo(data);
+            renderDetailedInsights(data);
+            const tags = data.missingNumbers.map(n => `number-${n}`);
+            renderProducts(tags);
+            document.getElementById("result").classList.remove("hidden");
+        }, 1500);
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+        showLoader();
+
+        const { dob, gender } = getQueryParams();
+        if (dob && gender) {
+            submitDOB(dob, gender);
+        }
+
+        // wait for 2 seconds before moving on
+        await new Promise(resolve => setTimeout(resolve, 1500));
+
+        document.getElementById("result").classList.remove("hidden");
+        document.getElementById("products").classList.remove("hidden");
+        hideLoader();
+    });
+</script>
+
+<script>
+    document.getElementById("download-pdf").addEventListener("click", () => {
+      const element = document.getElementById("result"); // full page
+      const opt = {
+        margin:       0,
+        filename:     'page.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
+    });
+</script>
+
+<style>
+    #lo-shu-heading {
+        color: #493002;
+        font-size: 1.1 rem;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    #button-div {
+        display: flex;
+        justify-content:end;
+    }
+    .download-btn {
+      margin-top: 10px;
+      background: #8B631A;
+      color: white;
+      text-transform: uppercase;
+      border: none;
+      padding: 12px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  
+    .download-btn:hover {
+      background: #493002;
+    }
+
+    h2.page-break {
+        page-break-before: always;
+    }
+</style>
+

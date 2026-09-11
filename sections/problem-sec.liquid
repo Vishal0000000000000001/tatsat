@@ -1,0 +1,145 @@
+{% schema %}
+{
+  "name": "Shop By Problem",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "SHOP BY PROBLEM"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "problem_item",
+      "name": "Problem Item",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select Product"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Problem Title"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Shop By Problem"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="problem-sec-wrapper problem-sec-px"> 
+  <h2 class="problem-sec-heading">
+    {{ section.settings.main_heading }}
+  </h2>
+
+  <div class="problem-sec-grid">
+    {% for block in section.blocks %}
+      {% assign prod = block.settings.product %}
+      {% assign product_obj = all_products[prod] %}
+
+      {% if product_obj %}
+        <a href="{{ product_obj.url }}" class="problem-sec-item">
+          <div class="problem-sec-img-wrap">
+            {% if product_obj.featured_image %}
+              <img 
+                src="{{ product_obj.featured_image | img_url: '600x' }}" 
+                alt="{{ product_obj.title }}" 
+                class="problem-sec-img"
+              >
+            {% endif %}
+
+            <span class="problem-sec-title">{{ block.settings.title }}</span>
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+/* Spacing */
+.problem-sec-wrapper {
+  text-align: center;
+  padding: 40px 15px;
+}
+
+.problem-sec-heading {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #cead80;
+}
+
+/* Grid */
+.problem-sec-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    max-width: 1400px;
+  margin:0 auto;
+}
+
+/* Item */
+.problem-sec-item {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s ease;
+}
+.problem-sec-item:hover {
+  transform: scale(1.03);
+}
+
+.problem-sec-img-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Image */
+.problem-sec-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Title Badge */
+.problem-sec-title {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background:  #cead80;
+  padding: 5px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .problem-sec-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .problem-sec-item {
+    flex: 0 0 65%;
+    scroll-snap-align: start;
+  }
+  .problem-sec-title {font-size: 10px;}
+}
+</style>

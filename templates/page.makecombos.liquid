@@ -1,0 +1,500 @@
+{% comment %}
+Combo Builder with Search, Filter, Image Preview — Styled like Collection Page
+{% endcomment %}
+  {% section 'custom-slides' %}
+<section class="combo-builder">
+  {% comment %} <h2 class="combo-title-main">Build Your Own Bunble</h2> {% endcomment %}
+
+  <!-- Search & Filter -->
+  <div class="combo-controls">
+    <input type="text" id="combo-search" placeholder="Search products..." class="combo-input">
+    <select id="combo-collection" class="combo-select">
+      <option value="">All Collections</option>
+      {% for collection in collections %}
+        {% if collection.all_products_count > 0 %}
+          <option value="{{ collection.handle }}">{{ collection.title }}</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+  </div>
+
+  <!-- Products list -->
+  <!-- Products list -->
+<div id="combo-products" class="combo-products">
+  
+  <!-- 1. Bracelets -->
+  {% paginate collections['bracelets'].products by 1000 %}
+  {% for product in collections['bracelets'].products %}
+    {% assign first_variant = product.variants.first %}
+      <div class="combo-item"
+        data-variant-id="{{ first_variant.id }}"
+        data-price="{{ first_variant.price | divided_by: 100 }}"
+        data-title="{{ product.title | escape }}"
+        data-collection="{% for col in product.collections %}{{ col.handle }} {% endfor %}">
+        {% comment %} <div class="combo-card">
+          <label>
+            <input type="checkbox" class="combo-checkbox">
+            <div class="combo-image-wrapper">
+              <img src="{{ product.featured_image | img_url: '540x' }}" alt="{{ product.title }}">
+              {% if product.compare_at_price > product.price %}
+                <span class="combo-discount">
+                  -{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | round }}%
+                </span>
+              {% endif %}
+            </div>
+            <div class="combo-details">
+              <h3 class="combo-name">{{ product.title }}</h3>
+              <div class="combo-price-block">
+                <span class="combo-price">{{ first_variant.price | money }}</span>
+                {% if product.compare_at_price > product.price %}
+                  <span class="combo-old-price">{{ product.compare_at_price | money }}</span>
+                {% endif %}
+              </div>
+              <!-- Start of Judge.me code -->
+              <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
+                  {{ product.metafields.judgeme.badge }}
+              </div>
+
+            </div>
+          </label>
+        </div> {% endcomment %}
+
+       <div class="combo-card">
+  <div class="combo-image-wrapper">
+    <img src="{{ product.featured_image | img_url: '540x' }}" alt="{{ product.title }}">
+    {% if product.compare_at_price > product.price %}
+      <span class="combo-discount">
+        -{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | round }}%
+      </span>
+    {% endif %}
+  </div>
+
+  <div class="combo-details">
+    <h3 class="combo-name">{{ product.title }}</h3>
+
+    <div class="combo-price-block">
+      <span class="combo-price">{{ first_variant.price | money }}</span>
+      {% if product.compare_at_price > product.price %}
+        <span class="combo-old-price">{{ product.compare_at_price | money }}</span>
+      {% endif %}
+    </div>
+
+   
+    <div style='{{ jm_style }}'
+         class='jdgm-widget jdgm-preview-badge'
+         data-id='{{ product.id }}'
+         data-auto-install='false'>
+      {{ product.metafields.judgeme.badge }}
+    </div>
+
+    
+     <button class="combo-select-btn"
+              data-selected="false">
+        Select Product
+      </button>
+  </div>
+</div>
+      </div>
+    {% comment %} {% endif %} {% endcomment %}
+  {% endfor %}
+{% endpaginate %}
+
+  <!-- 2. Neck Pieces -->
+  {% for product in collections['all'].products %}
+    {% if product.collections contains collections['neck-pieces'] %}
+      {% assign first_variant = product.variants.first %}
+      <div class="combo-item"
+        data-variant-id="{{ first_variant.id }}"
+        data-price="{{ first_variant.price | divided_by: 100 }}"
+        data-title="{{ product.title | escape }}"
+        data-collection="{% for col in product.collections %}{{ col.handle }} {% endfor %}">
+        {% comment %} <div class="combo-card">
+          <label>
+            <input type="checkbox" class="combo-checkbox">
+            <div class="combo-image-wrapper">
+              <img src="{{ product.featured_image | img_url: '540x' }}" alt="{{ product.title }}">
+              {% if product.compare_at_price > product.price %}
+                <span class="combo-discount">
+                  -{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | round }}%
+                </span>
+              {% endif %}
+            </div>
+            <div class="combo-details">
+              <h3 class="combo-name">{{ product.title }}</h3>
+              <div class="combo-price-block">
+                <span class="combo-price">{{ first_variant.price | money }}</span>
+                {% if product.compare_at_price > product.price %}
+                  <span class="combo-old-price">{{ product.compare_at_price | money }}</span>
+                {% endif %}
+              </div>
+              
+              <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
+                  {{ product.metafields.judgeme.badge }}
+              </div>
+
+            </div>
+          </label>
+        </div> {% endcomment %}
+        <div class="combo-card">
+  <div class="combo-image-wrapper">
+    <img src="{{ product.featured_image | img_url: '540x' }}" alt="{{ product.title }}">
+    {% if product.compare_at_price > product.price %}
+      <span class="combo-discount">
+        -{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | round }}%
+      </span>
+    {% endif %}
+  </div>
+
+  <div class="combo-details">
+    <h3 class="combo-name">{{ product.title }}</h3>
+
+    <div class="combo-price-block">
+      <span class="combo-price">{{ first_variant.price | money }}</span>
+      {% if product.compare_at_price > product.price %}
+        <span class="combo-old-price">{{ product.compare_at_price | money }}</span>
+      {% endif %}
+    </div>
+
+   
+    <div style='{{ jm_style }}'
+         class='jdgm-widget jdgm-preview-badge'
+         data-id='{{ product.id }}'
+         data-auto-install='false'>
+      {{ product.metafields.judgeme.badge }}
+    </div>
+
+    
+     <button class="combo-select-btn"
+              data-selected="false">
+        Select Product
+      </button>
+  </div>
+</div>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <!-- 3. Home Decor -->
+  {% comment %} {% for product in collections['all'].products %}
+    {% if product.collections contains collections['home-decor'] %}
+      {% assign first_variant = product.variants.first %}
+      <div class="combo-item"
+        data-variant-id="{{ first_variant.id }}"
+        data-price="{{ first_variant.price | divided_by: 100 }}"
+        data-title="{{ product.title | escape }}"
+        data-collection="{% for col in product.collections %}{{ col.handle }} {% endfor %}">
+        <div class="combo-card">
+          <label>
+            <input type="checkbox" class="combo-checkbox">
+            <div class="combo-image-wrapper">
+              <img src="{{ product.featured_image | img_url: '540x' }}" alt="{{ product.title }}">
+              {% if product.compare_at_price > product.price %}
+                <span class="combo-discount">
+                  -{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | round }}%
+                </span>
+              {% endif %}
+            </div>
+            <div class="combo-details">
+              <h3 class="combo-name">{{ product.title }}</h3>
+              <div class="combo-price-block">
+                <span class="combo-price">{{ first_variant.price | money }}</span>
+                {% if product.compare_at_price > product.price %}
+                  <span class="combo-old-price">{{ product.compare_at_price | money }}</span>
+                {% endif %}
+              </div>
+             
+    <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
+        {{ product.metafields.judgeme.badge }}
+    </div>
+
+            </div>
+          </label>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %} {% endcomment %}
+
+</div>
+
+
+  <!-- Selected products preview -->
+  <div class="combo-preview">
+    <h3>Selected Products</h3>
+    <div id="selected-products" class="selected-products"></div>
+  </div>
+
+  <!-- Summary -->
+  <div class="combo-summary">
+    <p><strong>Total:</strong> <span id="combo-total">₹0.00</span></p>
+    <button id="add-combo-to-cart" class="btn">Add Combo to Cart</button>
+  </div>
+</section>
+
+<div id="floating-combo-tracker" style="
+  
+">
+  <div class="flot-left-box" style="font-size: 16px; width: 33%;">
+    <span>Items Selected: <span id="floating-item-count">0</span></span>
+    <span class="flot-left">Total Cost: ₹<span class="floating-total-cost">0.00</span></span>
+    
+  </div>
+  <div class="flt-mb" style="font-size: 16px; width: 33%;">
+    Total Cost: ₹<span class="floating-total-cost">0.00</span>
+  </div>
+  <button id="floating-go-to-cart" style="
+    width: 33%;
+    padding: 12px 0;
+    background: rgb(210, 174, 125);;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  ">Go to Cart</button>
+</div>
+
+
+<style>
+.combo-builder { padding: 20px; max-width: 1200px; margin: auto; }
+.combo-title-main { text-align: center; margin-bottom: 20px; font-size: 2rem; }
+.combo-controls { margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+.combo-input, .combo-select {
+  flex: 1;
+  padding: 10px;
+}
+
+.combo-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.combo-card {
+  background: #fff;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+{% comment %} .combo-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); } {% endcomment %}
+.combo-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.combo-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.combo-discount {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #c49a6c;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+.combo-details { padding: 10px 0; }
+.combo-name {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  text-align: center;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;   /* sirf 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.combo-price-block { display: flex; gap: 8px; align-items: center;  justify-content: center; }
+.combo-price { font-weight: bold; text-align: center; }
+.combo-old-price { text-decoration: line-through; color: #888; font-size: 0.9rem; }
+
+.combo-preview {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px dashed #ccc;
+  background: #fafafa;
+}
+.selected-products img { height: 50px; width: auto; margin: 5px; border-radius: 4px; }
+
+.combo-summary {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.flot-left{display:none;}
+div#selected-products{
+    display: flex;
+    flex-wrap: wrap;
+}
+#floating-combo-tracker {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1200px;
+  width: calc(100% - 40px); /* 20px padding both sides */
+  background: white;
+  color: black;
+  padding: 20px 25px;
+  font-family: Lato, sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  z-index: 10000;
+}
+.combo-name { text-align: left;}
+ .combo-price-block {justify-content: start;}
+@media (max-width: 768px) {
+  .combo-controls { flex-direction: column; }
+  .combo-products {
+  grid-template-columns: repeat(2, 1fr);
+}
+.flt-mb{display:none;}
+.flot-left{display:block; font-size: 12px;}
+.flot-left-box{width:45% !important;}
+#floating-go-to-cart{width:45% !important;}
+{% comment %} #floating-combo-tracker{
+left:0 !important; right:0 !important; justify-content: space-between;
+} {% endcomment %}
+#floating-combo-tracker {
+    width: 100%;
+    left: 0;
+    transform: none;
+    padding: 7px 25px;
+    bottom: 0;
+    border-radius: 0;
+    justify-content: space-between;
+  }
+  .combo-name { text-align: left;}
+  .combo-price {    font-size: 11px;}
+  .combo-old-price {font-size: 11px;}
+  .combo-price-block {justify-content: start;}
+}
+
+
+.combo-select-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  background: #cead80;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.combo-select-btn:hover {
+  background: #333;
+}
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const searchInput = document.getElementById('combo-search');
+  const collectionFilter = document.getElementById('combo-collection');
+  const comboButtons = document.querySelectorAll('.combo-select-btn');
+  const totalElement = document.getElementById('combo-total');
+  const selectedProductsDiv = document.getElementById('selected-products');
+
+  const addButton = document.getElementById('add-combo-to-cart');
+  const floatingItemCount = document.getElementById('floating-item-count');
+  const floatingTotalCost = document.querySelectorAll('.floating-total-cost');
+  const floatingGoToCart = document.getElementById('floating-go-to-cart');
+
+  function updateTotalAndPreview() {
+    let total = 0;
+    let count = 0;
+    selectedProductsDiv.innerHTML = '';
+
+    document.querySelectorAll('.combo-item').forEach(item => {
+      const btn = item.querySelector('.combo-select-btn');
+      if (!btn) return;
+
+      if (btn.dataset.selected === 'true') {
+        total += parseFloat(item.dataset.price);
+        const img = item.querySelector('img').cloneNode();
+        selectedProductsDiv.appendChild(img);
+        count++;
+      }
+    });
+
+    if (totalElement) totalElement.textContent = `₹${total.toFixed(2)}`;
+    if (floatingItemCount) floatingItemCount.textContent = count;
+
+    floatingTotalCost.forEach(el => {
+      el.textContent = total.toFixed(2);
+    });
+  }
+
+  // BUTTON TOGGLE
+  comboButtons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const isSelected = this.dataset.selected === 'true';
+      this.dataset.selected = isSelected ? 'false' : 'true';
+      this.textContent = isSelected ? 'Select Product' : 'Deselect';
+      this.classList.toggle('selected', !isSelected);
+      updateTotalAndPreview();
+    });
+  });
+
+  function collectItems() {
+    let items = [];
+    document.querySelectorAll('.combo-item').forEach(item => {
+      const btn = item.querySelector('.combo-select-btn');
+      if (btn && btn.dataset.selected === 'true') {
+        items.push({
+          id: item.dataset.variantId,
+          quantity: 1
+        });
+      }
+    });
+    return items;
+  }
+
+  if (addButton) {
+    addButton.addEventListener('click', function () {
+      const items = collectItems();
+      if (!items.length) return alert('Please select at least one product.');
+
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items })
+      });
+    });
+  }
+
+  if (floatingGoToCart) {
+    floatingGoToCart.addEventListener('click', function () {
+      const items = collectItems();
+      if (!items.length) return alert('Please select at least one product.');
+
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items })
+      });
+    });
+  }
+
+  updateTotalAndPreview();
+});
+</script>
+
