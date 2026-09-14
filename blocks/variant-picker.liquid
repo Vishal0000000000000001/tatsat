@@ -30,19 +30,37 @@
   transform: translateX(0) !important;
 }
 .best-seller-badge{
-  display:inline-block;
-  position:relative;
-  top:auto;
+  display:inline-flex;
+  align-items:center;
+  gap:3px;
+  position:absolute;
+  top:6px;
+  right:6px;
   left:auto;
+  bottom:auto;
   transform:none;
-  background:#cead80;
-  color:#fff;
-  font-size:10px;
+  background:#151515;
+  color:#e8c98a;
+  font-size:8px;
   font-weight:700;
-  padding:2px 8px;
-  border-radius:3px;
-  margin-bottom:4px;
-  z-index:2;
+  letter-spacing:0.3px;
+  padding:2px 7px;
+  border-radius:999px;
+  border:1px solid #e8c98a;
+  box-shadow:0 2px 4px rgba(0,0,0,0.18);
+  margin-bottom:0;
+  white-space:nowrap;
+  z-index:3;
+}
+
+.best-seller-badge::before{
+  content:"★";
+  font-size:7px;
+}
+
+/* Make room at the top so the corner badge doesn't sit over the title */
+.variant-option__button-label:has(.best-seller-badge){
+  padding-top:calc(var(--padding-sm) + 16px);
 }
 
 .variant-option__button-label__text{
@@ -51,7 +69,33 @@
   align-items:center;
   justify-content:center;
   text-align:center;
-} 
+}
+
+.variant-option__value-row{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:nowrap;
+  gap:6px;
+}
+
+.variant-option__discount-badge{
+  display:inline-flex;
+  align-items:center;
+  background:linear-gradient(180deg, #f7ecd8, #efdcb8);
+  color:#8a5a26;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:0.3px;
+  line-height:1;
+  padding:3px 7px;
+  border-radius:999px;
+  border:1px solid rgba(154, 111, 46, 0.25);
+  box-shadow:0 1px 2px rgba(0,0,0,0.08);
+  white-space:nowrap;
+  flex-shrink:0;
+  z-index:2;
+}
 
 </style>
 

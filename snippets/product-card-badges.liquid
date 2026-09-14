@@ -38,6 +38,15 @@
   {%- endif -%}
 </div>
 
+{%- assign card_top_label = product.metafields.custom.badge_label.value -%}
+{%- if card_top_label != blank -%}
+  <div class="product-badges product-badges--top-left">
+    <div class="product-badges__badge product-badges__badge--pill">
+      {{ card_top_label }}
+    </div>
+  </div>
+{%- endif -%}
+
 {% stylesheet %}
   .product-badges {
     --badge-inset: max(var(--padding-xs), calc((var(--border-radius) + var(--padding-xs)) * (1 - cos(45deg))));
@@ -80,5 +89,17 @@
   .product-badges__badge--rectangle {
     padding-block: var(--badge-rectangle-padding-block);
     padding-inline: var(--badge-rectangle-padding-inline);
+  }
+
+  .product-badges__badge--pill {
+    background: linear-gradient(180deg, #f7ecd8, #cead80);
+    color: #4a3418;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
   }
 {% endstylesheet %}
