@@ -1,0 +1,370 @@
+{% doc %}
+  Auto-opening newsletter discount popup.
+  Shows itself after a configurable delay, optionally only once per visitor
+  (tracked in the browser's localStorage), and lets shoppers submit their
+  email through Shopify's customer/newsletter form to receive a discount.
+{% enddoc %}
+
+{% if section.settings.enable %}
+  {% assign popup_id = 'PopupNewsletter-' | append: section.id %}
+
+  <script
+    src="{{ 'dialog.js' | asset_url }}"
+    type="module"
+  ></script>
+
+  <dialog-component
+    id="{{ popup_id }}"
+    class="popup-newsletter"
+    data-delay="{{ section.settings.delay | times: 1000 }}"
+    data-once-per-visitor="{{ section.settings.once_per_visitor }}"
+    data-storage-key="popup-newsletter-dismissed-{{ section.id }}"
+  >
+    <dialog
+      ref="dialog"
+      class="popup-newsletter__content dialog-modal color-{{ section.settings.color_scheme }}"
+      scroll-lock
+      aria-labelledby="popup-newsletter-heading-{{ section.id }}"
+    >
+      <button
+        ref="closeButton"
+        on:click="/closeDialog"
+        class="button button-unstyled close-button popup-newsletter__close"
+        aria-label="{{ 'accessibility.close_dialog' | t }}"
+      >
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </button>
+
+      <div class="popup-newsletter__inner">
+        {% if section.settings.image != blank %}
+          <div class="popup-newsletter__image-wrapper">
+            {{
+              section.settings.image
+              | image_url: width: 400
+              | image_tag: loading: 'lazy', class: 'popup-newsletter__image', sizes: '200px', widths: '200,300,400'
+            }}
+          </div>
+        {% endif %}
+
+        <h2
+          id="popup-newsletter-heading-{{ section.id }}"
+          class="popup-newsletter__heading"
+        >
+          {{ section.settings.heading }}
+        </h2>
+
+        {% if section.settings.subheading != blank %}
+          <p class="popup-newsletter__subheading">{{ section.settings.subheading }}</p>
+        {% endif %}
+
+        {%- form 'customer', class: 'popup-newsletter__form' -%}
+          <input
+            type="hidden"
+            name="contact[tags]"
+            value="newsletter"
+          >
+
+          <label
+            for="{{ popup_id }}-email"
+            class="visually-hidden"
+          >
+            {{ 'blocks.email_signup.label' | t }}
+          </label>
+          <input
+            id="{{ popup_id }}-email"
+            class="popup-newsletter__input"
+            type="email"
+            name="contact[email]"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            placeholder="{{ section.settings.email_placeholder }}"
+            required
+            {% if form.errors %}
+              autofocus
+              aria-invalid="true"
+              aria-describedby="popup-newsletter-error-{{ section.id }}"
+            {% endif %}
+          >
+
+          {% if form.errors %}
+            <div
+              id="popup-newsletter-error-{{ section.id }}"
+              class="popup-newsletter__message popup-newsletter__message--error"
+              tabindex="-1"
+            >
+              {{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}
+            </div>
+          {% endif %}
+
+          {% if form.posted_successfully? %}
+            <div class="popup-newsletter__message popup-newsletter__message--success">
+              {{ section.settings.success_text }}
+            </div>
+          {% endif %}
+
+          <button
+            type="submit"
+            class="button popup-newsletter__submit"
+          >
+            {{ section.settings.button_label }}
+          </button>
+        {%- endform -%}
+
+        <button
+          ref="dismissButton"
+          type="button"
+          class="button button-unstyled popup-newsletter__dismiss"
+        >
+          {{ section.settings.dismiss_label }}
+        </button>
+
+        {% if section.settings.footer_text != blank %}
+          <p class="popup-newsletter__footer-text">{{ section.settings.footer_text }}</p>
+        {% endif %}
+      </div>
+    </dialog>
+  </dialog-component>
+
+  <script>
+    (function () {
+      var popup = document.getElementById('{{ popup_id }}');
+      if (!popup) return;
+
+      var delay = parseInt(popup.dataset.delay, 10) || 5000;
+      var oncePerVisitor = popup.dataset.oncePerVisitor === 'true';
+      var storageKey = popup.dataset.storageKey;
+
+      function markDismissed() {
+        if (!oncePerVisitor) return;
+        try {
+          window.localStorage.setItem(storageKey, '1');
+        } catch (e) {
+          /* localStorage unavailable, ignore */
+        }
+      }
+
+      function alreadyDismissed() {
+        if (!oncePerVisitor) return false;
+        try {
+          return window.localStorage.getItem(storageKey) === '1';
+        } catch (e) {
+          return false;
+        }
+      }
+
+      if (alreadyDismissed()) return;
+
+      window.setTimeout(function () {
+        if (typeof popup.showDialog === 'function') {
+          popup.showDialog();
+        }
+      }, delay);
+
+      popup.addEventListener('dialog:close', markDismissed);
+
+      var dismissButton = popup.querySelector('[ref="dismissButton"]');
+      if (dismissButton) {
+        dismissButton.addEventListener('click', function () {
+          markDismissed();
+          if (typeof popup.closeDialog === 'function') popup.closeDialog();
+        });
+      }
+
+      var form = popup.querySelector('form');
+      if (form) {
+        form.addEventListener('submit', markDismissed);
+      }
+    })();
+  </script>
+{% endif %}
+
+{% stylesheet %}
+    .popup-newsletter__content {
+      box-shadow: var(--shadow-popover);
+      border: var(--style-border-popover);
+      border-radius: var(--style-border-radius-popover);
+      background-color: var(--color-background);
+      padding: var(--padding-4xl) var(--padding-xl) var(--padding-xl);
+      width: 100%;
+      max-width: 420px;
+      max-height: var(--modal-max-height);
+      text-align: center;
+    }
+
+    .popup-newsletter__content[open] {
+      animation: modalSlideInTop var(--animation-speed) var(--animation-easing) forwards;
+    }
+
+    .popup-newsletter__content.dialog-closing {
+      animation: modalSlideOutTop var(--animation-speed) var(--animation-easing) forwards;
+    }
+
+    .popup-newsletter__close {
+      top: var(--margin-2xs);
+      right: var(--margin-2xs);
+      opacity: 0.8;
+      animation: none;
+    }
+
+    .popup-newsletter__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--gap-sm);
+    }
+
+    .popup-newsletter__image-wrapper {
+      width: 140px;
+      margin-bottom: var(--margin-xs);
+    }
+
+    .popup-newsletter__image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .popup-newsletter__heading {
+      margin: 0;
+    }
+
+    .popup-newsletter__subheading {
+      margin: 0;
+      opacity: 0.8;
+    }
+
+    .popup-newsletter__form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-sm);
+      width: 100%;
+      margin-top: var(--margin-xs);
+    }
+
+    .popup-newsletter__input {
+      width: 100%;
+      border: var(--style-border-width-inputs) solid var(--color-input-border);
+      border-radius: var(--style-border-radius-inputs);
+      padding: var(--padding-lg) var(--padding-xl);
+      background-color: var(--color-input-background);
+      color: var(--color-input-text);
+    }
+
+    .popup-newsletter__submit {
+      width: 100%;
+    }
+
+    .popup-newsletter__message {
+      font-size: 0.85em;
+    }
+
+    .popup-newsletter__message--error {
+      color: var(--color-error);
+    }
+
+    .popup-newsletter__dismiss {
+      opacity: 0.6;
+      text-decoration: underline;
+      margin-top: var(--margin-2xs);
+    }
+
+    .popup-newsletter__footer-text {
+      font-size: 0.75em;
+      opacity: 0.65;
+      margin: var(--margin-2xs) 0 0;
+    }
+  {% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Discount popup",
+  "tag": "div",
+  "class": "section-popup-newsletter",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Enable popup",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Timing"
+    },
+    {
+      "type": "range",
+      "id": "delay",
+      "label": "Show after (seconds)",
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "once_per_visitor",
+      "label": "Show only once per visitor",
+      "info": "Uses the visitor's browser storage so the popup won't reappear once it has been shown and closed.",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "10% OFF your next order"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Unlock it instantly now:"
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Email field placeholder",
+      "default": "Email address"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Submit button label",
+      "default": "Claim discount"
+    },
+    {
+      "type": "text",
+      "id": "dismiss_label",
+      "label": "Dismiss link label",
+      "default": "No, thanks"
+    },
+    {
+      "type": "text",
+      "id": "success_text",
+      "label": "Success message",
+      "default": "Thanks for subscribing! Check your inbox for your discount code."
+    },
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Footer text",
+      "default": "Be the first to get new features & special drops! Unsubscribe anytime."
+    }
+  ]
+}
+{% endschema %}
