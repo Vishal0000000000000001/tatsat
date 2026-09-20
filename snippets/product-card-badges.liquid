@@ -15,25 +15,14 @@
     --badge-font-family: var(--font-{{ settings.badge_font_family }}--family); --badge-font-weight: var(--font-{{ settings.badge_font_family }}--weight); --badge-text-transform: {{ settings.badge_text_transform }};
   "
 >
-  {%- if product.available == false or product.compare_at_price > product.price and product.available -%}
+  {%- if product.available == false -%}
     <div
       class="
         product-badges__badge product-badges__badge--rectangle
-        {% if product.available == false %} color-{{ settings.badge_sold_out_color_scheme }}{% elsif product.compare_at_price > product.price %} color-{{ settings.badge_sale_color_scheme }}{% endif %}
+        color-{{ settings.badge_sold_out_color_scheme }}
       "
     >
-      {%- if product.available == false -%}
-        {{ 'content.product_badge_sold_out' | t }}
-      {%- elsif product.compare_at_price > product.price -%}
-        
-        {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
-  {% assign compare_price = product.selected_or_first_available_variant.compare_at_price %}
-  {% assign sale_price = product.selected_or_first_available_variant.price %}
-  {% assign discount = compare_price | minus: sale_price | times: 100 | divided_by: compare_price %}
-   {{ discount | round }}% OFF
-{% endif %}
-
-      {%- endif -%}
+      {{ 'content.product_badge_sold_out' | t }}
     </div>
   {%- endif -%}
 </div>
@@ -43,6 +32,20 @@
   <div class="product-badges product-badges--top-left">
     <div class="product-badges__badge product-badges__badge--pill">
       {{ card_top_label }}
+    </div>
+  </div>
+{%- endif -%}
+
+{%- assign product_rating = product.metafields.reviews.rating.value.rating -%}
+{%- assign product_rating_count = product.metafields.reviews.rating_count -%}
+{%- if product_rating != blank and product_rating_count != blank and product_rating_count > 0 -%}
+  <div class="product-badges product-badges--top-right">
+    <div class="product-badges__badge product-badges__badge--pill product-badges__badge--rating">
+      <svg class="product-badges__star" viewBox="0 0 32 32" role="presentation" aria-hidden="true">
+        <path d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z" />
+      </svg>
+      {{ product_rating | round: 1 }}
+      <span class="product-badges__rating-count">({{ product_rating_count }})</span>
     </div>
   </div>
 {%- endif -%}
@@ -101,5 +104,23 @@
     border-radius: 999px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
     white-space: nowrap;
+  }
+
+  .product-badges__badge--rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .product-badges__star {
+    width: 11px;
+    height: 11px;
+    fill: #4a3418;
+    flex-shrink: 0;
+  }
+
+  .product-badges__rating-count {
+    font-weight: 500;
+    opacity: 0.85;
   }
 {% endstylesheet %}
