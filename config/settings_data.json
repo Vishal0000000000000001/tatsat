@@ -59,6 +59,16 @@
     "cart_type": "drawer",
     "cart_price_font": "secondary",
     "auto_open_cart_drawer": true,
+    "cart_upsell_heading": "You may also like",
+    "cart_upsell_products": [
+      "citrine-master-of-good-times",
+      "amethyst-with-pentacle-amp-crescent-moon-evil-eye-charging-plate",
+      "clear-quartz-master-of-aura-cleansing",
+      "garnet-master-stamina-booster",
+      "garnet-numerology-no-9-for-strength-stamina-hv",
+      "green-jade-master-of-success",
+      "labradorite-master-negative-energy-shield"
+    ],
     "drawer_drop_shadow": false,
     "icon_stroke": "default",
     "input_border_width": 2,
