@@ -1,6 +1,6 @@
 {%- doc -%}
   Simple "Pairs well with" upsell block for the cart drawer.
-  Shows the products picked in Theme settings > Cart > Upsell products, each with a small
+  Shows the a products picked in Theme settings > Cart > Upsell products, each with a small
   image, title, price and an Add to cart button. Merchant can change the products anytime
   from the theme editor - no code changes needed.
 
@@ -80,32 +80,40 @@
 
 {% stylesheet %}
   .cart-upsell {
-    padding: var(--cart-drawer-padding);
+    padding-block: var(--gap-sm, 12px);
+    padding-inline: var(--cart-drawer-padding);
     border-top: 1px solid rgb(var(--color-foreground-rgb) / 10%);
 
     @media screen and (min-width: 750px) {
-      padding: var(--cart-drawer-padding-desktop);
+      padding-inline: var(--cart-drawer-padding-desktop);
     }
   }
 
   .cart-upsell__heading {
-    margin: 0 0 var(--gap-sm, 12px);
+    margin: 0 0 8px;
   }
 
   .cart-upsell__list {
     display: flex;
-    gap: var(--gap-sm, 12px);
+    gap: 8px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding-bottom: 4px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .cart-upsell__list::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
   }
 
   .cart-upsell__card {
-    flex: 0 0 140px;
+    flex: 0 0 90px;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 3px;
   }
 
   .cart-upsell__image {
@@ -114,15 +122,15 @@
 
   .cart-upsell__image img {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 6px;
     display: block;
   }
 
   .cart-upsell__title {
-    font-size: 0.875rem;
-    line-height: 1.3;
+    font-size: 0.6875rem;
+    line-height: 1.2;
     color: var(--color-foreground);
     text-decoration: none;
     display: -webkit-box;
@@ -136,11 +144,12 @@
   }
 
   .cart-upsell__price {
-    font-size: 0.875rem;
+    font-size: 0.6875rem;
   }
 
   .cart-upsell__button {
     width: 100%;
-    padding-block: 8px;
+    padding-block: 4px;
+    font-size: 0.6875rem;
   }
 {% endstylesheet %}
