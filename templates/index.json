@@ -334,7 +334,7 @@
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "padding-block-start": 4,
+                "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
@@ -367,6 +367,7 @@
             "review_q8QR9y": {
               "type": "review",
               "name": "t:names.product_review_stars",
+              "disabled": true,
               "settings": {
                 "stars_style": "shaded",
                 "show_number": true,
