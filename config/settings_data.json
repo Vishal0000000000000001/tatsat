@@ -59,6 +59,7 @@
     "cart_type": "drawer",
     "cart_price_font": "secondary",
     "auto_open_cart_drawer": true,
+    "show_add_discount_code": false,
     "cart_upsell_heading": "You may also like",
     "cart_upsell_products": [
       "evil-eye-charging-plate",
