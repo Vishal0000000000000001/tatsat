@@ -1819,6 +1819,34 @@
         "step": 1,
         "unit": "px",
         "default": 0
+      },
+      {
+        "type": "header",
+        "content": "t:content.cart_upsell",
+        "visible_if": "{{ settings.cart_type == 'drawer' }}"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_cart_upsell",
+        "label": "t:settings.show_cart_upsell",
+        "info": "t:info.show_cart_upsell",
+        "default": true,
+        "visible_if": "{{ settings.cart_type == 'drawer' }}"
+      },
+      {
+        "type": "text",
+        "id": "cart_upsell_heading",
+        "label": "t:settings.cart_upsell_heading",
+        "default": "Pairs well with",
+        "visible_if": "{{ settings.cart_type == 'drawer' and settings.show_cart_upsell }}"
+      },
+      {
+        "type": "product_list",
+        "id": "cart_upsell_products",
+        "label": "t:settings.cart_upsell_products",
+        "info": "t:info.cart_upsell_products",
+        "limit": 8,
+        "visible_if": "{{ settings.cart_type == 'drawer' and settings.show_cart_upsell }}"
       }
     ]
   },
