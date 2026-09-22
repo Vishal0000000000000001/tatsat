@@ -1,0 +1,373 @@
+{%- if section.blocks.size > 0 -%}
+  {%- render 'section-spacing-collapsing' -%}
+
+  {%- liquid
+    assign block_count = section.blocks.size
+    assign logo_height = section.settings.logo_height | default: 32
+    assign tile_width = section.settings.tile_width | default: 170
+    assign scroll_duration = section.settings.scroll_duration | default: 30
+
+    assign repeat_count = 1
+    if section.settings.auto_scroll and block_count < 10
+      assign repeat_count = 9 | plus: block_count | divided_by: block_count
+    endif
+  -%}
+
+  <style>
+    #shopify-section-{{ section.id }} .cslogo {
+    --cslogo-tile-bg: {{ section.settings.tile_background.rgb | default: '246 246 246' }};
+    --cslogo-tile-radius: {{ section.settings.tile_radius | default: 12 }}px;
+    --cslogo-tile-w: {{ tile_width }}px;
+    --cslogo-logo-h: {{ logo_height }}px;
+    --cslogo-gap: clamp(10px, 1.6vw, 18px);
+    --cslogo-duration: {{ scroll_duration }}s;
+    }
+
+    #shopify-section-{{ section.id }} .cslogo {
+    display: grid;
+    gap: clamp(24px, 3.5vw, 40px);
+    }
+
+    /* ---------------------------- HEADER ---------------------------- */
+
+    #shopify-section-{{ section.id }} .cslogo__header {
+    display: grid;
+    gap: clamp(8px, 1.4vw, 14px);
+    justify-items: center;
+    text-align: center;
+    margin-inline: auto;
+    max-width: 100%;
+    padding-inline: 20px;
+    }
+
+    #shopify-section-{{ section.id }} .cslogo__eyebrow {
+    margin: 0;
+    font-size: clamp(11px, 1.4vw, 13px);
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgb(var(--text-color) / 0.55);
+    }
+
+    #shopify-section-{{ section.id }} .cslogo__title {
+    margin: 0;
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight, 700);
+    font-style: var(--heading-font-style, normal);
+    font-size: var(--text-h2);
+    line-height: 1.4;
+    color: rgb(var(--text-color));
+    text-wrap: balance;
+    }
+
+    #shopify-section-{{ section.id }} .cslogo__marquee {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    }
+
+    #shopify-section-{{ section.id }} .cslogo__track {
+    display: flex;
+    width: max-content;
+    gap: var(--cslogo-gap);
+    animation: cslogo-scroll var(--cslogo-duration) linear infinite;
+    }
+
+    #shopify-section-{{ section.id }} .cslogo__group {
+    display: flex;
+    gap: var(--cslogo-gap);
+    }
+
+    {%- if section.settings.pause_on_hover -%}
+    #shopify-section-{{ section.id }} .cslogo__marquee:hover .cslogo__track {
+    animation-play-state: paused;
+    }
+    {%- endif -%}
+
+    @keyframes cslogo-scroll {
+    to {
+    transform: translateX(calc(-50% - var(--cslogo-gap) / 2));
+    }
+    }
+
+    /* Static layout (auto scroll off) */
+
+    #shopify-section-{{ section.id }} .cslogo__static {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--cslogo-gap);
+    padding-inline: 20px;
+    }
+    #shopify-section-{{ section.id }} .cslogo__tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: var(--cslogo-tile-w);
+    height: calc(var(--cslogo-logo-h) + 44px);
+    padding: 14px 22px;
+    {% comment %} background: rgb(var(--cslogo-tile-bg)); {% endcomment %}
+    border-radius: var(--cslogo-tile-radius);
+    text-decoration: none;
+    }
+
+    #shopify-section-{{ section.id }} .cslogo__tile img,
+    #shopify-section-{{ section.id }} .cslogo__tile svg {
+    display: block;
+    width: 100%;
+    height: var(--cslogo-logo-h);
+    object-fit: contain;
+    {%- if section.settings.grayscale -%}
+    filter: grayscale(1);
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+    {%- endif -%}
+    }
+
+    {%- if section.settings.grayscale -%}
+    #shopify-section-{{ section.id }} .cslogo__tile:hover img,
+    #shopify-section-{{ section.id }} .cslogo__tile:focus-visible img {
+    filter: grayscale(0);
+    opacity: 1;
+    }
+    {%- endif -%}
+
+    @media screen and (max-width: 740px) {
+    #shopify-section-{{ section.id }} .cslogo {
+    --cslogo-tile-w: calc({{ tile_width }}px * 0.78);
+    --cslogo-logo-h: calc({{ logo_height }}px * 0.85);
+    }
+
+    #shopify-section-{{ section.id }} .cslogo__tile {
+    padding: 12px 16px;
+    height: calc(var(--cslogo-logo-h) + 34px);
+    }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} .cslogo__track {
+    animation: none;
+    }
+
+    #shopify-section-{{ section.id }} .cslogo__marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+    }
+    }
+  </style>
+
+  {%- capture logo_items -%} 
+ {%- for i in (1..repeat_count) -%} 
+ {%- for block in section.blocks -%} 
+ {%- liquid 
+ assign tag = 'div' 
+ if block.settings.url != blank 
+ assign tag = 'a' 
+ endif 
+
+ assign image_alt = block.settings.image.alt | default: 'Logo' | escape 
+ -%} 
+
+ <{{ tag }} 
+ class="cslogo__tile" 
+ {% if tag == 'a' %}href="{{ block.settings.url }}"{% endif %} 
+ {% if i == 1 %}{{ block.shopify_attributes }}{% endif %} 
+ > 
+ {%- if block.settings.image != blank -%} 
+ {{- 
+ block.settings.image 
+ | image_url: width: 400 
+ | image_tag: loading: 'lazy', alt: image_alt, widths: '200,300,400' 
+ -}} 
+ {%- else -%} 
+ {{- 'image' | placeholder_svg_tag -}} 
+ {%- endif -%} 
+ </{{ tag }}> 
+ {%- endfor -%} 
+ {%- endfor -%} 
+ {%- endcapture -%}
+
+  <div {% render 'section-properties' %}>
+    <div class="cslogo">
+      {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+        <div class="cslogo__header">
+          {%- if section.settings.subheading != blank -%}
+            <p class="cslogo__eyebrow">{{ section.settings.subheading | escape }}</p>
+          {%- endif -%}
+
+          {%- if section.settings.title != blank -%}
+            <h2 class="cslogo__title">{{ section.settings.title }}</h2>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.auto_scroll -%}
+        <div class="cslogo__marquee">
+          <div class="cslogo__track">
+            <div class="cslogo__group">{{ logo_items }}</div>
+            <div class="cslogo__group" aria-hidden="true">{{ logo_items }}</div>
+          </div>
+        </div>
+      {%- else -%}
+        <div class="cslogo__static">{{ logo_items }}</div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "CS Featured logo list",
+  "class": "shopify-section--cs-featured-logo-list",
+  "tag": "section",
+  "disabled_on": {
+    "templates": ["password"],
+    "groups": ["header", "custom.overlay"]
+  },
+  "max_blocks": 25,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "Backed by leading e-commerce investors and founders"
+    },
+    {
+      "type": "header",
+      "content": "Logos"
+    },
+    {
+      "type": "range",
+      "id": "logo_height",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Logo height",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "tile_width",
+      "min": 100,
+      "max": 260,
+      "step": 10,
+      "unit": "px",
+      "label": "Logo box width",
+      "default": 170
+    },
+    {
+      "type": "range",
+      "id": "tile_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Logo box corner radius",
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "grayscale",
+      "label": "Grayscale logos (color on hover)",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Auto scroll"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_scroll",
+      "label": "Auto scroll",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "scroll_duration",
+      "min": 10,
+      "max": 120,
+      "step": 5,
+      "unit": "s",
+      "label": "Scroll duration (per loop)",
+      "info": "Higher value = slower scroll",
+      "default": 30
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "tile_background",
+      "label": "Logo box background",
+      "default": "#f6f6f6"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Section background"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo image",
+          "info": "Transparent PNG or SVG works best"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CS Featured logo list",
+      "blocks": [
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" }
+      ]
+    }
+  ]
+}
+{% endschema %}

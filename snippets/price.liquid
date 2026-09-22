@@ -5,11 +5,13 @@
   @param {product} product_resource - The product to render
   @param {boolean} [show_unit_price] - Whether to show the unit price
   @param {boolean} [show_sale_price_first] - Whether to show the sale price first
+  @param {boolean} [show_discount_badge] - Whether to show the "X% OFF" badge next to the price
 {%- enddoc -%}
 
 {%- liquid
   assign show_unit_price = show_unit_price | default: false
   assign show_sale_price_first = show_sale_price_first | default: false
+  assign show_discount_badge = show_discount_badge | default: true, allow_false: true
   assign selected_variant = product_resource.selected_or_first_available_variant
   assign price = selected_variant.price
   assign compare_at_price = selected_variant.compare_at_price
@@ -73,7 +75,7 @@
     </span>
   {% endif %}
 
-   {% if discount_percentage > 0 %}
+   {% if discount_percentage > 0 and show_discount_badge %}
       <span class="discount-badge">
         {{ discount_percentage }}% OFF
       </span>
