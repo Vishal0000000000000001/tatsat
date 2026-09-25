@@ -14,10 +14,9 @@
       "blocks": {
         "slide_ByX9rB": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "desktop_image": "shopify://shop_images/Rakhi.jpg",
-            "mobile_image": "shopify://shop_images/Rakhi_Mobile.jpg",
+            "desktop_image": "shopify://shop_images/web-banner_jpg.jpg",
+            "mobile_image": "shopify://shop_images/mobile-banner_jpg.jpg",
             "slide_link": "shopify://collections/bracelets",
             "heading": "",
             "text": ""
