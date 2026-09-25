@@ -25,6 +25,7 @@
         },
         "slide_rzAGab": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/Image-1_jpg.jpg",
             "mobile_image": "shopify://shop_images/1x1.png",
