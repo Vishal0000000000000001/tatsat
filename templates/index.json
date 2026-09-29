@@ -282,7 +282,7 @@
         "sma_cs10_columns_mobile": 1.2,
         "sma_cs10_card_gap": 20,
         "sma_cs10_card_gap_mobile": 12,
-        "sma_cs10_image_ratio": "4/5",
+        "sma_cs10_image_ratio": "1/1",
         "sma_cs10_image_fit": "cover",
         "sma_cs10_card_bg": "#F2F1ED",
         "sma_cs10_card_radius": 20,
