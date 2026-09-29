@@ -1017,9 +1017,9 @@
       ],
       "name": "vb shoplook",
       "settings": {
-        "sma_full_width": true,
-        "sma_section_width": 1200,
-        "sma_height_desktop": 600,
+        "sma_full_width": false,
+        "sma_section_width": 1600,
+        "sma_height_desktop": 530,
         "sma_height_mobile": 400,
         "sma_border_radius": 16,
         "sma_use_aspect_ratio": true,
