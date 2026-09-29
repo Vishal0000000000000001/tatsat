@@ -597,6 +597,51 @@
         "padding-block-end": 48
       }
     },
+    "featuredlogo_bWX3Rq": {
+      "type": "featuredlogo",
+      "blocks": {
+        "logo_cBfaGi": {
+          "type": "logo",
+          "settings": {
+            "url": ""
+          }
+        },
+        "logo_JL8mez": {
+          "type": "logo",
+          "settings": {
+            "url": ""
+          }
+        },
+        "logo_HyUtWq": {
+          "type": "logo",
+          "settings": {
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_cBfaGi",
+        "logo_JL8mez",
+        "logo_HyUtWq"
+      ],
+      "name": "CS Featured logo list",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 48,
+        "padding-block-end": 48,
+        "subheading": "Featured In",
+        "title": "",
+        "logo_height": 32,
+        "tile_width": 170,
+        "tile_radius": 12,
+        "grayscale": true,
+        "auto_scroll": true,
+        "scroll_duration": 30,
+        "pause_on_hover": true,
+        "tile_background": "#f6f6f6"
+      }
+    },
     "collection_list_TxbKR9": {
       "type": "collection-list",
       "blocks": {
@@ -2911,6 +2956,7 @@
     "problem_sec_aUEeke",
     "vbmultitab_xRwwxg",
     "product_list_BFA8mJ",
+    "featuredlogo_bWX3Rq",
     "collection_list_TxbKR9",
     "image_gallery_xdLL9D",
     "shoplook_6NgJBf",
