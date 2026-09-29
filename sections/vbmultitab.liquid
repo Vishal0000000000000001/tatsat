@@ -1,0 +1,1651 @@
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+{%- style -%}
+  {%- if section.settings.sma_cs10_use_custom_font_heading -%}
+    {{ section.settings.sma_cs10_font_heading | font_face: font_display: 'swap' }}
+  {%- endif -%}
+  {%- if section.settings.sma_cs10_use_custom_font_desc -%}
+    {{ section.settings.sma_cs10_font_desc | font_face: font_display: 'swap' }}
+  {%- endif -%}
+  {%- if section.settings.sma_cs10_use_custom_font_tabs -%}
+    {{ section.settings.sma_cs10_font_tabs | font_face: font_display: 'swap' }}
+  {%- endif -%}
+  {%- if section.settings.sma_cs10_title_use_custom_font -%}
+    {{ section.settings.sma_cs10_title_font | font_face: font_display: 'swap' }}
+  {%- endif -%}
+  {%- if section.settings.sma_cs10_sale_badge_use_custom_font -%}
+    {{ section.settings.sma_cs10_sale_badge_font | font_face: font_display: 'swap' }}
+  {%- endif -%}
+  {%- if section.settings.sma_cs10_soldout_badge_use_custom_font -%}
+    {{ section.settings.sma_cs10_soldout_badge_font | font_face: font_display: 'swap' }}
+  {%- endif -%}
+
+  #sma-cs10-{{ section.id }} {
+    --sma-cs10-bg: {{ section.settings.sma_cs10_bg_color }};
+    --sma-cs10-pad-t: {{ section.settings.sma_cs10_padding_top }}px;
+    --sma-cs10-pad-b: {{ section.settings.sma_cs10_padding_bottom }}px;
+    --sma-cs10-pad-t-m: {{ section.settings.sma_cs10_padding_top_mobile }}px;
+    --sma-cs10-pad-b-m: {{ section.settings.sma_cs10_padding_bottom_mobile }}px;
+
+    --sma-cs10-heading-color: {{ section.settings.sma_cs10_heading_color }};
+    --sma-cs10-heading-size: {{ section.settings.sma_cs10_heading_size }}px;
+    --sma-cs10-heading-size-m: {{ section.settings.sma_cs10_heading_size_mobile }}px;
+    --sma-cs10-desc-color: {{ section.settings.sma_cs10_desc_color }};
+    --sma-cs10-desc-size: {{ section.settings.sma_cs10_desc_size }}px;
+    --sma-cs10-desc-maxw: {{ section.settings.sma_cs10_desc_max_width }}px;
+    --sma-cs10-header-gap: {{ section.settings.sma_cs10_header_bottom_spacing }}px;
+
+    --sma-cs10-tabs-align: {{ section.settings.sma_cs10_tabs_align }};
+    --sma-cs10-tab-color: {{ section.settings.sma_cs10_tab_color }};
+    --sma-cs10-tab-active-color: {{ section.settings.sma_cs10_tab_active_color }};
+    --sma-cs10-tab-underline-color: {{ section.settings.sma_cs10_tab_underline_color }};
+    --sma-cs10-tab-underline-thickness: {{ section.settings.sma_cs10_tab_underline_thickness }}px;
+    --sma-cs10-tab-separator-offset: {{ section.settings.sma_cs10_tab_separator_offset }}px;
+    --sma-cs10-tab-pill-bg: {{ section.settings.sma_cs10_tab_pill_bg }};
+    --sma-cs10-tab-pill-active-bg: {{ section.settings.sma_cs10_tab_pill_active_bg }};
+    --sma-cs10-tab-pill-active-text: {{ section.settings.sma_cs10_tab_pill_active_text }};
+    --sma-cs10-tab-pill-radius: {{ section.settings.sma_cs10_tab_pill_radius }}px;
+    --sma-cs10-tab-size: {{ section.settings.sma_cs10_tab_size }}px;
+    --sma-cs10-tab-letterspacing: {{ section.settings.sma_cs10_tab_letter_spacing }}px;
+    --sma-cs10-tab-gap: {{ section.settings.sma_cs10_tab_gap }}px;
+    --sma-cs10-tabs-gap-bottom: {{ section.settings.sma_cs10_tabs_bottom_spacing }}px;
+
+    --sma-cs10-card-bg: {{ section.settings.sma_cs10_card_bg }};
+    --sma-cs10-card-radius: {{ section.settings.sma_cs10_card_radius }}px;
+    --sma-cs10-image-padding: {{ section.settings.sma_cs10_image_padding }}px;
+    --sma-cs10-image-fit: {{ section.settings.sma_cs10_image_fit }};
+    --sma-cs10-image-ratio: {{ section.settings.sma_cs10_image_ratio }};
+    --sma-cs10-scrim-opacity: {{ section.settings.sma_cs10_scrim_opacity | divided_by: 100.0 }};
+    --sma-cs10-vendor-color: {{ section.settings.sma_cs10_vendor_color }};
+    --sma-cs10-badge-bg: {{ section.settings.sma_cs10_badge_bg }};
+    --sma-cs10-badge-color: {{ section.settings.sma_cs10_badge_color }};
+    --sma-cs10-soldout-bg: {{ section.settings.sma_cs10_soldout_bg }};
+    --sma-cs10-soldout-color: {{ section.settings.sma_cs10_soldout_color }};
+    --sma-cs10-badge-padding-x: {{ section.settings.sma_cs10_badge_padding_x }}px;
+    --sma-cs10-badge-padding-y: {{ section.settings.sma_cs10_badge_padding_y }}px;
+    --sma-cs10-badge-font-family: {{ section.settings.sma_cs10_sale_badge_font.family }}, {{ section.settings.sma_cs10_sale_badge_font.fallback_families }};
+    --sma-cs10-badge-font-weight: {{ section.settings.sma_cs10_sale_badge_font.weight }};
+    --sma-cs10-soldout-badge-font-family: {{ section.settings.sma_cs10_soldout_badge_font.family }}, {{ section.settings.sma_cs10_soldout_badge_font.fallback_families }};
+    --sma-cs10-soldout-badge-font-weight: {{ section.settings.sma_cs10_soldout_badge_font.weight }};
+
+    --sma-cs10-title-color: {{ section.settings.sma_cs10_title_color }};
+    --sma-cs10-title-hover-color: {{ section.settings.sma_cs10_title_hover_color }};
+    --sma-cs10-title-size: {{ section.settings.sma_cs10_title_size }}px;
+    --sma-cs10-title-size-m: {{ section.settings.sma_cs10_title_size_mobile }}px;
+    --sma-cs10-title-duration: {{ section.settings.sma_cs10_title_duration }}ms;
+    --sma-cs10-title-easing: {{ section.settings.sma_cs10_title_easing }};
+
+    --sma-cs10-price-bg: {{ section.settings.sma_cs10_price_bg }};
+    --sma-cs10-price-text: {{ section.settings.sma_cs10_price_text_color }};
+    --sma-cs10-price-radius: {{ section.settings.sma_cs10_price_radius }}px;
+    --sma-cs10-price-pad-x: {{ section.settings.sma_cs10_price_padding_x }}px;
+    --sma-cs10-price-pad-y: {{ section.settings.sma_cs10_price_padding_y }}px;
+    --sma-cs10-price-fontsize: {{ section.settings.sma_cs10_price_font_size }}px;
+    --sma-cs10-price-fade: {{ section.settings.sma_cs10_price_fade_duration }}ms;
+    --sma-cs10-compare-color: {{ section.settings.sma_cs10_compare_price_color }};
+    --sma-cs10-footer-text: {{ section.settings.sma_cs10_footer_text_color }};
+
+    --sma-cs10-arrow-bg: {{ section.settings.sma_cs10_arrow_bg }};
+    --sma-cs10-arrow-color: {{ section.settings.sma_cs10_arrow_color }};
+    --sma-cs10-arrow-bg-hover: {{ section.settings.sma_cs10_arrow_bg_hover }};
+    --sma-cs10-arrow-color-hover: {{ section.settings.sma_cs10_arrow_color_hover }};
+    --sma-cs10-arrow-size: {{ section.settings.sma_cs10_arrow_size }}px;
+    --sma-cs10-dot-color: {{ section.settings.sma_cs10_dot_color }};
+    --sma-cs10-dot-active: {{ section.settings.sma_cs10_dot_active_color }};
+    --sma-cs10-wrapper-bg: {{ section.settings.sma_cs10_wrapper_bg }};
+  }
+
+  .sma-cs10-section {
+    background: var(--sma-cs10-bg);
+    padding: var(--sma-cs10-pad-t) 0 var(--sma-cs10-pad-b);
+    margin-top: {{ section.settings.sma_cs10_margin_top }}px;
+    margin-bottom: {{ section.settings.sma_cs10_margin_bottom }}px;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (max-width: 768px) {
+    .sma-cs10-section { padding: var(--sma-cs10-pad-t-m) 0 var(--sma-cs10-pad-b-m); }
+  }
+
+  .sma-cs10-container {
+    max-width: 100%;
+    {% if section.settings.sma_cs10_width_mode == 'custom_width' %}
+      max-width: {{ section.settings.sma_cs10_max_width }}px;
+    {% endif %}
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    background: var(--sma-cs10-wrapper-bg);
+  }
+
+  .sma-cs10-header { margin-bottom: var(--sma-cs10-header-gap); max-width: var(--sma-cs10-desc-maxw); }
+  .sma-cs10-header--center { margin-left: auto; margin-right: auto; text-align: center; }
+  .sma-cs10-heading {
+    color: var(--sma-cs10-heading-color);
+    font-size: var(--sma-cs10-heading-size);
+    {% if section.settings.sma_cs10_use_custom_font_heading %}
+      font-family: {{ section.settings.sma_cs10_font_heading.family }}, {{ section.settings.sma_cs10_font_heading.fallback_families }};
+      font-weight: {{ section.settings.sma_cs10_font_heading.weight }};
+    {% endif %}
+    line-height: 1.15;
+    margin: 0 0 14px;
+  }
+  .sma-cs10-desc {
+    color: var(--sma-cs10-desc-color);
+    font-size: var(--sma-cs10-desc-size);
+    {% if section.settings.sma_cs10_use_custom_font_desc %}
+      font-family: {{ section.settings.sma_cs10_font_desc.family }}, {{ section.settings.sma_cs10_font_desc.fallback_families }};
+      font-weight: {{ section.settings.sma_cs10_font_desc.weight }};
+    {% endif %}
+    line-height: 1.6;
+    margin: 0;
+  }
+  .sma-cs10-desc p { margin: 0; }
+  @media (max-width: 768px) {
+    .sma-cs10-heading { font-size: var(--sma-cs10-heading-size-m); }
+  }
+
+  .sma-cs10-tabs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--sma-cs10-tab-gap);
+    justify-content: var(--sma-cs10-tabs-align);
+    margin-bottom: var(--sma-cs10-tabs-gap-bottom);
+  }
+  .sma-cs10-tab {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: var(--sma-cs10-tab-size);
+    letter-spacing: var(--sma-cs10-tab-letterspacing);
+    color: var(--sma-cs10-tab-color);
+    {% if section.settings.sma_cs10_use_custom_font_tabs %}
+      font-family: {{ section.settings.sma_cs10_font_tabs.family }}, {{ section.settings.sma_cs10_font_tabs.fallback_families }};
+      font-weight: {{ section.settings.sma_cs10_font_tabs.weight }};
+    {% else %}
+      font-weight: 600;
+    {% endif %}
+    {% if section.settings.sma_cs10_tab_uppercase %}text-transform: uppercase;{% endif %}
+    transition: color 0.25s ease;
+    position: relative;
+    line-height: 1.4;
+    align-self: center;
+  }
+  .sma-cs10-tab-sep {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    margin-top: var(--sma-cs10-tab-separator-offset);
+    line-height: 1;
+    color: var(--sma-cs10-tab-color);
+    opacity: 0.45;
+    font-size: var(--sma-cs10-tab-size);
+  }
+
+  .sma-cs10-tabs--underline .sma-cs10-tab { padding-bottom: 9px; }
+  .sma-cs10-tabs--underline .sma-cs10-tab::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: var(--sma-cs10-tab-underline-thickness);
+    background: var(--sma-cs10-tab-underline-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+  }
+  .sma-cs10-tabs--underline .sma-cs10-tab.is-active { color: var(--sma-cs10-tab-active-color); }
+  .sma-cs10-tabs--underline .sma-cs10-tab.is-active::after { transform: scaleX(1); }
+  .sma-cs10-tabs--underline .sma-cs10-tab:hover { color: var(--sma-cs10-tab-active-color); }
+
+  .sma-cs10-tabs--pill .sma-cs10-tab-sep { display: none; }
+  .sma-cs10-tabs--pill .sma-cs10-tab {
+    background: var(--sma-cs10-tab-pill-bg);
+    padding: 10px 20px;
+    border-radius: var(--sma-cs10-tab-pill-radius);
+  }
+  .sma-cs10-tabs--pill .sma-cs10-tab.is-active {
+    background: var(--sma-cs10-tab-pill-active-bg);
+    color: var(--sma-cs10-tab-pill-active-text);
+  }
+
+  .sma-cs10-panels { position: relative; }
+  .sma-cs10-panel { display: none; position: relative; }
+  .sma-cs10-panel.is-active { display: block; }
+  .sma-cs10-empty { color: var(--sma-cs10-desc-color); opacity: 0.75; padding: 30px 0; font-size: 14px; }
+
+  .sma-cs10-swiper { overflow: hidden; }
+  .sma-cs10-swiper .swiper-wrapper { align-items: stretch; }
+
+  .sma-cs10-slider-wrap {
+    position: relative;
+  }
+  .sma-cs10-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--sma-cs10-arrow-size);
+    height: var(--sma-cs10-arrow-size);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    background: var(--sma-cs10-arrow-bg);
+    color: var(--sma-cs10-arrow-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease, color 0.25s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+  .sma-cs10-nav:hover { background: var(--sma-cs10-arrow-bg-hover); color: var(--sma-cs10-arrow-color-hover); }
+  .sma-cs10-nav svg { width: 38%; height: 38%; stroke: currentColor; fill: none; stroke-width: 2.3; }
+  .sma-cs10-prev { left: -6px; }
+  .sma-cs10-next { right: -6px; }
+  .sma-cs10-nav.swiper-button-disabled { opacity: 0.3; cursor: not-allowed; }
+
+  .sma-cs10-dots.swiper-pagination {
+    position: static;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+  .sma-cs10-dots .swiper-pagination-bullet {
+    width: 6px; height: 6px;
+    background: var(--sma-cs10-dot-color);
+    opacity: 1;
+    border-radius: 50%;
+    transition: 0.25s;
+    margin: 0 !important;
+  }
+  .sma-cs10-dots .swiper-pagination-bullet-active { background: var(--sma-cs10-dot-active); width: 18px; border-radius: 3px; }
+
+  .sma-cs10-card { display: block; }
+  .sma-cs10-card-media {
+    position: relative;
+    background: var(--sma-cs10-card-bg);
+    border-radius: var(--sma-cs10-card-radius);
+    aspect-ratio: var(--sma-cs10-image-ratio);
+    overflow: hidden;
+    display: block;
+    box-sizing: border-box;
+    padding: var(--sma-cs10-image-padding);
+  }
+  .sma-cs10-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: var(--sma-cs10-image-fit);
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
+  }
+  .sma-cs10-card:hover .sma-cs10-card-media img { transform: scale(1.045); }
+
+  .sma-cs10-badge {
+    position: absolute; top: 14px; left: 14px; right: auto; z-index: 5;
+    background: var(--sma-cs10-badge-bg); color: var(--sma-cs10-badge-color);
+    font-size: 11px; letter-spacing: 0.03em;
+    padding: var(--sma-cs10-badge-padding-y) var(--sma-cs10-badge-padding-x);
+    border-radius: 5px;
+    line-height: 1;
+    font-family: var(--sma-cs10-badge-font-family, inherit);
+    font-weight: var(--sma-cs10-badge-font-weight, 700);
+    transform: none;
+  }
+  .sma-cs10-badge--center { left: 50%; right: auto; transform: translateX(-50%); }
+  .sma-cs10-badge--right { right: 14px; left: auto; }
+  .sma-cs10-badge--soldout {
+    background: var(--sma-cs10-soldout-bg);
+    color: var(--sma-cs10-soldout-color);
+    font-family: var(--sma-cs10-soldout-badge-font-family, inherit);
+    font-weight: var(--sma-cs10-soldout-badge-font-weight, 700);
+  }
+
+  .sma-cs10-scrim {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 58%;
+    background: linear-gradient(to top, rgba(0,0,0,var(--sma-cs10-scrim-opacity)), transparent);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .sma-cs10-title-wrap { position: absolute; left: 16px; right: 16px; bottom: 14px; z-index: 3; }
+  .sma-cs10-vendor {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--sma-cs10-vendor-color);
+    margin-bottom: 4px;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+  .sma-cs10-card-title {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: calc(var(--sma-cs10-title-size) * 1.3);
+    line-height: calc(var(--sma-cs10-title-size) * 1.3);
+    text-decoration: none;
+  }
+  .sma-cs10-title-row {
+    position: absolute; left: 0; top: 0; width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--sma-cs10-title-color);
+    font-size: var(--sma-cs10-title-size);
+    {% if section.settings.sma_cs10_title_use_custom_font %}
+      font-family: {{ section.settings.sma_cs10_title_font.family }}, {{ section.settings.sma_cs10_title_font.fallback_families }};
+      font-weight: {{ section.settings.sma_cs10_title_font.weight }};
+    {% else %}
+      font-weight: 600;
+    {% endif %}
+    {% if section.settings.sma_cs10_title_uppercase %}text-transform: uppercase;{% endif %}
+  }
+  .sma-cs10-title-row--b { top: 100%; color: var(--sma-cs10-title-hover-color); }
+  .sma-cs10-unit { display: inline-block; transition: transform var(--sma-cs10-title-duration) var(--sma-cs10-title-easing); }
+  .sma-cs10-card:hover .sma-cs10-title-row--a .sma-cs10-unit { transform: translateY(-100%); }
+  .sma-cs10-card:hover .sma-cs10-title-row--b .sma-cs10-unit { transform: translateY(-100%); }
+
+  .sma-cs10-card-title.sma-cs10-no-stagger { height: auto; overflow: visible; }
+  .sma-cs10-card-title.sma-cs10-no-stagger .sma-cs10-title-row { position: static; transition: color 0.25s ease; white-space: normal; }
+  .sma-cs10-card:hover .sma-cs10-card-title.sma-cs10-no-stagger .sma-cs10-title-row { color: var(--sma-cs10-title-hover-color); }
+
+  @media (max-width: 768px) {
+    .sma-cs10-title-row { font-size: var(--sma-cs10-title-size-m); }
+    .sma-cs10-card-title { height: calc(var(--sma-cs10-title-size-m) * 1.3); line-height: calc(var(--sma-cs10-title-size-m) * 1.3); }
+  }
+
+  .sma-cs10-price-float {
+    position: absolute; top: 0; left: 0; z-index: 6;
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--sma-cs10-price-bg); color: var(--sma-cs10-price-text);
+    padding: var(--sma-cs10-price-pad-y) var(--sma-cs10-price-pad-x);
+    border-radius: var(--sma-cs10-price-radius);
+    font-size: var(--sma-cs10-price-fontsize);
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--sma-cs10-price-fade) ease;
+    will-change: transform;
+  }
+  .sma-cs10-card-media.is-hovering .sma-cs10-price-float { opacity: 1; }
+  {% if section.settings.sma_cs10_price_shadow %}
+    .sma-cs10-price-float { box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+  {% endif %}
+  .sma-cs10-price-float svg { width: 13px; height: 13px; flex-shrink: 0; }
+  .sma-cs10-price-float .sma-cs10-price-compare {
+    text-decoration: line-through;
+    opacity: 0.55;
+    font-weight: 500;
+    margin-left: 2px;
+    font-size: 0.85em;
+  }
+
+  .sma-cs10-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 10px;
+  }
+  .sma-cs10-price-static { font-size: 14px; font-weight: 600; color: var(--sma-cs10-footer-text); }
+  .sma-cs10-price-static .sma-cs10-price-compare {
+    text-decoration: line-through;
+    color: var(--sma-cs10-compare-color);
+    font-weight: 400;
+    margin-left: 6px;
+    font-size: 0.85em;
+  }
+  .sma-cs10-footer-vendor { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sma-cs10-footer-text); opacity: 0.7; }
+
+  .sma-cs10-hide-desktop { display: none; }
+  @media (max-width: 768px) {
+    .sma-cs10-hide-desktop { display: flex; }
+  }
+{%- endstyle -%}
+
+<section
+  id="sma-cs10-{{ section.id }}"
+  class="sma-cs10-section"
+  data-cols-desktop="{{ section.settings.sma_cs10_columns_desktop }}"
+  data-cols-tablet="{{ section.settings.sma_cs10_columns_tablet }}"
+  data-cols-mobile="{{ section.settings.sma_cs10_columns_mobile }}"
+  data-gap="{{ section.settings.sma_cs10_card_gap }}"
+  data-gap-mobile="{{ section.settings.sma_cs10_card_gap_mobile }}"
+  data-speed="{{ section.settings.sma_cs10_transition_speed }}"
+  data-autoplay="{% if section.settings.sma_cs10_autoplay_enable %}1{% else %}0{% endif %}"
+  data-interval="{{ section.settings.sma_cs10_autoplay_interval }}"
+  data-pause-hover="{% if section.settings.sma_cs10_autoplay_pause_hover %}1{% else %}0{% endif %}"
+  data-dots="{% if section.settings.sma_cs10_show_dots %}1{% else %}0{% endif %}"
+  data-title-stagger="{% if section.settings.sma_cs10_title_stagger_enable %}1{% else %}0{% endif %}"
+  data-title-split="{{ section.settings.sma_cs10_title_split_mode }}"
+  data-title-delay="{{ section.settings.sma_cs10_title_stagger_delay }}"
+  data-price-smoothing="{{ section.settings.sma_cs10_price_smoothing }}"
+  data-price-off-x="{{ section.settings.sma_cs10_price_offset_x }}"
+  data-price-off-y="{{ section.settings.sma_cs10_price_offset_y }}"
+>
+  <div class="sma-cs10-container">
+    {%- if section.settings.sma_cs10_heading != blank or section.settings.sma_cs10_description != blank -%}
+      <div class="sma-cs10-header {% if section.settings.sma_cs10_header_align == 'center' %}sma-cs10-header--center{% endif %}">
+        {%- if section.settings.sma_cs10_heading != blank -%}
+          <h2 class="sma-cs10-heading">{{ section.settings.sma_cs10_heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.sma_cs10_description != blank -%}
+          <div class="sma-cs10-desc">{{ section.settings.sma_cs10_description }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.blocks.size == 0 -%}
+      {%- if request.design_mode -%}
+        <p class="sma-cs10-empty">Add a Tab block and assign a collection to get started.</p>
+      {%- endif -%}
+    {%- else -%}
+      <div class="sma-cs10-tabs sma-cs10-tabs--{{ section.settings.sma_cs10_tabs_style }}" role="tablist">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign sma_cs10_tab_label = block.settings.sma_tab_label
+            if sma_cs10_tab_label == blank
+              assign sma_cs10_tab_label = block.settings.sma_tab_collection.title | default: 'Tab ' | append: forloop.index
+            endif
+          -%}
+          <button
+            type="button"
+            class="sma-cs10-tab{% if forloop.first %} is-active{% endif %}"
+            data-tab-index="{{ forloop.index0 }}"
+            role="tab"
+            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+            {{ block.shopify_attributes }}
+          >
+            {{ sma_cs10_tab_label }}
+          </button>
+          {%- unless forloop.last -%}
+            <span class="sma-cs10-tab-sep" aria-hidden="true">{{ section.settings.sma_cs10_tab_separator }}</span>
+          {%- endunless -%}
+        {%- endfor -%}
+      </div>
+
+      <div class="sma-cs10-panels">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign sma_cs10_col = block.settings.sma_tab_collection
+            assign sma_cs10_limit = block.settings.sma_tab_products_limit
+            if sma_cs10_limit == blank or sma_cs10_limit == 0
+              assign sma_cs10_limit = section.settings.sma_cs10_products_per_tab
+            endif
+          -%}
+          <div class="sma-cs10-panel{% if forloop.first %} is-active{% endif %}" data-tab-index="{{ forloop.index0 }}">
+            {%- if sma_cs10_col == blank -%}
+              {%- if request.design_mode -%}
+                <p class="sma-cs10-empty">Select a collection for this tab in the section settings.</p>
+              {%- endif -%}
+            {%- elsif sma_cs10_col.products.size == 0 -%}
+              {%- if request.design_mode -%}
+                <p class="sma-cs10-empty">This collection has no products yet.</p>
+              {%- endif -%}
+            {%- else -%}
+              <div class="sma-cs10-slider-wrap">
+                <div class="swiper sma-cs10-swiper">
+                  <div class="swiper-wrapper">
+                    {%- for product in sma_cs10_col.products limit: sma_cs10_limit -%}
+                      {%- liquid
+                        assign sma_cs10_variant = product.selected_or_first_available_variant
+                        assign sma_cs10_price = sma_cs10_variant.price | default: 0
+                        assign sma_cs10_compare = sma_cs10_variant.compare_at_price | default: 0
+                        assign sma_cs10_available = sma_cs10_variant.available
+                        assign sma_cs10_on_sale = false
+                        assign sma_cs10_save_pct = 0
+                        if sma_cs10_compare > sma_cs10_price
+                          assign sma_cs10_on_sale = true
+                          assign sma_cs10_save_pct = sma_cs10_compare | minus: sma_cs10_price | times: 100 | divided_by: sma_cs10_compare
+                        endif
+                        assign sma_cs10_img_ar = product.featured_image.aspect_ratio | default: 1
+                      -%}
+                      <div class="swiper-slide">
+                        <div class="sma-cs10-card">
+                          <a
+                            href="{{ product.url }}"
+                            class="sma-cs10-card-media"
+                            aria-label="{{ product.title | escape }}"
+                          >
+                            {%- if product.featured_image != blank -%}
+                              <img
+                                src="{{ product.featured_image | image_url: width: 700 }}"
+                                alt="{{ product.featured_image.alt | default: product.title | escape }}"
+                                loading="{% if forloop.parentloop.first and forloop.index <= 4 %}eager{% else %}lazy{% endif %}"
+                                width="700"
+                                height="{{ 700 | divided_by: sma_cs10_img_ar | round }}"
+                              >
+                            {%- else -%}
+                              {{ 'product-1' | placeholder_svg_tag: 'sma-cs10-placeholder' }}
+                            {%- endif -%}
+
+                            {%- if section.settings.sma_cs10_show_badge -%}
+                              {%- if sma_cs10_available == false -%}
+                                <span class="sma-cs10-badge sma-cs10-badge--soldout{% if section.settings.sma_cs10_badge_alignment == 'center' %} sma-cs10-badge--center{% elsif section.settings.sma_cs10_badge_alignment == 'right' %} sma-cs10-badge--right{% endif %}">
+                                  {{- section.settings.sma_cs10_badge_soldout_text -}}
+                                </span>
+                              {%- elsif sma_cs10_on_sale -%}
+                                <span class="sma-cs10-badge{% if section.settings.sma_cs10_badge_alignment == 'center' %} sma-cs10-badge--center{% elsif section.settings.sma_cs10_badge_alignment == 'right' %} sma-cs10-badge--right{% endif %}">
+                                  {{- section.settings.sma_cs10_badge_sale_text -}}
+                                  {{- sma_cs10_save_pct }}%</span
+                                >
+                              {%- endif -%}
+                            {%- endif -%}
+
+                            {%- if section.settings.sma_cs10_show_scrim -%}
+                              <div class="sma-cs10-scrim" aria-hidden="true"> </div>
+                            {%- endif -%}
+
+                            <div class="sma-cs10-title-wrap">
+                              {%- if section.settings.sma_cs10_show_vendor and product.vendor != blank -%}
+                                <span class="sma-cs10-vendor">{{ product.vendor | escape }}</span>
+                              {%- endif -%}
+                              <span class="sma-cs10-card-title{% unless section.settings.sma_cs10_title_stagger_enable %} sma-cs10-no-stagger{% endunless %}">
+                                <span class="sma-cs10-title-row sma-cs10-title-row--a">{{ product.title | escape }}</span>
+                                {%- if section.settings.sma_cs10_title_stagger_enable -%}
+                                  <span class="sma-cs10-title-row sma-cs10-title-row--b" aria-hidden="true">
+                                    {{- product.title | escape -}}
+                                  </span>
+                                {%- endif -%}
+                              </span>
+                            </div>
+
+                            {%- if section.settings.sma_cs10_price_follow_enable -%}
+                              <div class="sma-cs10-price-float">
+                                {%- if section.settings.sma_cs10_price_show_icon -%}
+                                  <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+                                  </svg>
+                                {%- endif -%}
+                                {%- if product.price_varies -%}
+                                  <span>From {{ product.price_min | money }}</span>
+                                {%- else -%}
+                                  <span>{{ sma_cs10_price | money }}</span>
+                                {%- endif -%}
+                                {%- if sma_cs10_on_sale -%}
+                                  <span class="sma-cs10-price-compare">{{ sma_cs10_compare | money }}</span>
+                                {%- endif -%}
+                              </div>
+                            {%- endif -%}
+                          </a>
+
+                          <div class="sma-cs10-card-footer{% if section.settings.sma_cs10_price_follow_enable %} sma-cs10-hide-desktop{% endif %}">
+                            <div class="sma-cs10-price-static">
+                              {%- if product.price_varies -%}
+                                From {{ product.price_min | money }}
+                              {%- else -%}
+                                {{ sma_cs10_price | money }}
+                              {%- endif -%}
+                              {%- if sma_cs10_on_sale -%}
+                                <span class="sma-cs10-price-compare">{{ sma_cs10_compare | money }}</span>
+                              {%- endif -%}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    {%- endfor -%}
+                  </div>
+                </div>
+
+                {%- if section.settings.sma_cs10_show_arrows -%}
+                  <button type="button" class="sma-cs10-nav sma-cs10-prev" aria-label="Previous products">
+                    <svg viewBox="0 0 24 24">
+                      <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                  </button>
+                  <button type="button" class="sma-cs10-nav sma-cs10-next" aria-label="Next products">
+                    <svg viewBox="0 0 24 24">
+                      <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                  </button>
+                {%- endif -%}
+              </div>
+
+              {%- if section.settings.sma_cs10_show_dots -%}
+                <div class="sma-cs10-dots swiper-pagination"> </div>
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    'use strict';
+
+    var sectionId = '{{ section.id }}';
+    var swipers = {};
+
+    function ensureSwiperLib(cb) {
+      if (window.Swiper) {
+        cb();
+        return;
+      }
+
+      var tries = 0;
+
+      (function poll() {
+        if (window.Swiper) {
+          cb();
+          return;
+        }
+
+        tries += 1;
+        if (tries > 60) return;
+
+        setTimeout(poll, 100);
+      })();
+    }
+
+    function wrapUnits(el, mode, delayStep) {
+      if (!el || el.dataset.smaWrapped === '1') {
+        return;
+      }
+
+      var text = el.textContent;
+      el.textContent = '';
+      var units = mode === 'words' ? text.split(' ') : text.split('');
+
+      units.forEach(function (u, i) {
+        var span = document.createElement('span');
+        span.className = 'sma-cs10-unit';
+        span.style.transitionDelay = i * delayStep + 'ms';
+
+        if (mode === 'words') {
+          span.textContent = u + (i < units.length - 1 ? ' ' : '');
+        } else {
+          span.textContent = u === ' ' ? ' ' : u;
+        }
+
+        el.appendChild(span);
+      });
+
+      el.dataset.smaWrapped = '1';
+    }
+
+    function initPanelSwiper(root, panel, index) {
+      if (swipers[index]) {
+        return swipers[index];
+      }
+
+      var el = panel.querySelector('.sma-cs10-swiper');
+      if (!el || !window.Swiper) {
+        return null;
+      }
+
+      var slideCount = el.querySelectorAll('.swiper-slide').length;
+      var desktopCols = parseFloat(root.dataset.colsDesktop) || 4;
+      var loopOk = slideCount > desktopCols;
+      var autoplayOn = root.dataset.autoplay === '1' && loopOk;
+
+      var sw = new Swiper(el, {
+        slidesPerView: parseFloat(root.dataset.colsMobile) || 1.2,
+        spaceBetween: parseInt(root.dataset.gapMobile, 10) || 12,
+        speed: parseInt(root.dataset.speed, 10) || 650,
+        loop: loopOk,
+        watchOverflow: true,
+        autoplay: autoplayOn
+          ? {
+              delay: parseInt(root.dataset.interval, 10) || 3500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: root.dataset.pauseHover === '1',
+            }
+          : false,
+        navigation: {
+          nextEl: panel.querySelector('.sma-cs10-next'),
+          prevEl: panel.querySelector('.sma-cs10-prev'),
+        },
+        pagination:
+          root.dataset.dots === '1'
+            ? {
+                el: panel.querySelector('.sma-cs10-dots'),
+                clickable: true,
+              }
+            : false,
+        breakpoints: {
+          600: {
+            slidesPerView: parseFloat(root.dataset.colsTablet) || 3,
+            spaceBetween: parseInt(root.dataset.gap, 10) || 20,
+          },
+          1000: {
+            slidesPerView: parseFloat(root.dataset.colsDesktop) || 4,
+            spaceBetween: parseInt(root.dataset.gap, 10) || 20,
+          },
+        },
+      });
+
+      swipers[index] = sw;
+      return sw;
+    }
+
+    function activateTab(root, index) {
+      var tabs = root.querySelectorAll('.sma-cs10-tab');
+      var panels = root.querySelectorAll('.sma-cs10-panel');
+
+      tabs.forEach(function (t) {
+        var active = parseInt(t.dataset.tabIndex, 10) === index;
+        t.classList.toggle('is-active', active);
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+
+      panels.forEach(function (p) {
+        var i = parseInt(p.dataset.tabIndex, 10);
+        var active = i === index;
+
+        p.classList.toggle('is-active', active);
+
+        if (active) {
+          requestAnimationFrame(function () {
+            var sw = initPanelSwiper(root, p, i);
+            if (sw) {
+              sw.update();
+              if (sw.params.autoplay) {
+                sw.autoplay.start();
+              }
+            }
+          });
+        } else if (swipers[i] && swipers[i].params.autoplay) {
+          swipers[i].autoplay.stop();
+        }
+      });
+    }
+
+    function bindPriceFollow(root) {
+      var hasFinePointer = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      if (!hasFinePointer) {
+        return;
+      }
+
+      var smoothing = Math.max(0.05, (parseInt(root.dataset.priceSmoothing, 10) || 35) / 100);
+      var offX = parseInt(root.dataset.priceOffX, 10) || 18;
+      var offY = parseInt(root.dataset.priceOffY, 10) || 18;
+
+      root.querySelectorAll('.sma-cs10-price-float').forEach(function (badge) {
+        if (badge.dataset.smaBound === '1') {
+          return;
+        }
+        badge.dataset.smaBound = '1';
+
+        var media = badge.closest('.sma-cs10-card-media');
+        if (!media) {
+          return;
+        }
+
+        var raf = null;
+        var tx = 0;
+        var ty = 0;
+        var cx = 0;
+        var cy = 0;
+
+        function loop() {
+          cx += (tx - cx) * smoothing;
+          cy += (ty - cy) * smoothing;
+          badge.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0)';
+          raf = requestAnimationFrame(loop);
+        }
+
+        media.addEventListener('mouseenter', function (e) {
+          var rect = media.getBoundingClientRect();
+          tx = cx = e.clientX - rect.left + offX;
+          ty = cy = e.clientY - rect.top + offY;
+          badge.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
+          media.classList.add('is-hovering');
+          if (!raf) {
+            raf = requestAnimationFrame(loop);
+          }
+        });
+
+        media.addEventListener('mousemove', function (e) {
+          var rect = media.getBoundingClientRect();
+          tx = e.clientX - rect.left + offX;
+          ty = e.clientY - rect.top + offY;
+        });
+
+        media.addEventListener('mouseleave', function () {
+          media.classList.remove('is-hovering');
+          if (raf) {
+            cancelAnimationFrame(raf);
+            raf = null;
+          }
+        });
+      });
+    }
+
+    function init() {
+      var root = document.getElementById('sma-cs10-' + sectionId);
+      if (!root) {
+        return;
+      }
+
+      Object.keys(swipers).forEach(function (k) {
+        try {
+          swipers[k].destroy(true, true);
+        } catch (e) {
+          // ignore
+        }
+      });
+
+      swipers = {};
+
+      if (root.dataset.titleStagger === '1') {
+        var mode = root.dataset.titleSplit || 'letters';
+        var delay = parseInt(root.dataset.titleDelay, 10) || 20;
+        root.querySelectorAll('.sma-cs10-title-row').forEach(function (row) {
+          wrapUnits(row, mode, delay);
+        });
+      }
+
+      root.querySelectorAll('.sma-cs10-tab').forEach(function (t) {
+        t.addEventListener('click', function () {
+          activateTab(root, parseInt(t.dataset.tabIndex, 10));
+        });
+      });
+
+      ensureSwiperLib(function () {
+        activateTab(root, 0);
+      });
+      bindPriceFollow(root);
+    }
+
+    init();
+
+    document.addEventListener('shopify:section:load', function (e) {
+      if (e.detail.sectionId === sectionId) {
+        init();
+      }
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "vb multitab",
+  "settings": [
+    { "type": "header", "content": " Layout" },
+    {
+      "type": "select",
+      "id": "sma_cs10_width_mode",
+      "label": "Container width",
+      "options": [
+        { "value": "full_width", "label": "Full width" },
+        { "value": "custom_width", "label": "Custom width" }
+      ],
+      "default": "full_width"
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_max_width",
+      "label": "Max container width",
+      "min": 1000,
+      "max": 1800,
+      "step": 20,
+      "unit": "px",
+      "default": 1440,
+      "visible_if": "{{ section.settings.sma_cs10_width_mode == 'custom_width' }}"
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_padding_top_mobile",
+      "label": "Padding top (mobile)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_padding_bottom_mobile",
+      "label": "Padding bottom (mobile)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_margin_top",
+      "label": "Margin top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_margin_bottom",
+      "label": "Margin bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    { "type": "color", "id": "sma_cs10_bg_color", "label": "Section background", "default": "#0F0F10" },
+    {
+      "type": "color",
+      "id": "sma_cs10_wrapper_bg",
+      "label": "Wrapper background",
+      "default": "transparent",
+      "info": "Background color of the inner content wrapper (container). Defaults to transparent."
+    },
+
+    { "type": "header", "content": " Heading & Description" },
+    { "type": "text", "id": "sma_cs10_heading", "label": "Heading", "default": "Iconic Products" },
+    { "type": "color", "id": "sma_cs10_heading_color", "label": "Heading color", "default": "#FFFFFF" },
+    {
+      "type": "checkbox",
+      "id": "sma_cs10_use_custom_font_heading",
+      "label": "Custom font for heading",
+      "default": false
+    },
+    {
+      "type": "font_picker",
+      "id": "sma_cs10_font_heading",
+      "label": "Heading font",
+      "default": "assistant_n7",
+      "visible_if": "{{ section.settings.sma_cs10_use_custom_font_heading }}"
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_heading_size",
+      "label": "Heading size (desktop)",
+      "min": 20,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_heading_size_mobile",
+      "label": "Heading size (mobile)",
+      "min": 18,
+      "max": 44,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "richtext",
+      "id": "sma_cs10_description",
+      "label": "Description",
+      "default": "<p>This exploration delves into the world of handbags that have left an indelible mark on fashion history, highlighting their stories, designs, and the impact they've had on generations.</p>"
+    },
+    { "type": "color", "id": "sma_cs10_desc_color", "label": "Description color", "default": "#ABABAB" },
+    {
+      "type": "checkbox",
+      "id": "sma_cs10_use_custom_font_desc",
+      "label": "Custom font for description",
+      "default": false
+    },
+    {
+      "type": "font_picker",
+      "id": "sma_cs10_font_desc",
+      "label": "Description font",
+      "default": "assistant_n4",
+      "visible_if": "{{ section.settings.sma_cs10_use_custom_font_desc }}"
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_desc_size",
+      "label": "Description size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_desc_max_width",
+      "label": "Header max width",
+      "min": 300,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "default": 620
+    },
+    {
+      "type": "select",
+      "id": "sma_cs10_header_align",
+      "label": "Header alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_header_bottom_spacing",
+      "label": "Space below header",
+      "min": 16,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+
+    { "type": "header", "content": " Tabs" },
+    {
+      "type": "select",
+      "id": "sma_cs10_tabs_style",
+      "label": "Tab style",
+      "options": [
+        { "value": "underline", "label": "Underline" },
+        { "value": "pill", "label": "Pill" }
+      ],
+      "default": "underline"
+    },
+    {
+      "type": "select",
+      "id": "sma_cs10_tabs_align",
+      "label": "Tabs alignment",
+      "options": [
+        { "value": "flex-start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Right" }
+      ],
+      "default": "flex-start"
+    },
+    { "type": "text", "id": "sma_cs10_tab_separator", "label": "Separator (underline style)", "default": "/" },
+    {
+      "type": "range",
+      "id": "sma_cs10_tab_separator_offset",
+      "label": "Separator vertical offset",
+      "min": -8,
+      "max": 8,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "info": "Adjust separator vertical position to align with tab text"
+    },
+    { "type": "checkbox", "id": "sma_cs10_use_custom_font_tabs", "label": "Custom font for tabs", "default": false },
+    {
+      "type": "font_picker",
+      "id": "sma_cs10_font_tabs",
+      "label": "Font",
+      "default": "assistant_n7",
+      "visible_if": "{{ section.settings.sma_cs10_use_custom_font_tabs }}"
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_tab_size",
+      "label": "Tab text size",
+      "min": 11,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    { "type": "checkbox", "id": "sma_cs10_tab_uppercase", "label": "Uppercase tabs", "default": true },
+    {
+      "type": "range",
+      "id": "sma_cs10_tab_letter_spacing",
+      "label": "Tab letter spacing",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "px",
+      "default": 0.5
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_tab_gap",
+      "label": "Space between tabs",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    { "type": "color", "id": "sma_cs10_tab_color", "label": "Tab color (inactive)", "default": "#8A8A8A" },
+    { "type": "color", "id": "sma_cs10_tab_active_color", "label": "Tab color (active)", "default": "#FFFFFF" },
+    { "type": "color", "id": "sma_cs10_tab_underline_color", "label": "Underline color", "default": "#FFFFFF" },
+    {
+      "type": "range",
+      "id": "sma_cs10_tab_underline_thickness",
+      "label": "Underline thickness",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "sma_cs10_tab_pill_bg",
+      "label": "Pill background (inactive)",
+      "default": "#1A1A1A",
+      "visible_if": "{{ section.settings.sma_cs10_tabs_style == 'pill' }}"
+    },
+    {
+      "type": "color",
+      "id": "sma_cs10_tab_pill_active_bg",
+      "label": "Pill background (active)",
+      "default": "#FFFFFF",
+      "visible_if": "{{ section.settings.sma_cs10_tabs_style == 'pill' }}"
+    },
+    {
+      "type": "color",
+      "id": "sma_cs10_tab_pill_active_text",
+      "label": "Pill text (active)",
+      "default": "#111111",
+      "visible_if": "{{ section.settings.sma_cs10_tabs_style == 'pill' }}"
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_tab_pill_radius",
+      "label": "Pill roundness",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 30,
+      "visible_if": "{{ section.settings.sma_cs10_tabs_style == 'pill' }}"
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_tabs_bottom_spacing",
+      "label": "Space below tabs",
+      "min": 16,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+
+    { "type": "header", "content": "Product Source" },
+    {
+      "type": "range",
+      "id": "sma_cs10_products_per_tab",
+      "label": "Products per tab (default)",
+      "min": 4,
+      "max": 24,
+      "step": 1,
+      "default": 10,
+      "info": "Can be overridden per tab block"
+    },
+
+    { "type": "header", "content": "Product Card" },
+    {
+      "type": "range",
+      "id": "sma_cs10_columns_desktop",
+      "label": "Visible products (desktop)",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_columns_tablet",
+      "label": "Visible products (tablet)",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_columns_mobile",
+      "label": "Visible products (mobile)",
+      "min": 1,
+      "max": 2.4,
+      "step": 0.2,
+      "default": 1.2
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_card_gap",
+      "label": "Gap between cards",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_card_gap_mobile",
+      "label": "Gap between cards (mobile)",
+      "min": 6,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "sma_cs10_image_ratio",
+      "label": "Image ratio",
+      "options": [
+        { "value": "1/1", "label": "Square (1:1)" },
+        { "value": "4/5", "label": "Portrait (4:5)" },
+        { "value": "3/4", "label": "Tall (3:4)" },
+        { "value": "5/4", "label": "Landscape (5:4)" }
+      ],
+      "default": "4/5"
+    },
+    {
+      "type": "select",
+      "id": "sma_cs10_image_fit",
+      "label": "Image fit",
+      "options": [
+        { "value": "cover", "label": "Cover (fill & crop)" },
+        { "value": "contain", "label": "Contain (show whole image)" }
+      ],
+      "default": "cover"
+    },
+    { "type": "color", "id": "sma_cs10_card_bg", "label": "Card background", "default": "#F2F1ED" },
+    {
+      "type": "range",
+      "id": "sma_cs10_card_radius",
+      "label": "Card roundness",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_image_padding",
+      "label": "Image inner padding",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0,
+      "info": "Useful when Image fit is set to Contain"
+    },
+    {
+      "type": "checkbox",
+      "id": "sma_cs10_show_scrim",
+      "label": "Show bottom gradient (for text legibility)",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_scrim_opacity",
+      "label": "Gradient strength",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 55
+    },
+    { "type": "checkbox", "id": "sma_cs10_show_vendor", "label": "Show vendor", "default": false },
+    { "type": "color", "id": "sma_cs10_vendor_color", "label": "Vendor color", "default": "#D8D8D8" },
+    { "type": "checkbox", "id": "sma_cs10_show_badge", "label": "Show sale / sold out badge", "default": true },
+    { "type": "color", "id": "sma_cs10_badge_bg", "label": "Sale badge background", "default": "#111111" },
+    { "type": "color", "id": "sma_cs10_badge_color", "label": "Sale badge text", "default": "#FFFFFF" },
+    { "type": "text", "id": "sma_cs10_badge_sale_text", "label": "Sale badge text", "default": "-" },
+    {
+      "type": "checkbox",
+      "id": "sma_cs10_sale_badge_use_custom_font",
+      "label": "Custom font for sale badge",
+      "default": false
+    },
+    {
+      "type": "font_picker",
+      "id": "sma_cs10_sale_badge_font",
+      "label": "Sale badge font",
+      "default": "assistant_n7",
+      "visible_if": "{{ section.settings.sma_cs10_sale_badge_use_custom_font }}"
+    },
+    { "type": "color", "id": "sma_cs10_soldout_bg", "label": "Sold out badge background", "default": "#8C8C8C" },
+    { "type": "color", "id": "sma_cs10_soldout_color", "label": "Sold out badge text", "default": "#FFFFFF" },
+    { "type": "text", "id": "sma_cs10_badge_soldout_text", "label": "Sold out badge text", "default": "Sold out" },
+    {
+      "type": "checkbox",
+      "id": "sma_cs10_soldout_badge_use_custom_font",
+      "label": "Custom font for sold out badge",
+      "default": false
+    },
+    {
+      "type": "font_picker",
+      "id": "sma_cs10_soldout_badge_font",
+      "label": "Sold out badge font",
+      "default": "assistant_n7",
+      "visible_if": "{{ section.settings.sma_cs10_soldout_badge_use_custom_font }}"
+    },
+    {
+      "type": "select",
+      "id": "sma_cs10_badge_alignment",
+      "label": "Badge alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_badge_padding_x",
+      "label": "Badge horizontal padding",
+      "min": 4,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_badge_padding_y",
+      "label": "Badge vertical padding",
+      "min": 2,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 5
+    },
+
+    { "type": "header", "content": "Product Title (Hover Stagger)" },
+    {
+      "type": "checkbox",
+      "id": "sma_cs10_title_stagger_enable",
+      "label": "Enable stagger-up hover effect",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "sma_cs10_title_split_mode",
+      "label": "Split by",
+      "options": [
+        { "value": "letters", "label": "Letters" },
+        { "value": "words", "label": "Words" }
+      ],
+      "default": "letters"
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_title_stagger_delay",
+      "label": "Stagger delay per unit",
+      "min": 5,
+      "max": 60,
+      "step": 5,
+      "unit": "ms",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_title_duration",
+      "label": "Animation duration",
+      "min": 200,
+      "max": 800,
+      "step": 20,
+      "unit": "ms",
+      "default": 440
+    },
+    {
+      "type": "select",
+      "id": "sma_cs10_title_easing",
+      "label": "Easing",
+      "options": [
+        { "value": "ease", "label": "Ease" },
+        { "value": "ease-out", "label": "Ease out" },
+        { "value": "cubic-bezier(0.22, 1, 0.36, 1)", "label": "Smooth" },
+        { "value": "cubic-bezier(0.34, 1.56, 0.64, 1)", "label": "Bounce" }
+      ],
+      "default": "cubic-bezier(0.22, 1, 0.36, 1)"
+    },
+    { "type": "color", "id": "sma_cs10_title_color", "label": "Title color", "default": "#FFFFFF" },
+    {
+      "type": "color",
+      "id": "sma_cs10_title_hover_color",
+      "label": "Title color (incoming line)",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_title_size",
+      "label": "Title size (desktop)",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_title_size_mobile",
+      "label": "Title size (mobile)",
+      "min": 11,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    { "type": "checkbox", "id": "sma_cs10_title_use_custom_font", "label": "Custom font for title", "default": false },
+    {
+      "type": "font_picker",
+      "id": "sma_cs10_title_font",
+      "label": "Title font",
+      "default": "assistant_n7",
+      "visible_if": "{{ section.settings.sma_cs10_title_use_custom_font }}"
+    },
+    { "type": "checkbox", "id": "sma_cs10_title_uppercase", "label": "Uppercase title", "default": false },
+
+    { "type": "header", "content": "Price (Cursor Follow)" },
+    {
+      "type": "checkbox",
+      "id": "sma_cs10_price_follow_enable",
+      "label": "Price follows cursor on hover",
+      "default": true,
+      "info": "When off, price shows as a static label under the image at all times"
+    },
+    { "type": "color", "id": "sma_cs10_price_bg", "label": "Price badge background", "default": "#FFFFFF" },
+    { "type": "color", "id": "sma_cs10_price_text_color", "label": "Price badge text", "default": "#111111" },
+    {
+      "type": "range",
+      "id": "sma_cs10_price_radius",
+      "label": "Price badge roundness",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_price_padding_x",
+      "label": "Price badge horizontal padding",
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_price_padding_y",
+      "label": "Price badge vertical padding",
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_price_font_size",
+      "label": "Price text size",
+      "min": 11,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    { "type": "checkbox", "id": "sma_cs10_price_show_icon", "label": "Show bag icon", "default": true },
+    { "type": "checkbox", "id": "sma_cs10_price_shadow", "label": "Drop shadow on price badge", "default": true },
+    {
+      "type": "range",
+      "id": "sma_cs10_price_offset_x",
+      "label": "Cursor offset (x)",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_price_offset_y",
+      "label": "Cursor offset (y)",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_price_smoothing",
+      "label": "Follow speed",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "default": 35,
+      "info": "Higher = snappier, lower = more trailing lag"
+    },
+    {
+      "type": "range",
+      "id": "sma_cs10_price_fade_duration",
+      "label": "Fade in/out duration",
+      "min": 100,
+      "max": 500,
+      "step": 20,
+      "unit": "ms",
+      "default": 220
+    },
+    { "type": "color", "id": "sma_cs10_compare_price_color", "label": "Compare-at price color", "default": "#9A9A9A" },
+    {
+      "type": "color",
+      "id": "sma_cs10_footer_text_color",
+      "label": "Static price color (mobile / fallback)",
+      "default": "#FFFFFF"
+    },
+
+    { "type": "header", "content": "🎠 Autoplay & Slider" },
+    { "type": "checkbox", "id": "sma_cs10_autoplay_enable", "label": "Auto-slide products", "default": true },
+    {
+      "type": "range",
+      "id": "sma_cs10_autoplay_interval",
+      "label": "Auto-slide interval",
+      "min": 2000,
+      "max": 8000,
+      "step": 250,
+      "unit": "ms",
+      "default": 3500
+    },
+    { "type": "checkbox", "id": "sma_cs10_autoplay_pause_hover", "label": "Pause on hover", "default": true },
+    {
+      "type": "range",
+      "id": "sma_cs10_transition_speed",
+      "label": "Transition speed",
+      "min": 300,
+      "max": 1200,
+      "step": 50,
+      "unit": "ms",
+      "default": 650
+    },
+    { "type": "checkbox", "id": "sma_cs10_show_arrows", "label": "Show navigation arrows", "default": true },
+    { "type": "color", "id": "sma_cs10_arrow_bg", "label": "Arrow background", "default": "#FFFFFF" },
+    { "type": "color", "id": "sma_cs10_arrow_color", "label": "Arrow icon color", "default": "#111111" },
+    { "type": "color", "id": "sma_cs10_arrow_bg_hover", "label": "Arrow background (hover)", "default": "#111111" },
+    { "type": "color", "id": "sma_cs10_arrow_color_hover", "label": "Arrow icon color (hover)", "default": "#FFFFFF" },
+    {
+      "type": "range",
+      "id": "sma_cs10_arrow_size",
+      "label": "Arrow size",
+      "min": 32,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "default": 44
+    },
+    { "type": "checkbox", "id": "sma_cs10_show_dots", "label": "Show dot indicators", "default": false },
+    { "type": "color", "id": "sma_cs10_dot_color", "label": "Dot color", "default": "#4D4D4D" },
+    { "type": "color", "id": "sma_cs10_dot_active_color", "label": "Dot color (active)", "default": "#FFFFFF" }
+  ],
+  "blocks": [
+    {
+      "type": "sma_tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "sma_tab_label",
+          "label": "Tab label",
+          "info": "Leave blank to use the collection's title"
+        },
+        { "type": "collection", "id": "sma_tab_collection", "label": "Collection" },
+        {
+          "type": "range",
+          "id": "sma_tab_products_limit",
+          "label": "Products to show",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "default": 0,
+          "info": "0 = use the section default above"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "vb multitab",
+      "blocks": [
+        { "type": "sma_tab", "settings": { "sma_tab_label": "Sling Bag" } },
+        { "type": "sma_tab", "settings": { "sma_tab_label": "Brown Base" } },
+        { "type": "sma_tab", "settings": { "sma_tab_label": "Oversized Bag" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+  

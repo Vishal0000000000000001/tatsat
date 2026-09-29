@@ -19,11 +19,15 @@
   assign show_compare_price = false
   assign discount_percentage = 0
 
-  if compare_at_price > price
-    assign show_compare_price = true
-    assign discount_amount = compare_at_price | minus: price
-    assign discount_percentage = discount_amount | times: 100 | divided_by: compare_at_price
-  endif
+  comment
+    Compare-at price / discount % display temporarily disabled.
+    To re-enable, uncomment the block below.
+  endcomment
+  # if compare_at_price > price
+  #   assign show_compare_price = true
+  #   assign discount_amount = compare_at_price | minus: price
+  #   assign discount_percentage = discount_amount | times: 100 | divided_by: compare_at_price
+  # endif
 
   if product_resource == blank
     assign price = 1999

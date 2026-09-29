@@ -1,6 +1,4 @@
 {%- if section.blocks.size > 0 -%}
-  {%- render 'section-spacing-collapsing' -%}
-
   {%- liquid
     assign block_count = section.blocks.size
     assign logo_height = section.settings.logo_height | default: 32
@@ -42,21 +40,22 @@
 
     #shopify-section-{{ section.id }} .cslogo__eyebrow {
     margin: 0;
+    font-family: var(--font-body--family);
     font-size: clamp(11px, 1.4vw, 13px);
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgb(var(--text-color) / 0.55);
+    color: rgb(var(--color-foreground-rgb) / 0.55);
     }
 
     #shopify-section-{{ section.id }} .cslogo__title {
     margin: 0;
-    font-family: var(--heading-font-family);
-    font-weight: var(--heading-font-weight, 700);
-    font-style: var(--heading-font-style, normal);
-    font-size: var(--text-h2);
-    line-height: 1.4;
-    color: rgb(var(--text-color));
+    font-family: var(--font-h2--family);
+    font-weight: var(--font-h2--weight);
+    font-style: var(--font-h2--style);
+    font-size: var(--font-h2--size);
+    line-height: var(--font-h2--line-height);
+    color: var(--color-foreground-heading);
     text-wrap: balance;
     }
 
@@ -107,7 +106,7 @@
     width: var(--cslogo-tile-w);
     height: calc(var(--cslogo-logo-h) + 44px);
     padding: 14px 22px;
-    {% comment %} background: rgb(var(--cslogo-tile-bg)); {% endcomment %}
+    background: rgb(var(--cslogo-tile-bg));
     border-radius: var(--cslogo-tile-radius);
     text-decoration: none;
     }
@@ -189,7 +188,11 @@
  {%- endfor -%} 
  {%- endcapture -%}
 
-  <div {% render 'section-properties' %}>
+  <div class="section-background color-{{ section.settings.color_scheme }}"></div>
+  <div
+    class="section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }} spacing-style"
+    style="{% render 'spacing-style', settings: section.settings %}"
+  >
     <div class="cslogo">
       {%- if section.settings.subheading != blank or section.settings.title != blank -%}
         <div class="cslogo__header">
@@ -224,15 +227,49 @@
   "tag": "section",
   "disabled_on": {
     "templates": ["password"],
-    "groups": ["header", "custom.overlay"]
+    "groups": ["header", "footer", "aside"]
   },
   "max_blocks": 25,
   "settings": [
     {
-      "type": "checkbox",
-      "id": "full_width",
-      "label": "Full width",
-      "default": true
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page width" },
+        { "value": "full-width", "label": "Full width" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
     },
     {
       "type": "header",
@@ -325,16 +362,6 @@
       "id": "tile_background",
       "label": "Logo box background",
       "default": "#f6f6f6"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Section background"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text color"
     }
   ],
   "blocks": [

@@ -1,0 +1,522 @@
+
+{% style %}
+  .sma-stl-2-{{ section.id }} {
+    --sma-section-width: {{ section.settings.sma_section_width }}px;
+    --sma-height-desktop: {{ section.settings.sma_height_desktop }}px;
+    --sma-height-mobile: {{ section.settings.sma_height_mobile }}px;
+    --sma-dot-size: {{ section.settings.sma_dot_size }}px;
+    --sma-dot-color: {{ section.settings.sma_dot_color }};
+    --sma-popup-size: {{ section.settings.sma_popup_size }}px;
+    --sma-anim-speed: {{ section.settings.sma_anim_speed }}s;
+
+    padding-top: {{ section.settings.sma_padding_top }}px;
+    padding-bottom: {{ section.settings.sma_padding_bottom }}px;
+    margin-top: {{ section.settings.sma_margin_top }}px;
+    margin-bottom: {{ section.settings.sma_margin_bottom }}px;
+    background-color: {{ section.settings.sma_bg_color }};
+    overflow: hidden;
+
+    .sma-stl-2-container {
+      max-width: var(--sma-section-width);
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+
+      {% if section.settings.sma_full_width %}
+        max-width: 100%;
+        padding: 0;
+      {% endif %}
+
+      .sma-stl-2-image-wrapper {
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        border-radius: {{ section.settings.sma_border_radius }}px;
+        overflow: hidden;
+        background: #f0f0f0;
+
+        {% if section.settings.sma_use_aspect_ratio and section.settings.sma_main_image != blank %}
+          aspect-ratio: {{ section.settings.sma_main_image.aspect_ratio }};
+          height: auto;
+        {% else %}
+          height: var(--sma-height-desktop);
+
+          @media (max-width: 767px) {
+            height: var(--sma-height-mobile);
+          }
+        {% endif %}
+
+        .sma-stl-2-main-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .sma-stl-2-hotspot {
+          position: absolute;
+          width: var(--sma-dot-size);
+          height: var(--sma-dot-size);
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+          z-index: 10;
+          transition: transform 0.3s ease;
+
+          .sma-stl-2-dot-inner {
+            width: 100%;
+            height: 100%;
+            background: var(--sma-dot-color);
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            border: 2px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease
+            , visibility 0.3s ease;
+
+            &::before {
+              content: '';
+              position: absolute;
+              width: 160%;
+              height: 160%;
+              border: 1.5px solid #fff;
+              border-radius: 50%;
+              opacity: 0.8;
+            }
+          }
+
+          .sma-stl-2-pulse-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 1px solid var(--sma-dot-color);
+            animation: sma-stl-2-pulse-anim 3s infinite ease-out;
+            pointer-events: none;
+            transition: opacity 0.3s ease
+            , visibility 0.3s ease;
+
+             &:nth-child(2) {
+              animation-delay: 1s;
+            }
+          }
+
+          .sma-stl-2-popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: var(--sma-popup-size);
+            height: var(--sma-popup-size);
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0;
+            transform: translate(calc(-50% + var(--sma-mag-x, 0px)), calc(-50% + var(--sma-mag-y, 0px))) scale(0.8);
+            transition: transform var(--sma-anim-speed) cubic-bezier(0.34, 1.56, 0.64, 1)
+            , opacity var(--sma-anim-speed) ease;
+            z-index: 10;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            border: 3px solid #fff;
+
+            .sma-stl-2-popup-img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+              transform: scale(1.15);
+              transition: transform var(--sma-anim-speed) ease;
+            }
+          }
+
+          .sma-stl-2-link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+            cursor: pointer;
+            border-radius: 50%;
+
+            /* Small transparent area to bridge the gap during hover transition */
+            &::after {
+              content: '';
+              position: absolute;
+              inset: calc(var(--sma-popup-size) * -0.5);
+              border-radius: 50%;
+            }
+          }
+
+          .sma-stl-2-tooltip {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 25;
+          }
+
+           &:hover {
+            .sma-stl-2-dot-inner,
+            .sma-stl-2-pulse-ring {
+              opacity: 0;
+              visibility: hidden;
+            }
+
+            .sma-stl-2-popup {
+              opacity: 1;
+              transform: translate(calc(-50% + var(--sma-mag-x, 0px)), calc(-50% + var(--sma-mag-y, 0px))) scale(1);
+
+              .sma-stl-2-popup-img {
+                transform: scale(1);
+              }
+            }
+
+            .sma-stl-2-tooltip {
+              opacity: 1;
+              transform: translateX(-50%) translateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes sma-stl-2-pulse-anim {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    70% {
+      transform: translate(-50%, -50%) scale(3.5);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(3.5);
+      opacity: 0;
+    }
+  }
+{% endstyle %}
+<section class="sma-stl-2-{{ section.id }}" id="sma-stl-2-{{ section.id }}">
+  <div class="sma-stl-2-container">
+    <div class="sma-stl-2-image-wrapper">
+      {%- if section.settings.sma_main_image != blank -%}
+        {{ section.settings.sma_main_image | image_url: width: 2400 | image_tag: 
+ loading: 'lazy', 
+ class: 'sma-stl-2-main-img'
+        }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'sma-stl-2-main-img placeholder' }}
+      {%- endif -%}
+
+      {%- for block in section.blocks -%}
+        {%- assign product = block.settings.sma_product -%}
+        {%- assign hover_image = block.settings.sma_custom_image -%}
+
+        <div
+          class="sma-stl-2-hotspot"
+          style="left: {{ block.settings.sma_pos_x }}%; top: {{ block.settings.sma_pos_y }}%;"
+          {{ block.shopify_attributes }}>
+
+          {%- if product != blank -%}
+            <a href="{{ product.url }}" class="sma-stl-2-link"> </a>
+          {%- endif -%}
+
+          <div class="sma-stl-2-dot-inner"> </div>
+          <span class="sma-stl-2-pulse-ring"> </span>
+          <span class="sma-stl-2-pulse-ring"> </span>
+
+          <div class="sma-stl-2-popup">
+            {%- if hover_image != blank -%}
+              {{ hover_image | image_url: width: 600 | image_tag: loading: 'lazy', class: 'sma-stl-2-popup-img' }}
+            {%- elsif product != blank -%}
+              {{ product.featured_image | image_url: width: 600 | image_tag: loading: 'lazy', class: 'sma-stl-2-popup-img' }}
+            {%- else -%}
+              {{ 'product-1' | placeholder_svg_tag: 'sma-stl-2-popup-img placeholder' }}
+            {%- endif -%}
+          </div>
+
+          {%- if block.settings.sma_label != blank -%}
+            <div class="sma-stl-2-tooltip">{{ block.settings.sma_label }}</div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<script>
+  (function() {
+    const initMagnetic = () => {
+      document.querySelectorAll('.sma-stl-2-{{ section.id }} .sma-stl-2-hotspot').forEach(hotspot => {
+        const popup = hotspot.querySelector('.sma-stl-2-popup');
+        
+        hotspot.addEventListener('mousemove', (e) => {
+          const rect = hotspot.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          
+          hotspot.style.setProperty('--sma-mag-x', (x * 0.4) + 'px');
+          hotspot.style.setProperty('--sma-mag-y', (y * 0.4) + 'px');
+        });
+        
+        hotspot.addEventListener('mouseleave', () => {
+          hotspot.style.setProperty('--sma-mag-x', '0px');
+          hotspot.style.setProperty('--sma-mag-y', '0px');
+        });
+      });
+    };
+  
+    initMagnetic();
+    document.addEventListener('shopify:section:load', (e) => {
+      if (e.target.querySelector('.sma-stl-2-{{ section.id }}')) initMagnetic();
+    });
+  })();
+</script>
+
+{% schema %}
+  {
+    "name": "vb shop the look",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Layout"
+      },
+      {
+        "type": "checkbox",
+        "id": "sma_full_width",
+        "label": "Full Width Section",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "sma_section_width",
+        "min": 800,
+        "max": 1600,
+        "step": 20,
+        "unit": "px",
+        "label": "Container Max Width",
+        "default": 1200
+      },
+      {
+        "type": "range",
+        "id": "sma_height_desktop",
+        "min": 300,
+        "max": 1000,
+        "step": 10,
+        "unit": "px",
+        "label": "Desktop Height",
+        "default": 600
+      },
+      {
+        "type": "range",
+        "id": "sma_height_mobile",
+        "min": 200,
+        "max": 800,
+        "step": 10,
+        "unit": "px",
+        "label": "Mobile Height",
+        "default": 400
+      },
+      {
+        "type": "range",
+        "id": "sma_border_radius",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Corner Radius",
+        "default": 16
+      },
+      {
+        "type": "checkbox",
+        "id": "sma_use_aspect_ratio",
+        "label": "Maintain Image Aspect Ratio",
+        "info": "Ensures hotspots stay perfectly aligned with products on all screen sizes.",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "sma_bg_color",
+        "label": "Section Background",
+        "default": "transparent"
+      },
+      {
+        "type": "range",
+        "id": "sma_padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "sma_padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "sma_margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Margin Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "sma_margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Margin Bottom",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Main Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "sma_main_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "header",
+        "content": "Hotspot & Popup Styling"
+      },
+      {
+        "type": "color",
+        "id": "sma_dot_color",
+        "label": "Dot Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "sma_dot_size",
+        "min": 10,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "label": "Dot Size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "sma_popup_size",
+        "min": 100,
+        "max": 300,
+        "step": 5,
+        "unit": "px",
+        "label": "Hover Circle Size",
+        "default": 180
+      },
+      {
+        "type": "range",
+        "id": "sma_anim_speed",
+        "min": 0.2,
+        "max": 1.0,
+        "step": 0.1,
+        "unit": "s",
+        "label": "Animation Speed",
+        "default": 0.5
+      }
+    ],
+    "blocks": [
+      {
+        "type": "hotspot",
+        "name": "Hotspot",
+        "settings": [
+          {
+            "type": "product",
+            "id": "sma_product",
+            "label": "Linked Product"
+          },
+          {
+            "type": "image_picker",
+            "id": "sma_custom_image",
+            "label": "Optional Hover Image",
+            "info": "Leave blank to use product featured image"
+          },
+          {
+            "type": "text",
+            "id": "sma_label",
+            "label": "Tooltip Label",
+            "default": "Shop the Product"
+          },
+          {
+            "type": "header",
+            "content": "Position"
+          },
+          {
+            "type": "range",
+            "id": "sma_pos_x",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "Horizontal (X)",
+            "default": 50
+          },
+          {
+            "type": "range",
+            "id": "sma_pos_y",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "Vertical (Y)",
+            "default": 50
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "vb shoplook",
+        "blocks": [
+          {
+            "type": "hotspot",
+            "settings": {
+              "sma_pos_x": 30,
+              "sma_pos_y": 40
+            }
+          },
+          {
+            "type": "hotspot",
+            "settings": {
+              "sma_pos_x": 60,
+              "sma_pos_y": 70
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+  
