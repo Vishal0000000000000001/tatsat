@@ -947,6 +947,54 @@
         "columns": 4
       }
     },
+    "shoplook_6NgJBf": {
+      "type": "shoplook",
+      "blocks": {
+        "hotspot_QVFLPf": {
+          "type": "hotspot",
+          "settings": {
+            "sma_product": "citrine-master-of-good-times",
+            "sma_custom_image": "shopify://shop_images/Citrine_f088e1d5-c9d0-4b07-900e-bd6cb14fe548.png",
+            "sma_label": "Shop the Product",
+            "sma_pos_x": 30,
+            "sma_pos_y": 40
+          }
+        },
+        "hotspot_wthEUt": {
+          "type": "hotspot",
+          "settings": {
+            "sma_product": "citrine-the-radiant-guru-evil-eye-charging-plate",
+            "sma_custom_image": "shopify://shop_images/Shungite_5e7b2350-eb59-4009-8cb7-c33c27673862.png",
+            "sma_label": "Shop the Product",
+            "sma_pos_x": 60,
+            "sma_pos_y": 70
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_QVFLPf",
+        "hotspot_wthEUt"
+      ],
+      "name": "vb shoplook",
+      "settings": {
+        "sma_full_width": false,
+        "sma_section_width": 1200,
+        "sma_height_desktop": 600,
+        "sma_height_mobile": 400,
+        "sma_border_radius": 16,
+        "sma_use_aspect_ratio": true,
+        "sma_bg_color": "transparent",
+        "sma_padding_top": 40,
+        "sma_padding_bottom": 40,
+        "sma_margin_top": 0,
+        "sma_margin_bottom": 0,
+        "sma_main_image": "shopify://shop_images/ChatGPT_Image_Sep_29_2026_07_51_38_PM.png",
+        "sma_dot_color": "#ffffff",
+        "sma_dot_size": 16,
+        "sma_popup_size": 180,
+        "sma_anim_speed": 0.5
+      }
+    },
     "product_list_VQpani": {
       "type": "product-list",
       "blocks": {
@@ -2865,6 +2913,7 @@
     "product_list_BFA8mJ",
     "collection_list_TxbKR9",
     "image_gallery_xdLL9D",
+    "shoplook_6NgJBf",
     "product_list_VQpani",
     "divider_KJPnFc",
     "section_ytcYni",
