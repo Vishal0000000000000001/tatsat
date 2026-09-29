@@ -335,7 +335,7 @@
         "sma_cs10_footer_text_color": "#1D1C1C",
         "sma_cs10_autoplay_enable": false,
         "sma_cs10_autoplay_interval": 3500,
-        "sma_cs10_autoplay_pause_hover": true,
+        "sma_cs10_autoplay_pause_hover": false,
         "sma_cs10_transition_speed": 650,
         "sma_cs10_show_arrows": true,
         "sma_cs10_arrow_bg": "#FFFFFF",
