@@ -204,8 +204,8 @@
         "sma_tab_UGVVqm": {
           "type": "sma_tab",
           "settings": {
-            "sma_tab_label": "Sling Bag",
-            "sma_tab_collection": "",
+            "sma_tab_label": "Bracelets",
+            "sma_tab_collection": "bracelets",
             "sma_tab_products_limit": 0
           }
         },
