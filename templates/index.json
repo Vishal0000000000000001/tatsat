@@ -603,26 +603,21 @@
         "logo_cBfaGi": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/Forbes_logo_svg.webp",
             "url": ""
           }
         },
-        "logo_JL8mez": {
+        "logo_pJMapj": {
           "type": "logo",
           "settings": {
-            "url": ""
-          }
-        },
-        "logo_HyUtWq": {
-          "type": "logo",
-          "settings": {
+            "image": "shopify://shop_images/India_Mid_Day-removebg-preview.webp",
             "url": ""
           }
         }
       },
       "block_order": [
         "logo_cBfaGi",
-        "logo_JL8mez",
-        "logo_HyUtWq"
+        "logo_pJMapj"
       ],
       "name": "CS Featured logo list",
       "settings": {
