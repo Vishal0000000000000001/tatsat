@@ -294,7 +294,7 @@
         "sma_cs10_show_badge": true,
         "sma_cs10_badge_bg": "#111111",
         "sma_cs10_badge_color": "#FFFFFF",
-        "sma_cs10_badge_sale_text": "-",
+        "sma_cs10_badge_sale_text": "New Arrival",
         "sma_cs10_sale_badge_use_custom_font": false,
         "sma_cs10_sale_badge_font": "assistant_n7",
         "sma_cs10_soldout_bg": "#8C8C8C",
