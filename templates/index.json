@@ -212,16 +212,17 @@
         "sma_tab_TejTXt": {
           "type": "sma_tab",
           "settings": {
-            "sma_tab_label": "Brown Base",
-            "sma_tab_collection": "",
+            "sma_tab_label": "Gifting",
+            "sma_tab_collection": "home-decor",
             "sma_tab_products_limit": 0
           }
         },
         "sma_tab_4WnVGX": {
           "type": "sma_tab",
+          "disabled": true,
           "settings": {
-            "sma_tab_label": "Oversized Bag",
-            "sma_tab_collection": "",
+            "sma_tab_label": "Charging plate",
+            "sma_tab_collection": "the-soul-shield-set",
             "sma_tab_products_limit": 0
           }
         }
@@ -237,7 +238,7 @@
         "sma_cs10_max_width": 1440,
         "sma_cs10_padding_top": 96,
         "sma_cs10_padding_bottom": 96,
-        "sma_cs10_padding_top_mobile": 56,
+        "sma_cs10_padding_top_mobile": 20,
         "sma_cs10_padding_bottom_mobile": 56,
         "sma_cs10_margin_top": 0,
         "sma_cs10_margin_bottom": 0,
