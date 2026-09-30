@@ -1,0 +1,229 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "custom_liquid_xERmEC": {
+          "type": "custom-liquid",
+          "name": "t:names.custom_liquid",
+          "settings": {
+            "custom_liquid": "<script src=\"https://pdp.gokwik.co/kp-account/init.js\" type=\"module\"></script>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "custom_liquid_xERmEC"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "section_mJAYDp": {
+      "type": "section",
+      "blocks": {
+        "title_LLArNC": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3",
+            "title": "<p>Brand Story</p>",
+            "font": "--font-family-base",
+            "color": "#f5f5dd",
+            "font_size": 80,
+            "line_height": 45,
+            "letter_spacing": 0,
+            "font_weight": "500",
+            "font_style": "normal",
+            "align": "center",
+            "padding": "",
+            "margin": "",
+            "color_mobi": "#ffffff",
+            "font_size_mobi": 20,
+            "line_height_mobi": 28,
+            "letter_spacing_mobi": 0,
+            "align_mobi": "center"
+          },
+          "blocks": {}
+        },
+        "title_dzMxUB": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3",
+            "title": "<p>THE JOURNEY FROM KARMA TO LIGHT — READ OUR SOUL’S PATH.</p>",
+            "font": "--font-family-base",
+            "color": "#ffffff",
+            "font_size": 13,
+            "line_height": 24,
+            "letter_spacing": 3,
+            "font_weight": "400",
+            "font_style": "normal",
+            "align": "center",
+            "padding": "",
+            "margin": "0 0 20px",
+            "color_mobi": "#ffffff",
+            "font_size_mobi": 12,
+            "line_height_mobi": 20,
+            "letter_spacing_mobi": 2,
+            "align_mobi": "center"
+          },
+          "blocks": {}
+        },
+        "divider_atC8AM": {
+          "type": "_divider",
+          "name": "t:names.divider",
+          "settings": {
+            "thickness": 1,
+            "corner_radius": "square",
+            "width_percent": 29,
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "title_LLArNC",
+        "title_dzMxUB",
+        "divider_atC8AM"
+      ],
+      "disabled": true,
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 23,
+        "section_width": "page-width",
+        "section_height": "custom",
+        "section_height_custom": 42,
+        "color_scheme": "",
+        "background_media": "image",
+        "video_position": "cover",
+        "background_image": "shopify://shop_images/Banner_Design_FAQ.webp",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "section_ihMkre": {
+      "type": "section",
+      "blocks": {
+        "text_YBdHqV": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p><strong>Tat Sat - The Ultimate Truth</strong><br/>Tat Sat isn’t just a brand, it is a mantra, a mission, and a memory of your soul’s original light. Rooted in the divine phrase \"Hari Om Tat Sat\" from the ancient Vedas, Tat Sat combines the sacred principles of preservation, transformation, and elevation through energy.<br/><br/> <strong>We are the keepers of Trinity Healing:</strong><br/>•<strong> Light</strong> – Through Light Codes we awaken the subtle blueprints of your soul<br/>• <strong>Sound</strong> – Through Sound Frequency Healing we tune in the vibration of your inner and outer world<br/>• <strong>Fire</strong> – Through Sacred Fire Rituals we invoke transformation and energetic release<br/><br/> <strong>The Deeper Symbolism</strong><br/>• Tat – The eternal principle, associated with Lord Vishnu, the Preserver. He is the source of Light and Balance in the universe. His four arms signify the four directions and his reach across creation. Vishnu carries the radiance of wisdom and the light of purpose.<br/>• Sat – The absolute truth, connected with Lord Shiva, the Transformer. He embodies both Fire (the energy that purifies and destroys illusion) and Sound (the vibration of Om, the cosmic truth). Shiva liberates the soul from karmic cycles.<br/><br/> <strong>Together, Tat Sat means:</strong><br/>• Tat (Tat)- All that exists beyond perception<br/>• Sat (Truth)- All that is real, eternal, and unchanging. We believe that the creator and the  creation are one. What you see and what lies beyond it are both divine.</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 37,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_CmY6Rz": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p><strong>Our Philosophy:</strong><br/>At Tat Sat, every product we serve, is not just a piece of crystal. it is: <br/>• Infused with Trinity Healing: Light, Sound, and Fire<br/>Our offerings help realign your energetic blueprint with the ancient forces of the universe. They are designed not just to heal, but to burn karmas, preserve dharma, and awaken the light within.<br/>We don’t just offer energy tools, we offer energy contracts which your soul already chose before entering this lifetime.</p><p><strong> Mantra of the Soul: Hari Om Tat Sat</strong><br/>This sacred mantra represents:<br/>• Hari (The manifest) -  the world, the life, the visible<br/>• Om (The unmanifest) - the source, the void, the unknown<br/>• Tat Sat - That which is the only eternal truth.</p><p> Hari Om Tat Sat is not just a chant. It is a bridge. From your mind to your higher self. From noise to stillness. From confusion to clarity.</p><p> <strong>According to the Bhagavad Gita:</strong><br/>• Om - The divine beginning of all spiritual practices<br/>• Tat - Surrender of the ego and attachment to results<br/>• Sat - All that is done in truth, sincerity, and divine alignment</p><p>This mantra reminds us that we are not separate from the divine, we are truth in motion, energy in evolution, and light in a human form.</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_YBdHqV",
+        "text_CmY6Rz"
+      ],
+      "disabled": true,
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "small",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_mJAYDp",
+    "section_ihMkre"
+  ]
+}
