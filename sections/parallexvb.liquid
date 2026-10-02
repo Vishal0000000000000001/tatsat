@@ -1,0 +1,611 @@
+{%- liquid
+  assign tab_count = section.blocks.size
+  assign d_widths = '1200,1600,2000,2400' | split: ','
+  assign m_widths = '600,900,1200,1500' | split: ','
+-%}
+
+{%- if tab_count > 0 -%}
+  <style>
+    #ps-{{ section.id }} {
+      --ps-text: {{ section.settings.text_color }};
+      --ps-overlay: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+      --ps-title-size: {{ section.settings.title_size }}px;
+      --ps-fit: {{ section.settings.image_fit }};
+      --ps-top: calc(var(--header-is-sticky, 0) * var(--header-height, 0px) + var(--announcement-bar-is-sticky, 0) * var(--announcement-bar-height, 0px));
+      --ps-h: calc(100vh - var(--ps-top));
+      --ps-bg: {{ section.settings.background_color }};
+      --ps-pad: clamp(20px, 5vw, 70px);
+
+      position: relative;
+      width: 100%;
+      background: var(--ps-bg);
+      color: var(--ps-text);
+    }
+
+    /* ---------- slides (plain vertical stack, each banner shown in full) ---------- */
+    @supports (height: 100svh) {
+      #ps-{{ section.id }} { --ps-h: calc(100svh - var(--ps-top)); }
+    }
+
+    #ps-{{ section.id }} .ps__slide {
+      position: relative;
+      overflow: hidden;
+      background: var(--ps-bg);
+    }
+
+    #ps-{{ section.id }} .ps__media { position: relative; }
+
+    #ps-{{ section.id }} .ps__media picture,
+    #ps-{{ section.id }} .ps__media img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    #ps-{{ section.id }} .ps__video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* video sits exactly over the image so both share the same banner ratio */
+    #ps-{{ section.id }} .ps__media.has-image .ps__video {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #ps-{{ section.id }} .ps__video--mobile { display: none; }
+
+    /* ---------- optional: full width + full height banners ---------- */
+    #ps-{{ section.id }}.ps--full .ps__slide { height: var(--ps-h); }
+
+    #ps-{{ section.id }}.ps--full .ps__media {
+      position: absolute;
+      inset: 0;
+    }
+
+    #ps-{{ section.id }}.ps--full .ps__media picture,
+    #ps-{{ section.id }}.ps--full .ps__media img,
+    #ps-{{ section.id }}.ps--full .ps__media .ps__video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: var(--ps-fit);
+    }
+
+    #ps-{{ section.id }} .ps__shade {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(90deg, rgba(0, 0, 0, var(--ps-overlay)) 0%, rgba(0, 0, 0, 0) 60%);
+    }
+
+    /* ---------- fixed nav (sticks while section is on screen, leaves with it) ---------- */
+    #ps-{{ section.id }} .ps__nav-track {
+      position: absolute;
+      inset: 0;
+      z-index: {{ tab_count | plus: 2 }};
+      pointer-events: none;
+    }
+
+    #ps-{{ section.id }} .ps__nav {
+      position: sticky;
+      top: var(--ps-top);
+      height: var(--ps-h);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 var(--ps-pad);
+      box-sizing: border-box;
+    }
+
+    #ps-{{ section.id }} .ps__nav > * { pointer-events: auto; align-self: flex-start; }
+
+    #ps-{{ section.id }} .ps__heading {
+      margin: 0 0 40px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ps-text);
+    }
+
+    #ps-{{ section.id }} .ps__list {
+      list-style: none;
+      margin: 0 0 40px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    #ps-{{ section.id }} .ps__tab {
+      appearance: none;
+      background: none;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      font: inherit;
+      font-size: calc(var(--ps-title-size) * 0.6);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      text-align: left;
+
+      color: var(--ps-text);
+      opacity: 0.5;
+      cursor: pointer;
+      transition: opacity 0.4s ease, font-size 0.4s ease;
+    }
+
+    #ps-{{ section.id }} .ps__tab:hover,
+    #ps-{{ section.id }} .ps__tab:focus-visible { opacity: 0.85; }
+
+    #ps-{{ section.id }} .ps__tab.is-active {
+      font-size: var(--ps-title-size);
+      font-weight: 700;
+      opacity: 1;
+    }
+
+    #ps-{{ section.id }} .ps__list { align-items: flex-start; }
+
+    #ps-{{ section.id }} .ps__ctas { display: grid; }
+
+    #ps-{{ section.id }} .ps__cta {
+      grid-area: 1 / 1;
+      justify-self: start;
+      align-self: start;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border: 1px solid var(--ps-text);
+      color: var(--ps-text);
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, background-color 0.25s ease, color 0.25s ease;
+    }
+
+    #ps-{{ section.id }} .ps__cta.is-active { opacity: 1; visibility: visible; }
+
+    #ps-{{ section.id }} .ps__cta:hover {
+      background: var(--ps-text);
+      color: #000;
+    }
+
+    /* ---------- mobile ---------- */
+    @media (max-width: 749px) {
+      #ps-{{ section.id }} .ps__video--desktop { display: none; }
+      #ps-{{ section.id }} .ps__video--mobile { display: block; }
+
+      #ps-{{ section.id }} .ps__shade {
+        background: linear-gradient(0deg, rgba(0, 0, 0, var(--ps-overlay)) 0%, rgba(0, 0, 0, 0) 65%);
+      }
+
+      #ps-{{ section.id }} .ps__nav { justify-content: flex-end; padding-bottom: 40px; }
+      #ps-{{ section.id }} .ps__heading { margin-bottom: 20px; font-size: 12px; }
+      #ps-{{ section.id }} .ps__list { margin-bottom: 24px; gap: 12px; }
+      #ps-{{ section.id }} .ps__tab { font-size: calc(var(--ps-title-size) * 0.5); }
+      #ps-{{ section.id }} .ps__tab.is-active { font-size: calc(var(--ps-title-size) * 0.85); }
+      #ps-{{ section.id }} .ps__cta { padding: 12px 18px; font-size: 13px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #ps-{{ section.id }} .ps__tab,
+      #ps-{{ section.id }} .ps__cta { transition: none; }
+    }
+  </style>
+
+  <div id="ps-{{ section.id }}" class="ps{% if section.settings.full_screen %} ps--full{% endif %}" data-ps>
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign img = block.settings.image
+        assign m_img = block.settings.mobile_image | default: img
+        assign video = block.settings.video
+        assign m_video = block.settings.mobile_video | default: video
+        assign loading = 'lazy'
+        assign priority = 'low'
+        if forloop.first
+          assign loading = 'eager'
+          assign priority = 'high'
+        endif
+      -%}
+
+      <div class="ps__slide" data-ps-slide data-index="{{ forloop.index0 }}">
+        <div class="ps__media{% if img != blank or m_img != blank %} has-image{% endif %}">
+          {%- if img != blank or m_img != blank -%}
+            {%- capture d_srcset -%}
+              {%- for w in d_widths -%}
+                {%- assign wi = w | plus: 0 -%}
+                {%- if wi <= img.width -%}{{ img | image_url: width: wi }} {{ wi }}w,{%- endif -%}
+              {%- endfor -%}
+            {%- endcapture -%}
+            {%- capture m_srcset -%}
+              {%- for w in m_widths -%}
+                {%- assign wi = w | plus: 0 -%}
+                {%- if wi <= m_img.width -%}{{ m_img | image_url: width: wi }} {{ wi }}w,{%- endif -%}
+              {%- endfor -%}
+            {%- endcapture -%}
+
+            <picture>
+              {%- if m_img != blank -%}
+                <source
+                  media="(max-width: 749px)"
+                  srcset="{% if m_srcset != blank %}{{ m_srcset | strip | remove_last: ',' }}{% else %}{{ m_img | image_url: width: m_img.width }}{% endif %}"
+                  sizes="100vw"
+                >
+              {%- endif -%}
+              {%- if img != blank -%}
+                <img
+                  src="{{ img | image_url: width: 2000 }}"
+                  {% if d_srcset != blank %}srcset="{{ d_srcset | strip | remove_last: ',' }}"{% endif %}
+                  sizes="100vw"
+                  width="{{ img.width }}"
+                  height="{{ img.height }}"
+                  alt="{{ img.alt | default: block.settings.title | escape }}"
+                  loading="{{ loading }}"
+                  fetchpriority="{{ priority }}"
+                >
+              {%- else -%}
+                <img
+                  src="{{ m_img | image_url: width: 1500 }}"
+                  width="{{ m_img.width }}"
+                  height="{{ m_img.height }}"
+                  alt="{{ m_img.alt | default: block.settings.title | escape }}"
+                  loading="{{ loading }}"
+                >
+              {%- endif -%}
+            </picture>
+          {%- endif -%}
+
+          {%- for v in (1..2) -%}
+            {%- liquid
+              if forloop.first
+                assign vid = video
+                assign vclass = 'ps__video--desktop'
+              else
+                assign vid = m_video
+                assign vclass = 'ps__video--mobile'
+              endif
+              assign best = nil
+              if vid != blank
+                for s in vid.sources
+                  if s.mime_type == 'video/mp4' and s.height <= 1080
+                    if best == nil
+                      assign best = s
+                    elsif s.height > best.height
+                      assign best = s
+                    endif
+                  endif
+                endfor
+                if best == nil
+                  assign best = vid.sources.first
+                endif
+              endif
+            -%}
+            {%- if best != blank -%}
+              <video
+                class="ps__video {{ vclass }}"
+                data-ps-video
+                src="{{ best.url }}"
+                {% if vid.preview_image %}poster="{{ vid.preview_image | image_url: width: 1600 }}"{% endif %}
+                muted
+                loop
+                playsinline
+                preload="none"
+                aria-hidden="true"
+              ></video>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        <div class="ps__shade"></div>
+      </div>
+    {%- endfor -%}
+
+    <div class="ps__nav-track">
+      <div class="ps__nav">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="ps__heading">{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+
+        <ul class="ps__list">
+          {%- for block in section.blocks -%}
+            <li data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+              <button
+                type="button"
+                class="ps__tab{% if forloop.first %} is-active{% endif %}"
+                data-ps-tab
+                data-index="{{ forloop.index0 }}"
+                {% if forloop.first %}aria-current="true"{% endif %}
+              >
+                {{- block.settings.title | escape -}}
+              </button>
+            </li>
+          {%- endfor -%}
+        </ul>
+
+        <div class="ps__ctas">
+          {%- for block in section.blocks -%}
+            {%- if block.settings.button_label != blank and block.settings.button_link != blank -%}
+              <a
+                href="{{ block.settings.button_link }}"
+                class="ps__cta{% if forloop.first %} is-active{% endif %}"
+                data-ps-cta
+                data-index="{{ forloop.index0 }}"
+                {% unless forloop.first %}tabindex="-1"{% endunless %}
+              >
+                <svg width="12" height="9" viewBox="0 0 12 9" fill="none" aria-hidden="true">
+                  <path d="M1 4.74256L10.5879 4.70898" stroke="currentColor" stroke-width="1.00713" stroke-miterlimit="10"/>
+                  <path d="M7.19043 1L10.8128 4.76332" stroke="currentColor" stroke-width="1.00713" stroke-miterlimit="10"/>
+                  <path d="M11.0511 4.29297L7.19043 8.30136" stroke="currentColor" stroke-width="1.00713" stroke-miterlimit="10"/>
+                </svg>
+                {{ block.settings.button_label | escape }}
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.getElementById('ps-{{ section.id }}');
+      if (!root) return;
+
+      var slides = Array.prototype.slice.call(root.querySelectorAll('[data-ps-slide]'));
+      var tabs = Array.prototype.slice.call(root.querySelectorAll('[data-ps-tab]'));
+      var ctas = Array.prototype.slice.call(root.querySelectorAll('[data-ps-cta]'));
+      var nav = root.querySelector('.ps__nav');
+      var count = slides.length;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var active = -1;
+      var ticking = false;
+
+      function clamp(v, min, max) { return Math.min(max, Math.max(min, v)); }
+
+      function playVideos(index, inView) {
+        slides.forEach(function (slide, i) {
+          slide.querySelectorAll('[data-ps-video]').forEach(function (video) {
+            var visible = video.getClientRects().length > 0;
+            if (inView && i === index && visible) {
+              video.preload = 'auto';
+              var p = video.play();
+              if (p && p.catch) p.catch(function () {});
+            } else if (!video.paused) {
+              video.pause();
+            }
+          });
+        });
+      }
+
+      function setActive(index, inView) {
+        if (index !== active) {
+          active = index;
+          tabs.forEach(function (tab, i) {
+            var on = i === index;
+            tab.classList.toggle('is-active', on);
+            if (on) tab.setAttribute('aria-current', 'true');
+            else tab.removeAttribute('aria-current');
+          });
+          ctas.forEach(function (cta) {
+            var on = +cta.dataset.index === index;
+            cta.classList.toggle('is-active', on);
+            if (on) cta.removeAttribute('tabindex');
+            else cta.setAttribute('tabindex', '-1');
+          });
+        }
+        playVideos(index, inView);
+      }
+
+      function update() {
+        ticking = false;
+        var vh = window.innerHeight;
+        var rect = root.getBoundingClientRect();
+        var inView = rect.bottom > 0 && rect.top < vh;
+
+        // active tab = the banner that is crossing the middle of the screen
+        var navTop = parseFloat(getComputedStyle(nav).top) || 0;
+        var mid = navTop + (vh - navTop) / 2;
+        var index = 0;
+        slides.forEach(function (slide, i) {
+          if (slide.getBoundingClientRect().top <= mid) index = i;
+        });
+
+        setActive(index, inView);
+      }
+
+      function requestUpdate() {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(update);
+        }
+      }
+
+      function scrollToTab(index, instant) {
+        var slide = slides[index];
+        var rect = slide.getBoundingClientRect();
+        // put the banner in the middle of the screen (top-aligned if taller than the screen)
+        var navTop = parseFloat(getComputedStyle(nav).top) || 0;
+        var offset = navTop + Math.max(0, (window.innerHeight - navTop - rect.height) / 2);
+        var top = window.pageYOffset + rect.top - offset;
+        window.scrollTo({ top: top, behavior: instant || reduce.matches ? 'auto' : 'smooth' });
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () { scrollToTab(+tab.dataset.index); });
+      });
+
+      window.addEventListener('scroll', requestUpdate, { passive: true });
+      window.addEventListener('resize', requestUpdate);
+
+      // Theme editor: jump to a tab when its block is selected, clean up on unload
+      function onBlockSelect(e) {
+        if (root.contains(e.target) && e.target.dataset.index !== undefined) {
+          scrollToTab(+e.target.dataset.index, true);
+        }
+      }
+      function onUnload(e) {
+        if (e.target.contains(root)) {
+          window.removeEventListener('scroll', requestUpdate);
+          window.removeEventListener('resize', requestUpdate);
+          document.removeEventListener('shopify:block:select', onBlockSelect);
+          document.removeEventListener('shopify:section:unload', onUnload);
+        }
+      }
+      document.addEventListener('shopify:block:select', onBlockSelect);
+      document.addEventListener('shopify:section:unload', onUnload);
+
+      update();
+    })();
+  </script>
+{%- elsif request.design_mode -%}
+  <div style="padding: 60px 20px; text-align: center; background: #f3f3f3;">
+    Add tabs (blocks) to this section — each tab takes a title, desktop/mobile image or video and a button.
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Parallax Tabs",
+  "tag": "section",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_screen",
+      "label": "Full width + full height banners",
+      "default": false,
+      "info": "On: every banner fills the visible screen (below the sticky header). Off: banner shows at its own ratio."
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "Full-screen image fit",
+      "options": [
+        { "value": "cover", "label": "Cover (fills screen, edges may crop)" },
+        { "value": "contain", "label": "Contain (never crops, may show bars)" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#000000",
+      "info": "Shows behind the image (visible only with Contain)."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Explore Collections"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text & button color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Text-side dark overlay",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 35,
+      "info": "Darkens the side where the titles sit so they stay readable."
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Active tab title size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Collection name"
+        },
+        {
+          "type": "header",
+          "content": "Desktop media"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Full-screen mode: 2400 x 1250 px. Normal mode: 2400 x 1200 px. Keep key content in the center 85%. Same size for every tab."
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video",
+          "info": "Optional. Plays over the image (the image is used as fallback while loading)."
+        },
+        {
+          "type": "header",
+          "content": "Mobile media"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "Full-screen mode: 1080 x 1920 px. Normal mode: 1080 x 1350 px. Falls back to the desktop image if empty."
+        },
+        {
+          "type": "video",
+          "id": "mobile_video",
+          "label": "Mobile video",
+          "info": "Falls back to the desktop video if empty."
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Discover"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Parallax Tabs",
+      "blocks": [
+        { "type": "tab" },
+        { "type": "tab" },
+        { "type": "tab" }
+      ]
+    }
+  ]
+}
+{% endschema %}
