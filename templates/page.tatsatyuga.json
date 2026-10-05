@@ -58,24 +58,15 @@
             "button_label": "Discover",
             "button_link": "#"
           }
-        },
-        "tab_HMEtrH": {
-          "type": "tab",
-          "settings": {
-            "title": "Collection name",
-            "button_label": "Discover",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
         "tab_a8ak93",
-        "tab_Kg6pKB",
-        "tab_HMEtrH"
+        "tab_Kg6pKB"
       ],
       "name": "Parallax Tabs",
       "settings": {
-        "full_screen": false,
+        "full_screen": true,
         "image_fit": "cover",
         "background_color": "#000000",
         "heading": "Explore Collections",
