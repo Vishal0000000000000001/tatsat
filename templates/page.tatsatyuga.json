@@ -90,7 +90,7 @@
         "tab_E3DATN": {
           "type": "tab",
           "settings": {
-            "tab_label": "Men",
+            "tab_label": "Bracelets",
             "collection": "bracelets",
             "products_count": 10,
             "kicker": "",
@@ -103,7 +103,7 @@
         "tab_JHWCEh": {
           "type": "tab",
           "settings": {
-            "tab_label": "Women",
+            "tab_label": "Combos",
             "collection": "make-combo-s",
             "products_count": 10,
             "kicker": "",
