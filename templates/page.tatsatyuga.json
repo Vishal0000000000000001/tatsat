@@ -124,7 +124,7 @@
         "per_view_mobile": "2",
         "gap": 2,
         "pill_radius": 0,
-        "image_ratio": "4 / 5",
+        "image_ratio": "adapt",
         "image_hover": true,
         "show_badges": true,
         "card_radius": 0,
