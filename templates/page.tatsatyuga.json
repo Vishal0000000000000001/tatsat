@@ -38,6 +38,62 @@
       "name": "Custom Slideshow - Image Click",
       "settings": {}
     },
+    "dual_image_banner_NbTPhF": {
+      "type": "dual-image-banner",
+      "blocks": {
+        "banner_rDkVkA": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/Regal_Lion_Jewelry_Editorial.png",
+            "heading_line_1": "Regalia",
+            "heading_line_2": "of the Kings",
+            "description": "<p>Powerful pieces<br/>for the modern man.</p>",
+            "button_label": "Explore",
+            "link": "",
+            "full_card_link": true,
+            "content_position": "center",
+            "accent_color": "#D9C29A",
+            "heading_color": "#F3ECE0",
+            "text_color": "#F3ECE0",
+            "overlay_color": "#1A120B",
+            "overlay_opacity": 45
+          }
+        },
+        "banner_VLYGTd": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/Teal_and_Gold_Veiled_Jewelry_Portrait.png",
+            "heading_line_1": "Shringar",
+            "heading_line_2": "of the Queens",
+            "description": "<p>Sacred adornments<br/>for the divine feminine.</p>",
+            "button_label": "Explore",
+            "link": "",
+            "full_card_link": true,
+            "content_position": "center",
+            "accent_color": "#D9C29A",
+            "heading_color": "#F3ECE0",
+            "text_color": "#F3ECE0",
+            "overlay_color": "#1A120B",
+            "overlay_opacity": 45
+          }
+        }
+      },
+      "block_order": [
+        "banner_rDkVkA",
+        "banner_VLYGTd"
+      ],
+      "name": "Dual image banner",
+      "settings": {
+        "bg_color": "#F5F2EC",
+        "image_ratio": "16 / 10",
+        "image_ratio_mobile": "1 / 1",
+        "gap": 30,
+        "gap_mobile": 16,
+        "max_width": 1600,
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
     "parallexvb_UrEhPg": {
       "type": "parallexvb",
       "blocks": {
@@ -122,7 +178,7 @@
         "show_divider": true,
         "padding_top": 40,
         "padding_bottom": 40,
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "text_color": "#111111"
       }
     }
@@ -130,6 +186,7 @@
   "order": [
     "main",
     "custom_slides_HfgBNN",
+    "dual_image_banner_NbTPhF",
     "parallexvb_UrEhPg",
     "vbmultitab_PYAkPT"
   ]
