@@ -26,6 +26,7 @@
           "type": "slide",
           "settings": {
             "desktop_image": "shopify://shop_images/ChatGPT_Image_Sep_29_2026_07_51_38_PM.png",
+            "mobile_image": "shopify://shop_images/Selenite_Plate_d4083f56-9b04-4d03-afac-1990c240635b.png",
             "slide_link": "",
             "heading": "",
             "text": ""
@@ -94,43 +95,6 @@
         "padding_bottom": 28
       }
     },
-    "parallexvb_UrEhPg": {
-      "type": "parallexvb",
-      "blocks": {
-        "tab_a8ak93": {
-          "type": "tab",
-          "settings": {
-            "title": "Collection name",
-            "image": "shopify://shop_images/Teal_and_Gold_Veiled_Jewelry_Portrait.png",
-            "button_label": "Discover",
-            "button_link": "#"
-          }
-        },
-        "tab_Kg6pKB": {
-          "type": "tab",
-          "settings": {
-            "title": "Collection name",
-            "image": "shopify://shop_images/Regal_Lion_Jewelry_Editorial.png",
-            "button_label": "Discover",
-            "button_link": "#"
-          }
-        }
-      },
-      "block_order": [
-        "tab_a8ak93",
-        "tab_Kg6pKB"
-      ],
-      "name": "Parallax Tabs",
-      "settings": {
-        "full_screen": true,
-        "image_fit": "cover",
-        "background_color": "#000000",
-        "heading": "Explore Collections",
-        "text_color": "#ffffff",
-        "overlay_opacity": 35,
-        "title_size": 24
-      }
-    },
     "vbmultitab_PYAkPT": {
       "type": "vbmultitab",
       "blocks": {
@@ -181,13 +145,50 @@
         "bg_color": "#ffffff",
         "text_color": "#111111"
       }
+    },
+    "parallexvb_UrEhPg": {
+      "type": "parallexvb",
+      "blocks": {
+        "tab_a8ak93": {
+          "type": "tab",
+          "settings": {
+            "title": "Collection name",
+            "image": "shopify://shop_images/Teal_and_Gold_Veiled_Jewelry_Portrait.png",
+            "button_label": "Discover",
+            "button_link": "#"
+          }
+        },
+        "tab_Kg6pKB": {
+          "type": "tab",
+          "settings": {
+            "title": "Collection name",
+            "image": "shopify://shop_images/Regal_Lion_Jewelry_Editorial.png",
+            "button_label": "Discover",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "tab_a8ak93",
+        "tab_Kg6pKB"
+      ],
+      "name": "Parallax Tabs",
+      "settings": {
+        "full_screen": true,
+        "image_fit": "cover",
+        "background_color": "#000000",
+        "heading": "Explore Collections",
+        "text_color": "#ffffff",
+        "overlay_opacity": 35,
+        "title_size": 24
+      }
     }
   },
   "order": [
     "main",
     "custom_slides_HfgBNN",
     "dual_image_banner_NbTPhF",
-    "parallexvb_UrEhPg",
-    "vbmultitab_PYAkPT"
+    "vbmultitab_PYAkPT",
+    "parallexvb_UrEhPg"
   ]
 }
