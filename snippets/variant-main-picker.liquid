@@ -125,23 +125,12 @@
                     <span class="variant-option__button-label__pill"></span>
                   {% endif %}
 
-                  {%- liquid
-                    assign option_discount_percentage = 0
-                    if is_first_option and product_option_value.variant.compare_at_price > product_option_value.variant.price
-                      assign option_discount_amount = product_option_value.variant.compare_at_price | minus: product_option_value.variant.price
-                      assign option_discount_percentage = option_discount_amount | times: 100 | divided_by: product_option_value.variant.compare_at_price
-                    endif
-                  -%}
-
                   <span class="variant-option__button-label__text">
                     {% if product_option_value == '21 Steps - Premium' %}
                       <span class="best-seller-badge">BEST SELLER</span>
                     {% endif %}
                     <span class="variant-option__value-row">
                       <span>{{ product_option_value | escape }}</span>
-                      {% if option_discount_percentage > 0 %}
-                        <span class="variant-option__discount-badge">{{ option_discount_percentage }}% OFF</span>
-                      {% endif %}
                     </span>
                   </span>
                 {% endif %}
