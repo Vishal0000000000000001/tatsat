@@ -39,62 +39,6 @@
       "name": "Custom Slideshow - Image Click",
       "settings": {}
     },
-    "dual_image_banner_NbTPhF": {
-      "type": "dual-image-banner",
-      "blocks": {
-        "banner_rDkVkA": {
-          "type": "banner",
-          "settings": {
-            "image": "shopify://shop_images/Regal_Lion_Jewelry_Editorial.png",
-            "heading_line_1": "Regalia",
-            "heading_line_2": "of the Kings",
-            "description": "<p>Powerful pieces<br/>for the modern man.</p>",
-            "button_label": "Explore",
-            "link": "",
-            "full_card_link": true,
-            "content_position": "center",
-            "accent_color": "#D9C29A",
-            "heading_color": "#F3ECE0",
-            "text_color": "#F3ECE0",
-            "overlay_color": "#1A120B",
-            "overlay_opacity": 45
-          }
-        },
-        "banner_VLYGTd": {
-          "type": "banner",
-          "settings": {
-            "image": "shopify://shop_images/Teal_and_Gold_Veiled_Jewelry_Portrait.png",
-            "heading_line_1": "Shringar",
-            "heading_line_2": "of the Queens",
-            "description": "<p>Sacred adornments<br/>for the divine feminine.</p>",
-            "button_label": "Explore",
-            "link": "",
-            "full_card_link": true,
-            "content_position": "center",
-            "accent_color": "#D9C29A",
-            "heading_color": "#F3ECE0",
-            "text_color": "#F3ECE0",
-            "overlay_color": "#1A120B",
-            "overlay_opacity": 45
-          }
-        }
-      },
-      "block_order": [
-        "banner_rDkVkA",
-        "banner_VLYGTd"
-      ],
-      "name": "Dual image banner",
-      "settings": {
-        "bg_color": "#F5F2EC",
-        "image_ratio": "16 / 10",
-        "image_ratio_mobile": "1 / 1",
-        "gap": 30,
-        "gap_mobile": 16,
-        "max_width": 1600,
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "vbmultitab_PYAkPT": {
       "type": "vbmultitab",
       "blocks": {
@@ -105,7 +49,7 @@
             "collection": "bracelets",
             "products_count": 10,
             "kicker": "",
-            "heading": "",
+            "heading": "Top Selling",
             "subheading": "",
             "description": "",
             "button_label": ""
@@ -144,6 +88,62 @@
         "padding_bottom": 40,
         "bg_color": "#ffffff",
         "text_color": "#111111"
+      }
+    },
+    "dual_image_banner_NbTPhF": {
+      "type": "dual-image-banner",
+      "blocks": {
+        "banner_rDkVkA": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/Regal_Lion_Jewelry_Editorial.png",
+            "heading_line_1": "Regalia",
+            "heading_line_2": "of the Kings",
+            "description": "<p>Powerful pieces<br/>for the modern man.</p>",
+            "button_label": "Explore",
+            "link": "",
+            "full_card_link": true,
+            "content_position": "center",
+            "accent_color": "#d9c29a",
+            "heading_color": "#f3ece0",
+            "text_color": "#f3ece0",
+            "overlay_color": "#1a120b",
+            "overlay_opacity": 45
+          }
+        },
+        "banner_VLYGTd": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/Teal_and_Gold_Veiled_Jewelry_Portrait.png",
+            "heading_line_1": "Shringar",
+            "heading_line_2": "of the Queens",
+            "description": "<p>Sacred adornments<br/>for the divine feminine.</p>",
+            "button_label": "Explore",
+            "link": "",
+            "full_card_link": true,
+            "content_position": "center",
+            "accent_color": "#d9c29a",
+            "heading_color": "#f3ece0",
+            "text_color": "#f3ece0",
+            "overlay_color": "#1a120b",
+            "overlay_opacity": 45
+          }
+        }
+      },
+      "block_order": [
+        "banner_rDkVkA",
+        "banner_VLYGTd"
+      ],
+      "name": "Dual image banner",
+      "settings": {
+        "bg_color": "#f5f2ec",
+        "image_ratio": "16 / 10",
+        "image_ratio_mobile": "1 / 1",
+        "gap": 30,
+        "gap_mobile": 16,
+        "max_width": 1600,
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
     "parallexvb_UrEhPg": {
@@ -187,8 +187,8 @@
   "order": [
     "main",
     "custom_slides_HfgBNN",
-    "dual_image_banner_NbTPhF",
     "vbmultitab_PYAkPT",
+    "dual_image_banner_NbTPhF",
     "parallexvb_UrEhPg"
   ]
 }
