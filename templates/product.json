@@ -439,10 +439,52 @@
                   "block_order": [
                     "text_xwazkQ"
                   ]
+                },
+                "accordion_row_X9YQGt": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "heading": "Jewellery Care",
+                    "open_by_default": false,
+                    "only_for_collection": "",
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_hD9CWT": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Preserve the Beauty of Your YUGA Piece<br/><br/>Every YUGA jewel is created to be worn, loved and treasured. As our pieces are crafted in brass with gold plating, a little care will help preserve their finish, shine and beauty for longer.<br/><br/>Keep it dry<br/>Avoid direct contact with water, perfume, deodorant, hairspray, lotions, oils and other cosmetics. Always wear your jewellery after completing your beauty routine.<br/><br/>Remove before bathing or swimming<br/>Do not wear your jewellery while showering, swimming, exercising or entering a sauna. Moisture, chlorine, salt water and perspiration can gradually affect the plating.<br/><br/>Avoid chemicals<br/>Keep your jewellery away from household cleaners, sanitisers and other harsh chemicals, as these may damage or discolour the plated surface.<br/><br/>Handle with care<br/>Avoid dropping, bending or placing heavy objects over your jewellery. Pieces with stones, intricate detailing or delicate components should be handled gently.<br/><br/>Clean gently<br/>After wearing, softly wipe your jewellery with a clean, dry and soft cloth to remove perspiration, oils or residue. Do not use abrasive cloths, polishing agents, jewellery cleaners or chemical solutions on gold-plated pieces.<br/><br/>Store separately<br/>Store each piece individually in its YUGA pouch or box in a cool, dry place. Keeping pieces separate helps prevent scratching, tangling and unnecessary friction.<br/><br/>Last on. First off.<br/>Make your jewellery the last thing you put on before stepping out and the first thing you take off when you return.<br/><br/>A NOTE ON GOLD PLATING<br/>Gold plating is a surface finish and may naturally evolve with time and wear. The longevity of the plating depends on factors such as frequency of use, exposure to moisture and chemicals, perspiration, individual skin pH and how the jewellery is stored and cared for.<br/>This natural change in finish is part of the character of plated jewellery and is not considered a manufacturing defect.<br/><br/>YUGA CARE MANTRA<br/>Wear with love.<br/>Handle with care.<br/>Store with intention.<br/><br/>With thoughtful care, your YUGA jewellery can retain its beauty and remain part of your story for longer.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_hD9CWT"
+                  ]
                 }
               },
               "block_order": [
-                "accordion_row_xjNLqq"
+                "accordion_row_xjNLqq",
+                "accordion_row_X9YQGt"
               ]
             }
           },
