@@ -255,6 +255,79 @@
               },
               "blocks": {}
             },
+            "icon_features_marquee_3JxNP6": {
+              "type": "icon-features-marquee",
+              "name": "Icon features marquee",
+              "settings": {
+                "enable_motion": true,
+                "direction": "left_to_right",
+                "speed": 25,
+                "fade_edges": true,
+                "icon_size": 56,
+                "item_width": 150,
+                "gap": 24,
+                "show_circle": true,
+                "circle_color": "#FFE2BB",
+                "title_color": "#1a1a1a",
+                "text_color": "#6b6b6b",
+                "padding-block-start": 16,
+                "padding-block-end": 16
+              },
+              "blocks": {
+                "icon_feature_R6tbgh": {
+                  "type": "_icon-feature",
+                  "settings": {
+                    "title": "Worldwide\nshipping",
+                    "text": "",
+                    "url": ""
+                  },
+                  "blocks": {}
+                },
+                "icon_feature_9qKm88": {
+                  "type": "_icon-feature",
+                  "settings": {
+                    "title": "Easy returns,\nrefunds & exchanges",
+                    "text": "",
+                    "url": ""
+                  },
+                  "blocks": {}
+                },
+                "icon_feature_9PqQYF": {
+                  "type": "_icon-feature",
+                  "settings": {
+                    "title": "Product\nFAQ",
+                    "text": "",
+                    "url": ""
+                  },
+                  "blocks": {}
+                },
+                "icon_feature_kHidg9": {
+                  "type": "_icon-feature",
+                  "settings": {
+                    "title": "Gift wrap\n& packaging",
+                    "text": "",
+                    "url": ""
+                  },
+                  "blocks": {}
+                },
+                "icon_feature_fQbxmT": {
+                  "type": "_icon-feature",
+                  "settings": {
+                    "title": "Partial COD\navailable",
+                    "text": "",
+                    "url": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "icon_feature_R6tbgh",
+                "icon_feature_9qKm88",
+                "icon_feature_9PqQYF",
+                "icon_feature_kHidg9",
+                "icon_feature_fQbxmT"
+              ]
+            },
             "buy_buttons": {
               "type": "buy-buttons",
               "settings": {
@@ -331,6 +404,7 @@
                   "settings": {
                     "heading": "Description",
                     "open_by_default": true,
+                    "only_for_collection": "",
                     "icon": "none",
                     "width": 20
                   },
@@ -375,6 +449,7 @@
             "group",
             "custom_liquid_ABGWD6",
             "variant_picker",
+            "icon_features_marquee_3JxNP6",
             "buy_buttons",
             "custom_liquid_UtpBpc",
             "custom_liquid_gApeyx",
