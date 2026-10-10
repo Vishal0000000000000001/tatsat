@@ -305,7 +305,7 @@
               "settings": {
                 "enable_motion": true,
                 "direction": "left_to_right",
-                "speed": 45,
+                "speed": 25,
                 "fade_edges": true,
                 "icon_size": 46,
                 "item_width": 150,
