@@ -261,13 +261,13 @@
               "settings": {
                 "enable_motion": true,
                 "direction": "left_to_right",
-                "speed": 25,
+                "speed": 15,
                 "fade_edges": true,
                 "icon_size": 56,
                 "item_width": 150,
                 "gap": 24,
                 "show_circle": true,
-                "circle_color": "#FFE2BB",
+                "circle_color": "#ffe2bb",
                 "title_color": "#1a1a1a",
                 "text_color": "#6b6b6b",
                 "padding-block-start": 16,
@@ -366,6 +366,7 @@
             "custom_liquid_UtpBpc": {
               "type": "custom-liquid",
               "name": "t:names.custom_liquid",
+              "disabled": true,
               "settings": {
                 "custom_liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0935/1997/0578/files/Website_Icon_3788d936-c8ac-49a3-8362-6d88ed83279b.webp?v=1775461194\"/>"
               },
