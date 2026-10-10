@@ -186,7 +186,7 @@
                       aria-current="page"
                     {% endif %}
                   >
-                    <span class="menu-drawer__menu-item-text wrap-text">{{ link.title | escape }}</span>
+                    {% render 'menu-link-title', link: link, class: 'menu-drawer__menu-item-text wrap-text' %}
                   </a>
                   {% liquid
                     assign render_link_image = false
@@ -237,7 +237,7 @@
                       aria-current="page"
                     {% endif %}
                   >
-                    <span class="menu-drawer__menu-item-text wrap-text">{{ link.title | escape }}</span>
+                    {% render 'menu-link-title', link: link, class: 'menu-drawer__menu-item-text wrap-text' %}
                   </a>
                 {% endif %}
               </li>

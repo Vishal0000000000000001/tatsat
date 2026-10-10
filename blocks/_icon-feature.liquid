@@ -1,0 +1,126 @@
+{%- liquid
+  assign block_settings = block.settings
+
+  assign tag = 'div'
+  if block_settings.url != blank
+    assign tag = 'a'
+  endif
+
+  assign image_alt = block_settings.icon.alt | default: block_settings.title | escape
+-%}
+
+<{{ tag }}
+  class="icon-feature"
+  {% if tag == 'a' %}href="{{ block_settings.url }}"{% endif %}
+  {{ block.shopify_attributes }}
+>
+  <span class="icon-feature__icon">
+    {%- if block_settings.icon != blank -%}
+      {{-
+        block_settings.icon
+        | image_url: width: 200
+        | image_tag: loading: 'lazy', alt: image_alt, widths: '100,200'
+      -}}
+    {%- else -%}
+      {{- 'image' | placeholder_svg_tag -}}
+    {%- endif -%}
+  </span>
+
+  {%- if block_settings.title != blank -%}
+    <p class="icon-feature__title">{{ block_settings.title | escape | newline_to_br }}</p>
+  {%- endif -%}
+
+  {%- if block_settings.text != blank -%}
+    <p class="icon-feature__text">{{ block_settings.text }}</p>
+  {%- endif -%}
+</{{ tag }}>
+
+{% stylesheet %}
+  .icon-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 10px;
+    width: var(--icon-features-item-w, 160px);
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+    color: inherit;
+  }
+
+  .icon-feature__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--icon-features-icon-size, 60px);
+    height: var(--icon-features-icon-size, 60px);
+    padding: var(--icon-features-icon-padding, 0);
+    border-radius: 50%;
+    background: var(--icon-features-circle-bg, transparent);
+  }
+
+  .icon-feature__icon img,
+  .icon-feature__icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .icon-feature__title {
+    margin: 0;
+    font-family: var(--font-h2--family);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--icon-features-title-color, inherit);
+  }
+
+  .icon-feature__text {
+    margin: 0;
+    font-family: var(--font-body--family);
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--icon-features-text-color, inherit);
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Feature",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon",
+      "info": "White PNG or SVG works best on the circle"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "info": "Press Enter for a new line",
+      "default": "Worldwide shipping"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "label": "Sub text"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature"
+    }
+  ]
+}
+{% endschema %}

@@ -44,7 +44,7 @@
         {%- endif -%}
         ref="menuitem"
       >
-        <span class="menu-list__link-title">{{- link.title -}}</span>
+        {% render 'menu-link-title', link: link, class: 'menu-list__link-title' %}
       </a>
       {%- if link.links != blank -%}
         <div class="menu-list__submenu{{ color_scheme_classes }}" ref="submenu[]">

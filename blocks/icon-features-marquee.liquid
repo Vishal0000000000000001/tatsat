@@ -1,0 +1,275 @@
+{%- liquid
+  assign block_settings = block.settings
+
+  assign movement_direction = 'normal'
+  if block_settings.direction == 'left_to_right'
+    assign movement_direction = 'reverse'
+  endif
+
+  assign icon_padding = '0px'
+  if block_settings.show_circle
+    assign icon_padding = block_settings.icon_size | times: 0.2 | append: 'px'
+  endif
+-%}
+
+{%- capture icon_features_style -%}
+  {% render 'spacing-style', settings: block_settings %};
+  --icon-features-gap: {{ block_settings.gap }}px;
+  --icon-features-item-w: {{ block_settings.item_width }}px;
+  --icon-features-icon-size: {{ block_settings.icon_size }}px;
+  --icon-features-icon-padding: {{ icon_padding }};
+  --icon-features-circle-bg: {% if block_settings.show_circle %}{{ block_settings.circle_color }}{% else %}transparent{% endif %};
+  --icon-features-title-color: {{ block_settings.title_color }};
+  --icon-features-text-color: {{ block_settings.text_color }};
+{%- endcapture -%}
+
+{%- liquid
+  assign root_tag = 'div'
+  if block_settings.enable_motion
+    assign root_tag = 'marquee-component'
+  endif
+-%}
+
+{%- if block_settings.enable_motion -%}
+  <script
+    src="{{ 'marquee.js' | asset_url }}"
+    type="module"
+    fetchpriority="low"
+  ></script>
+{%- endif -%}
+
+<{{ root_tag }}
+  class="
+    icon-features-marquee spacing-style
+    {% unless block_settings.enable_motion %}icon-features-marquee--static{% endunless %}
+    {% if block_settings.enable_motion and block_settings.fade_edges %}icon-features-marquee--fade{% endif %}
+  "
+  style="{{ icon_features_style }} --marquee-direction: {{ movement_direction }};"
+  {% if block_settings.enable_motion %}
+    data-speed-factor="{{ block_settings.speed }}"
+    data-movement-direction="{{ movement_direction }}"
+  {% endif %}
+  {{ block.shopify_attributes }}
+>
+  <div
+    class="icon-features-marquee__wrapper"
+    ref="wrapper"
+  >
+    <div
+      class="icon-features-marquee__content"
+      ref="content"
+    >
+      <div
+        class="icon-features-marquee__items"
+        ref="marqueeItems[]"
+      >
+        {% content_for 'blocks' %}
+      </div>
+    </div>
+  </div>
+</{{ root_tag }}>
+
+{% stylesheet %}
+  .icon-features-marquee {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .icon-features-marquee--fade {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+
+  .icon-features-marquee__wrapper,
+  .icon-features-marquee__content,
+  .icon-features-marquee__items {
+    display: flex;
+    gap: var(--icon-features-gap);
+  }
+
+  .icon-features-marquee__wrapper {
+    width: fit-content;
+  }
+
+  .icon-features-marquee__content,
+  .icon-features-marquee__items {
+    min-width: max-content;
+    align-items: flex-start;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    marquee-component.icon-features-marquee .icon-features-marquee__wrapper {
+      animation: icon-features-motion var(--marquee-speed, 30s) linear infinite var(--marquee-direction);
+    }
+  }
+
+  @keyframes icon-features-motion {
+    to {
+      transform: translate3d(calc(-50% - (var(--icon-features-gap) / 2)), 0, 0);
+    }
+  }
+
+  /* Static layout (motion off) */
+  .icon-features-marquee--static .icon-features-marquee__wrapper,
+  .icon-features-marquee--static .icon-features-marquee__content,
+  .icon-features-marquee--static .icon-features-marquee__items {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .icon-features-marquee--static .icon-features-marquee__items {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Icon features marquee",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "_icon-feature"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Motion"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_motion",
+      "label": "Enable motion",
+      "info": "Turn off to show the items in a static row",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Direction",
+      "options": [
+        { "value": "left_to_right", "label": "Left to right" },
+        { "value": "right_to_left", "label": "Right to left" }
+      ],
+      "default": "left_to_right"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "label": "Slowness",
+      "info": "Higher value = slower scroll",
+      "default": 25
+    },
+    {
+      "type": "checkbox",
+      "id": "fade_edges",
+      "label": "Fade edges",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Items"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 30,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "item_width",
+      "min": 80,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Item width",
+      "default": 150
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between items",
+      "default": 24
+    },
+    {
+      "type": "checkbox",
+      "id": "show_circle",
+      "label": "Show circle behind icon",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "circle_color",
+      "label": "Icon circle",
+      "default": "#9a8467"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Sub text",
+      "default": "#6b6b6b"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon features marquee",
+      "blocks": {
+        "feature-1": { "type": "_icon-feature", "settings": { "title": "Worldwide\nshipping" } },
+        "feature-2": { "type": "_icon-feature", "settings": { "title": "Easy returns,\nrefunds & exchanges" } },
+        "feature-3": { "type": "_icon-feature", "settings": { "title": "Product\nFAQ" } },
+        "feature-4": { "type": "_icon-feature", "settings": { "title": "Gift wrap\n& packaging" } },
+        "feature-5": { "type": "_icon-feature", "settings": { "title": "Partial COD\navailable" } }
+      },
+      "block_order": ["feature-1", "feature-2", "feature-3", "feature-4", "feature-5"]
+    }
+  ]
+}
+{% endschema %}
