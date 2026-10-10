@@ -255,6 +255,58 @@
               },
               "blocks": {}
             },
+            "buy_buttons": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false,
+                "gift_card_form": true,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "custom_liquid_UtpBpc": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "disabled": true,
+              "settings": {
+                "custom_liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0935/1997/0578/files/Website_Icon_3788d936-c8ac-49a3-8362-6d88ed83279b.webp?v=1775461194\"/>"
+              },
+              "blocks": {}
+            },
+            "custom_liquid_gApeyx": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<script>\n  document.addEventListener(\"DOMContentLoaded\", function () {\n\n    // ============================\n    // 1) Countdown Timer (till midnight)\n    // ============================\n    function updateCountdown() {\n      const now = new Date();\n      const midnight = new Date();\n      midnight.setHours(24, 0, 0, 0);\n\n      const diff = midnight - now;\n\n      let hours = Math.floor(diff / (1000 * 60 * 60));\n      let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));\n\n      document.getElementById(\"countdown\").innerHTML =\n        `Order in the next ${hours} hours ${minutes} minutes`;\n    }\n\n    updateCountdown();\n    setInterval(updateCountdown, 30000); // Update every 30 seconds\n\n\n    // ============================\n    // 2) Estimated Delivery Date\n    // ============================\n\n    const isPreOrder = false; // CHANGE to true for preorder mode\n    \n    const today = new Date();\n    const addDays = isPreOrder ? 10 : 5;\n\n    const start = new Date();\n    const end = new Date();\n\n    start.setDate(today.getDate() + addDays);\n    end.setDate(today.getDate() + addDays + 4); // range of 4 days\n\n    const options = { weekday: 'long', month: 'short', day: 'numeric' };\n\n    const startStr = start.toLocaleDateString('en-US', options);\n    const endStr = end.toLocaleDateString('en-US', options);\n\n    document.getElementById(\"delivery-range\").innerHTML =\n      `to get it between <b>${startStr}</b> and <b>${endStr}</b>`;\n    \n  });\n</script>\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n<div class=\"estimated-wrap\" id=\"estimatedDeliveryBox\">\n  <div class=\"icon-box\">\n    <i class=\"fa fa-truck\"></i>\n  </div>\n\n  <div class=\"divider-cust\"></div>\n\n  <div class=\"text-box\">\n    <div id=\"countdown\"></div>\n    <div id=\"delivery-range\"></div>\n  </div>\n</div>\n<style>\n\n.estimated-wrap {\n  display: flex;\n  align-items: center;\n  gap: 15px;\n  padding: 12px 0;\n  color: #000;\n  font-size: 13px;\n  font-family: sans-serif;\n}\n\n.icon-box i {\n  font-size: 22px;\n  color: #000;\n}\n\n.divider-cust {\n  width: 1px;\n  height: 35px;\n  background: #000;\n  opacity: 0.2;\n}\n\n.text-box {\n  display: flex;\n  flex-direction: column;\n  gap: 3px;\n}\n\n#countdown {\n  font-weight: 600;\n}\n\n#delivery-range {\n  font-size: 13px;\n  opacity: 0.9;\n}\n\n</style>"
+              },
+              "blocks": {}
+            },
             "icon_features_marquee_3JxNP6": {
               "type": "icon-features-marquee",
               "name": "Icon features marquee",
@@ -328,58 +380,6 @@
                 "icon_feature_fQbxmT"
               ]
             },
-            "buy_buttons": {
-              "type": "buy-buttons",
-              "settings": {
-                "stacking": true,
-                "show_pickup_availability": false,
-                "gift_card_form": true,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "quantity": {
-                  "type": "quantity",
-                  "static": true,
-                  "settings": {},
-                  "blocks": {}
-                },
-                "add-to-cart": {
-                  "type": "add-to-cart",
-                  "static": true,
-                  "settings": {
-                    "style_class": "button"
-                  },
-                  "blocks": {}
-                },
-                "accelerated-checkout": {
-                  "type": "accelerated-checkout",
-                  "static": true,
-                  "settings": {},
-                  "blocks": {}
-                }
-              },
-              "block_order": []
-            },
-            "custom_liquid_UtpBpc": {
-              "type": "custom-liquid",
-              "name": "t:names.custom_liquid",
-              "disabled": true,
-              "settings": {
-                "custom_liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0935/1997/0578/files/Website_Icon_3788d936-c8ac-49a3-8362-6d88ed83279b.webp?v=1775461194\"/>"
-              },
-              "blocks": {}
-            },
-            "custom_liquid_gApeyx": {
-              "type": "custom-liquid",
-              "name": "t:names.custom_liquid",
-              "settings": {
-                "custom_liquid": "<script>\n  document.addEventListener(\"DOMContentLoaded\", function () {\n\n    // ============================\n    // 1) Countdown Timer (till midnight)\n    // ============================\n    function updateCountdown() {\n      const now = new Date();\n      const midnight = new Date();\n      midnight.setHours(24, 0, 0, 0);\n\n      const diff = midnight - now;\n\n      let hours = Math.floor(diff / (1000 * 60 * 60));\n      let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));\n\n      document.getElementById(\"countdown\").innerHTML =\n        `Order in the next ${hours} hours ${minutes} minutes`;\n    }\n\n    updateCountdown();\n    setInterval(updateCountdown, 30000); // Update every 30 seconds\n\n\n    // ============================\n    // 2) Estimated Delivery Date\n    // ============================\n\n    const isPreOrder = false; // CHANGE to true for preorder mode\n    \n    const today = new Date();\n    const addDays = isPreOrder ? 10 : 5;\n\n    const start = new Date();\n    const end = new Date();\n\n    start.setDate(today.getDate() + addDays);\n    end.setDate(today.getDate() + addDays + 4); // range of 4 days\n\n    const options = { weekday: 'long', month: 'short', day: 'numeric' };\n\n    const startStr = start.toLocaleDateString('en-US', options);\n    const endStr = end.toLocaleDateString('en-US', options);\n\n    document.getElementById(\"delivery-range\").innerHTML =\n      `to get it between <b>${startStr}</b> and <b>${endStr}</b>`;\n    \n  });\n</script>\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n<div class=\"estimated-wrap\" id=\"estimatedDeliveryBox\">\n  <div class=\"icon-box\">\n    <i class=\"fa fa-truck\"></i>\n  </div>\n\n  <div class=\"divider-cust\"></div>\n\n  <div class=\"text-box\">\n    <div id=\"countdown\"></div>\n    <div id=\"delivery-range\"></div>\n  </div>\n</div>\n<style>\n\n.estimated-wrap {\n  display: flex;\n  align-items: center;\n  gap: 15px;\n  padding: 12px 0;\n  color: #000;\n  font-size: 13px;\n  font-family: sans-serif;\n}\n\n.icon-box i {\n  font-size: 22px;\n  color: #000;\n}\n\n.divider-cust {\n  width: 1px;\n  height: 35px;\n  background: #000;\n  opacity: 0.2;\n}\n\n.text-box {\n  display: flex;\n  flex-direction: column;\n  gap: 3px;\n}\n\n#countdown {\n  font-weight: 600;\n}\n\n#delivery-range {\n  font-size: 13px;\n  opacity: 0.9;\n}\n\n</style>"
-              },
-              "blocks": {}
-            },
             "accordion_LHdHhY": {
               "type": "accordion",
               "name": "t:names.accordion",
@@ -450,10 +450,10 @@
             "group",
             "custom_liquid_ABGWD6",
             "variant_picker",
-            "icon_features_marquee_3JxNP6",
             "buy_buttons",
             "custom_liquid_UtpBpc",
             "custom_liquid_gApeyx",
+            "icon_features_marquee_3JxNP6",
             "accordion_LHdHhY"
           ]
         }
