@@ -77,8 +77,34 @@
         "tab_JHWCEh": {
           "type": "tab",
           "settings": {
-            "tab_label": "Combos",
-            "collection": "make-combo-s",
+            "tab_label": "",
+            "collection": "women-earrings",
+            "products_count": 10,
+            "kicker": "",
+            "heading": "",
+            "subheading": "",
+            "description": "",
+            "button_label": ""
+          }
+        },
+        "tab_gYfGek": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "",
+            "collection": "women-rings",
+            "products_count": 10,
+            "kicker": "",
+            "heading": "",
+            "subheading": "",
+            "description": "",
+            "button_label": ""
+          }
+        },
+        "tab_RyNtQp": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "",
+            "collection": "women-necklaces",
             "products_count": 10,
             "kicker": "",
             "heading": "",
@@ -90,7 +116,9 @@
       },
       "block_order": [
         "tab_E3DATN",
-        "tab_JHWCEh"
+        "tab_JHWCEh",
+        "tab_gYfGek",
+        "tab_RyNtQp"
       ],
       "name": "Multi tab collection",
       "settings": {
