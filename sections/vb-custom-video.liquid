@@ -1,0 +1,225 @@
+{%- liquid
+  assign sid = section.id
+  assign video_desktop = section.settings.video_desktop
+  assign video_mobile = section.settings.video_mobile | default: video_desktop
+
+  assign ratio_desktop = video_desktop.aspect_ratio | default: 1.7778
+  assign ratio_mobile = video_mobile.aspect_ratio | default: 0.5625
+-%}
+
+<div
+  id="CustomVideo-{{ sid }}"
+  class="custom-video{% unless section.settings.full_width %} custom-video--boxed{% endunless %}"
+  style="
+    --cv-ratio-desktop: {{ ratio_desktop }};
+    --cv-ratio-mobile: {{ ratio_mobile }};
+    --cv-height-desktop: {{ section.settings.height_desktop }}px;
+    --cv-height-mobile: {{ section.settings.height_mobile }}px;
+    --cv-pad-top: {{ section.settings.padding_top }}px;
+    --cv-pad-bottom: {{ section.settings.padding_bottom }}px;
+    --cv-bg: {{ section.settings.bg_color }};
+  "
+>
+  {%- if section.settings.link != blank -%}
+    <a href="{{ section.settings.link }}" class="custom-video__link" aria-label="{{ section.settings.link_label | default: 'View' | escape }}"></a>
+  {%- endif -%}
+
+  {%- if video_desktop == blank and section.settings.video_mobile == blank -%}
+    <div class="custom-video__media custom-video__media--desktop custom-video__media--{{ section.settings.size_desktop }} custom-video__placeholder">
+      {{ 'hero-apparel-1' | placeholder_svg_tag }}
+    </div>
+    <div class="custom-video__media custom-video__media--mobile custom-video__media--{{ section.settings.size_mobile }} custom-video__placeholder">
+      {{ 'hero-apparel-1' | placeholder_svg_tag }}
+    </div>
+  {%- else -%}
+    <div class="custom-video__media custom-video__media--desktop custom-video__media--{{ section.settings.size_desktop }}">
+      {{
+        video_desktop
+        | video_tag:
+          autoplay: false,
+          loop: true,
+          controls: false,
+          muted: true,
+          playsinline: true,
+          preload: 'none',
+          image_size: '1920x',
+          class: 'custom-video__video'
+      }}
+    </div>
+    <div class="custom-video__media custom-video__media--mobile custom-video__media--{{ section.settings.size_mobile }}">
+      {{
+        video_mobile
+        | video_tag:
+          autoplay: false,
+          loop: true,
+          controls: false,
+          muted: true,
+          playsinline: true,
+          preload: 'none',
+          image_size: '900x',
+          class: 'custom-video__video'
+      }}
+    </div>
+  {%- endif -%}
+</div>
+
+<style>
+  #CustomVideo-{{ sid }} {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    min-width: 0;
+    overflow: hidden;
+    overflow: clip;
+    box-sizing: border-box;
+    padding: var(--cv-pad-top) 0 var(--cv-pad-bottom);
+    background: var(--cv-bg);
+  }
+
+  #CustomVideo-{{ sid }}.custom-video--boxed {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  #CustomVideo-{{ sid }} .custom-video__link {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+
+  #CustomVideo-{{ sid }} .custom-video__media {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  /* Adapt = video's own shape, nothing cropped */
+  #CustomVideo-{{ sid }} .custom-video__media--desktop.custom-video__media--adapt { aspect-ratio: var(--cv-ratio-desktop); }
+  #CustomVideo-{{ sid }} .custom-video__media--mobile.custom-video__media--adapt { aspect-ratio: var(--cv-ratio-mobile); }
+
+  /* Full screen = fills the visible screen height */
+  #CustomVideo-{{ sid }} .custom-video__media--screen { height: 100vh; height: 100svh; }
+
+  /* Custom = fixed height in px */
+  #CustomVideo-{{ sid }} .custom-video__media--desktop.custom-video__media--custom { height: var(--cv-height-desktop); }
+  #CustomVideo-{{ sid }} .custom-video__media--mobile.custom-video__media--custom { height: var(--cv-height-mobile); }
+
+  #CustomVideo-{{ sid }} .custom-video__media video,
+  #CustomVideo-{{ sid }} .custom-video__placeholder svg {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #CustomVideo-{{ sid }} .custom-video__placeholder {
+    aspect-ratio: 16 / 9;
+    background: rgb(0 0 0 / 0.05);
+  }
+
+  #CustomVideo-{{ sid }} .custom-video__media--mobile { display: none; }
+
+  @media (max-width: 749px) {
+    #CustomVideo-{{ sid }}.custom-video--boxed {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    #CustomVideo-{{ sid }} .custom-video__media--desktop { display: none; }
+    #CustomVideo-{{ sid }} .custom-video__media--mobile { display: block; }
+  }
+</style>
+
+<script>
+  (function () {
+    var root = document.getElementById('CustomVideo-{{ sid }}');
+    if (!root) return;
+
+    var desktop = root.querySelector('.custom-video__media--desktop video');
+    var mobile = root.querySelector('.custom-video__media--mobile video');
+    var mq = window.matchMedia('(max-width: 749px)');
+
+    // Only the video for the current screen loads and plays
+    function sync() {
+      var active = mq.matches ? mobile : desktop;
+      var idle = mq.matches ? desktop : mobile;
+      if (idle) idle.pause();
+      if (!active) return;
+      active.muted = true;
+      active.preload = 'auto';
+      var p = active.play();
+      if (p && p.catch) p.catch(function () {});
+    }
+
+    sync();
+    if (mq.addEventListener) mq.addEventListener('change', sync);
+    else if (mq.addListener) mq.addListener(sync);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Custom video",
+  "tag": "section",
+  "class": "section-custom-video",
+  "settings": [
+    { "type": "header", "content": "Desktop" },
+    { "type": "video", "id": "video_desktop", "label": "Desktop video" },
+    {
+      "type": "select", "id": "size_desktop", "label": "Desktop height",
+      "options": [
+        { "value": "adapt", "label": "Adapt to video" },
+        { "value": "screen", "label": "Full screen" },
+        { "value": "custom", "label": "Custom" }
+      ],
+      "default": "adapt"
+    },
+    {
+      "type": "range", "id": "height_desktop", "label": "Custom desktop height",
+      "min": 200, "max": 1000, "step": 20, "unit": "px", "default": 600,
+      "info": "Used when height is Custom."
+    },
+    { "type": "header", "content": "Mobile" },
+    {
+      "type": "video", "id": "video_mobile", "label": "Mobile video",
+      "info": "Vertical video works best. Leave empty to use the desktop video."
+    },
+    {
+      "type": "select", "id": "size_mobile", "label": "Mobile height",
+      "options": [
+        { "value": "adapt", "label": "Adapt to video" },
+        { "value": "screen", "label": "Full screen" },
+        { "value": "custom", "label": "Custom" }
+      ],
+      "default": "adapt"
+    },
+    {
+      "type": "range", "id": "height_mobile", "label": "Custom mobile height",
+      "min": 200, "max": 900, "step": 20, "unit": "px", "default": 500,
+      "info": "Used when height is Custom."
+    },
+    { "type": "header", "content": "Link" },
+    { "type": "url", "id": "link", "label": "Video link", "info": "Optional. Makes the whole video clickable." },
+    { "type": "text", "id": "link_label", "label": "Link label (for screen readers)", "default": "Shop now" },
+    { "type": "header", "content": "Layout" },
+    { "type": "checkbox", "id": "full_width", "label": "Full width", "default": true },
+    {
+      "type": "range", "id": "padding_top", "label": "Top padding",
+      "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0
+    },
+    {
+      "type": "range", "id": "padding_bottom", "label": "Bottom padding",
+      "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0
+    },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#FFFFFF" }
+  ],
+  "presets": [
+    { "name": "Custom video" }
+  ]
+}
+{% endschema %}

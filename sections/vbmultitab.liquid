@@ -16,7 +16,18 @@
     --mt-pad-bottom: {{ section.settings.padding_bottom }}px;
   "
 >
-  <div class="multi-tab__header">
+  {%- if section.settings.section_heading != blank or section.settings.section_description != blank -%}
+    <div class="multi-tab__top multi-tab__top--{{ section.settings.section_align }}">
+      {%- if section.settings.section_heading != blank -%}
+        <h3 class="multi-tab__top-heading">{{ section.settings.section_heading }}</h3>
+      {%- endif -%}
+      {%- if section.settings.section_description != blank -%}
+        <div class="multi-tab__top-desc rte">{{ section.settings.section_description }}</div>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  <div class="multi-tab__header multi-tab__header--pills-{{ section.settings.pill_align }}">
     <div class="multi-tab__intro">
       {%- for block in section.blocks -%}
         <div
@@ -89,6 +100,50 @@
                   {%- render 'product-card-badges', product: product, settings: settings -%}
                 {%- endif -%}
               </div>
+              {%- if section.settings.show_atc -%}
+                {%- liquid
+                  assign atc_variant = product.selected_or_first_available_variant
+                  assign atc_form_id = 'MultiTabForm-' | append: sid | append: '-' | append: block.id | append: '-' | append: product.id
+                  assign atc_class = 'add-to-cart-button ' | append: section.settings.atc_style
+                  if atc_variant.available
+                    assign can_add_to_cart = true
+                    assign add_to_cart_text = 'products.product.add_to_cart' | t
+                  else
+                    assign can_add_to_cart = false
+                    assign add_to_cart_text = 'products.product.sold_out' | t
+                  endif
+                -%}
+                <div class="multi-tab__atc">
+                  <product-form-component
+                    data-section-id="{{ sid }}"
+                    data-product-id="{{ product.id }}"
+                    data-product-url="{{ product.url }}"
+                    on:submit="/handleSubmit"
+                    data-quantity-default="{{ atc_variant.quantity_rule.min | default: 1 }}"
+                    data-quantity-error-max="{{ 'products.product.quantity_error_max' | t }}"
+                  >
+                    <div class="visually-hidden" aria-live="assertive" role="status" aria-atomic="true" ref="liveRegion"></div>
+                    {%- form 'product', product, id: atc_form_id, data-type: 'add-to-cart-form' -%}
+                      <input type="hidden" name="id" ref="variantId" value="{{ atc_variant.id }}">
+                      <div class="product-form-buttons" ref="productFormButtons">
+                        <span class="product-form-text__error hidden" ref="addToCartTextError">
+                          <span class="svg-wrapper product-form-icon--error">
+                            {{- 'icon-error.svg' | inline_asset_content -}}
+                          </span>
+                        </span>
+                        <span style="--add-to-cart-font-case: {{ settings.button_text_case }};">
+                          {%- render 'add-to-cart-button',
+                            class: atc_class,
+                            can_add_to_cart: can_add_to_cart,
+                            product: product,
+                            add_to_cart_text: add_to_cart_text
+                          -%}
+                        </span>
+                      </div>
+                    {%- endform -%}
+                  </product-form-component>
+                </div>
+              {%- endif -%}
             </div>
           {%- endfor -%}
         {%- else -%}
@@ -124,10 +179,25 @@
 
 <style>
   #MultiTab-{{ sid }} {
+    position: relative;
+    overflow-x: clip;
     padding: var(--mt-pad-top) 24px var(--mt-pad-bottom);
     background: var(--mt-bg);
     color: var(--mt-text);
   }
+
+  #MultiTab-{{ sid }} .multi-tab__top {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  #MultiTab-{{ sid }} .multi-tab__top--center { text-align: center; }
+  #MultiTab-{{ sid }} .multi-tab__top--right { text-align: right; }
+
+  #MultiTab-{{ sid }} .multi-tab__top-heading { margin: 0; }
+
+  #MultiTab-{{ sid }} .multi-tab__top-desc { margin-top: 8px; }
+  #MultiTab-{{ sid }} .multi-tab__top-desc p { margin: 0; }
 
   #MultiTab-{{ sid }} .multi-tab__header {
     display: flex;
@@ -138,6 +208,21 @@
   }
 
   #MultiTab-{{ sid }} .multi-tab__intro { min-width: 0; }
+
+  /* Pills on their own row when aligned left / center */
+  #MultiTab-{{ sid }} .multi-tab__header--pills-left,
+  #MultiTab-{{ sid }} .multi-tab__header--pills-center {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  #MultiTab-{{ sid }} .multi-tab__header--pills-left .multi-tab__pills { justify-content: flex-start; }
+  #MultiTab-{{ sid }} .multi-tab__header--pills-center .multi-tab__pills { justify-content: safe center; }
+  #MultiTab-{{ sid }} .multi-tab__header--pills-right .multi-tab__pills { margin-left: auto; }
+
+  #MultiTab-{{ sid }} .multi-tab__header--pills-left .multi-tab__intro:empty,
+  #MultiTab-{{ sid }} .multi-tab__header--pills-center .multi-tab__intro:empty { display: none; }
 
   #MultiTab-{{ sid }} .multi-tab__kicker {
     margin: 0 0 6px;
@@ -203,7 +288,10 @@
     color: var(--mt-bg);
   }
 
+  /* position: relative keeps the hidden add-to-cart helpers (absolute) inside the slider,
+     otherwise off-screen slides stretch the whole page sideways */
   #MultiTab-{{ sid }} .multi-tab__track {
+    position: relative;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% - (var(--mt-per-view) - 1) * var(--mt-gap)) / var(--mt-per-view));
@@ -219,9 +307,12 @@
   #MultiTab-{{ sid }} .multi-tab__pills::-webkit-scrollbar { display: none; }
 
   #MultiTab-{{ sid }} .multi-tab__slide {
+    position: relative;
     min-width: 0;
     scroll-snap-align: start;
   }
+
+  #MultiTab-{{ sid }} .multi-tab__atc { margin-top: 8px; }
 
   #MultiTab-{{ sid }} .multi-tab__card {
     --padding-block-start: 0px;
@@ -229,7 +320,6 @@
     --border-radius: 0px;
     --resource-card-corner-radius: {{ section.settings.card_radius }}px;
     position: relative;
-    height: 100%;
   }
 
   #MultiTab-{{ sid }} .multi-tab__card .resource-card__media {
@@ -316,6 +406,10 @@
       align-items: stretch;
       gap: 16px;
     }
+
+    #MultiTab-{{ sid }} .multi-tab__pills { justify-content: flex-start; }
+    #MultiTab-{{ sid }} .multi-tab__header--pills-center .multi-tab__pills { justify-content: safe center; }
+    #MultiTab-{{ sid }} .multi-tab__header--pills-right .multi-tab__pills { justify-content: safe flex-end; margin-left: -16px; }
 
     /* Too many pills on phone → swipe sideways */
     #MultiTab-{{ sid }} .multi-tab__pills {
@@ -405,6 +499,18 @@
   "class": "section-multi-tab",
   "max_blocks": 10,
   "settings": [
+    { "type": "header", "content": "Section heading" },
+    { "type": "text", "id": "section_heading", "label": "Heading", "info": "Shown above the tabs. Leave empty to hide." },
+    { "type": "richtext", "id": "section_description", "label": "Description" },
+    {
+      "type": "select", "id": "section_align", "label": "Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
     { "type": "header", "content": "Layout" },
     {
       "type": "range", "id": "per_view_desktop", "label": "Products visible (desktop)",
@@ -425,6 +531,15 @@
       "min": 0, "max": 32, "step": 2, "unit": "px", "default": 2
     },
     {
+      "type": "select", "id": "pill_align", "label": "Tab pills alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "right"
+    },
+    {
       "type": "range", "id": "pill_radius", "label": "Tab pill roundness",
       "min": 0, "max": 40, "step": 2, "unit": "px", "default": 0
     },
@@ -441,6 +556,15 @@
     },
     { "type": "checkbox", "id": "image_hover", "label": "Show second image on hover", "default": true },
     { "type": "checkbox", "id": "show_badges", "label": "Show badges (sold out, label, rating)", "default": true },
+    { "type": "checkbox", "id": "show_atc", "label": "Show add to cart button", "default": false },
+    {
+      "type": "select", "id": "atc_style", "label": "Add to cart style",
+      "options": [
+        { "value": "button", "label": "Primary" },
+        { "value": "button-secondary", "label": "Secondary" }
+      ],
+      "default": "button"
+    },
     {
       "type": "range", "id": "card_radius", "label": "Image corner radius",
       "min": 0, "max": 24, "step": 2, "unit": "px", "default": 0
