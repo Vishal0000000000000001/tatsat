@@ -21,7 +21,7 @@
   assign discount_percentage = 0
 
   comment
-    Compare-at price / discount % only shows where enable_compare_price is passed (currently the product page price block).
+    Compare-at price / discount % only shows where enable_compare_price is passed (price block, product cards, resource cards).
   endcomment
   if enable_compare_price and compare_at_price > price
     assign show_compare_price = true
