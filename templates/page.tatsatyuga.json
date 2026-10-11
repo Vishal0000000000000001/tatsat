@@ -130,7 +130,7 @@
         "gap": 2,
         "pill_align": "center",
         "pill_radius": 0,
-        "image_ratio": "adapt",
+        "image_ratio": "1 / 1",
         "image_hover": true,
         "show_badges": true,
         "show_atc": true,
