@@ -60,6 +60,27 @@
           class: 'custom-video__video'
       }}
     </div>
+
+    {%- if section.settings.show_sound_button -%}
+      <button
+        type="button"
+        class="custom-video__sound"
+        aria-label="Turn sound off"
+        aria-pressed="true"
+        data-label-on="Turn sound off"
+        data-label-off="Turn sound on"
+      >
+        <svg class="custom-video__sound-icon custom-video__sound-icon--on" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/>
+          <path d="M15.5 9a4 4 0 0 1 0 6"/>
+          <path d="M18 6.5a7.5 7.5 0 0 1 0 11"/>
+        </svg>
+        <svg class="custom-video__sound-icon custom-video__sound-icon--off" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/>
+          <path d="M16 10l4 4M20 10l-4 4"/>
+        </svg>
+      </button>
+    {%- endif -%}
   {%- endif -%}
 </div>
 
@@ -86,6 +107,42 @@
     inset: 0;
     z-index: 2;
   }
+
+  /* Sound toggle - soft glass button, top right */
+  #CustomVideo-{{ sid }} .custom-video__sound {
+    position: absolute;
+    top: calc(var(--cv-pad-top) + 16px);
+    right: 16px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid rgb(255 255 255 / 0.3);
+    border-radius: 50%;
+    background: rgb(0 0 0 / 0.28);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.25s ease, background 0.25s ease, transform 0.25s ease;
+  }
+  #CustomVideo-{{ sid }} .custom-video__sound:hover {
+    opacity: 1;
+    background: rgb(0 0 0 / 0.42);
+    transform: scale(1.05);
+  }
+  #CustomVideo-{{ sid }} .custom-video__sound:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+  #CustomVideo-{{ sid }}.custom-video--boxed .custom-video__sound { right: 40px; }
+  #CustomVideo-{{ sid }} .custom-video__sound-icon--off { display: none; }
+  #CustomVideo-{{ sid }} .custom-video__sound.is-muted .custom-video__sound-icon--on { display: none; }
+  #CustomVideo-{{ sid }} .custom-video__sound.is-muted .custom-video__sound-icon--off { display: block; }
 
   #CustomVideo-{{ sid }} .custom-video__media {
     position: relative;
@@ -132,6 +189,14 @@
 
     #CustomVideo-{{ sid }} .custom-video__media--desktop { display: none; }
     #CustomVideo-{{ sid }} .custom-video__media--mobile { display: block; }
+
+    #CustomVideo-{{ sid }} .custom-video__sound {
+      top: calc(var(--cv-pad-top) + 12px);
+      right: 12px;
+      width: 36px;
+      height: 36px;
+    }
+    #CustomVideo-{{ sid }}.custom-video--boxed .custom-video__sound { right: 28px; }
   }
 </style>
 
@@ -142,18 +207,82 @@
 
     var desktop = root.querySelector('.custom-video__media--desktop video');
     var mobile = root.querySelector('.custom-video__media--mobile video');
+    var soundBtn = root.querySelector('.custom-video__sound');
     var mq = window.matchMedia('(max-width: 749px)');
+
+    // soundOn = what the shopper wants; browsers may still force mute until they click/tap somewhere
+    var soundOn = {{ section.settings.sound_on_default | json }} && !!soundBtn;
+    var inView = true;
+
+    function activeVideo() {
+      return mq.matches ? mobile : desktop;
+    }
+
+    function updateButton() {
+      if (!soundBtn) return;
+      var active = activeVideo();
+      var muted = !active || active.muted;
+      soundBtn.classList.toggle('is-muted', muted);
+      soundBtn.setAttribute('aria-pressed', muted ? 'false' : 'true');
+      soundBtn.setAttribute('aria-label', muted ? soundBtn.dataset.labelOff : soundBtn.dataset.labelOn);
+    }
+
+    function play(video) {
+      video.muted = !soundOn;
+      var p = video.play();
+      if (p && p.catch) {
+        p.catch(function () {
+          // Autoplay with sound blocked - play muted, unmute on first interaction
+          video.muted = true;
+          video.play().catch(function () {});
+          updateButton();
+        });
+      }
+      updateButton();
+    }
 
     // Only the video for the current screen loads and plays
     function sync() {
-      var active = mq.matches ? mobile : desktop;
+      var active = activeVideo();
       var idle = mq.matches ? desktop : mobile;
       if (idle) idle.pause();
       if (!active) return;
-      active.muted = true;
       active.preload = 'auto';
-      var p = active.play();
-      if (p && p.catch) p.catch(function () {});
+      if (inView) play(active);
+      else active.pause();
+    }
+
+    if (soundBtn) {
+      soundBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var active = activeVideo();
+        soundOn = !!(active && active.muted);
+        if (active) play(active);
+      });
+
+      // First click/tap/key anywhere on the page unlocks sound if it should be on
+      var unlock = function (e) {
+        // A tap on the sound button itself is handled by its click handler
+        if (e && soundBtn.contains(e.target)) return;
+        document.removeEventListener('pointerdown', unlock, true);
+        document.removeEventListener('keydown', unlock, true);
+        var active = activeVideo();
+        if (soundOn && active && active.muted && inView) {
+          active.muted = false;
+          updateButton();
+        }
+      };
+      document.addEventListener('pointerdown', unlock, true);
+      document.addEventListener('keydown', unlock, true);
+    }
+
+    // Pause when scrolled away so sound doesn't play off-screen
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        inView = entries[0].isIntersecting;
+        sync();
+      }, { threshold: 0.25 }).observe(root);
     }
 
     sync();
@@ -202,6 +331,12 @@
       "type": "range", "id": "height_mobile", "label": "Custom mobile height",
       "min": 200, "max": 900, "step": 20, "unit": "px", "default": 500,
       "info": "Used when height is Custom."
+    },
+    { "type": "header", "content": "Sound" },
+    { "type": "checkbox", "id": "show_sound_button", "label": "Show sound on/off button", "default": true },
+    {
+      "type": "checkbox", "id": "sound_on_default", "label": "Sound on by default", "default": true,
+      "info": "Browsers block sound until the visitor clicks or taps the page, so sound starts on their first tap."
     },
     { "type": "header", "content": "Link" },
     { "type": "url", "id": "link", "label": "Video link", "info": "Optional. Makes the whole video clickable." },
