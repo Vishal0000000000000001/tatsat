@@ -700,21 +700,29 @@
         "logo_cBfaGi": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Forbes_logo_svg.webp",
+            "image": "shopify://shop_images/fr3.png",
             "url": ""
           }
         },
         "logo_pJMapj": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/India_Mid_Day-removebg-preview.webp",
+            "image": "shopify://shop_images/fr2.png",
+            "url": ""
+          }
+        },
+        "logo_JDhfKD": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/fr_1.png",
             "url": ""
           }
         }
       },
       "block_order": [
         "logo_cBfaGi",
-        "logo_pJMapj"
+        "logo_pJMapj",
+        "logo_JDhfKD"
       ],
       "name": "CS Featured logo list",
       "settings": {
@@ -724,8 +732,8 @@
         "padding-block-end": 48,
         "subheading": "",
         "title": "Featured In",
-        "logo_height": 40,
-        "tile_width": 170,
+        "logo_height": 56,
+        "tile_width": 260,
         "auto_scroll": true,
         "scroll_duration": 30,
         "pause_on_hover": true
