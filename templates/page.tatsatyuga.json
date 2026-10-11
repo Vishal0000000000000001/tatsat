@@ -170,14 +170,14 @@
             "overlay_opacity": 45
           }
         },
-        "banner_VLYGTd": {
+        "banner_Ca3jE6": {
           "type": "banner",
           "settings": {
-            "image": "shopify://shop_images/Teal_and_Gold_Veiled_Jewelry_Portrait.png",
-            "heading_line_1": "Shringar",
-            "heading_line_2": "of the Queens",
-            "description": "<p>Sacred adornments<br/>for the divine feminine.</p>",
-            "button_label": "Explore",
+            "image": "shopify://shop_images/sh.jpg",
+            "heading_line_1": "",
+            "heading_line_2": "",
+            "description": "",
+            "button_label": "",
             "link": "",
             "full_card_link": true,
             "content_position": "center",
@@ -191,11 +191,11 @@
       },
       "block_order": [
         "banner_rDkVkA",
-        "banner_VLYGTd"
+        "banner_Ca3jE6"
       ],
       "name": "Dual image banner",
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "image_ratio": "adapt",
         "image_ratio_mobile": "adapt",
         "gap": 30,
