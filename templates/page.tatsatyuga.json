@@ -64,11 +64,11 @@
         "tab_E3DATN": {
           "type": "tab",
           "settings": {
-            "tab_label": "Bracelets",
-            "collection": "bracelets",
+            "tab_label": "",
+            "collection": "men-rings",
             "products_count": 10,
             "kicker": "",
-            "heading": "Top Selling",
+            "heading": "",
             "subheading": "",
             "description": "",
             "button_label": ""
