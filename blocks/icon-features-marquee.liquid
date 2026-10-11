@@ -21,6 +21,9 @@
   --icon-features-circle-bg: {% if block_settings.show_circle %}{{ block_settings.circle_color }}{% else %}transparent{% endif %};
   --icon-features-title-color: {{ block_settings.title_color }};
   --icon-features-text-color: {{ block_settings.text_color }};
+  --icon-features-title-size-desktop: {{ block_settings.title_size }}px;
+  --icon-features-title-size-mobile: {{ block_settings.title_size_mobile }}px;
+  --icon-features-text-size: {{ block_settings.text_size }}px;
 {%- endcapture -%}
 
 {%- liquid
@@ -74,6 +77,13 @@
     display: block;
     width: 100%;
     overflow: hidden;
+    --icon-features-title-size: var(--icon-features-title-size-desktop);
+  }
+
+  @media screen and (max-width: 749px) {
+    .icon-features-marquee {
+      --icon-features-title-size: var(--icon-features-title-size-mobile);
+    }
   }
 
   .icon-features-marquee--fade {
@@ -210,6 +220,40 @@
       "id": "show_circle",
       "label": "Show circle behind icon",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "Text size"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Title size (desktop)",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "min": 10,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Title size (mobile)",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Sub text size",
+      "default": 12
     },
     {
       "type": "header",

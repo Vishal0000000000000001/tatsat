@@ -6,6 +6,7 @@
   @param {boolean} [show_unit_price] - Whether to show the unit price
   @param {boolean} [show_sale_price_first] - Whether to show the sale price first
   @param {boolean} [show_discount_badge] - Whether to show the "X% OFF" badge next to the price
+  @param {boolean} [enable_compare_price] - Whether to show the compare-at price (strikethrough) when the product is on sale
 {%- enddoc -%}
 
 {%- liquid
@@ -20,14 +21,13 @@
   assign discount_percentage = 0
 
   comment
-    Compare-at price / discount % display temporarily disabled.
-    To re-enable, uncomment the block below.
+    Compare-at price / discount % only shows where enable_compare_price is passed (currently the product page price block).
   endcomment
-  # if compare_at_price > price
-  #   assign show_compare_price = true
-  #   assign discount_amount = compare_at_price | minus: price
-  #   assign discount_percentage = discount_amount | times: 100 | divided_by: compare_at_price
-  # endif
+  if enable_compare_price and compare_at_price > price
+    assign show_compare_price = true
+    assign discount_amount = compare_at_price | minus: price
+    assign discount_percentage = discount_amount | times: 100 | divided_by: compare_at_price
+  endif
 
   if product_resource == blank
     assign price = 1999
@@ -59,7 +59,7 @@
   {% if show_compare_price %}
     <span role="group">
       <span class="visually-hidden">{{ 'content.price_sale' | t }}&nbsp;</span>
-      <span class="price" style="font-size:16px;">{{ price | default: '&nbsp;' }}</span>
+      <span class="price">{{ price | default: '&nbsp;' }}</span>
     </span>
 
 
@@ -73,7 +73,7 @@
   {% if show_sale_price_first == true and show_compare_price %}
     <span role="group">
       <span class="visually-hidden">{{ 'content.price_regular' | t }}&nbsp;</span>
-      <span class="compare-at-price" style="font-size:14px;">
+      <span class="compare-at-price" style="font-size:0.75em;">
         {{ compare_at_price }}
       </span>
     </span>
