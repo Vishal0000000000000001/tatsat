@@ -167,7 +167,7 @@
             "heading_color": "#f3ece0",
             "text_color": "#f3ece0",
             "overlay_color": "#1a120b",
-            "overlay_opacity": 45
+            "overlay_opacity": 0
           }
         },
         "banner_Ca3jE6": {
@@ -185,7 +185,7 @@
             "heading_color": "#f3ece0",
             "text_color": "#f3ece0",
             "overlay_color": "#1a120b",
-            "overlay_opacity": 45
+            "overlay_opacity": 0
           }
         }
       },
