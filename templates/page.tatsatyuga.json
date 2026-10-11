@@ -61,37 +61,24 @@
     "vbmultitab_PYAkPT": {
       "type": "vbmultitab",
       "blocks": {
-        "tab_E3DATN": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "",
-            "collection": "men-rings",
-            "products_count": 10,
-            "kicker": "",
-            "heading": "",
-            "subheading": "",
-            "description": "",
-            "button_label": ""
-          }
-        },
-        "tab_JHWCEh": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "",
-            "collection": "women-earrings",
-            "products_count": 10,
-            "kicker": "",
-            "heading": "",
-            "subheading": "",
-            "description": "",
-            "button_label": ""
-          }
-        },
         "tab_gYfGek": {
           "type": "tab",
           "settings": {
             "tab_label": "",
             "collection": "women-rings",
+            "products_count": 10,
+            "kicker": "",
+            "heading": "",
+            "subheading": "",
+            "description": "",
+            "button_label": ""
+          }
+        },
+        "tab_J6NUhP": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "",
+            "collection": "women-bracelets",
             "products_count": 10,
             "kicker": "",
             "heading": "",
@@ -113,11 +100,24 @@
             "button_label": ""
           }
         },
-        "tab_J6NUhP": {
+        "tab_JHWCEh": {
           "type": "tab",
           "settings": {
             "tab_label": "",
-            "collection": "women-bracelets",
+            "collection": "women-earrings",
+            "products_count": 10,
+            "kicker": "",
+            "heading": "",
+            "subheading": "",
+            "description": "",
+            "button_label": ""
+          }
+        },
+        "tab_E3DATN": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "",
+            "collection": "men-rings",
             "products_count": 10,
             "kicker": "",
             "heading": "",
@@ -128,11 +128,11 @@
         }
       },
       "block_order": [
-        "tab_E3DATN",
-        "tab_JHWCEh",
         "tab_gYfGek",
+        "tab_J6NUhP",
         "tab_RyNtQp",
-        "tab_J6NUhP"
+        "tab_JHWCEh",
+        "tab_E3DATN"
       ],
       "name": "Multi tab collection",
       "settings": {
@@ -158,7 +158,7 @@
         "pill_bg": "",
         "pill_text": "",
         "pill_border": "",
-        "pill_active_bg": "",
+        "pill_active_bg": "#CEAD80",
         "pill_active_text": "",
         "pill_active_border": ""
       }
