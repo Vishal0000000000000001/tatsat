@@ -19,7 +19,7 @@
         "video_mobile": "shopify://files/videos/hero video.mp4",
         "size_mobile": "custom",
         "height_mobile": 500,
-        "link": "",
+        "link": "#",
         "link_label": "Shop now",
         "full_width": true,
         "padding_top": 0,
