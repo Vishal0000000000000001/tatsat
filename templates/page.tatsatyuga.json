@@ -112,13 +112,27 @@
             "description": "",
             "button_label": ""
           }
+        },
+        "tab_J6NUhP": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "",
+            "collection": "women-bracelets",
+            "products_count": 10,
+            "kicker": "",
+            "heading": "",
+            "subheading": "",
+            "description": "",
+            "button_label": ""
+          }
         }
       },
       "block_order": [
         "tab_E3DATN",
         "tab_JHWCEh",
         "tab_gYfGek",
-        "tab_RyNtQp"
+        "tab_RyNtQp",
+        "tab_J6NUhP"
       ],
       "name": "Multi tab collection",
       "settings": {
