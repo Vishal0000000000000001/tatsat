@@ -428,7 +428,7 @@
       },
       "name": "t:names.products_grid",
       "settings": {
-        "collection": "shop-by-problem",
+        "collection": "jwellery",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
         "max_products": 8,
@@ -617,7 +617,6 @@
             "review_fMgqhw": {
               "type": "review",
               "name": "t:names.product_review_stars",
-              "disabled": true,
               "settings": {
                 "stars_style": "shaded",
                 "show_number": true,
@@ -1114,6 +1113,7 @@
         "hotspot_QVFLPf",
         "hotspot_wthEUt"
       ],
+      "disabled": true,
       "name": "vb shoplook",
       "settings": {
         "sma_full_width": false,
@@ -1364,7 +1364,7 @@
       "name": "t:names.products_grid",
       "settings": {
         "collection": "shop-by-numerology",
-        "layout_type": "grid",
+        "layout_type": "carousel",
         "carousel_on_mobile": false,
         "max_products": 8,
         "columns": 4,
