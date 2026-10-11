@@ -34,7 +34,7 @@
         "full_width": true,
         "padding_top": 0,
         "padding_bottom": 0,
-        "bg_color": "#FFFFFF"
+        "bg_color": "#ffffff"
       }
     },
     "custom_slides_HfgBNN": {
@@ -140,7 +140,13 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "bg_color": "#ffffff",
-        "text_color": "#111111"
+        "text_color": "#111111",
+        "pill_bg": "",
+        "pill_text": "",
+        "pill_border": "",
+        "pill_active_bg": "",
+        "pill_active_text": "",
+        "pill_active_border": ""
       }
     },
     "dual_image_banner_NbTPhF": {
@@ -189,14 +195,14 @@
       ],
       "name": "Dual image banner",
       "settings": {
-        "bg_color": "#f5f2ec",
-        "image_ratio": "16 / 10",
-        "image_ratio_mobile": "1 / 1",
+        "bg_color": "#FFFFFF",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
         "gap": 30,
         "gap_mobile": 16,
         "max_width": 1600,
-        "padding_top": 28,
-        "padding_bottom": 28
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "product_list_bVrJQx": {
