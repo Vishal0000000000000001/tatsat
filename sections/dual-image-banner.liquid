@@ -8,8 +8,6 @@
     --db-gap: {{ section.settings.gap }}px;
     --db-gap-mobile: {{ section.settings.gap_mobile }}px;
     --db-max-width: {{ section.settings.max_width }}px;
-    --db-ratio: {{ section.settings.image_ratio }};
-    --db-ratio-mobile: {{ section.settings.image_ratio_mobile }};
     --db-pad-top: {{ section.settings.padding_top }}px;
     --db-pad-bottom: {{ section.settings.padding_bottom }}px;
   "
@@ -24,10 +22,32 @@
         if bs.link != blank
           assign has_link = true
         endif
+
+        assign card_ratio = section.settings.image_ratio
+        if card_ratio == 'adapt'
+          if bs.image != blank
+            assign card_ratio = bs.image.aspect_ratio
+          else
+            assign card_ratio = '16 / 10'
+          endif
+        endif
+
+        assign card_ratio_mobile = section.settings.image_ratio_mobile
+        if card_ratio_mobile == 'adapt'
+          if bs.image_mobile != blank
+            assign card_ratio_mobile = bs.image_mobile.aspect_ratio
+          elsif bs.image != blank
+            assign card_ratio_mobile = bs.image.aspect_ratio
+          else
+            assign card_ratio_mobile = '1 / 1'
+          endif
+        endif
       -%}
       <div
         class="dual-banner__card dual-banner__card--{{ bs.content_position }}"
         style="
+          --db-ratio: {{ card_ratio }};
+          --db-ratio-mobile: {{ card_ratio_mobile }};
           --db-heading: {{ bs.heading_color }};
           --db-text: {{ bs.text_color }};
           --db-accent: {{ bs.accent_color }};
@@ -227,6 +247,7 @@
       "id": "image_ratio",
       "label": "Card ratio (desktop)",
       "options": [
+        { "value": "adapt", "label": "Adapt to image" },
         { "value": "16 / 10", "label": "Landscape (16:10)" },
         { "value": "3 / 2", "label": "Landscape (3:2)" },
         { "value": "4 / 3", "label": "Landscape (4:3)" },
@@ -240,6 +261,7 @@
       "id": "image_ratio_mobile",
       "label": "Card ratio (mobile)",
       "options": [
+        { "value": "adapt", "label": "Adapt to image" },
         { "value": "4 / 3", "label": "Landscape (4:3)" },
         { "value": "1 / 1", "label": "Square" },
         { "value": "4 / 5", "label": "Portrait (4:5)" },

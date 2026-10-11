@@ -724,14 +724,11 @@
         "padding-block-end": 48,
         "subheading": "Featured In",
         "title": "",
-        "logo_height": 32,
+        "logo_height": 40,
         "tile_width": 170,
-        "tile_radius": 12,
-        "grayscale": true,
         "auto_scroll": true,
         "scroll_duration": 30,
-        "pause_on_hover": true,
-        "tile_background": "#f6f6f6"
+        "pause_on_hover": true
       }
     },
     "collection_list_TxbKR9": {

@@ -13,11 +13,9 @@
 
   <style>
     #shopify-section-{{ section.id }} .cslogo {
-    --cslogo-tile-bg: {{ section.settings.tile_background.rgb | default: '246 246 246' }};
-    --cslogo-tile-radius: {{ section.settings.tile_radius | default: 12 }}px;
     --cslogo-tile-w: {{ tile_width }}px;
     --cslogo-logo-h: {{ logo_height }}px;
-    --cslogo-gap: clamp(10px, 1.6vw, 18px);
+    --cslogo-gap: clamp(32px, 5vw, 64px);
     --cslogo-duration: {{ scroll_duration }}s;
     }
 
@@ -38,25 +36,15 @@
     padding-inline: 20px;
     }
 
-    #shopify-section-{{ section.id }} .cslogo__eyebrow {
+    /* Font styles come from the theme's .paragraph / .h3 classes so it matches the other section headings */
+    #shopify-section-{{ section.id }} .cslogo__eyebrow,
+    #shopify-section-{{ section.id }} .cslogo__title {
     margin: 0;
-    font-family: var(--font-body--family);
-    font-size: clamp(11px, 1.4vw, 13px);
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: rgb(var(--color-foreground-rgb) / 0.55);
+    text-wrap: balance;
     }
 
     #shopify-section-{{ section.id }} .cslogo__title {
-    margin: 0;
-    font-family: var(--font-h2--family);
-    font-weight: var(--font-h2--weight);
-    font-style: var(--font-h2--style);
-    font-size: var(--font-h2--size);
-    line-height: var(--font-h2--line-height);
     color: var(--color-foreground-heading);
-    text-wrap: balance;
     }
 
     #shopify-section-{{ section.id }} .cslogo__marquee {
@@ -103,44 +91,23 @@
     align-items: center;
     justify-content: center;
     flex: 0 0 auto;
-    width: var(--cslogo-tile-w);
-    height: calc(var(--cslogo-logo-h) + 44px);
-    padding: 14px 22px;
-    background: rgb(var(--cslogo-tile-bg));
-    border-radius: var(--cslogo-tile-radius);
+    max-width: var(--cslogo-tile-w);
     text-decoration: none;
     }
 
     #shopify-section-{{ section.id }} .cslogo__tile img,
     #shopify-section-{{ section.id }} .cslogo__tile svg {
     display: block;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: var(--cslogo-logo-h);
     object-fit: contain;
-    {%- if section.settings.grayscale -%}
-    filter: grayscale(1);
-    opacity: 0.6;
-    transition: filter 0.3s ease, opacity 0.3s ease;
-    {%- endif -%}
     }
-
-    {%- if section.settings.grayscale -%}
-    #shopify-section-{{ section.id }} .cslogo__tile:hover img,
-    #shopify-section-{{ section.id }} .cslogo__tile:focus-visible img {
-    filter: grayscale(0);
-    opacity: 1;
-    }
-    {%- endif -%}
 
     @media screen and (max-width: 740px) {
     #shopify-section-{{ section.id }} .cslogo {
     --cslogo-tile-w: calc({{ tile_width }}px * 0.78);
     --cslogo-logo-h: calc({{ logo_height }}px * 0.85);
-    }
-
-    #shopify-section-{{ section.id }} .cslogo__tile {
-    padding: 12px 16px;
-    height: calc(var(--cslogo-logo-h) + 34px);
     }
     }
 
@@ -177,8 +144,8 @@
  {%- if block.settings.image != blank -%} 
  {{- 
  block.settings.image 
- | image_url: width: 400 
- | image_tag: loading: 'lazy', alt: image_alt, widths: '200,300,400' 
+ | image_url: width: 600 
+ | image_tag: loading: 'lazy', alt: image_alt, widths: '200,400,600' 
  -}} 
  {%- else -%} 
  {{- 'image' | placeholder_svg_tag -}} 
@@ -197,11 +164,11 @@
       {%- if section.settings.subheading != blank or section.settings.title != blank -%}
         <div class="cslogo__header">
           {%- if section.settings.subheading != blank -%}
-            <p class="cslogo__eyebrow">{{ section.settings.subheading | escape }}</p>
+            <p class="cslogo__eyebrow paragraph">{{ section.settings.subheading | escape }}</p>
           {%- endif -%}
 
           {%- if section.settings.title != blank -%}
-            <h2 class="cslogo__title">{{ section.settings.title }}</h2>
+            <h2 class="cslogo__title h3">{{ section.settings.title }}</h2>
           {%- endif -%}
         </div>
       {%- endif -%}
@@ -298,7 +265,7 @@
       "step": 2,
       "unit": "px",
       "label": "Logo height",
-      "default": 32
+      "default": 40
     },
     {
       "type": "range",
@@ -307,24 +274,8 @@
       "max": 260,
       "step": 10,
       "unit": "px",
-      "label": "Logo box width",
+      "label": "Logo max width",
       "default": 170
-    },
-    {
-      "type": "range",
-      "id": "tile_radius",
-      "min": 0,
-      "max": 40,
-      "step": 2,
-      "unit": "px",
-      "label": "Logo box corner radius",
-      "default": 12
-    },
-    {
-      "type": "checkbox",
-      "id": "grayscale",
-      "label": "Grayscale logos (color on hover)",
-      "default": true
     },
     {
       "type": "header",
@@ -352,16 +303,6 @@
       "id": "pause_on_hover",
       "label": "Pause on hover",
       "default": true
-    },
-    {
-      "type": "header",
-      "content": "Colors"
-    },
-    {
-      "type": "color",
-      "id": "tile_background",
-      "label": "Logo box background",
-      "default": "#f6f6f6"
     }
   ],
   "blocks": [

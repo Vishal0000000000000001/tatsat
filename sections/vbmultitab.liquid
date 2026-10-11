@@ -12,6 +12,12 @@
     --mt-bg: {{ section.settings.bg_color }};
     --mt-text: {{ section.settings.text_color }};
     --mt-muted: {{ section.settings.text_color | color_modify: 'alpha', 0.6 }};
+    --mt-pill-bg: {{ section.settings.pill_bg | default: 'transparent' }};
+    --mt-pill-text: {{ section.settings.pill_text | default: section.settings.text_color }};
+    --mt-pill-border: {{ section.settings.pill_border | default: section.settings.text_color }};
+    --mt-pill-active-bg: {{ section.settings.pill_active_bg | default: section.settings.text_color }};
+    --mt-pill-active-text: {{ section.settings.pill_active_text | default: section.settings.bg_color }};
+    --mt-pill-active-border: {{ section.settings.pill_active_border | default: section.settings.pill_active_bg | default: section.settings.text_color }};
     --mt-pad-top: {{ section.settings.padding_top }}px;
     --mt-pad-bottom: {{ section.settings.padding_bottom }}px;
   "
@@ -270,22 +276,24 @@
     flex-shrink: 0;
     min-width: 80px;
     padding: 9px 22px;
-    border: 1px solid var(--mt-text);
+    border: 1px solid var(--mt-pill-border);
     border-radius: {{ section.settings.pill_radius }}px;
-    background: transparent;
-    color: var(--mt-text);
+    background: var(--mt-pill-bg);
+    color: var(--mt-pill-text);
     font: inherit;
     font-size: 13px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     white-space: nowrap;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
   }
 
-  #MultiTab-{{ sid }} .multi-tab__pill[aria-selected="true"] {
-    background: var(--mt-text);
-    color: var(--mt-bg);
+  #MultiTab-{{ sid }} .multi-tab__pill[aria-selected="true"],
+  #MultiTab-{{ sid }} .multi-tab__pill:hover {
+    background: var(--mt-pill-active-bg);
+    border-color: var(--mt-pill-active-border);
+    color: var(--mt-pill-active-text);
   }
 
   /* position: relative keeps the hidden add-to-cart helpers (absolute) inside the slider,
@@ -580,7 +588,14 @@
     },
     { "type": "header", "content": "Colors" },
     { "type": "color", "id": "bg_color", "label": "Background", "default": "#FFFFFF" },
-    { "type": "color", "id": "text_color", "label": "Text", "default": "#111111" }
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#111111" },
+    { "type": "header", "content": "Tab button colors", "info": "Leave empty to use the Text and Background colors above." },
+    { "type": "color", "id": "pill_bg", "label": "Tab background" },
+    { "type": "color", "id": "pill_text", "label": "Tab text" },
+    { "type": "color", "id": "pill_border", "label": "Tab border" },
+    { "type": "color", "id": "pill_active_bg", "label": "Active tab background" },
+    { "type": "color", "id": "pill_active_text", "label": "Active tab text" },
+    { "type": "color", "id": "pill_active_border", "label": "Active tab border" }
   ],
   "blocks": [
     {
