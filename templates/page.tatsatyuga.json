@@ -152,24 +152,6 @@
     "dual_image_banner_NbTPhF": {
       "type": "dual-image-banner",
       "blocks": {
-        "banner_rDkVkA": {
-          "type": "banner",
-          "settings": {
-            "image": "shopify://shop_images/REGALIA_JPG.jpg",
-            "heading_line_1": "",
-            "heading_line_2": "",
-            "description": "",
-            "button_label": "",
-            "link": "",
-            "full_card_link": true,
-            "content_position": "center",
-            "accent_color": "#d9c29a",
-            "heading_color": "#f3ece0",
-            "text_color": "#f3ece0",
-            "overlay_color": "#1a120b",
-            "overlay_opacity": 0
-          }
-        },
         "banner_Ca3jE6": {
           "type": "banner",
           "settings": {
@@ -187,11 +169,29 @@
             "overlay_color": "#1a120b",
             "overlay_opacity": 0
           }
+        },
+        "banner_rDkVkA": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/REGALIA_JPG.jpg",
+            "heading_line_1": "",
+            "heading_line_2": "",
+            "description": "",
+            "button_label": "",
+            "link": "",
+            "full_card_link": true,
+            "content_position": "center",
+            "accent_color": "#d9c29a",
+            "heading_color": "#f3ece0",
+            "text_color": "#f3ece0",
+            "overlay_color": "#1a120b",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
-        "banner_rDkVkA",
-        "banner_Ca3jE6"
+        "banner_Ca3jE6",
+        "banner_rDkVkA"
       ],
       "name": "Dual image banner",
       "settings": {
