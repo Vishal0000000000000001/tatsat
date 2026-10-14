@@ -619,6 +619,18 @@
                   },
                   "blocks": {}
                 },
+                "list_item_F6PhCq": {
+                  "type": "_list-item",
+                  "name": "List item",
+                  "settings": {
+                    "text": "Women Necklaces",
+                    "url": "shopify://collections/women-necklaces",
+                    "icon": "",
+                    "padding": "",
+                    "margin": ""
+                  },
+                  "blocks": {}
+                },
                 "list_item_CXFW6Q": {
                   "type": "_list-item",
                   "settings": {
@@ -655,6 +667,7 @@
                 "list_item_EgVmFX": {
                   "type": "_list-item",
                   "name": "List item",
+                  "disabled": true,
                   "settings": {
                     "text": "Neck Pieces + Charging Plate",
                     "url": "shopify://collections/the-soul-shield-set",
@@ -666,6 +679,7 @@
                 },
                 "list_item_XbHG9D": {
                   "type": "_list-item",
+                  "disabled": true,
                   "settings": {
                     "text": "Gifting & Home Decor",
                     "url": "shopify://collections/home-decor",
@@ -694,6 +708,7 @@
                 "list_item_qTRLVw",
                 "list_item_ba9qUA",
                 "list_item_jHhtxA",
+                "list_item_F6PhCq",
                 "list_item_CXFW6Q",
                 "list_item_4Kf6g9",
                 "list_item_nbJ3hi",
