@@ -389,7 +389,7 @@
               "type": "custom-liquid",
               "name": "t:names.custom_liquid",
               "settings": {
-                "custom_liquid": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n<p class=\"same-day-delivery-note\">\n  <i class=\"fa fa-truck\"></i>\n  <span>Same-Day Delivery Available in Delhi NCR - ₹250 Additional Charge</span>\n</p>\n\n<style>\n  .same-day-delivery-note {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    margin: 0 0 12px;\n    padding: 8px 12px;\n    background: #f5f8fc;\n    border-left: 3px solid #173b63;\n    color: #173b63;\n    font-size: 12px;\n    line-height: 1.5;\n    font-family: sans-serif;\n    border-radius: 3px;\n  }\n\n  .same-day-delivery-note .fa-truck {\n    font-size: 20px;\n    flex-shrink: 0;\n  }\n</style>"
+                "custom_liquid": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n<p class=\"same-day-delivery-note\">\n  <i class=\"fa fa-truck\"></i>\n  <span>Same-Day Delivery Available in Delhi NCR - ₹250 Additional Charge</span>\n</p>\n\n<style>\n  .same-day-delivery-note {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    margin: 0 0 12px;\n    padding: 8px 12px;\n    background: #FBF7F0;\n    border: 1px solid #E8D7BE;\n    border-left: 3px solid #CBA777;\n    color: #513719;\n    font-size: 12px;\n    line-height: 1.5;\n    font-family: sans-serif;\n    border-radius: 3px;\n  }\n\n  .same-day-delivery-note .fa-truck {\n    font-size: 20px;\n    color: #C5A06B;\n    flex-shrink: 0;\n  }\n</style>"
               },
               "blocks": {}
             },
