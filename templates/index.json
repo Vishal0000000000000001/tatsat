@@ -11,12 +11,33 @@
   "sections": {
     "vb_custom_video_Rf3Cmn": {
       "type": "vb-custom-video",
+      "disabled": true,
       "name": "Custom video",
       "settings": {
         "video_desktop": "shopify://files/videos/hero video.mp4",
         "size_desktop": "adapt",
         "height_desktop": 600,
         "video_mobile": "shopify://files/videos/hero video.mp4",
+        "size_mobile": "custom",
+        "height_mobile": 500,
+        "show_sound_button": true,
+        "sound_on_default": true,
+        "link": "#",
+        "link_label": "Shop now",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "bg_color": "#ffffff"
+      }
+    },
+    "vb_custom_video_QEizVT": {
+      "type": "vb-custom-video",
+      "name": "Custom video",
+      "settings": {
+        "video_desktop": "shopify://files/videos/IMG_4609.MP4",
+        "size_desktop": "adapt",
+        "height_desktop": 600,
+        "video_mobile": "shopify://files/videos/IMG_4609.MP4",
         "size_mobile": "custom",
         "height_mobile": 500,
         "show_sound_button": true,
@@ -3075,6 +3096,7 @@
   },
   "order": [
     "vb_custom_video_Rf3Cmn",
+    "vb_custom_video_QEizVT",
     "custom_slides_aa6mTK",
     "payment_offer_banner_z4pVHG",
     "problem_sec_aUEeke",
