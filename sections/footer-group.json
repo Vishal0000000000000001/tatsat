@@ -638,7 +638,7 @@
                     "url": "shopify://collections/bracelets",
                     "icon": "",
                     "padding": "",
-                    "margin": "0 0 10px"
+                    "margin": ""
                   },
                   "blocks": {}
                 },
@@ -649,7 +649,7 @@
                     "url": "shopify://collections/neck-pieces",
                     "icon": "",
                     "padding": "",
-                    "margin": "0 0 10px"
+                    "margin": ""
                   },
                   "blocks": {}
                 },
