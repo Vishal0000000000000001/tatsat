@@ -583,6 +583,18 @@
                   },
                   "blocks": {}
                 },
+                "list_item_qTRLVw": {
+                  "type": "_list-item",
+                  "name": "List item",
+                  "settings": {
+                    "text": "Women Bracelets",
+                    "url": "shopify://collections/women-bracelets",
+                    "icon": "",
+                    "padding": "",
+                    "margin": ""
+                  },
+                  "blocks": {}
+                },
                 "list_item_ba9qUA": {
                   "type": "_list-item",
                   "name": "List item",
@@ -679,6 +691,7 @@
               },
               "block_order": [
                 "list_item_AGMCAL",
+                "list_item_qTRLVw",
                 "list_item_ba9qUA",
                 "list_item_jHhtxA",
                 "list_item_CXFW6Q",
