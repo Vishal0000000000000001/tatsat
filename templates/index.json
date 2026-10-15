@@ -488,6 +488,317 @@
         "padding-block-end": 48
       }
     },
+    "product_list_Vqh8qU": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "name": "t:names.header",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_list_text_fKt6XX": {
+              "type": "_product-list-text",
+              "name": "t:names.collection_title",
+              "settings": {
+                "text": "<h3>Women Necklace</h3>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_list_button_T3VHhH": {
+              "type": "_product-list-button",
+              "name": "t:names.product_list_button",
+              "disabled": true,
+              "settings": {
+                "label": "View all",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_list_text_fKt6XX",
+            "product_list_button_T3VHhH"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_card_gallery_BGPxXM": {
+              "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
+              "settings": {
+                "image_ratio": "square",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_title_ANE9Xq": {
+              "type": "product-title",
+              "name": "t:names.product_title",
+              "settings": {
+                "width": "fit-content",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price_ciLMDb": {
+              "type": "price",
+              "name": "t:names.product_price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_discount_badge": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "var(--color-foreground)",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "review_hbT4tz": {
+              "type": "review",
+              "name": "t:names.product_review_stars",
+              "settings": {
+                "stars_style": "shaded",
+                "show_number": true,
+                "rating_color": "primary",
+                "type_preset": "paragraph",
+                "alignment": "left"
+              },
+              "blocks": {}
+            },
+            "buy_buttons_xCRc3n": {
+              "type": "buy-buttons",
+              "name": "t:names.product_buy_buttons",
+              "settings": {
+                "stacking": false,
+                "show_pickup_availability": true,
+                "gift_card_form": true,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            }
+          },
+          "block_order": [
+            "product_card_gallery_BGPxXM",
+            "product_title_ANE9Xq",
+            "price_ciLMDb",
+            "review_hbT4tz",
+            "buy_buttons_xCRc3n"
+          ]
+        }
+      },
+      "name": "t:names.products_grid",
+      "settings": {
+        "collection": "women-necklaces",
+        "layout_type": "carousel",
+        "carousel_on_mobile": false,
+        "max_products": 16,
+        "columns": 4,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 8,
+        "rows_gap": 24,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 28,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "vbmultitab_THNYGg": {
+      "type": "vbmultitab",
+      "blocks": {
+        "tab_NrrjUn": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "",
+            "collection": "women-rings",
+            "products_count": 10,
+            "kicker": "",
+            "heading": "",
+            "subheading": "",
+            "description": "",
+            "button_label": ""
+          }
+        },
+        "tab_dP6wfa": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "",
+            "collection": "women-bracelets",
+            "products_count": 10,
+            "kicker": "",
+            "heading": "",
+            "subheading": "",
+            "description": "",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_NrrjUn",
+        "tab_dP6wfa"
+      ],
+      "name": "Multi tab collection",
+      "settings": {
+        "section_heading": "",
+        "section_description": "",
+        "section_align": "center",
+        "per_view_desktop": 5,
+        "per_view_mobile": "2",
+        "gap": 2,
+        "pill_align": "center",
+        "pill_radius": 0,
+        "image_ratio": "adapt",
+        "image_hover": true,
+        "show_badges": true,
+        "show_atc": false,
+        "atc_style": "button",
+        "card_radius": 0,
+        "show_divider": true,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "bg_color": "#FFFFFF",
+        "text_color": "#111111",
+        "pill_bg": "",
+        "pill_text": "",
+        "pill_border": "",
+        "pill_active_bg": "#A58963",
+        "pill_active_text": "",
+        "pill_active_border": ""
+      }
+    },
     "product_list_pRcyVG": {
       "type": "product-list",
       "blocks": {
@@ -1101,89 +1412,6 @@
         "padding-block-end": 48
       }
     },
-    "image_gallery_xdLL9D": {
-      "type": "image-gallery",
-      "blocks": {
-        "image_AMAVLE": {
-          "type": "image",
-          "settings": {}
-        },
-        "image_WQEjWe": {
-          "type": "image",
-          "settings": {}
-        },
-        "image_qmprYU": {
-          "type": "image",
-          "settings": {}
-        },
-        "image_HNgxnU": {
-          "type": "image",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "image_AMAVLE",
-        "image_WQEjWe",
-        "image_qmprYU",
-        "image_HNgxnU"
-      ],
-      "disabled": true,
-      "name": "Responsive Image Gallery",
-      "settings": {
-        "heading": "Responsive Image Gallery",
-        "subheading": "Resize the screen to see the responsive effect",
-        "columns": 4
-      }
-    },
-    "shoplook_6NgJBf": {
-      "type": "shoplook",
-      "blocks": {
-        "hotspot_QVFLPf": {
-          "type": "hotspot",
-          "settings": {
-            "sma_product": "citrine-master-of-good-times",
-            "sma_custom_image": "shopify://shop_images/Citrine_f088e1d5-c9d0-4b07-900e-bd6cb14fe548.png",
-            "sma_label": "Shop the Product",
-            "sma_pos_x": 30,
-            "sma_pos_y": 40
-          }
-        },
-        "hotspot_wthEUt": {
-          "type": "hotspot",
-          "settings": {
-            "sma_product": "citrine-the-radiant-guru-evil-eye-charging-plate",
-            "sma_custom_image": "shopify://shop_images/Shungite_5e7b2350-eb59-4009-8cb7-c33c27673862.png",
-            "sma_label": "Shop the Product",
-            "sma_pos_x": 60,
-            "sma_pos_y": 70
-          }
-        }
-      },
-      "block_order": [
-        "hotspot_QVFLPf",
-        "hotspot_wthEUt"
-      ],
-      "disabled": true,
-      "name": "vb shoplook",
-      "settings": {
-        "sma_full_width": false,
-        "sma_section_width": 1600,
-        "sma_height_desktop": 530,
-        "sma_height_mobile": 400,
-        "sma_border_radius": 16,
-        "sma_use_aspect_ratio": true,
-        "sma_bg_color": "rgba(0,0,0,0)",
-        "sma_padding_top": 40,
-        "sma_padding_bottom": 40,
-        "sma_margin_top": 0,
-        "sma_margin_bottom": 0,
-        "sma_main_image": "shopify://shop_images/ChatGPT_Image_Sep_29_2026_07_51_38_PM.png",
-        "sma_dot_color": "#ffffff",
-        "sma_dot_size": 16,
-        "sma_popup_size": 180,
-        "sma_anim_speed": 0.5
-      }
-    },
     "product_list_VQpani": {
       "type": "product-list",
       "blocks": {
@@ -1632,153 +1860,6 @@
         "alignment_horizontal": "center",
         "padding-block-start": 16,
         "padding-block-end": 16
-      }
-    },
-    "video_series_rBByrV": {
-      "type": "video-series",
-      "blocks": {
-        "video_card_6Nhqbd": {
-          "type": "video_card",
-          "settings": {
-            "title": "Tat Sat- The Ultimate Truth",
-            "subtitle": "",
-            "video_url": "https://www.youtube.com/embed/np9Sc_ysE5I",
-            "thumbnail": "shopify://shop_images/Video1.webp",
-            "is_youtube": true,
-            "no_video": false,
-            "placeholder_bg": "#f5f5f5",
-            "placeholder_text_color": "#8b631a",
-            "placeholder_text": "Coming Soon",
-            "placeholder_link": "",
-            "video_title_color": "#8b631a",
-            "video_subtitle_color": "#444444"
-          }
-        },
-        "video_card_xJnHKD": {
-          "type": "video_card",
-          "settings": {
-            "title": "Tat Sat- The Ultimate Truth",
-            "subtitle": "",
-            "video_url": "https://www.youtube.com/embed/QX9q1t0WYog",
-            "thumbnail": "shopify://shop_images/Video1.webp",
-            "is_youtube": true,
-            "no_video": false,
-            "placeholder_bg": "#f5f5f5",
-            "placeholder_text_color": "#8b631a",
-            "placeholder_text": "Coming Soon",
-            "placeholder_link": "",
-            "video_title_color": "#8b631a",
-            "video_subtitle_color": "#444444"
-          }
-        },
-        "video_card_3DB6tc": {
-          "type": "video_card",
-          "settings": {
-            "title": "Welcome to Tat Sat",
-            "subtitle": "",
-            "video_url": "https://www.youtube.com/embed/jybXUhlWpsI",
-            "thumbnail": "shopify://shop_images/Video1.webp",
-            "is_youtube": true,
-            "no_video": false,
-            "placeholder_bg": "#f5f5f5",
-            "placeholder_text_color": "#8b631a",
-            "placeholder_text": "Coming Soon",
-            "placeholder_link": "",
-            "video_title_color": "#8b631a",
-            "video_subtitle_color": "#444444"
-          }
-        },
-        "video_card_PmzaNQ": {
-          "type": "video_card",
-          "settings": {
-            "title": "Tat Sat- The Ultimate Truth",
-            "subtitle": "",
-            "video_url": "https://www.youtube.com/embed/EauttqKNotw",
-            "thumbnail": "shopify://shop_images/Video1.webp",
-            "is_youtube": true,
-            "no_video": false,
-            "placeholder_bg": "#f5f5f5",
-            "placeholder_text_color": "#8b631a",
-            "placeholder_text": "Coming Soon",
-            "placeholder_link": "",
-            "video_title_color": "#8b631a",
-            "video_subtitle_color": "#444444"
-          }
-        },
-        "video_card_bVXTyt": {
-          "type": "video_card",
-          "settings": {
-            "title": "Tat Sat's Trinity Healing Ritual ",
-            "subtitle": "",
-            "video_url": "https://www.youtube.com/embed/-WgYooKHiJE",
-            "thumbnail": "shopify://shop_images/Video1.webp",
-            "is_youtube": true,
-            "no_video": false,
-            "placeholder_bg": "#f5f5f5",
-            "placeholder_text_color": "#8b631a",
-            "placeholder_text": "Coming Soon",
-            "placeholder_link": "",
-            "video_title_color": "#8b631a",
-            "video_subtitle_color": "#444444"
-          }
-        },
-        "video_card_3dztYV": {
-          "type": "video_card",
-          "settings": {
-            "title": "What is Tat Sat's Karmic Light Book?",
-            "subtitle": "",
-            "video_url": "https://www.youtube.com/embed/CCk7O3woerc",
-            "thumbnail": "shopify://shop_images/Video1.webp",
-            "is_youtube": true,
-            "no_video": false,
-            "placeholder_bg": "#f5f5f5",
-            "placeholder_text_color": "#8b631a",
-            "placeholder_text": "Coming Soon",
-            "placeholder_link": "",
-            "video_title_color": "#8b631a",
-            "video_subtitle_color": "#444444"
-          }
-        },
-        "video_card_cLXprC": {
-          "type": "video_card",
-          "settings": {
-            "title": "",
-            "subtitle": "",
-            "video_url": "",
-            "is_youtube": false,
-            "no_video": true,
-            "placeholder_bg": "#dccab2",
-            "placeholder_text_color": "#000000",
-            "placeholder_text": "Watch All Videos",
-            "placeholder_link": "https://www.youtube.com/@tatsatuniverse",
-            "video_title_color": "#444444",
-            "video_subtitle_color": "#444444"
-          }
-        }
-      },
-      "block_order": [
-        "video_card_6Nhqbd",
-        "video_card_xJnHKD",
-        "video_card_3DB6tc",
-        "video_card_PmzaNQ",
-        "video_card_bVXTyt",
-        "video_card_3dztYV",
-        "video_card_cLXprC"
-      ],
-      "disabled": true,
-      "name": "Video Series with Instagram",
-      "settings": {
-        "section_heading": "TAT SAT SACRED SERIES",
-        "section_subheading": "Watch the energies come alive — from our origin story to healing rituals and karmic activation.",
-        "padding_top": 40,
-        "padding_bottom": 50,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "heading_font_size": 24,
-        "subheading_font_size": 14,
-        "heading_color": "#8b631a",
-        "subheading_color": "#493002",
-        "subheading_font_weight": "300"
       }
     },
     "section_T84jTj": {
@@ -3101,16 +3182,15 @@
     "payment_offer_banner_z4pVHG",
     "problem_sec_aUEeke",
     "product_list_BFA8mJ",
+    "product_list_Vqh8qU",
+    "vbmultitab_THNYGg",
     "product_list_pRcyVG",
     "featuredlogo_bWX3Rq",
     "collection_list_TxbKR9",
-    "image_gallery_xdLL9D",
-    "shoplook_6NgJBf",
     "product_list_VQpani",
     "divider_KJPnFc",
     "section_ytcYni",
     "divider_4MUVjh",
-    "video_series_rBByrV",
     "section_T84jTj",
     "17652768549105e0fa",
     "custom_liquid_ntNHAa",
