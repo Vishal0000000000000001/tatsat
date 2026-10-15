@@ -499,8 +499,8 @@
                   "name": "t:names.accordion_row",
                   "settings": {
                     "heading": "DELIVERY",
-                    "open_by_default": false,
-                    "only_for_collection": "",
+                    "open_by_default": true,
+                    "only_for_collection": "jwellery",
                     "icon": "none",
                     "width": 20
                   },
