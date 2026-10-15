@@ -493,11 +493,53 @@
                   "block_order": [
                     "text_hD9CWT"
                   ]
+                },
+                "accordion_row_bAfML9": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "heading": "DELIVERY",
+                    "open_by_default": false,
+                    "only_for_collection": "",
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_bBe7Kx": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Standard Shipping: Ships in 24 hours</p><p>Express Shipping (charges applicable):</p><p>Same-Day: Delhi NCR Order before 4 PM (Mon–Sat)</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_bBe7Kx"
+                  ]
                 }
               },
               "block_order": [
                 "accordion_row_xjNLqq",
-                "accordion_row_X9YQGt"
+                "accordion_row_X9YQGt",
+                "accordion_row_bAfML9"
               ]
             }
           },
