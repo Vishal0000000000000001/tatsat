@@ -739,6 +739,19 @@
     "vbmultitab_THNYGg": {
       "type": "vbmultitab",
       "blocks": {
+        "tab_HPzPTk": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "",
+            "collection": "men-rings",
+            "products_count": 10,
+            "kicker": "",
+            "heading": "",
+            "subheading": "",
+            "description": "",
+            "button_label": ""
+          }
+        },
         "tab_NrrjUn": {
           "type": "tab",
           "settings": {
@@ -767,6 +780,7 @@
         }
       },
       "block_order": [
+        "tab_HPzPTk",
         "tab_NrrjUn",
         "tab_dP6wfa"
       ],
