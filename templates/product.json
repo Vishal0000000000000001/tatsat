@@ -417,7 +417,7 @@
                   "name": "t:names.accordion_row",
                   "settings": {
                     "heading": "Description",
-                    "open_by_default": true,
+                    "open_by_default": false,
                     "only_for_collection": "",
                     "icon": "none",
                     "width": 20
@@ -498,7 +498,7 @@
                   "type": "_accordion-row",
                   "name": "t:names.accordion_row",
                   "settings": {
-                    "heading": "DELIVERY",
+                    "heading": "Delivery",
                     "open_by_default": false,
                     "only_for_collection": "jwellery",
                     "icon": "none",
