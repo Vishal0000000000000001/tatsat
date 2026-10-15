@@ -783,7 +783,7 @@
         "image_ratio": "adapt",
         "image_hover": true,
         "show_badges": true,
-        "show_atc": false,
+        "show_atc": true,
         "atc_style": "button",
         "card_radius": 0,
         "show_divider": true,
