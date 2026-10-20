@@ -67,8 +67,8 @@
         "slide_rzAGab": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify://shop_images/Image-1_jpg.jpg",
-            "mobile_image": "shopify://shop_images/1x1.png",
+            "desktop_image": "shopify://shop_images/herobgm.png",
+            "mobile_image": "shopify://shop_images/herobg1.png",
             "slide_link": "",
             "heading": "",
             "text": ""
@@ -803,12 +803,12 @@
         "show_divider": true,
         "padding_top": 40,
         "padding_bottom": 40,
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "text_color": "#111111",
         "pill_bg": "",
         "pill_text": "",
         "pill_border": "",
-        "pill_active_bg": "#A58963",
+        "pill_active_bg": "#a58963",
         "pill_active_text": "",
         "pill_active_border": ""
       }
