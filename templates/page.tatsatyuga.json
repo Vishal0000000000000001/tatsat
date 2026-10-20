@@ -852,7 +852,6 @@
             "price_cRCHnR": {
               "type": "price",
               "name": "t:names.product_price",
-              "disabled": true,
               "settings": {
                 "show_sale_price_first": true,
                 "show_discount_badge": true,
@@ -877,7 +876,6 @@
             "buy_buttons_hcXKKc": {
               "type": "buy-buttons",
               "name": "t:names.product_buy_buttons",
-              "disabled": true,
               "settings": {
                 "stacking": false,
                 "show_pickup_availability": true,
@@ -896,7 +894,6 @@
                 },
                 "add-to-cart": {
                   "type": "add-to-cart",
-                  "disabled": true,
                   "static": true,
                   "settings": {
                     "style_class": "button-secondary"
@@ -905,6 +902,7 @@
                 },
                 "accelerated-checkout": {
                   "type": "accelerated-checkout",
+                  "disabled": true,
                   "static": true,
                   "settings": {},
                   "blocks": {}
