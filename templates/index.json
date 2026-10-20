@@ -32,6 +32,7 @@
     },
     "vb_custom_video_QEizVT": {
       "type": "vb-custom-video",
+      "disabled": true,
       "name": "Custom video",
       "settings": {
         "video_desktop": "shopify://files/videos/IMG_4609.MP4",
@@ -69,13 +70,14 @@
           "settings": {
             "desktop_image": "shopify://shop_images/herobgm.png",
             "mobile_image": "shopify://shop_images/herobg1.png",
-            "slide_link": "",
+            "slide_link": "shopify://pages/tat-sat-yuga",
             "heading": "",
             "text": ""
           }
         },
         "slide_NyiUmm": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/Banner_5_Heal_Your_Inner_Self_with_Sound_Frequencies.jpg",
             "mobile_image": "shopify://shop_images/5_50c739ec-3b84-4d35-9ec7-2163b47b10b7.jpg",
@@ -130,6 +132,7 @@
         },
         "slide_6F9zU6": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/Banner_1_Ma_am.jpg",
             "mobile_image": "shopify://shop_images/1_56e5b7c5-10aa-40b7-b94c-7d2d32a9c436.jpg",
@@ -149,7 +152,6 @@
         "slide_B4iYYw",
         "slide_6F9zU6"
       ],
-      "disabled": true,
       "name": "Custom Slideshow",
       "settings": {}
     },
