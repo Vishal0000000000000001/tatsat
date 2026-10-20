@@ -63,6 +63,19 @@
     "vbmultitab_PYAkPT": {
       "type": "vbmultitab",
       "blocks": {
+        "tab_RyNtQp": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "",
+            "collection": "women-necklaces",
+            "products_count": 10,
+            "kicker": "",
+            "heading": "",
+            "subheading": "",
+            "description": "",
+            "button_label": ""
+          }
+        },
         "tab_gYfGek": {
           "type": "tab",
           "settings": {
@@ -81,19 +94,6 @@
           "settings": {
             "tab_label": "",
             "collection": "women-bracelets",
-            "products_count": 10,
-            "kicker": "",
-            "heading": "",
-            "subheading": "",
-            "description": "",
-            "button_label": ""
-          }
-        },
-        "tab_RyNtQp": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "",
-            "collection": "women-necklaces",
             "products_count": 10,
             "kicker": "",
             "heading": "",
@@ -130,9 +130,9 @@
         }
       },
       "block_order": [
+        "tab_RyNtQp",
         "tab_gYfGek",
         "tab_J6NUhP",
-        "tab_RyNtQp",
         "tab_JHWCEh",
         "tab_E3DATN"
       ],
