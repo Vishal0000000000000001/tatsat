@@ -5,7 +5,30 @@
 
   assign ratio_desktop = video_desktop.aspect_ratio | default: 1.7778
   assign ratio_mobile = video_mobile.aspect_ratio | default: 0.5625
+
+  assign poster_mobile = video_mobile.preview_image
+  assign poster_desktop = video_desktop.preview_image
 -%}
+
+{%- comment -%} Preload the hero poster so the LCP image is discovered early and painted with high priority {%- endcomment -%}
+{%- if poster_mobile != blank -%}
+  <link
+    rel="preload"
+    as="image"
+    href="{{ poster_mobile | image_url: width: 750 }}"
+    media="(max-width: 749px)"
+    fetchpriority="high"
+  >
+{%- endif -%}
+{%- if poster_desktop != blank -%}
+  <link
+    rel="preload"
+    as="image"
+    href="{{ poster_desktop | image_url: width: 1500 }}"
+    media="(min-width: 750px)"
+    fetchpriority="high"
+  >
+{%- endif -%}
 
 <div
   id="CustomVideo-{{ sid }}"
@@ -42,7 +65,7 @@
           muted: true,
           playsinline: true,
           preload: 'none',
-          image_size: '1920x',
+          image_size: '1500x',
           class: 'custom-video__video'
       }}
     </div>
@@ -56,7 +79,7 @@
           muted: true,
           playsinline: true,
           preload: 'none',
-          image_size: '900x',
+          image_size: '750x',
           class: 'custom-video__video'
       }}
     </div>
@@ -213,6 +236,9 @@
     // soundOn = what the shopper wants; browsers may still force mute until they click/tap somewhere
     var soundOn = {{ section.settings.sound_on_default | json }} && !!soundBtn;
     var inView = true;
+    // Hold off downloading the heavy video file until the page has loaded,
+    // so the poster image (LCP) paints first without competing for bandwidth.
+    var ready = false;
 
     function activeVideo() {
       return mq.matches ? mobile : desktop;
@@ -247,9 +273,12 @@
       var idle = mq.matches ? desktop : mobile;
       if (idle) idle.pause();
       if (!active) return;
-      active.preload = 'auto';
-      if (inView) play(active);
-      else active.pause();
+      if (ready && inView) {
+        active.preload = 'auto';
+        play(active);
+      } else {
+        active.pause();
+      }
     }
 
     if (soundBtn) {
@@ -283,6 +312,19 @@
         inView = entries[0].isIntersecting;
         sync();
       }, { threshold: 0.25 }).observe(root);
+    }
+
+    // Start the video only after the page finishes loading (then when idle),
+    // so it never delays the first paint / LCP.
+    function begin() {
+      ready = true;
+      sync();
+    }
+    var defer = window.requestIdleCallback || function (cb) { return setTimeout(cb, 200); };
+    if (document.readyState === 'complete') {
+      defer(begin);
+    } else {
+      window.addEventListener('load', function () { defer(begin); }, { once: true });
     }
 
     sync();
